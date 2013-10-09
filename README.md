@@ -25,6 +25,11 @@ Possible sources of evidence (do any one of these):
 * Use a queue as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
 * Consult with Dr. Brinkman on an alternative project
 
+<strong><em>Evidences:</em></strong>
+
+<li>I am able to create an implementation of a Queue. Please see: https://github.com/luo-yu/03_Queue_Lab/tree/luoy6</li>
+
+<li>I am able to use a queue as my data structure in the Shuffle project. Please see: https://github.com/luo-yu/Shuffle/tree/luoy6</li>
 7 - Create an implementation of a List
 ----
 Possible sources of evidence (do any one of these):
@@ -34,6 +39,9 @@ Possible sources of evidence (do any one of these):
 * Implement chaining instead of linear probing in https://github.com/MiamiOH-CSE274/05_Hashing_Lab
 * Consult with Dr. Brinkman on an alternative project
 
+<strong><em>Evidence:<em></strong>
+
+<li>I am able to create an implementation of a List, Please see: https://github.com/luo-yu/04_Linked_List_Lab/tree/luoy6</li>
 
 7 - Create an implementation of a Binary Search Tree
 ----
@@ -88,6 +96,11 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
 
+<strong><em>Evidences:</em></strong>
+
+<li>Please see running time analysis section in my 03_Queue_Lab: https://github.com/luo-yu/03_Queue_Lab/tree/luoy6</li>
+
+<li>Please see running time analysis section in my 04_Linked_List_Lab: https://github.com/luo-yu/04_Linked_List_Lab/tree/luoy6</li>
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
@@ -95,12 +108,20 @@ Possible sources of evidence (do one):
 
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
 
+<strong><em>Evidence:<em></strong>
+<li>I will explain the dynamic memory management in 04_Linked_List_Lab, please see: https://github.com/luo-yu/04_Linked_List_Lab/tree/luoy6. </li>
+
+<li>In this Lab, I allocated dynamic memory to a new Node named dummyNode in the constructor using the keyword new. This dummyNode will be deleted in the desctrutor. In the add method, I allocated a space for the newly added node named addedNode. In the remove method, when I remove an item at postion i, I deleted the allocated space on the heap for removed item. I freed all the dynamic memory allocations in the desctructor using a while loop, including the dummyNode. My program will not leak memory because every time I remove an item at postion i, I will delete the associated memory allocation.   </li>
 
 5 - Create collection classes using templates in C++
 ----
 Possible sources of evidence (do one):
 
 * Any of the labs or projects, provided it uses templates in an interesting way.
+
+<strong><em>Evidence:</em></strong>
+
+<li>Please see:https://github.com/luo-yu/04_Linked_List_Lab/tree/luoy6 </li>
 
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application

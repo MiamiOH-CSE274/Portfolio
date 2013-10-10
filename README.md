@@ -25,6 +25,10 @@ Possible sources of evidence (do any one of these):
 * Use a queue as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
 * Consult with Dr. Brinkman on an alternative project
 
+My implementation of a queue here: https://github.com/ChaceTurner/03_Queue_Lab/tree/turnerce
+
+Based on positive feedback from our class' TA and success in all tester methods and personal testing, I feel that my implementation of a Queue was successful.  The largest issue I faced in this assignment was understanding how to use Xcode as a compiler, and after realizing the mistakes I had made in Xcode, my array based queue and it's methods began operating exactly how I had expected them to.
+
 7 - Create an implementation of a List
 ----
 Possible sources of evidence (do any one of these):
@@ -33,6 +37,8 @@ Possible sources of evidence (do any one of these):
 * Use a linked list as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
 * Implement chaining instead of linear probing in https://github.com/MiamiOH-CSE274/05_Hashing_Lab
 * Consult with Dr. Brinkman on an alternative project
+
+The linked list lab has been the most beneficial and enjoyable assignment to me so far.  Spending the time to implement splice  helped me to understand, as well as force myself to visualize, the methods involved with a linked list.  Implementing this data structure using nodes also helped me to better understand the differences between Java and C++ regarding the amount of control you have on data storage.  I believe my implementation of the Linked List was successful.
 
 
 7 - Create an implementation of a Binary Search Tree

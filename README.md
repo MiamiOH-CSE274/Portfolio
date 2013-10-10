@@ -6,6 +6,10 @@ Portfolio
 
 Document completion of the course's learning outcomes.
 
+Author
+==========
+"Kojs, Michelle", kojsmn
+
 Instructions
 ====
 The goal of this is to make it very easy for me (or an employer, or a teaching assistant) to see whether or not you have mastered the material of the class. The hope is that I would be able to grade your work without downloading and compiling your code. If you have recorded proper video demonstrations of your programs, that should be sufficient. You will also want to write a paragraph or so making your case for why you deserve full credit for particular learning outcome (or if you don't, then you should say so).
@@ -25,6 +29,9 @@ Possible sources of evidence (do any one of these):
 * Use a queue as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
 * Consult with Dr. Brinkman on an alternative project
 
+I chose to do the Queue Lab for the implementation of a Queue.
+Here is a link to my repository on github which includes the source code: https://github.com/kojsmn/03_Queue_Lab/tree/kojsmn
+
 7 - Create an implementation of a List
 ----
 Possible sources of evidence (do any one of these):
@@ -34,6 +41,8 @@ Possible sources of evidence (do any one of these):
 * Implement chaining instead of linear probing in https://github.com/MiamiOH-CSE274/05_Hashing_Lab
 * Consult with Dr. Brinkman on an alternative project
 
+I chose to do the Linked List Lab for the implementation of a List.
+Here is a link to my repository on github which includes the source code: https://github.com/kojsmn/04_Linked_List_Lab/tree/kojsmn
 
 7 - Create an implementation of a Binary Search Tree
 ----
@@ -88,6 +97,22 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
 
+Queue Lab:
+	The add() method takes O(1) time or linear time unless grow is called, then it takes O(n) time since grow takes O(n) time.
+	The remove() method takes O(1) time or linear time unless grow is called, then it takes O(n) time since grow takes O(n) time.
+	The getNumItems() method takes O(1) time or linear time.
+	The grow() method takes O(n) time or constant time.
+	Link to the methods: https://github.com/kojsmn/03_Queue_Lab/blob/kojsmn/ArrayQueue.ipp
+
+Linked List Lab:
+	The find() method takes O(n) time or constant time since there is a for loop.
+	The set() method takes O(n) time since find is called and find takes O(n) time.
+	The add() method takes O(n) time since find is called and find takes O(n) time.
+	The remove() method takes O(n) time since find is called and find takes O(n) time.
+	The get() method takes O(n) time since find is called and find takes O(n) time.
+	The splice() method takes O(n) time since find is called and find takes O(n) time.
+	The size() method takes O(1) time or linear time.
+	Link to the methods: https://github.com/kojsmn/04_Linked_List_Lab/blob/kojsmn/LinkedList.ipp
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----

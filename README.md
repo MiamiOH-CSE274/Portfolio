@@ -21,18 +21,13 @@ Body of portfolio
 ----
 Possible sources of evidence (do any one of these):
 
-* https://github.com/MiamiOH-CSE274/03_Queue_Lab
-* Use a queue as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
-* Consult with Dr. Brinkman on an alternative project
+By clicking on the link you will see that I have fully demonstrated my knowledge of a queue. The code within ArrayQueue.ipp has passed the tests that have been provided by Dr. Brinkman in main.cpp. Furthermore, to implement the queue in this assignment I used the circular array concept. In this code(ArrayQueue.ipp) you will find a constructor and destructor for a circular array. You will also find a add, remove, getNumItems and grow methods. All of these methods are fully functional. At this time I couldn't provide a video, however, at a later time I will be adding a screen shot or video to show the full implementation of an array queue. Link: https://github.com/LakersAllTheWay/03_Queue_Lab
 
 7 - Create an implementation of a List
 ----
 Possible sources of evidence (do any one of these):
 
-* https://github.com/MiamiOH-CSE274/04_Linked_List_Lab
-* Use a linked list as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
-* Implement chaining instead of linear probing in https://github.com/MiamiOH-CSE274/05_Hashing_Lab
-* Consult with Dr. Brinkman on an alternative project
+By clicking on the link below you will see that I have fully demonstrated my knowledge of a linked list. Other than the splice method all other methods have passed the tests provided by Dr. Brinkman. In this assignment I used a dummyNode that allowed me to access the linked list in which the dummyNode's "next" and "prev" were itself. The methods that can be found in LinkedList.ipp are: find, set, add, remove, get and size. Also the constructor and destructor for the linked list are provided. As stated for the array queue I am going to make a video/screenshot to show the full functionality of this structure. Link: https://github.com/LakersAllTheWay/04_Linked_List_Lab
 
 
 7 - Create an implementation of a Binary Search Tree

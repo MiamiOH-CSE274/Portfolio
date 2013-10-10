@@ -19,20 +19,15 @@ Body of portfolio
 
 7 - Create an implementation of a Queue
 ----
-Possible sources of evidence (do any one of these):
 
-* https://github.com/MiamiOH-CSE274/03_Queue_Lab
-* Use a queue as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
-* Consult with Dr. Brinkman on an alternative project
+* https://github.com/mullinz/03_Queue_Lab/tree/mullingh
+* The reason I deserve credit for this learning outcome is because I successfully completed the Queue Lab.  I implemented an array based queue (through a circular array) and completed all of the assignment's requirements.
 
 7 - Create an implementation of a List
 ----
-Possible sources of evidence (do any one of these):
 
-* https://github.com/MiamiOH-CSE274/04_Linked_List_Lab
-* Use a linked list as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
-* Implement chaining instead of linear probing in https://github.com/MiamiOH-CSE274/05_Hashing_Lab
-* Consult with Dr. Brinkman on an alternative project
+* https://github.com/mullinz/04_Linked_List_Lab/tree/mullingh
+* The reason I deserve credit for this learning outcome is because I successfully completed the Linked List lab.  I was able to implement a simple linked list through the use of pointers and classes, and completed all of the necessary requirements.  I also completed the optional splice() method.
 
 
 7 - Create an implementation of a Binary Search Tree

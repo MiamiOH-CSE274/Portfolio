@@ -1,6 +1,7 @@
 Author
-==========
+=======
 "Proctor, Patrick", proctopj
+
 Portfolio
 =========
 
@@ -19,6 +20,8 @@ Body of portfolio
 
 7 - Create an implementation of a Queue
 ----
+https://github.com/proctopj/03_Queue_Lab
+
 Possible sources of evidence (do any one of these):
 
 * https://github.com/MiamiOH-CSE274/03_Queue_Lab
@@ -27,6 +30,8 @@ Possible sources of evidence (do any one of these):
 
 7 - Create an implementation of a List
 ----
+https://github.com/proctopj/04_Linked_List_Lab
+
 Possible sources of evidence (do any one of these):
 
 * https://github.com/MiamiOH-CSE274/04_Linked_List_Lab
@@ -88,6 +93,22 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
 
+For Queue (Link provided above),
+
+The running times for add() and remove() are constant, while the grow() function is linear where n is the number items in the initial
+Queue which are then added to the new Queue after the array size has been doubled. The constructor and destructor are also both 
+constant, but in reality if this Queue were to be applied for classes, it would become linear time as each item would need to be 
+destructed according to its class parameters.
+
+
+For Linked List (Link provided above),
+
+The running time of size() is always constant due to existing control structures within other methods. find(), get(), add(), and 
+remove() are selectively constant (for cases of an index of 0 or size-1 (where the size variable is actually numItems)) but 
+otherwise will run in linear time. getAll is constant because it concatenates a LinkedList to the end of the main one, meaning 
+an index of numItems-1 is used. The constructor method for these purposes is constant, but one could make a linear-time constructor
+for a predetermined arrangement of data. In fact I should probably do that before the final iteration of this portfolio.
+
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
@@ -95,12 +116,28 @@ Possible sources of evidence (do one):
 
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
 
+For the LinkedList Lab(link provided above) we see dynamic memory allocation being used to construct and connect a data type of our own design
+called Node which contains data of an unknown type until execution and address markers to other Nodes in the Linked List. The dummyNode is
+generated first and made permanent by the new() function which gives it an address in the RAM which will not be changed or freed up until we 
+specify by use of the delete() function. Each time an item is added to the LinkedList, a new Node is generated to contain that item and then 
+link it to the adjacent Nodes at a given index in the LinkedList. Each time an item is removed, the nodes adjacent to the target restructure 
+their links to each other, and then the target is deleted so no dangling pointer (address to nowhere) is left behind. The LinkedList destructor
+employs a perfect loop of the Node destructor we call remove(), and it ensures not a single node, including the dummy, remains, and it doesn't 
+go beyond the LinkedList into other parts of the RAM and accidentally deleting extraneous addresses. We must manage memory by hand because C++ 
+does not automatically collect garbage the way Java does.
 
 5 - Create collection classes using templates in C++
 ----
 Possible sources of evidence (do one):
 
 * Any of the labs or projects, provided it uses templates in an interesting way.
+
+Again in the LinkedList lab we see a 2-layer usage of the template class. We have the abstract data type List with its own special template, 
+then a LinkedList template which adds in specific functions needed for this particular implementation, such as the takeAll() function. This 
+usage of templates keeps the project goals in mind as well as a convenient way to store directions for implementation while hiding the
+implementation in our LinkedList.ipp file. It also shows the inheritance of LinkedList from List as well as the privately owned structure,
+Node, on which it builds the collection as a whole, allowing any data type (labeled as T) to be entered into this collection. The implemented
+type is decided at execution time of the program, thus giving the collection flexibility by this construction of the templates.
 
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application

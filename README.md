@@ -19,20 +19,16 @@ Body of portfolio
 
 7 - Create an implementation of a Queue
 ----
-Possible sources of evidence (do any one of these):
+This is my implementation of an Array Queue.  All the logic seems sound to me, but it doesn't run properly.  I am still awaiting feedback on this lab, which will hopefully help me figure out my problem.
 
-* https://github.com/MiamiOH-CSE274/03_Queue_Lab
-* Use a queue as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
-* Consult with Dr. Brinkman on an alternative project
+https://github.com/stilgeki/03_Queue_Lab/tree/stilgeki
+
 
 7 - Create an implementation of a List
 ----
-Possible sources of evidence (do any one of these):
+This is a link to my implementation of a Linked List.  As with the Queue, my logic and code seem correct, but I still get errors.  When I attempt to debug it, Visual Studio directs me to a file that isn't even a part of the program and that I don't understand.  As with the Queue, I am awaiting feedback that will hopefully help me to fix this.
 
-* https://github.com/MiamiOH-CSE274/04_Linked_List_Lab
-* Use a linked list as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
-* Implement chaining instead of linear probing in https://github.com/MiamiOH-CSE274/05_Hashing_Lab
-* Consult with Dr. Brinkman on an alternative project
+https://github.com/stilgeki/04_Linked_List_Lab
 
 
 7 - Create an implementation of a Binary Search Tree
@@ -84,9 +80,13 @@ Possible sources of evidence (do any one of these):
 
 21 - Determine space and time requirements of common data structure methods
 -----
-Possible sources of evidence (do up to 3 of these, up to 7 points for each):
+For the Queue, my time analysis is in Question 1, parts 1-4 and 6:
 
-* Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
+https://github.com/stilgeki/03_Queue_Lab/tree/stilgeki
+
+For the Linked List, my time analysis is in Question 1, parts 1 and 4: 
+
+https://github.com/stilgeki/04_Linked_List_Lab
 
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors

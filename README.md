@@ -21,11 +21,15 @@ Body of portfolio
 ----
 Possible sources of evidence (do any one of these):
 
+I chose to implement a Queue in the Queue Lab which you can find at the following https://github.com/SebastianMonnin/03_Queue_Lab/tree/monninse
+
 * https://github.com/MiamiOH-CSE274/03_Queue_Lab
 * Use a queue as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
 * Consult with Dr. Brinkman on an alternative project
 
 7 - Create an implementation of a List
+
+I implemented a List in my Linked List Lab -   https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/monninse 
 ----
 Possible sources of evidence (do any one of these):
 

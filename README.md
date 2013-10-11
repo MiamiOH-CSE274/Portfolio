@@ -6,6 +6,8 @@ Portfolio
 
 Document completion of the course's learning outcomes.
 
+<b> Lots of work still to do!!  Tried to fill in what I could thus far.  Certain things that may have been answered generally were not because they would be more correctly answered later in the semester after more work and better understanding of material.  Did not want to try to answer things I may slightly know, and give a general answer incorrectly. 
+
 Instructions
 ====
 The goal of this is to make it very easy for me (or an employer, or a teaching assistant) to see whether or not you have mastered the material of the class. The hope is that I would be able to grade your work without downloading and compiling your code. If you have recorded proper video demonstrations of your programs, that should be sufficient. You will also want to write a paragraph or so making your case for why you deserve full credit for particular learning outcome (or if you don't, then you should say so).
@@ -21,19 +23,22 @@ Body of portfolio
 ----
 Possible sources of evidence (do any one of these):
 
-* https://github.com/MiamiOH-CSE274/03_Queue_Lab
+* <b> https://github.com/MiamiOH-CSE274/03_Queue_Lab  [I will use this as evidence] </b>
 * Use a queue as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
 * Consult with Dr. Brinkman on an alternative project
+
+To show suffecient knowledge of Queue I will use my 03_Queue_Lab the link is https://github.com/kosirjm/03_Queue_Lab
 
 7 - Create an implementation of a List
 ----
 Possible sources of evidence (do any one of these):
 
 * https://github.com/MiamiOH-CSE274/04_Linked_List_Lab
-* Use a linked list as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
+* <b> Use a linked list as your data structure in https://github.com/MiamiOH-CSE274/Shuffle [I will use this as evidence]</b>
 * Implement chaining instead of linear probing in https://github.com/MiamiOH-CSE274/05_Hashing_Lab
 * Consult with Dr. Brinkman on an alternative project
 
+I will use the shuffle project as evidence.  Currently not finished. Due on Oct 14, 2013.
 
 7 - Create an implementation of a Binary Search Tree
 ----
@@ -86,8 +91,9 @@ Possible sources of evidence (do any one of these):
 -----
 Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
-* Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
+* Select any of the following labs, and analyze the running times for each of your methods of your data structure: <b> Queue </b> , Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
 
+Only One currently done is the Queue Lab.  Please see https://github.com/kosirjm/03_Queue_Lab
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
@@ -95,7 +101,7 @@ Possible sources of evidence (do one):
 
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
 
-
+Though I have done this in my Queue_Lab I would like to work with this more, and understand it better before submitting this question.  I could currently give a general answer from what we have learned, but I would like to get a better feel for it first. 
 5 - Create collection classes using templates in C++
 ----
 Possible sources of evidence (do one):

@@ -19,21 +19,24 @@ Body of portfolio
 
 7 - Create an implementation of a Queue
 ----
-Possible sources of evidence (do any one of these):
 
-* https://github.com/MiamiOH-CSE274/03_Queue_Lab
-* Use a queue as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
-* Consult with Dr. Brinkman on an alternative project
+
+Explanation of how I accomplished the requirements of the lab/answered questions on queues:
+https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/gardnedn
+
+Code of Circular based Queue:
+https://github.com/MiamiOH-CSE274/03_Queue_Lab/blob/gardnedn/ArrayQueue.ipp
+
+The Queue is circular, compiles, successfully adds and subtracts elements, grows when it is full, does not leak memory, throws exceptions when appropriate, and works in constant time when it is supposed to. 
 
 7 - Create an implementation of a List
 ----
-Possible sources of evidence (do any one of these):
+Explanation of how I accomplished the requirements of the lab/answered questions on Linked Lists:
+* https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/gardnedn
+Code of Linked List:
+* https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/blob/gardnedn/LinkedList.ipp
 
-* https://github.com/MiamiOH-CSE274/04_Linked_List_Lab
-* Use a linked list as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
-* Implement chaining instead of linear probing in https://github.com/MiamiOH-CSE274/05_Hashing_Lab
-* Consult with Dr. Brinkman on an alternative project
-
+Link List compiles, and is circular. Succesfuly adds, removes, sets and sets Nodes into Linked List. Remove, get, set work in constant time when supposed to, throws exceptions when appropriate, does not leak memory, and keeps track of the size of the list in O(1) time. 
 
 7 - Create an implementation of a Binary Search Tree
 ----

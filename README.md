@@ -1,6 +1,3 @@
-Author
-==========
-"Vutisalchavakul, Pob", vutisat
 Portfolio
 =========
 
@@ -21,18 +18,15 @@ Body of portfolio
 ----
 Possible sources of evidence (do any one of these):
 
-* https://github.com/MiamiOH-CSE274/03_Queue_Lab
-* Use a queue as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
-* Consult with Dr. Brinkman on an alternative project
+I've implemented a queue and uploaded it to GitHub which can be found here:
+https://github.com/Vutisat/03_Queue_Lab
 
 7 - Create an implementation of a List
 ----
 Possible sources of evidence (do any one of these):
 
-* https://github.com/MiamiOH-CSE274/04_Linked_List_Lab
-* Use a linked list as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
-* Implement chaining instead of linear probing in https://github.com/MiamiOH-CSE274/05_Hashing_Lab
-* Consult with Dr. Brinkman on an alternative project
+I've implemented a queue and uploaded it to GitHub which can be found here:
+https://github.com/Vutisat/04_Linked_List_Lab
 
 
 7 - Create an implementation of a Binary Search Tree
@@ -85,6 +79,8 @@ Possible sources of evidence (do any one of these):
 21 - Determine space and time requirements of common data structure methods
 -----
 Possible sources of evidence (do up to 3 of these, up to 7 points for each):
+
+I have implemented queue and linked list with linear running time which can be found from links in the sections above.
 
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
 

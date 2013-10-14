@@ -84,6 +84,7 @@ For the ArrayQueue (found here https://github.com/db4soundman/03_Queue_Lab/blob/
 
 The constructor is constant time, since space is only being set aside to store data in the array, nothing is being added. The destructor is constant time as well, assuming that the `delete[]` method is constant. `Add()` is constant time as well, unless `grow()` is called, in which case it's running time is based on `grow()` (see below). `Remove()` is constant time as well, since the first item in the queue is always removed from the array. `getNumItems()` is constant time, as the method only returns `numItems`. Finally, `grow()` runs in linear time since the items in the backingArray need to be copied to a new and larger array.
 
+In terms of space requirements, the ArrayQueue only stores primitive data, so the largest space requirement is the size of the array.
 
 
 For the Linked List (found here https://github.com/db4soundman/04_Linked_List_Lab/blob/blasedd/LinkedList.ipp ), the running times for the methods are as follows. 
@@ -94,7 +95,7 @@ For the Linked List (found here https://github.com/db4soundman/04_Linked_List_La
 	For similar reasons, `add()`, `remove()`, and `splice()` are the same running time as `find()` (linear), as all three methods have calls to `find()`, and then perform operations that are not based on the size of the LinkedList.
 	`Size()` is constant time; it only returns the numItems variable.
 
-
+For LinkedLists, the space requirement is based on the type of data being stored. Otherwise, the instance variables are an unsigned long, and Node* variables.
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
@@ -102,12 +103,15 @@ Possible sources of evidence (do one):
 
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
 
+In a LinkedList ( https://github.com/db4soundman/04_Linked_List_Lab/blob/blasedd/LinkedList.ipp ), the dynamic memory that is allotted are Nodes. Nodes are created in the constructor for the linkedlist (it creates the dummyNode), as well as in the `add()` method. As seen in the add method, the `next` and `prev` pointers within the nodes are updated appropriately to maintain the structure of the list and ensures that no data is lost in memory. The `remove()` method acts similarly, by updating the pointers before and after the Node being deleted so that the list remains connected. Once that has been done, `delete` is called, effectively freeing up the memory that the Node was using. The destructor method calls `remove()` in a loop until all the nodes except the dummyNode is gone, and then calls `delete` on the dummyNode, freeing up all dynamically allocated memory back to the system.
+
 
 5 - Create collection classes using templates in C++
 ----
-Possible sources of evidence (do one):
 
-* Any of the labs or projects, provided it uses templates in an interesting way.
+https://github.com/db4soundman/04_Linked_List_Lab/blob/blasedd/LinkedList.ipp
+
+The `grow()` method in this class uses pointer management instead of loops, making grow a more efficient method in terms of running time.
 
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application

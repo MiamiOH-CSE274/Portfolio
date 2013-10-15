@@ -29,6 +29,10 @@ Here is a link to my repository on github, it includes my source code:
 
 https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/zhongm2
 
+Shuffle project:
+
+https://github.com/JohnneyMing/Shuffle/tree/zhongm2
+
 
 
 7 - Create an implementation of a List

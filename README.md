@@ -104,121 +104,14 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
 
-Queue: 
-Remove() method:
 
-1.Create an return variable: T rm. (n = 1)
-
-2.Check if array has elements in it. (n = 1)
-
-3.If it doesn't, throw an exception. (n = 1 or n = 0).
-
-4.Set the return variable as backingArray[front]. (n = 1).
-
-5.Increase the first index of array as one by doing:
-
-front = ( ( front + 1) % backingArraySize)). (n = 1)
-
-6.Decrease the number of element in array as one. ( n = 1)
-
-7.Return.(n = 1).
-
-Therefore: the remove() method takes constant time O(1).
-
-
-grow() method:
-
-1.Creating integer variable: int count = 0;(N = 1).
-
-2.Creating an new array, size twice larger than original array.
-
-T *newArray = new T[2 * backingArraySize]. (N = 1).
-
-3.Do a while loop to loop through the entire array and copy elements from
-original array to new array: while(count < numItems).
-Assume the number of element in array is n. (N = n - 1 + n - 1 = 2n-2).
-
-4.backingArraySize = 2 * backingArraySize. (N = 1)
-
-5.Deallocate the memory: delete[]backingArray. (N = 1).
-
-6.Set backingArray to be NULL: backingArray = NULL (N = 1).
-
-7.backingArray = newArray. (N = 1)
-
-Therefore: T(n) = 1 + 1 + 2n-2 + 1 + 1 + 1 = 2n + 3.
-Which is O(n).
-
-
-add() method:
-
-If array is not full, then it takes O(1). Otherwise it takes O(n), because 
-you need to call grow() method if the array is full.
-
-getNumItems() method:
-
-It takes O(1) time because it simply just return number of element in array.
-
-
-Summary:
-
-I implemented Queue by using circular array, program runs successfully, memory
-has been managed appropriately.
-
-
-/*****************************************/
-
-
-Linked list:
-
-add() method:
-
-It takes O(1) time. Because creating a new memory block for storing the element
-which you want to add on the list and switch pointer take constant time.
-So the running time of this method is O(1).
-
-remove() method:
-
-It is same as add() method, O(1).
-
-find() method:
-
-It takes O(n) time, because it needs to make a loop to find the
-memory address of element in array, and return that memory address.
-
-get() method:
-
-It takes O(n) time, because it involved find() method, and then return the
-data in that memory address.
-
-set() method:
-
-It takes O(n) time because it also involved find() method, and then set the 
-data in that memory address.
-
-size() method:
-
-It takes O(1) time because it returned the number of element in array.
-
-
-Summary: 
-The prorgam runs successfully, memory has been managed appropriately.
-
-
-If you want to find out more details, click the links below:
-
-
-Queue: 
+Queue lab:
 
 https://github.com/JohnneyMing/03_Queue_Lab/tree/patch-1
 
-List:
+Linked-list lab:
 
 https://github.com/JohnneyMing/04_Linked_List_Lab/tree/zhongm2
-
-
-
-
 
 
 
@@ -235,12 +128,9 @@ https://github.com/MiamiOH-CSE274/03_Queue_Lab/blob/zhongm2/ArrayQueue.ipp
 
 In my constructor, I allocated memory on line 26.
 
-In my destructor, I deallocated the memory and set it to be NULL.
-
-Summary:
-
-My program does not leak meemory, and does not suffer from dangling pointers.
-
+In my destructor, I deallocated the memory and set it to be NULL, set a pointer
+to be NULL after doing deallocation is to avoid a pointer suffers from dangling
+ pointer.
 
 
 

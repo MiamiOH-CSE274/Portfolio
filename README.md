@@ -41,6 +41,10 @@ Possible sources of evidence (do any one of these):
 I chose to do the Linked List Lab for the implementation of a List.
 Here is a link to my repository on github which includes the source code: https://github.com/kojsmn/04_Linked_List_Lab/tree/kojsmn
 
+I also used a linked list as my data structure in the Shuffle project. 
+Here is a link to my repository on github: https://github.com/kojsmn/Shuffle/tree/kojsmn
+At the bottom of my repository there is a video link which shows the Shuffle project working.
+
 7 - Create an implementation of a Binary Search Tree
 ----
 Possible sources of evidence (do any one of these):
@@ -51,7 +55,7 @@ Possible sources of evidence (do any one of these):
 * Consult with Dr. Brinkman on an alternative project
 
 
-7 - Create an implementaiton of a Hash Table
+7 - Create an implementation of a Hash Table
 ----
 Possible sources of evidence (do any one of these):
 
@@ -59,6 +63,9 @@ Possible sources of evidence (do any one of these):
 * Use a hash table in the Zeitgeist project
 * Use locality-preserving hashing on the Starbucks project (not recommended!)
 * Consult with Dr. Brinkman on an alternative project
+
+I chose to do the Hashing Lab for the implementation of a Hash Table.
+Here is a linke to my repository on github which includes the source code: https://github.com/kojsmn/05_Hashing_Lab/tree/kojsmn
 
 7 - Create an implementation of a Heap
 ----

@@ -21,17 +21,14 @@ Body of portfolio
 ----
 Possible sources of evidence (do any one of these):
 
+Implementing array-based Queue:
+
+https://github.com/JohnneyMing/03_Queue_Lab
+
+
 * https://github.com/MiamiOH-CSE274/03_Queue_Lab
 * Use a queue as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
 * Consult with Dr. Brinkman on an alternative project
-
-Here is a link to my repository on github, it includes my source code:
-
-https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/zhongm2
-
-Shuffle project:
-
-https://github.com/JohnneyMing/Shuffle/tree/zhongm2
 
 
 
@@ -39,21 +36,26 @@ https://github.com/JohnneyMing/Shuffle/tree/zhongm2
 ----
 Possible sources of evidence (do any one of these):
 
+Implementing Linked_List:
+
+https://github.com/JohnneyMing/04_Linked_List_Lab
+
+
 * https://github.com/MiamiOH-CSE274/04_Linked_List_Lab
 * Use a linked list as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
 * Implement chaining instead of linear probing in https://github.com/MiamiOH-CSE274/05_Hashing_Lab
 * Consult with Dr. Brinkman on an alternative project
 
 
-Here is a linke to my repository on github, it includes my source code:
-
-https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/zhongm2
-
-
 
 7 - Create an implementation of a Binary Search Tree
 ----
 Possible sources of evidence (do any one of these):
+
+Implementing Binary Search tree:
+
+https://github.com/JohnneyMing/06_BST_Lab
+
 
 * Binary Search Tree Lab (TODO)
 * Use a binary search tree or KD-Tree in the Starbucks project.
@@ -64,6 +66,11 @@ Possible sources of evidence (do any one of these):
 7 - Create an implementaiton of a Hash Table
 ----
 Possible sources of evidence (do any one of these):
+
+Implementing hash table:
+
+https://github.com/JohnneyMing/05_Hashing_Lab
+
 
 * https://github.com/MiamiOH-CSE274/05_Hashing_Lab
 * Use a hash table in the Zeitgeist project
@@ -104,15 +111,95 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
 
+*******************************************************************************
 
-Queue lab:
+Queue Implementation:
 
-https://github.com/JohnneyMing/03_Queue_Lab/tree/patch-1
+https://github.com/JohnneyMing/03_Queue_Lab
 
-Linked-list lab:
 
-https://github.com/JohnneyMing/04_Linked_List_Lab/tree/zhongm2
+The running time for `add()` method is constant, unless `grow()` is called.
 
+The running time for `remove()` method is constant. Since this method is to
+remove the first element from array.
+
+The running time for constructor is constant.
+
+The running time for destructor is constant.
+
+The running time for `grow()` method is linear, because you need to copy the 
+number of N elements from original array and add them to new array.
+
+
+Space requirement:
+
+I used circular array, the space is the initial size of array. 
+
+
+*******************************************************************************
+
+
+Linked-list Implementation:
+
+https://github.com/JohnneyMing/04_Linked_List_Lab
+
+The running time for constructor is constant.
+
+The running time for destructor is linear time, since you need to loop through
+entire list by using while loop and call `remove()` method.
+
+The running time for `find()` method is linear, except you are looking for the
+last item or the first time in the list.
+
+The running time for `set()` method is linear, since you need to invoke 
+`find()` method to access the node that you want to make changes.
+
+The running time for `splice()` method is linear, since it invokes `find()`
+method.
+
+The running time for `remove()` method is linear, since it invokes `find()`
+method.
+
+The running time for `get()` method is linear, since it invokes `find()` method.
+
+The running time for `add()` method is linear, since it invokes `find()` method.
+
+The running time for `size()` method is constant, since it simply returns the 
+the number of item in the list.
+
+
+Space requirement:
+
+Classical double-linked list, it has three pointers: pre, next and data.
+
+
+*******************************************************************************
+
+HashTable Implementation:
+
+https://github.com/JohnneyMing/05_Hashing_Lab/tree/zhongm2
+
+The running time for constructor is constant. 
+
+The running time for destructor is constant.
+
+The running time for `size()` method is constant, it only returns the number
+of element in the array.
+
+The running time for `keyExists()`, `find()` and `remove()` are constant,
+except you need to hash through entire hash table to find the key, then it 
+will be linear.
+
+The running time for grow() is linear, because you need to copy N elements 
+from original hash table to new hash table.
+
+
+Space requirement:
+
+The largest space is the size of hash table.
+
+
+*******************************************************************************
 
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
@@ -121,16 +208,23 @@ Possible sources of evidence (do one):
 
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
 
+My linked-list lab(https://github.com/JohnneyMing/04_Linked_list_Lab) uses
+dynamic memory allocation. 
 
-Queue lab:
+1.In the constructor, Nodes are created.
 
-https://github.com/MiamiOH-CSE274/03_Queue_Lab/blob/zhongm2/ArrayQueue.ipp
+2.In the `add()` method, `next` node and `prev` node are updated every time 
+you call this method.
 
-In my constructor, I allocated memory on line 26.
+3.In the `remove()` method, after the node is deleted by using `delete`, 
+`next` node and `prev` node will be updated.  
 
-In my destructor, I deallocated the memory and set it to be NULL, set a pointer
-to be NULL after doing deallocation is to avoid a pointer suffers from dangling
- pointer.
+4.Deallocating memory of that node was using after `delete` is called.
+
+5.In destructor, `remove()` method is called in a `for loop`.
+The `for loop` will loop through entire list and delete every node.
+Finally, do `delete dummyNode` to deallocate all dynamically allocated
+memory.
 
 
 
@@ -142,7 +236,7 @@ Possible sources of evidence (do one):
 
 For instance, in my Queue lab:
 
-https://github.com/MiamiOH-CSE274/03_Queue_Lab/blob/zhongm2/Queue.h
+https://github.com/JohnneyMing/03_Queue_Lab
 
 Using template to mimic an intreface in C++.
 
@@ -156,18 +250,4 @@ Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
 
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
-
-
-Queue Lab:
-
-
-1.We could use regular array instead of using circular-array, you could make 
-the array big enough in order to avoid using grow() when your array is full.
-Because grow() method will lower your program's running time. However, if the numbre of data you need to add to the array is gigantic, it is possible to run out of your RAM. But if you use circular array, this situation will not happen.
-
-2.We also could use linked-list to implement Queue. But it still has some 
-disvantages. For instance, if you implement add() method by using linked-list, 
-it means you need to keep adding elements at the end of linked-list. As the elements get larger, the longer will become longer.  But using circular-array, you 
-could avoid this condition.
-
 

@@ -149,7 +149,7 @@ The running time for destructor is linear time, since you need to loop through
 entire list by using while loop and call `remove()` method.
 
 The running time for `find()` method is linear, except you are looking for the
-last item or the first time in the list.
+last item or the first time in the list, which will be constant time.
 
 The running time for `set()` method is linear, since you need to invoke 
 `find()` method to access the node that you want to make changes.
@@ -190,7 +190,7 @@ The running time for `keyExists()`, `find()` and `remove()` are constant,
 except you need to hash through entire hash table to find the key, then it 
 will be linear.
 
-The running time for grow() is linear, because you need to copy N elements 
+The running time for `grow()` is linear, because you need to copy N elements 
 from original hash table to new hash table.
 
 

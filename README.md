@@ -37,20 +37,18 @@ appropriate. Not leaking memory
 ----
 Possible sources of evidence (do any one of these):
 
-* Binary Search Tree Lab (TODO)
-* Use a binary search tree or KD-Tree in the Starbucks project.
-* Use a binary search tree in the Zeitgeist project
-* Consult with Dr. Brinkman on an alternative project
+* https://github.com/aczirkle/06_BST_Lab 
+* This works for some cases but required more work in the next and previous methods
+* https://github.com/aczirkle/ClosestStarbucks
+* This is a 4 way b tree which checks for the closest starbucks given a latitude and longitude
 
 
 7 - Create an implementation of a Hash Table
 ----
 Possible sources of evidence (do any one of these):
 
-* https://github.com/MiamiOH-CSE274/05_Hashing_Lab
-* Use a hash table in the Zeitgeist project
-* Use locality-preserving hashing on the Starbucks project (not recommended!)
-* Consult with Dr. Brinkman on an alternative project
+* https://github.com/aczirkle/05_Hashing_Lab
+This is just a basic hashtable wihc works in constant time most of the time, O(n) at the worst
 
 7 - Create an implementation of a Heap
 ----
@@ -84,7 +82,21 @@ Possible sources of evidence (do any one of these):
 -----
 Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
-* Select any of the following labs, and analyse the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
+*  Queue:
+*  *
+*  *
+*  *
+*  *
+*  Linked List:
+*  *
+*  *
+*  *
+*  *
+*  Hash Table:
+*  *
+*  *
+*  *
+*  *
 
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
@@ -108,3 +120,18 @@ Possible sources of evidence (do one):
 Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
+
+In the case where someone wanted to organize all of their games alphabetically and holding some of the favorites able to be easily accesed.
+
+
+EC - 
+----
+I went the research fair.
+
+And here is a CS (related) limrick
+
+There was a man whose life was a mess
+which he blamed on his GPS
+he was never on time,
+it was the design
+it used binary search was total BS

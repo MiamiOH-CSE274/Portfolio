@@ -121,10 +121,10 @@ Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
 
-In the case where someone wanted to organize all of their games alphabetically and holding some of the favorites able to be easily accesed.
+The shuffle project was one that could have had different data structures as there are multiple types of shuffling. A linked list would be the first I can think of which would work and a hash table would work as well. They would both take about the same amount of time to create, but I think the hash table would be easier to shuffle if you just created two hashtables each with half the data in it and mixed them back together into the first hashtable while linked list would require either doing the same thing or adding a dummy node somewhere in the list and then adding the data into new list. The linked list might be less memory intensive in that case.
 
 
-EC - 
+EC  
 ----
 I went the research fair.
 

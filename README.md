@@ -131,7 +131,11 @@ I went the research fair.
 And here is a CS (related) limrick
 
 There was a man whose life was a mess
+
 which he blamed on his GPS
+
 he was never on time,
+
 it was the design
+
 it used binary search was total BS

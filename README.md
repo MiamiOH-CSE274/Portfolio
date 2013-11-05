@@ -26,7 +26,7 @@ Possible sources of evidence (do any one of these):
 
 7 - Create an implementation of a List
 ----
-https://github.com/proctopj/04_Linked_List_Lab
+https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/proctopj
 
 Possible sources of evidence (do any one of these):
 

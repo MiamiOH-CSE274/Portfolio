@@ -27,7 +27,7 @@ Possible sources of evidence (do any one of these):
 * Consult with Dr. Brinkman on an alternative project
 
 I chose to do the Queue Lab for the implementation of a Queue.
-Here is a link to my repository on github which includes the source code: https://github.com/kojsmn/03_Queue_Lab/tree/kojsmn
+Here is a link to my repository on github which includes the source code: https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/kojsmn
 
 7 - Create an implementation of a List
 ----
@@ -39,10 +39,10 @@ Possible sources of evidence (do any one of these):
 * Consult with Dr. Brinkman on an alternative project
 
 I chose to do the Linked List Lab for the implementation of a List.
-Here is a link to my repository on github which includes the source code: https://github.com/kojsmn/04_Linked_List_Lab/tree/kojsmn
+Here is a link to my repository on github which includes the source code: https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/kojsmn
 
 I also used a linked list as my data structure in the Shuffle project. 
-Here is a link to my repository on github: https://github.com/kojsmn/Shuffle/tree/kojsmn
+Here is a link to my repository on github: https://github.com/MiamiOH-CSE274/Shuffle/tree/kojsmn
 At the bottom of my repository there is a video link which shows the Shuffle project working.
 
 7 - Create an implementation of a Binary Search Tree
@@ -54,6 +54,8 @@ Possible sources of evidence (do any one of these):
 * Use a binary search tree in the Zeitgeist project
 * Consult with Dr. Brinkman on an alternative project
 
+I chose to do the Binary Search Tree Lab for the implementation of a Binary Search Tree.
+Here is a link to my repository on github which includes the source code: https://github.com/MiamiOH-CSE274/06_BST_Lab/tree/kojsmn
 
 7 - Create an implementation of a Hash Table
 ----
@@ -65,7 +67,7 @@ Possible sources of evidence (do any one of these):
 * Consult with Dr. Brinkman on an alternative project
 
 I chose to do the Hashing Lab for the implementation of a Hash Table.
-Here is a linke to my repository on github which includes the source code: https://github.com/kojsmn/05_Hashing_Lab/tree/kojsmn
+Here is a link to my repository on github which includes the source code: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/kojsmn
 
 7 - Create an implementation of a Heap
 ----
@@ -76,6 +78,9 @@ Possible sources of evidence (do any one of these):
 * Implement a heap as part of the Graph Algorithms lab (TODO)
 * Implement a heap as part of the Graph Project (TODO)
 * Consult with Dr. Brinkman on an alternative project
+
+I chose to do the Heap Lab for the implementation of a Heap.
+Here is a link to my repository on github which includes the source code: https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/kojsmn
 
 7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
 ----
@@ -102,20 +107,20 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
 
 Queue Lab:
-	The add() method takes O(1) time or linear time unless grow is called, then it takes O(n) time since grow takes O(n) time.
-	The remove() method takes O(1) time or linear time unless grow is called, then it takes O(n) time since grow takes O(n) time.
-	The getNumItems() method takes O(1) time or linear time.
-	The grow() method takes O(n) time or constant time.
+	The add() method takes O(1) time or constant time unless grow is called, then it takes O(n) time since grow takes O(n) time.
+	The remove() method takes O(1) time or constant time unless grow is called, then it takes O(n) time since grow takes O(n) time.
+	The getNumItems() method takes O(1) time or constant time.
+	The grow() method takes O(n) time or linear time.
 	Link to the methods: https://github.com/kojsmn/03_Queue_Lab/blob/kojsmn/ArrayQueue.ipp
 
 Linked List Lab:
-	The find() method takes O(n) time or constant time since there is a for loop.
+	The find() method takes O(n) time or linear time since there is a for loop, unless the first or last item is being found. If the first or last item is being found it takes 0(1) or constant time.
 	The set() method takes O(n) time since find is called and find takes O(n) time.
 	The add() method takes O(n) time since find is called and find takes O(n) time.
 	The remove() method takes O(n) time since find is called and find takes O(n) time.
 	The get() method takes O(n) time since find is called and find takes O(n) time.
 	The splice() method takes O(n) time since find is called and find takes O(n) time.
-	The size() method takes O(1) time or linear time.
+	The size() method takes O(1) time or constant time.
 	Link to the methods: https://github.com/kojsmn/04_Linked_List_Lab/blob/kojsmn/LinkedList.ipp
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
@@ -138,3 +143,7 @@ Possible sources of evidence (do one):
 Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
+
+Extra Credit - 5
+
+I attended the Research Fair. I talked to Mr. Stanley about Computer Security as well as professors that attended. 

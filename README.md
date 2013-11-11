@@ -66,6 +66,12 @@ Possible sources of evidence (do any one of these):
 * Use locality-preserving hashing on the Starbucks project (not recommended!)
 * Consult with Dr. Brinkman on an alternative project
 
+
+<strong><em>Evidence:<em></strong>
+
+
+<li>I am able to create an implementation of a Hash Table, Please see: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/luoy6</li>
+
 7 - Create an implementation of a Heap
 ----
 Possible sources of evidence (do any one of these):

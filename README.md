@@ -86,7 +86,7 @@ Binary Search Tree:
 BSTs are structured so that all nodes that have keys less than a specific node are all represented on the left side of that node and all nodes with keys larger than a specific node are all represented on the right of that node, methods must only check some of the values of a specific branch in the tree rather than all of them to travel to a specific key. The branches can range from height 0 to height n. In a perfectly balanced tree, the branches always have a height of log(n). This is due to the fact that the last row of nodes in a tree contains 1 more node than the rest of the tree.
 
 Constructor-O(1), since all this does is set the variable root to NULL.
-Destructor-O(n*h), since the method must first travel the height of the tree. It does this for every item in the tree.
+Destructor-O(n), since the method visits every node to remove it, the destructor depends on the number of items in the list
 size()-O(n), since the method first must visit every node and return 1 plus size(r) called on the adjacent nodes.
 add(k,x)-O(h), since the method must travel to the bottom of a branch in order to create a new node to store the data.
 remove(k)-O(h), since the method must first find the node to remove, the furthest one down requiring te method to travel th height of the tree. Even when removing an internal node, the method may have to travel further down a branch to find a node to replace the removed node.

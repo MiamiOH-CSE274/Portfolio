@@ -108,9 +108,9 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 <strong><em>Evidences:</em></strong>
 
-<li>Please see running time analysis section in my 03_Queue_Lab: https://github.com/luo-yu/03_Queue_Lab/tree/luoy6</li>
+<li>Please see running time analysis section in my 03_Queue_Lab: https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/luoy6</li>
 
-<li>Please see running time analysis section in my 04_Linked_List_Lab: https://github.com/luo-yu/04_Linked_List_Lab/tree/luoy6</li>
+<li>Please see running time analysis section in my 04_Linked_List_Lab: https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/luoy6</li>
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----

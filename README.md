@@ -52,6 +52,10 @@ Possible sources of evidence (do any one of these):
 * Use a binary search tree in the Zeitgeist project
 * Consult with Dr. Brinkman on an alternative project
 
+<strong><em>Evidence:<em></strong>
+
+
+<li>I am able to create an implementation of a Binary Search Tree, Please see: </li>
 
 7 - Create an implementaiton of a Hash Table
 ----

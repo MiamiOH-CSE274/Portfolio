@@ -27,9 +27,9 @@ Possible sources of evidence (do any one of these):
 
 <strong><em>Evidences:</em></strong>
 
-<li>I am able to create an implementation of a Queue. Please see: https://github.com/luo-yu/03_Queue_Lab/tree/luoy6</li>
+<li>I am able to create an implementation of a Queue. Please see: https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/luoy6</li>
 
-<li>I am able to use a queue as my data structure in the Shuffle project. Please see: https://github.com/luo-yu/Shuffle/tree/luoy6</li>
+<li>I am able to use a queue as my data structure in the Shuffle project. Please see: https://github.com/MiamiOH-CSE274/Shuffle/tree/luoy6</li>
 7 - Create an implementation of a List
 ----
 Possible sources of evidence (do any one of these):

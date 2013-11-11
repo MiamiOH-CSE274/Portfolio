@@ -41,7 +41,7 @@ Possible sources of evidence (do any one of these):
 
 <strong><em>Evidence:<em></strong>
 
-<li>I am able to create an implementation of a List, Please see: https://github.com/luo-yu/04_Linked_List_Lab/tree/luoy6</li>
+<li>I am able to create an implementation of a List, Please see: https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/luoy6</li>
 
 7 - Create an implementation of a Binary Search Tree
 ----

@@ -71,7 +71,9 @@ Possible sources of evidence (do any one of these):
 Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
+* 
 Linked List:
+
 Constructor-O(1), since it always creates just one node and then connects it to itself
 Destructor-O(n), since the method visits every node to remove it, the destructor depends on the number of items in the list
 find(i)-O(n), since in order to return the node that is right in the middle of the list you have to travel to every node before it, find relies on the number of items in the list. However, you can find an item at the beginning or the end of the list with O(1) time, since the list is circular, allowing you to move forward or backwards through the array.

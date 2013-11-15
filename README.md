@@ -29,32 +29,21 @@ I have implemented a List, specifically, a Linked List, in the Linked List Lab, 
 
 7 - Create an implementation of a Binary Search Tree
 ----
-Possible sources of evidence (do any one of these):
 
-* Binary Search Tree Lab (TODO)
-* Use a binary search tree or KD-Tree in the Starbucks project.
-* Use a binary search tree in the Zeitgeist project
-* Consult with Dr. Brinkman on an alternative project
+See my implementation of a BST: https://github.com/MiamiOH-CSE274/06_BST_Lab/blob/blasedd/BST.ipp
+
 
 
 7 - Create an implementation of a Hash Table
 ----
-Possible sources of evidence (do any one of these):
 
-* https://github.com/MiamiOH-CSE274/05_Hashing_Lab
-* Use a hash table in the Zeitgeist project
-* Use locality-preserving hashing on the Starbucks project (not recommended!)
-* Consult with Dr. Brinkman on an alternative project
+See my implementation of a Hash Table: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/blob/blasedd/HashTable.ipp
+
 
 7 - Create an implementation of a Heap
 ----
-Possible sources of evidence (do any one of these):
 
-* Heap lab (TODO)
-* Implement heap sort in the Sorting lab (TODO)
-* Implement a heap as part of the Graph Algorithms lab (TODO)
-* Implement a heap as part of the Graph Project (TODO)
-* Consult with Dr. Brinkman on an alternative project
+See my implementation of a Heap here: https://github.com/MiamiOH-CSE274/07_Heap_Lab/blob/blasedd/Heap.ipp
 
 7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
 ----

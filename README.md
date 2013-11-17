@@ -123,9 +123,13 @@ The running time for `add()` method is constant, unless `grow()` is called.
 The running time for `remove()` method is constant. Since this method is to
 remove the first element from array.
 
-The running time for constructor is constant.
+The running time for constructor is constant if the type parameter is basic 
+type. But it might take linear time if type parameter is a class, because
+a class can handle more than one datatype.
 
-The running time for destructor is constant.
+The running time for destructor is constant if the type parameter is basic
+type. Same as `constructor`, it might take linear time if type parameter
+is a class.
 
 The running time for `grow()` method is linear, because you need to copy the 
 number of N elements from original array and add them to new array.

@@ -186,9 +186,8 @@ The running time for destructor is constant.
 The running time for `size()` method is constant, it only returns the number
 of element in the array.
 
-The running time for `keyExists()`, `find()` and `remove()` are constant,
-except you need to hash through entire hash table to find the key, then it 
-will be linear.
+The running time for `keyExists()`, `find()`, `remove()` and `add()` are 
+constant time if the hashtable was designed approritately.
 
 The running time for `grow()` is linear, because you need to copy N elements 
 from original hash table to new hash table.

@@ -128,6 +128,8 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 <li>Please see running time analysis section in my 04_Linked_List_Lab: https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/luoy6</li>
 
+<li>Please see running time analysis section in my 05_Hashing_Lab: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/luoy6</li>
+
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
 Possible sources of evidence (do one):

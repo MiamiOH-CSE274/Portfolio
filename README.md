@@ -96,6 +96,12 @@ Possible sources of evidence (do any one of these):
 * Graph project
 * Consult with Dr. Brinkman on an alternative project
 
+
+<strong><em>Evidence:<em></strong>
+
+<li>I am able to create an implementation of a Adjacency List, Please see: https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/luoy6 </li>
+
+
 7 - Implement graph algorithms
 ----
 Possible sources of evidence (do any one of these):
@@ -104,6 +110,11 @@ Possible sources of evidence (do any one of these):
 * Graph Algorithms lab
 * Graph project
 * Consult with Dr. Brinkman on an alternative project
+
+<strong><em>Evidence:<em></strong>
+
+<li>I am able to implement graph algorithms, Please see: https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/luoy6 </li>
+
 
 21 - Determine space and time requirements of common data structure methods
 -----

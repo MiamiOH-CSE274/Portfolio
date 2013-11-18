@@ -154,6 +154,8 @@ Possible sources of evidence (do one):
 
 <li>Please see:https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/luoy6 </li>
 
+<li>In C++, templates are a way to make code more reusable. Function templates are special functions that can operate with generic types. This allows the programmers to create a function template whose functionality can be adapted to more than one type or class without repeating the entire code for each type. To create a template function, we use “template <class type>” on top of the function header. In my lab, the template function is placed within the “LinkedList.ipp” file. The class type T is a generic type; this means that we can reuse these template functions for different types later on. Normally we put declarations in the .h file and the code in a matching .cpp file. Unfortunately, when working with templates, this doesn’t work very well. If we try to compile a “LinkedList.cpp” file with template functions in it, the compiler will not know what a type “T” is, and so the compile will fail. This is because .cpp files are compiled independently.  So when we use template class in C++, we have to include the source code in the “LinkedList.ipp” at the end of the “LinkedList.h” file. </li>
+
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application
 ----

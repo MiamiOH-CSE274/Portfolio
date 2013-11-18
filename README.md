@@ -166,3 +166,14 @@ Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
 <strong><em>Evidences:<em></strong>
 <li>Here is my Shuffle project. Please see: https://github.com/MiamiOH-CSE274/Shuffle/tree/luoy6</li>
+
+In the Shuffle project, I was asked to use a data structure to simulate the shuffling a deck of cards. I chose to use an array based queue to simulate a Hindu shuffle. The Hindu shuffle rearranges the order or the cards in segments. So in order to simulate a Hindu shuffle, there is one important operation is needed. That is, I need to splice a segment (chunk) of cards from the deck and place the segment (chunk) into appropriate position in the deck. 
+
+There are two data structure can be used for this project, an array based queue and a linked list. As I stated, I chose to use an array based queue instead of a linked list. The reason I chose the queue is because that I believed that there was no particular advantages using linked list than using array based queue. 
+
+If I used a linked list, I need to use a splice method. In my 04_LinkedList_Lab, I have a splice method. This splice method will remove several consecutive nodes and insert into the target list at a specified position. However, this splice method takes linear running time, O (n), where n is the index position in the targeted linked list. Most of the operation in this splice method takes constant time; however, this splice method calls a find method. With linked list, a find operation will take linear time because I need to traverse to a particular position in the target list. Since I did a Hindu shuffle, I need to splice a segment of cards in the front of the original linked list, and I need to place this segment at the end of the target list. This means that the find method will have to traverse the whole target list. 
+
+I used an array queue for the Hindu shuffle. I used the array queue from my 03_Queue_Lab. With the array queue, when I do a splice, I remove a segment of cards from the queue, which takes O(n), where n is the number of cards in the segments. I repeatedly doing this until that the queue is empty. So the total cost for the splice operation takes O (m*n), where m is the number of segments, and n is the number of cards in each segments. Even though it takes (m*n), but m will be a constant number, considering that a deck of cards only have 52 cards. For example, if each segment is 20 cards, then m will be just 2.6. So, the splice operation actually takes O (n) time. Therefore, when doing the splice operation for the Hindu shuffle, using linked list has not particular advantages over using an array-based queue. 
+
+
+

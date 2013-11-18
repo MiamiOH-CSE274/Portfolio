@@ -84,7 +84,7 @@ Possible sources of evidence (do any one of these):
 
 <strong><em>Evidence:<em></strong>
 
-<li>I am able to create an implementation of a Heap, Please see: https://github.com/luo-yu/07_Heap_Lab/tree/luoy6/ </li>
+<li>I am able to create an implementation of a Heap, Please see: https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/luoy6 </li>
 
 
 7 - Create an implementation of either Adjanency Lists or Adjacency Matrices

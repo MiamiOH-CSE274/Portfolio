@@ -20,14 +20,14 @@ Body of portfolio
 ----
 My source of evidence is going to be my Queue Lab. By going to the link below, one can see I have done all required functions, and through feedback and my own personal code inspection, everything works as it should in the program.
 
-* https://github.com/emrickgarrett/03_Queue_Lab
+* https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/emrickgj
 
 7 - Create an implementation of a List
 ----
 My source of evidence is going to be my LinkedList Lab, as well as an implementation of it in my Zeitgeist project to keep track of the top words in the documents. This may change in the future, based on how the cache actually works. If it still runs efficiently while adding/getting indexes from the array without using the LinkedList part, then this will stay. Based on the performance, I may use an alternative method I further describe in the Portfolio project to hopefully speed up the program dramatically.
 
 
-* https://github.com/MiamiOH-CSE274/04_Linked_List_Lab
+* https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/emrickgj
 
 
 7 - Create an implementation of a Binary Search Tree
@@ -92,8 +92,8 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 Looking at my Linked_List_Lab and Queue lab, I believe I have the space and time requirements of these common data structure methods, although I'm not sure. If this is incorrect, I'd like to know or if I need to go into more detail.
 
 
-* https://github.com/emrickgarrett/03_Queue_Lab
-* https://github.com/emrickgarrett/04_Linked_List_Lab
+* https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/emrickgj
+* https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/emrickgj
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
 
 

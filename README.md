@@ -59,7 +59,7 @@ Possible sources of evidence (do any one of these):
 ----
 Possible sources of evidence (do any one of these):
 
-* Heap lab (TODO)
+* Heap lab https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/proctopj
 * Implement heap sort in the Sorting lab (TODO)
 * Implement a heap as part of the Graph Algorithms lab (TODO)
 * Implement a heap as part of the Graph Project (TODO)
@@ -69,7 +69,7 @@ Possible sources of evidence (do any one of these):
 ----
 Possible sources of evidence (do any one of these):
 
-* Graph lab
+* Graph lab https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/proctopj
 * Graph Algorithms lab
 * Graph project
 * Consult with Dr. Brinkman on an alternative project

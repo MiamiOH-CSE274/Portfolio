@@ -5,8 +5,6 @@ Document completion of the course's learning outcomes.
 
 Name: Garrett Emrick
 
-I'm not entirely sure what state the portfolio is supposed to be in, or what all is supposed to be done, so I hope what I have is sufficient.
-
 Instructions
 ====
 The goal of this is to make it very easy for me (or an employer, or a teaching assistant) to see whether or not you have mastered the material of the class. The hope is that I would be able to grade your work without downloading and compiling your code. If you have recorded proper video demonstrations of your programs, that should be sufficient. You will also want to write a paragraph or so making your case for why you deserve full credit for particular learning outcome (or if you don't, then you should say so).
@@ -36,6 +34,8 @@ My source of evidence is going to be my LinkedList Lab, as well as an implementa
 ----
 Possible sources of evidence (do any one of these):
 
+One can see an implementation of a Binary Search Tree from my BST Lab.
+
 * Binary Search Tree Lab (TODO)
 * Use a binary search tree or KD-Tree in the Starbucks project.
 * Use a binary search tree in the Zeitgeist project
@@ -55,6 +55,8 @@ I plan on implementing the hash table as part of my Zeitgeist project, and may e
 ----
 Possible sources of evidence (do any one of these):
 
+//NEED TO DO HEAP LAB
+
 * Heap lab (TODO)
 * Implement heap sort in the Sorting lab (TODO)
 * Implement a heap as part of the Graph Algorithms lab (TODO)
@@ -65,6 +67,8 @@ Possible sources of evidence (do any one of these):
 ----
 Possible sources of evidence (do any one of these):
 
+One can see my implementation of an Adjacency list in my Graph Lab.
+
 * Graph lab
 * Graph Algorithms lab
 * Graph project
@@ -73,6 +77,8 @@ Possible sources of evidence (do any one of these):
 7 - Implement graph algorithms
 ----
 Possible sources of evidence (do any one of these):
+
+One can see my implementation of my graphing algorithm in my "Graph Lab" project.
 
 * Graph lab
 * Graph Algorithms lab
@@ -98,12 +104,16 @@ Memory in C++ is handled much differently than memory in a language such as Java
 
 When dynamic allocation happens, one needs to use the delete key to clear up that memory. If one forgets to release that memory, it is what is commonly known as a "memory leak". There is no way to fix it once it has already been done, which is why it is important to not forget to do it in your program,
 and also make sure the delete key is happening. One location many classes that use dynamic allocation, such as our Linked_List_Lab, is the destructor which will allow one to free up all memory being held, before the class itself is released from memory. The Linked_List_Lab can clearly be seen using the 
-destructor correctly, and makes use of the destructor.
+destructor correctly.
+
+The destructor looks similar to the constructor, which is used for initialization, but has a "~" in front of it. The key difference between this and the destructor, is that the destructor is called upon the objects deletion. Because this is called before the object is "deleted", is that it allows you to free
+up any memory that was dynamically allocated within the object, such as member variables, so that memory leak is not an issue. 
+
+It's also important to remember the equivalent for an array. For deleting an array that was dynamically allocated, one will use the "delete[]" instead of using "delete"!
 
 Possible sources of evidence (do one):
 
-* https://github.com/emrickgarrett/04_Linked_List_Lab
-
+* https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/emrickgj
 
 5 - Create collection classes using templates in C++
 ----
@@ -117,7 +127,7 @@ I'm not entirely sure what an interesting implementation exactly is, as it's kin
 30 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
 
-I plan on using this to go over two different projects that have different problems, with comparison to help justify the selection of the data structures and why a certain data structure is better for either situation. The first one I plan on using is the Zeitgeist, the other will be a future project.
+For this I plan on using Zeitgeist (need to finish) and my Vise Project.
 
 Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 

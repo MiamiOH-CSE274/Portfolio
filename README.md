@@ -45,23 +45,16 @@ See my implementation of a Hash Table: https://github.com/MiamiOH-CSE274/05_Hash
 
 See my implementation of a Heap here: https://github.com/MiamiOH-CSE274/07_Heap_Lab/blob/blasedd/Heap.ipp
 
-7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
+7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----
-Possible sources of evidence (do any one of these):
 
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+See my implementation of a Graph here: https://github.com/MiamiOH-CSE274/08_Graph_Lab/blob/blasedd/Graph.cpp
 
 7 - Implement graph algorithms
 ----
 Possible sources of evidence (do any one of these):
 
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+See my implementation of a Graph here: https://github.com/MiamiOH-CSE274/08_Graph_Lab/blob/blasedd/Graph.cpp
 
 21 - Determine space and time requirements of common data structure methods
 -----

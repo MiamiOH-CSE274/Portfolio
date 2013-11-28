@@ -43,6 +43,8 @@ An implementation of a List can be found at:  https://github.com/MiamiOH-CSE274/
 ----
 Possible sources of evidence (do any one of these):
 
+An implementation of a BST can be found at: https://github.com/MiamiOH-CSE274/06_BST_Lab/tree/bickledb
+
 * Binary Search Tree Lab (TODO)
 * Use a binary search tree or KD-Tree in the Starbucks project.
 * Use a binary search tree in the Zeitgeist project
@@ -53,6 +55,7 @@ Possible sources of evidence (do any one of these):
 ----
 Possible sources of evidence (do any one of these):
 
+An implemention of a Hash Table can be found at: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/bickledb
 * https://github.com/MiamiOH-CSE274/05_Hashing_Lab
 * Use a hash table in the Zeitgeist project
 * Use locality-preserving hashing on the Starbucks project (not recommended!)
@@ -61,6 +64,8 @@ Possible sources of evidence (do any one of these):
 7 - Create an implementation of a Heap
 ----
 Possible sources of evidence (do any one of these):
+
+An implementation of a Heap can be found at: https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/bickledb
 
 * Heap lab (TODO)
 * Implement heap sort in the Sorting lab (TODO)
@@ -72,6 +77,7 @@ Possible sources of evidence (do any one of these):
 ----
 Possible sources of evidence (do any one of these):
 
+An Implementation of an Adjacency Matrix can be found at https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/bickledb
 * Graph lab
 * Graph Algorithms lab
 * Graph project
@@ -117,13 +123,18 @@ Possible sources of evidence (do one):
 
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
 
+Evidence: https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/bickledb
+	This example of a heap utilizes a dynamically allocated array. The size of the array is stored in a variable to prevent any reading out of the bounds of the array. Due to the nature of the Heap, the array must be able to be resized, and call a grow() method. This Heap's grow method 
+	is located at https://github.com/MiamiOH-CSE274/07_Heap_Lab/blob/bickledb/Heap.ipp on line 17. To change the size of the array, a completely new array is allocated. The old array is copied over, and then to avoid leaking memory, the old array is deleted with delete[]. Then, when the heap
+	needs to be deallocated. In the destuctor, the backing array is deleted with the delete[] function.
 
 5 - Create collection classes using templates in C++
 ----
 Possible sources of evidence (do one):
 
 * Any of the labs or projects, provided it uses templates in an interesting way.
-
+Evidence: https://github.com/MiamiOH-CSE274/07_Heap_Lab/blob/bickledb/Heap.ipp
+	In this example, a template class is used to create a Heap.
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application
 ----

@@ -81,6 +81,8 @@ https://github.com/JohnneyMing/05_Hashing_Lab
 ----
 Possible sources of evidence (do any one of these):
 
+Heap lab: https://github.com/MiamiOH-CSE274/07_Heap_Lab
+
 * Heap lab (TODO)
 * Implement heap sort in the Sorting lab (TODO)
 * Implement a heap as part of the Graph Algorithms lab (TODO)
@@ -91,6 +93,8 @@ Possible sources of evidence (do any one of these):
 ----
 Possible sources of evidence (do any one of these):
 
+Graph lab: https://github.com/MiamiOH-CSE274/08_Graph_Lab
+
 * Graph lab
 * Graph Algorithms lab
 * Graph project
@@ -99,6 +103,8 @@ Possible sources of evidence (do any one of these):
 7 - Implement graph algorithms
 ----
 Possible sources of evidence (do any one of these):
+
+Graph lab: https://github.com/MiamiOH-CSE274/08_Graph_Lab
 
 * Graph lab
 * Graph Algorithms lab

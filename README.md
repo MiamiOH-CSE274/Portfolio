@@ -214,21 +214,25 @@ Possible sources of evidence (do one):
 My linked-list lab(https://github.com/JohnneyMing/04_Linked_list_Lab) uses
 dynamic memory allocation. 
 
-1.In the constructor, Nodes are created.
+1. In the constructor in LinkedList.ipp file, `dummyNode = new Node()` is using dynamic memory allocation by using `new`,it created a memory block on heap. 
+In Java, when you use `new`, an object will be created on JVM heap.
 
-2.In the `add()` method, `next` node and `prev` node are updated every time 
-you call this method.
+2. The local variables in each function are allocated on the `Stack` of the
+program. In Java, local variables are also stored on the `Stack`.
 
-3.In the `remove()` method, after the node is deleted by using `delete`, 
-`next` node and `prev` node will be updated.  
+3. Memory leaking in C++ means an object is stored in memory can not be accessed by the running code. Dangling pointers are pointers that do not point to a 
+valid object of the appropriate type(WIKIPEDIA). This program does not leak
+memory, and does not suffer from dangling pointers. In `remove()` method, once  you find the node that needs to be removed, `delete` it (memory freed up). And 
+set the node to be `NULL` to avoid suffering from dangling pointers. 
 
-4.Deallocating memory of that node was using after `delete` is called.
+4. Java allocates memory by using `new` operator, and dellocate memory by 
+relying on the garbage collector. The garbage collector performs memory 
+management automatically. It can deallocate memory occupied by objects that are
+no longeer in use by the program.
 
-5.In destructor, `remove()` method is called in a `for loop`.
-The `for loop` will loop through entire list and delete every node.
-Finally, do `delete dummyNode` to deallocate all dynamically allocated
-memory.
 
+
+********************************************************************************
 
 
 5 - Create collection classes using templates in C++

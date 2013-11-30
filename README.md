@@ -175,5 +175,12 @@ If I used a linked list, I need to use a splice method. In my 04_LinkedList_Lab,
 
 I used an array queue for the Hindu shuffle. I used the array queue from my 03_Queue_Lab. With the array queue, when I do a splice, I remove a segment of cards from the queue, which takes O(n), where n is the number of cards in the segments. I repeatedly doing this until that the queue is empty. So the total cost for the splice operation takes O (m*n), where m is the number of segments, and n is the number of cards in each segments. Even though it takes (m*n), but m will be a constant number, considering that a deck of cards only have 52 cards. For example, if each segment is 20 cards, then m will be just 2.6. So, the splice operation actually takes O (n) time. Therefore, when doing the splice operation for the Hindu shuffle, using linked list has not particular advantages over using an array-based queue. 
 
+<strong><em>Closest Starbucks<em></strong>
+Two possible data structures can be used for the Closest Starbucks project, KD-Trees and Grid (2-d array used as dictionary).  In this project, the data structure must support getNearest() operation.  This method will find and return a nearest location relative to a particular position. 
 
+Using 2-d tree, all the locations are stored as nodes. These nodes are not stored in the internal nodes. The internal nodes do not contain Starbucks locations. They only contain the middle point of x-axis (latitude) and y-axis (longitude).
+
+The choice between 2-d tree and 2-d array depends on the input data set. In this project, the input data set contains Starbucks locations identified by their address, longitude, and latitude. The data set is not sorted. Instead, the data set is randomly distributed. In this case, using 2-d tree is better choice.  Using 2-d tree, the getNearest() will return a pretty accurate location, and it should also be fairly fast.  Getting the nearest location is an O (log N) operation since the input data set contains randomly distributed locations. If using 2-d array for the same input data set, getting the nearest location will be an O (n) operation. 
+
+If the input data set is sorted, then using Grid (2-d array) would be better. Using 2-d array with sorted locations, find a nearest location is an O (1) operation and it will also be very accurate. 
 

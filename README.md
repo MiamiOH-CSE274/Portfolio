@@ -176,8 +176,8 @@ If I used a linked list, I need to use a splice method. In my 04_LinkedList_Lab,
 I used an array queue for the Hindu shuffle. I used the array queue from my 03_Queue_Lab. With the array queue, when I do a splice, I remove a segment of cards from the queue, which takes O(n), where n is the number of cards in the segments. I repeatedly doing this until that the queue is empty. So the total cost for the splice operation takes O (m*n), where m is the number of segments, and n is the number of cards in each segments. Even though it takes (m*n), but m will be a constant number, considering that a deck of cards only have 52 cards. For example, if each segment is 20 cards, then m will be just 2.6. So, the splice operation actually takes O (n) time. Therefore, when doing the splice operation for the Hindu shuffle, using linked list has not particular advantages over using an array-based queue. 
 
 <strong><em>Closest Starbucks<em></strong>
-
 Two possible data structures can be used for the Closest Starbucks project, KD-Trees and Grid (2-d array used as dictionary).  In this project, the data structure must support getNearest() operation.  This method will find and return a nearest location relative to a particular position. 
+
 
 Using 2-d tree, all the locations are stored as nodes. These nodes are not stored in the internal nodes. The internal nodes do not contain Starbucks locations. They only contain the middle point of x-axis (latitude) and y-axis (longitude).
 

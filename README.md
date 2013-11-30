@@ -20,7 +20,7 @@ Body of portfolio
 
 7 - Create an implementation of a Queue
 ----
-https://github.com/proctopj/03_Queue_Lab
+https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/proctopj
 
 Possible sources of evidence (do any one of these):
 
@@ -42,6 +42,8 @@ Possible sources of evidence (do any one of these):
 
 7 - Create an implementation of a Binary Search Tree
 ----
+https://github.com/MiamiOH-CSE274/06_BST_Lab/tree/proctopj
+
 Possible sources of evidence (do any one of these):
 
 * Binary Search Tree Lab (TODO)
@@ -50,8 +52,10 @@ Possible sources of evidence (do any one of these):
 * Consult with Dr. Brinkman on an alternative project
 
 
-7 - Create an implementaiton of a Hash Table
+7 - Create an implementation of a Hash Table
 ----
+https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/proctopj
+
 Possible sources of evidence (do any one of these):
 
 * https://github.com/MiamiOH-CSE274/05_Hashing_Lab
@@ -61,9 +65,11 @@ Possible sources of evidence (do any one of these):
 
 7 - Create an implementation of a Heap
 ----
+https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/proctopj
+
 Possible sources of evidence (do any one of these):
 
-* Heap lab https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/proctopj
+* Heap lab
 * Implement heap sort in the Sorting lab (TODO)
 * Implement a heap as part of the Graph Algorithms lab (TODO)
 * Implement a heap as part of the Graph Project (TODO)
@@ -71,9 +77,11 @@ Possible sources of evidence (do any one of these):
 
 7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
 ----
+https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/proctopj
+
 Possible sources of evidence (do any one of these):
 
-* Graph lab https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/proctopj
+* Graph lab 
 * Graph Algorithms lab
 * Graph project
 * Consult with Dr. Brinkman on an alternative project
@@ -93,21 +101,40 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
 
-For Queue (Link provided above),
+For Queue https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/proctopj,
 
 The running times for add() and remove() are constant, while the grow() function is linear where n is the number items in the initial
 Queue which are then added to the new Queue after the array size has been doubled. The constructor and destructor are also both 
 constant, but in reality if this Queue were to be applied for classes, it would become linear time as each item would need to be 
-destructed according to its class parameters.
+destructed according to its class parameters. In terms of space requirements, the data structure has exactly n records(array spaces), 
+1 for each stored item.
 
 
-For Linked List (Link provided above),
+For Linked List https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/proctopj,
 
 The running time of size() is always constant due to existing control structures within other methods. find(), get(), add(), and 
 remove() are selectively constant (for cases of an index of 0 or size-1 (where the size variable is actually numItems)) but 
 otherwise will run in linear time. getAll is constant because it concatenates a LinkedList to the end of the main one, meaning 
 an index of numItems-1 is used. The constructor method for these purposes is constant, but one could make a linear-time constructor
-for a predetermined arrangement of data. In fact I should probably do that before the final iteration of this portfolio.
+for a predetermined arrangement of data. In fact I should probably do that before the final iteration of this portfolio.In terms of 
+space requirements, the data structure has exactly n records(nodes), 1 for each stored item.
+
+
+For Binary Search Tree https://github.com/MiamiOH-CSE274/06_BST_Lab/tree/proctopj
+
+The running time of size() can be made constant if you store the variable numItems and increment it in add(). Otherwise it is O(n) 
+by way of using a depth-first search (also featured in my code for this lab, but not utilized). Add() is effectively O(h) where h is
+the height of BST. This height can be expressed as base2 log(n) where n is the number of nodes in the tree. Note the log-base changes
+as the number of children per node changes. If each node has 3 children, then height is base3 log(n). So, in short, add runs in O(lg(n)) time.
+
+Remove() runs in O(2lg(n)), 2 because the node must be found if it exists O(lg(n)), and then according to the implementation, bubble to the 
+bottom O(lg(n)), and then be set to NULL and deleted (each O(1)).
+
+max() and min() run in O(lg(n)) time on average, but the balance of the tree can affect this and all methods in this lab except size()
+
+next() and prev() run in O(lg(n)) time as well, as they are based on the same flavor of algorithm as add.
+
+In terms of space requirements, the data structure has exactly n records(nodes), 1 for each stored item.
 
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
@@ -116,15 +143,15 @@ Possible sources of evidence (do one):
 
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
 
-For the LinkedList Lab(link provided above) we see dynamic memory allocation being used to construct and connect a data type of our own design
-called Node which contains data of an unknown type until execution and address markers to other Nodes in the Linked List. The dummyNode is
-generated first and made permanent by the new() function which gives it an address in the RAM which will not be changed or freed up until we 
-specify by use of the delete() function. Each time an item is added to the LinkedList, a new Node is generated to contain that item and then 
-link it to the adjacent Nodes at a given index in the LinkedList. Each time an item is removed, the nodes adjacent to the target restructure 
-their links to each other, and then the target is deleted so no dangling pointer (address to nowhere) is left behind. The LinkedList destructor
-employs a perfect loop of the Node destructor we call remove(), and it ensures not a single node, including the dummy, remains, and it doesn't 
-go beyond the LinkedList into other parts of the RAM and accidentally deleting extraneous addresses. We must manage memory by hand because C++ 
-does not automatically collect garbage the way Java does.
+For the LinkedList Lab(https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/proctopj) we see dynamic memory allocation being used to construct 
+and connect a data type of our own design called Node which contains data of an unknown type until execution and address markers to other Nodes in 
+the Linked List. The dummyNode is generated first and made permanent by the new() function which gives it an address in the RAM which will not be 
+changed or freed up until we specify by use of the delete() function. Each time an item is added to the LinkedList, a new Node is generated to contain 
+that item and then link it to the adjacent Nodes at a given index in the LinkedList. Each time an item is removed, the nodes adjacent to the target 
+restructure their links to each other, and then the target is deleted so no dangling pointer (address to nowhere) is left behind. The LinkedList destructor
+employs a perfect loop of the Node destructor we call remove(), and it ensures not a single node, including the dummy, remains, and it doesn't go beyond 
+the LinkedList into other parts of the RAM and accidentally deleting extraneous addresses. We must manage memory by hand because C++ does not automatically 
+collect garbage the way Java does.
 
 5 - Create collection classes using templates in C++
 ----
@@ -132,12 +159,7 @@ Possible sources of evidence (do one):
 
 * Any of the labs or projects, provided it uses templates in an interesting way.
 
-Again in the LinkedList lab we see a 2-layer usage of the template class. We have the abstract data type List with its own special template, 
-then a LinkedList template which adds in specific functions needed for this particular implementation, such as the takeAll() function. This 
-usage of templates keeps the project goals in mind as well as a convenient way to store directions for implementation while hiding the
-implementation in our LinkedList.ipp file. It also shows the inheritance of LinkedList from List as well as the privately owned structure,
-Node, on which it builds the collection as a whole, allowing any data type (labeled as T) to be entered into this collection. The implemented
-type is decided at execution time of the program, thus giving the collection flexibility by this construction of the templates.
+//TODO
 
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application

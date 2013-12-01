@@ -159,7 +159,18 @@ Possible sources of evidence (do one):
 
 * Any of the labs or projects, provided it uses templates in an interesting way.
 
-//TODO
+If we look at the Heap Labhttps://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/proctopj) We see a template of two classes:
+T is the data we wish to store, and Pri stands for priority: how important it is. Since a Heap is an implementation of 
+the Priority Queue ADT, the variable Pri is particularly important for this class. That said, the class Pri in this case 
+is implemented generally. This means one can technically set anything to be the data type used for priority here, even if
+it makes no sense, so long as there is a way to compare the data. 
+
+T has become a standard generic variable for us to hold any type of data, but the data in our case is for proprietary use
+only, so we the designers of the heap can ignore it. The point of generic variables is to create a collection class which can
+handle anything (within reason, hence the caveat of Pri needing to be a data type which can be compared to other Pri data).
+
+And I suppose the nestling of the data inside the C++ standard 'pair<a,b>' class is noteworthy, because otherwise I wouldn't
+have known the thing existed.
 
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application

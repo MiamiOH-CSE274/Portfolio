@@ -32,50 +32,32 @@ I have implemented a List, specifically, a Linked List, in the Linked List Lab, 
 
 7 - Create an implementation of a Binary Search Tree
 ----
-Possible sources of evidence (do any one of these):
 
-* Binary Search Tree Lab (TODO)
-* Use a binary search tree or KD-Tree in the Starbucks project.
-* Use a binary search tree in the Zeitgeist project
-* Consult with Dr. Brinkman on an alternative project
+See my implementation of a BST: https://github.com/MiamiOH-CSE274/06_BST_Lab/blob/blasedd/BST.ipp
+
 
 
 7 - Create an implementation of a Hash Table
 ----
-Possible sources of evidence (do any one of these):
 
-* https://github.com/MiamiOH-CSE274/05_Hashing_Lab
-* Use a hash table in the Zeitgeist project
-* Use locality-preserving hashing on the Starbucks project (not recommended!)
-* Consult with Dr. Brinkman on an alternative project
+See my implementation of a Hash Table: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/blob/blasedd/HashTable.ipp
+
 
 7 - Create an implementation of a Heap
 ----
-Possible sources of evidence (do any one of these):
 
-* Heap lab (TODO)
-* Implement heap sort in the Sorting lab (TODO)
-* Implement a heap as part of the Graph Algorithms lab (TODO)
-* Implement a heap as part of the Graph Project (TODO)
-* Consult with Dr. Brinkman on an alternative project
+See my implementation of a Heap here: https://github.com/MiamiOH-CSE274/07_Heap_Lab/blob/blasedd/Heap.ipp
 
-7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
+7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----
-Possible sources of evidence (do any one of these):
 
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+See my implementation of a Graph here: https://github.com/MiamiOH-CSE274/08_Graph_Lab/blob/blasedd/Graph.cpp
 
 7 - Implement graph algorithms
 ----
 Possible sources of evidence (do any one of these):
 
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+See my implementation of a Graph here: https://github.com/MiamiOH-CSE274/08_Graph_Lab/blob/blasedd/Graph.cpp
 
 21 - Determine space and time requirements of common data structure methods
 -----
@@ -123,3 +105,5 @@ The `grow()` method in this class uses pointer management instead of loops, maki
 Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
+
+In the Shuffle project, there are two reasonable data structures that can be used: an array-based queue, or a linked list. The feasibility of each structure depends on the method chosen for shuffling the deck of cards. An array-based queue has constant time operations on adding (as long as the array is not entirely filled up) and removing from the array. If the array is at capacity when another item is added to it, the running time becomes linear for that particular instance of adding to the array. A linked list, comparatively, has a nearly linear `add()` running time, unless the first or last “index” of the list is the target of the new data. `remove()` in a linked list could also potentially take linear time, depending on the location of the data that is to be removed. Splicing the list can also take linear time depending on the portion of the list that is to be removed. All of these running times are a result of the `find()`, since the list can only be traversed in a linear fashion.Despite these running time comparisons, there is no clear-cut preferred choice for data structure; it depends on the shuffling style selected. The typical bridge shuffle, for instance, is the perfect task for an array-queue, since it is only the bottom cards of two-halves of the deck that need to be taken out to combine into a shuffled deck. A linked list would require more operations to reset the pointers of the list, which causes the list to be less efficient for this particular shuffle. For shuffles similar to the Hindu shuffle, where the middle of the deck is separated and then the rest of the deck is added to the pile, the linked list is more efficient. It is technically not possible to remove the middle of a queue, since a queue by nature removes the front of the array every time. Using the splice method of linked lists makes the Hindu shuffle very practical.

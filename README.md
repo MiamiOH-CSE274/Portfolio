@@ -240,20 +240,40 @@ no longeer in use by the program.
 
 ********************************************************************************
 
-
 5 - Create collection classes using templates in C++
 ----
 Possible sources of evidence (do one):
 
 * Any of the labs or projects, provided it uses templates in an interesting way.
 
-For instance, in my Queue lab:
+Queue Lab:
 
-https://github.com/JohnneyMing/03_Queue_Lab
+https://github.com/MiamiOH-CSE274/03_Queue_Lab
 
-Using template to mimic an intreface in C++.
+Using `Templates` allows programmers to create one function that could handle 
+many different types. 
+
+For instance, this lab is using `Function template` that can accept arguments
+of many different types. In `ArrayQueue.ipp` file, there is a function called
+`getNumItems()` which returns the number of item in the array was defined as:
+  
+                         template<class T>
+
+			 unsigned long ArrayQueue<T>::getNumItems(){}
 
 
+In `main.cpp` file `void testCtor(ArrayQueue<int>& testQueue)` method, 
+it instantiated a version of the function where the type `T` is `int`.
+Because of using `Template`, you could be able to define your own data type.
+In this case, this function could also be called like:
+`void testCtor(ArrayQueue<string>& testQueue)` if the elements are stored in
+the array is `string`. It also works any other data type for which it makes
+sense to get the total amount of elements in the array, the type of elements
+could be 'int`, `string`, `class` etc.
+			 
+
+
+********************************************************************************
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application
 ----

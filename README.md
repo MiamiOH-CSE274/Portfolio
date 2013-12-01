@@ -114,7 +114,7 @@ Queue Lab:
 	The remove() method takes O(1) time or constant time unless grow is called, then it takes O(n) time since grow takes O(n) time.
 	The getNumItems() method takes O(1) time or constant time.
 	The grow() method takes O(n) time or linear time.
-	Link to the methods: https://github.com/kojsmn/03_Queue_Lab/blob/kojsmn/ArrayQueue.ipp
+	Link to the methods: https://github.com/MiamiOH-CSE274/03_Queue_Lab/blob/kojsmn/ArrayQueue.ipp
 
 Linked List Lab:
 	The find() method takes O(n) time or linear time since there is a for loop, unless the first or last item is being found. If the first or last item is being found it takes 0(1) or constant time.
@@ -124,7 +124,7 @@ Linked List Lab:
 	The get() method takes O(n) time since find is called and find takes O(n) time.
 	The splice() method takes O(n) time since find is called and find takes O(n) time.
 	The size() method takes O(1) time or constant time.
-	Link to the methods: https://github.com/kojsmn/04_Linked_List_Lab/blob/kojsmn/LinkedList.ipp
+	Link to the methods: https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/blob/kojsmn/LinkedList.ipp
 
 Binary Search Tree Lab:
 	The size() method takes O(n) time or linear time since each node is visited in orer to determine the number of items.
@@ -136,7 +136,7 @@ Binary Search Tree Lab:
 	The prev() method takes O(h) time, where h is the height of the tree. See the remove method for explanation of h.
 	The max() method takes O(h) time, where h is the height of the tree. See the remove method for explanation of h.
 	The min() method takes O(h) time, where h is the height of the tree. See the remove method for explanation of h.
-	
+	Link to the methods: https://github.com/MiamiOH-CSE274/06_BST_Lab/blob/kojsmn/BST.ipp#L88	
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
@@ -145,12 +145,19 @@ Possible sources of evidence (do one):
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
 
 
+
 5 - Create collection classes using templates in C++
 ----
 Possible sources of evidence (do one):
 
 * Any of the labs or projects, provided it uses templates in an interesting way.
+The Hashing Lab uses templates in an interesting way. The link to my Hashing Lab repository on github is: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/kojsmn
 
+Templates allow easy reuse of code. Templates can handle many different data types. This allows the programmer to decide what type of data type they would like to use.
+In the Hashing Lab, I use a template where that looks like template <class Key, class T>.  This allows the user to specify what data type they would like K(key) to be and what 
+data type they would like T(data) to be. In the main.cpp file this line:  HashTable<std::string,int> testTable; tells the compiler that K is a string type and T is an int type.
+With this template, we could change K and T to be whatever data types we would like without having to change the HashTable.ipp file that contains the methods. Since this is a template
+the methods in the HashTable.ipp file will run with different data types as K and T.
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
@@ -162,4 +169,4 @@ Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
 Extra Credit - 5
 
-I attended the Research Fair. I talked to Mr. Stanley about Computer Security as well as professors that attended. 
+I attended the Research Fair. I talked to Mr. Stanley about Computer Security as well as other professors that attended. 

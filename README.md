@@ -269,7 +269,7 @@ In this case, this function could also be called like:
 `void testCtor(ArrayQueue<string>& testQueue)` if the elements are stored in
 the array is `string`. It also works any other data type for which it makes
 sense to get the total amount of elements in the array, the type of elements
-could be 'int`, `string`, `class` etc.
+could be `int` , `string` , `class` etc.
 			 
 
 

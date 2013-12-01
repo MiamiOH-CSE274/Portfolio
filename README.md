@@ -91,6 +91,9 @@ Possible sources of evidence (do any one of these):
 * Graph project
 * Consult with Dr. Brinkman on an alternative project
 
+I chose to do the Graph Algorithms Lab for the implementation of an Adjancency Lists.
+Here is a link to my repository on github which includes the source code: https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/kojsmn
+
 7 - Implement graph algorithms
 ----
 Possible sources of evidence (do any one of these):
@@ -123,6 +126,18 @@ Linked List Lab:
 	The size() method takes O(1) time or constant time.
 	Link to the methods: https://github.com/kojsmn/04_Linked_List_Lab/blob/kojsmn/LinkedList.ipp
 
+Binary Search Tree Lab:
+	The size() method takes O(n) time or linear time since each node is visited in orer to determine the number of items.
+	The add() method takes O(h) time, where h is the height of the tree.  If the tree is balanced then h is logn and if the tree is unbalanced then h is n.
+	The remove() method takes O(h) time, where h is the height of the tree.  If the tree is balanced then h is log n and if the tree is unbalanced then h is n.
+	The find() method takes take O(h) time, where h is the height of the tree. See the remove method for explanation of h.
+	The keyExists() method takes 0(h) time, where h is the height of the tree. See the remove method for explanation of h. keyExists() calls find which takes O(h) time.
+	The next() method takes O(h) time, where h is the height of the tree. See the remove method for explanation of h.
+	The prev() method takes O(h) time, where h is the height of the tree. See the remove method for explanation of h.
+	The max() method takes O(h) time, where h is the height of the tree. See the remove method for explanation of h.
+	The min() method takes O(h) time, where h is the height of the tree. See the remove method for explanation of h.
+	
+
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
 Possible sources of evidence (do one):
@@ -143,6 +158,7 @@ Possible sources of evidence (do one):
 Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
+
 
 Extra Credit - 5
 

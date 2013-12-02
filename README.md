@@ -112,7 +112,8 @@ The linked list lab is a good example of usage of dynamic memory as it creates a
 ----
 Possible sources of evidence (do one):
 
-* Any of the labs or projects, provided it uses templates in an interesting way.
+* https://github.com/MiamiOH-CSE274/06_BST_Lab/blob/zirkleac/BST.ipp
+This lab uses template classes to allow someone to make their own way of organizing their data the type of which is decided by them while making their code. Examples may include using strings to organize their data which consists of floats, using floats to organize their data which consists of arrays, or any combination of one class and another. Of course the code I wrote may (read will) not work for some of these cases because it was made under the assumption that numbers would be used to organize strings.
 
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application

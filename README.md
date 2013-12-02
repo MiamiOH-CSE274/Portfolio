@@ -102,9 +102,10 @@ Hash Table:
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
-Possible sources of evidence (do one):
+Proof:
+https://github.com/MiamiOH-CSE274/05_Hashing_Lab/blob/continnd/HashTable.ipp
 
-* Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
+The dynamic memory portion of the hash tables has to increasing the capacity of the array. Grow will create a new array to avoid increasing the number of collisions, so once all the data is copied to the new array, it is important to delete the old array to avoid having a memory leak. There are no dangling pointers in my code either since my backingArray pointer will always point to an array after deleting the old array. Any pointer not being used (i.e. oldBackingArray) are deleted.
 
 
 5 - Create collection classes using templates in C++

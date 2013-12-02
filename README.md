@@ -101,12 +101,24 @@ Possible sources of evidence (do one):
 
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
 
+https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/blob/turnerce/LinkedList.ipp
+
+The linked list lab uses Dynamic memory in a way that is very easy to see.  Each node that is added to the list requires a new pointer to be created.  At creation of a node, we are reserving more memory to store that object's data. In order to correctly free all of the memory we have used, we must tell the program to delete those objects before terminating.
+
+In line 21-22 in LinkedList.ipp, you can see that the program calls remove() on all of it's nodes before deleting the dummyNode.  remove() deletes the node you are calling it on in line 77.  Deleting all of our pointers that have been created (most easily recognized by anything that was created using the 'new' operator) is a key element of managing memory and preventing memory leaks.
+
 
 5 - Create collection classes using templates in C++
 ----
 Possible sources of evidence (do one):
 
 * Any of the labs or projects, provided it uses templates in an interesting way.
+
+https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/turnerce
+
+In the Heap Lab, we used a template to specify that we wanted our heap queue to hold pairs that consisted of a Priority and some piece of data (T or Typeparameter).  I think our implementation is interesting because we don't really use T at all; all we ever put in it is the same number we use for 'Pri' for each data.
+
+Because we have done this, the same code can be used to handle any type of data a user would want to store in T.  This is the main advantage of using templates.  We can reuse code for multiple purposes if we make it generic it terms of what it will store.
 
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application

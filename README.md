@@ -165,8 +165,17 @@ Binary Search Tree Lab:
 ----
 Possible sources of evidence (do one):
 
-* Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
+* Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. 
+In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. 
+This will probably require referring to your code, providing links.
 
+Memory management in C++ is manual memory management and must be controlled by the programmer. Memory is allocated using new and deallocated using the delete operator.  
+In the Hashing Lab memory is managed. Here is the link to my Hashing Lab on github, which I will be referring to: https://github.com/MiamiOH-CSE274/05_Hashing_Lab 
+In line 10, memory is allocated with the new operator. In line 18 memory is deallocated with the delete[] operator.
+To make sure that there is no out of bounds array access, the indexes are determined through the formula hash(k) % backingArraySize.
+This makes sure that an index is not out of bounds. Lines 29, 61, 81, and 90 show this. 
+In the grow() method a new HashRecord is created in Line 116. The backingArray data is copied into the new backingArray.  
+Then in line 130 the old backingArray is deleted using the delete[] operator.
 
 5 - Create collection classes using templates in C++
 ----

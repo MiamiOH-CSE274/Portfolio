@@ -88,6 +88,17 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
 
+Hash Table: O(1) time for remove and find if load factor (n/m) < (1/2). O(1) time for add if grow is not called, and as grow is called it is called less frequently so O(1) for add as well.
+grow takes O(n) as you have to loop through the old array and add it to the new array.
+
+Linked List: add, get, and remove take O(1) time if at end or beginning to linked list. otherwise they take O(n).
+find takes O(n) as it has to loop through the each node til it finds it.
+set also take O(n) as it calls find.
+size takes O(1) time as the variable numItems keeps track of the size. and size() returns numItems.
+
+Queue:remove takes O(1) as we are only incrementing variables and instantiating T removedItem.
+add takes O(1) time as we are using random access to change the array spot to toAdd.  unless grow is called in which case it takes O(n) because grow takes O(n) 
+grow takes O(n) time as we have to add every item into the new array.
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----

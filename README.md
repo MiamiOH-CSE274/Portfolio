@@ -107,7 +107,7 @@ Possible sources of evidence (do one):
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
 
 https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/blob/gardnedn/LinkedList.ipp
-The program does not delete memory as the remove function switches the pointers and then deletes the node that is to be removed. The add method creates a new node and the remove function deletes the nodes after switching the pointers appropriately.
+The program does not leak memory as the remove function switches the pointers and then deletes the node that is to be removed. The add method creates a new node and the remove function deletes the nodes after switching the pointers appropriately.
  The destructor calls remove while the linked list is not empty and then finally deletes the dummyNode to make sure there are not any nodes "floating" after the program is done.
  
 

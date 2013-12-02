@@ -18,7 +18,8 @@ Body of portfolio
 ----
 Possible sources of evidence (do any one of these):
 
-Proof of Queue implementation here: https://github.com/aczirkle/03_Queue_Lab
+Proof of Queue implementation here: 
+* https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/zirkleac
 
 My queue adds to the queue and removes the first in the queue when called. it gets the correct number
 items in the queue and does all of it in the correct length of time.
@@ -27,7 +28,8 @@ items in the queue and does all of it in the correct length of time.
 ----
 Possible sources of evidence (do any one of these):
 
-Proof of List implementation here: https://github.com/aczirkle/04_Linked_List_Lab
+Proof of List implementation here: 
+* https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/zirkleac
 
 My list is a doubly linked list which allows an add, remove, get and set in constant time, throwing errors where
 appropriate. Not leaking memory
@@ -37,9 +39,9 @@ appropriate. Not leaking memory
 ----
 Possible sources of evidence (do any one of these):
 
-* https://github.com/aczirkle/06_BST_Lab 
+* https://github.com/MiamiOH-CSE274/06_BST_Lab/tree/zirkleac
 * This works for some cases but required more work in the next and previous methods
-* https://github.com/aczirkle/ClosestStarbucks
+* https://github.com/MiamiOH-CSE274/ClosestStarbucks/tree/zirkleac
 * This is a 4 way b tree which checks for the closest starbucks given a latitude and longitude
 
 
@@ -47,7 +49,7 @@ Possible sources of evidence (do any one of these):
 ----
 Possible sources of evidence (do any one of these):
 
-* https://github.com/aczirkle/05_Hashing_Lab
+* https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/zirkleac
 This is just a basic hashtable wihc works in constant time most of the time, O(n) at the worst
 
 7 - Create an implementation of a Heap
@@ -64,39 +66,38 @@ Possible sources of evidence (do any one of these):
 ----
 Possible sources of evidence (do any one of these):
 
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+* https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/zirkleac
+* https://github.com/aczirkle/Vise
+
 
 7 - Implement graph algorithms
 ----
 Possible sources of evidence (do any one of these):
 
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+* https://github.com/aczirkle/Vise
+* The vise project uses graph algoithms to find if the pieces remain connected
 
 21 - Determine space and time requirements of common data structure methods
 -----
 Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
-*  Queue:
-*  *
-*  *
-*  *
-*  *
+*  Graph:
+*  Space would be dependant on the number of connections and size of the aarray
+*  Creation would be dependant on the size of the array you are creating
+*  Adding and removing connections are O(n)
+*  Searching is O(1)
+
 *  Linked List:
-*  *
-*  *
-*  *
-*  *
+*  Space depends on the number of items in the array
+*  Creation is O(1)
+*  Adding and removing from the array is O(n) because it depends on the size of the array
+*  Searching is O(n)
+
 *  Hash Table:
-*  *
-*  *
-*  *
-*  *
+*  Space is dependant on the size
+*  Creation is O(1) because the dummy node is just
+*  Adding a new item is dependant on the number of collosions but effectively becomes O(1)
+*  Searching is dependant on the number of collisions but effectively becomes O(1)
 
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors

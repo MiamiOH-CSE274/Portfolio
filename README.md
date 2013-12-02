@@ -20,7 +20,7 @@ Body of portfolio
 7 - Create an implementation of a Queue
 ----
 Proof:
-https://github.com/MiamiOH-CSE274/03_Queue_Lab/blob/master/ArrayQueue.ipp
+https://github.com/MiamiOH-CSE274/03_Queue_Lab/blob/continnd/ArrayQueue.ipp
 
 7 - Create an implementation of a List
 ----

@@ -117,6 +117,10 @@ The program does not delete memory as the remove function switches the pointers 
 Possible sources of evidence (do one):
 
 * Any of the labs or projects, provided it uses templates in an interesting way.
+updated main of Linked List lab to showcase templates. Namely that we can switch the 
+type of the linked list data, such as the how I changed it to doubles from ints. 
+Templates are extremely useful in the sense that they can make code more reusable by using generic data structures that store arbitrary data types.
+https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/blob/master/main.cpp
 
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application

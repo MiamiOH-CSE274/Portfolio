@@ -177,11 +177,15 @@ This makes sure that an index is not out of bounds. Lines 29, 61, 81, and 90 sho
 In the grow() method a new HashRecord is created in Line 116. The backingArray data is copied into the new backingArray.  
 Then in line 130 the old backingArray is deleted using the delete[] operator.
 
+DANGLING POINTERS??
+links to src in his
+
 5 - Create collection classes using templates in C++
 ----
 Possible sources of evidence (do one):
 
 * Any of the labs or projects, provided it uses templates in an interesting way.
+
 The Hashing Lab uses templates in an interesting way. The link to my Hashing Lab repository on github is: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/kojsmn
 
 Templates allow easy reuse of code. Templates can handle many different data types. This allows the programmer to decide what type of data type they would like to use.
@@ -195,8 +199,24 @@ the methods in the HashTable.ipp file will run with different data types as K an
 
 Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
-* Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
+* Select a project for which there are multiple reasonable data structure designs. 
+Describe two reasonable options, and explain the trade-offs between them. 
+For each, describe an application where the data structure would be better. 
+For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better 
+really depends on the input data set. Explain what the data would have to look like for the 
+Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
 
+Shuffle
+
+For the Shuffle project there are two obvious data structure designs. The two reasonable options are Linked Lists and Array Queues. The Shuffle project requires implementing a realistic shuffle method of cards.
+
+The trade-offs between Linked Lists and Array Queues are in the running times of the methods.
+
+In Array Queues the get method take O(1) time. The remove and add methods in ArrayQueues are O(1) time or constant time unless grow is called then they are O(n) or linear time. If an ArrayQueue was used for the Shuffle project the process of adding and removing items would be slow. When adding and removing the array needs to either grow or be shrunk. This is done by allocating a new array of the desired size and copying the data over.
+
+The LinkedList methods of get, set, splice, and find take O(n) or linear time. The remove and add methods take O(n) time or constant time. LinkedLists do not need to copy any data when adding or removing. The place where the add or remove is desired needs to be found and then inserted by updating the links.
+
+For the Shuffle project I choose to use Linked Lists as my data structure. The reason I choose this data structure was because insertion and removal is easier with LinkedLists than with ArrayQueues. With ArrayQueues my running time would be worse because I would have to create new arrays to deal with the addition and removal of cards. With LinkedLists I am able to insert and remove chunks of cards easily without having to use the new operator.  With LinkedLists I do not have to deal with resizing my data structure, like I would have to with ArrayQueues. LinkedLists are easy to manipulate and the Shuffle project requires easy manipulation of cards in order to get a realistic shuffle that produces a shuffled deck.
 
 Extra Credit - 5
 

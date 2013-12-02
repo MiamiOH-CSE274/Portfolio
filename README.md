@@ -41,17 +41,17 @@ https://github.com/MiamiOH-CSE274/05_Hashing_Lab/blob/continnd/HashTable.ipp
 7 - Create an implementation of a Heap
 ----
 Proof:
-https://github.com/continnd/07_Heap_Lab/blob/master/Heap.ipp
+https://github.com/MiamiOH-CSE274/07_Heap_Lab/blob/continnd/HashTable.ipp
 
 7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
 ----
 Proof:
-https://github.com/continnd/08_Graph_Lab/blob/master/Graph.cpp
+https://github.com/MiamiOH-CSE274/08_Graph_Lab/blob/continnd/Graph.cpp
 
 7 - Implement graph algorithms
 ----
 Proof:
-https://github.com/continnd/Vise/blob/master/src/testApp.cpp
+https://github.com/MiamiOH-CSE274/Vise/blob/ContiniAndKojs/src/testApp.cpp
 
 21 - Determine space and time requirements of common data structure methods
 -----

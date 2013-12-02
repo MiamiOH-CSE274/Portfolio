@@ -82,7 +82,7 @@ Possible sources of evidence (do any one of these):
 I chose to do the Heap Lab for the implementation of a Heap.
 Here is a link to my repository on github which includes the source code: https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/kojsmn
 
-7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
+7 - Create an implementation of either Adjancency Lists or Adjacency Matrices
 ----
 Possible sources of evidence (do any one of these):
 
@@ -110,32 +110,55 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
 
 Queue Lab:
+
 	The add() method takes O(1) time or constant time unless grow is called, then it takes O(n) time since grow takes O(n) time.
+
 	The remove() method takes O(1) time or constant time unless grow is called, then it takes O(n) time since grow takes O(n) time.
+
 	The getNumItems() method takes O(1) time or constant time.
+
 	The grow() method takes O(n) time or linear time.
+
 	Link to the methods: https://github.com/MiamiOH-CSE274/03_Queue_Lab/blob/kojsmn/ArrayQueue.ipp
 
 Linked List Lab:
+
 	The find() method takes O(n) time or linear time since there is a for loop, unless the first or last item is being found. If the first or last item is being found it takes 0(1) or constant time.
+
 	The set() method takes O(n) time since find is called and find takes O(n) time.
+
 	The add() method takes O(n) time since find is called and find takes O(n) time.
+
 	The remove() method takes O(n) time since find is called and find takes O(n) time.
+
 	The get() method takes O(n) time since find is called and find takes O(n) time.
+
 	The splice() method takes O(n) time since find is called and find takes O(n) time.
+
 	The size() method takes O(1) time or constant time.
+
 	Link to the methods: https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/blob/kojsmn/LinkedList.ipp
 
 Binary Search Tree Lab:
+
 	The size() method takes O(n) time or linear time since each node is visited in orer to determine the number of items.
+
 	The add() method takes O(h) time, where h is the height of the tree.  If the tree is balanced then h is logn and if the tree is unbalanced then h is n.
+
 	The remove() method takes O(h) time, where h is the height of the tree.  If the tree is balanced then h is log n and if the tree is unbalanced then h is n.
+
 	The find() method takes take O(h) time, where h is the height of the tree. See the remove method for explanation of h.
+
 	The keyExists() method takes 0(h) time, where h is the height of the tree. See the remove method for explanation of h. keyExists() calls find which takes O(h) time.
+
 	The next() method takes O(h) time, where h is the height of the tree. See the remove method for explanation of h.
+
 	The prev() method takes O(h) time, where h is the height of the tree. See the remove method for explanation of h.
+
 	The max() method takes O(h) time, where h is the height of the tree. See the remove method for explanation of h.
+
 	The min() method takes O(h) time, where h is the height of the tree. See the remove method for explanation of h.
+
 	Link to the methods: https://github.com/MiamiOH-CSE274/06_BST_Lab/blob/kojsmn/BST.ipp#L88	
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
@@ -143,7 +166,6 @@ Binary Search Tree Lab:
 Possible sources of evidence (do one):
 
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
-
 
 
 5 - Create collection classes using templates in C++

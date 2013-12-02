@@ -32,14 +32,9 @@ My source of evidence is going to be my LinkedList Lab, as well as an implementa
 
 7 - Create an implementation of a Binary Search Tree
 ----
-Possible sources of evidence (do any one of these):
+My source of evidence is going to be my Binary Search tree lab. In the lab, one can see I clearly implement a binary search tree, and all the functions work as they should!
 
-One can see an implementation of a Binary Search Tree from my BST Lab.
-
-* Binary Search Tree Lab (TODO)
-* Use a binary search tree or KD-Tree in the Starbucks project.
-* Use a binary search tree in the Zeitgeist project
-* Consult with Dr. Brinkman on an alternative project
+* https://github.com/MiamiOH-CSE274/06_BST_Lab/tree/emrickgj
 
 
 7 - Create an implementaiton of a Hash Table
@@ -48,7 +43,7 @@ One can see an implementation of a Binary Search Tree from my BST Lab.
 I plan on implementing the hash table as part of my Zeitgeist project, and may end up doing the Hashing Lab as well. I am working on it tonight, sometime this weekend, and next weekend as well. More information can be found in my Zeitgiest repository.
 
 
-* https://github.com/emrickgarrett/Zeitgeist
+* https://github.com/MiamiOH_CSE274/Zeitgeist/tree/emrickgj
 
 
 7 - Create an implementation of a Heap
@@ -65,25 +60,15 @@ Possible sources of evidence (do any one of these):
 
 7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
 ----
-Possible sources of evidence (do any one of these):
+I create an adjacency list in my Graph Lab! I create an array index for each node, and within each node one can easily see what nodes it points to, in a very fast and efficient matter! I believe this is an adequate source of evidence for an implementation of an adjacency list!
 
-One can see my implementation of an Adjacency list in my Graph Lab.
-
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+* https://github.com/MiamiOH_CSE274/08_Graph_Lab/tree/emrickgj
 
 7 - Implement graph algorithms
 ----
-Possible sources of evidence (do any one of these):
+One can see an implementation of my Graph algorithms in my Graph project. 
 
-One can see my implementation of my graphing algorithm in my "Graph Lab" project.
-
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+* https://github.com/MiamiOH_CSE274/08_Graph_Lab/tree/emrickgj
 
 21 - Determine space and time requirements of common data structure methods
 -----
@@ -122,6 +107,8 @@ Possible sources of evidence (do one):
 I'm not entirely sure what an interesting implementation exactly is, as it's kind of vague, but the two projects I have done so far use templates. Not sure if the Linked_List and Queue labs count here or not though.
 
 * Any of the labs or projects, provided it uses templates in an interesting way.
+* https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/emrickgj
+* https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/emrickgj
 
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application

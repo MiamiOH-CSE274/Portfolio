@@ -40,31 +40,18 @@ https://github.com/MiamiOH-CSE274/05_Hashing_Lab/blob/continnd/HashTable.ipp
 
 7 - Create an implementation of a Heap
 ----
-Possible sources of evidence (do any one of these):
-
-* Heap lab (TODO)
-* Implement heap sort in the Sorting lab (TODO)
-* Implement a heap as part of the Graph Algorithms lab (TODO)
-* Implement a heap as part of the Graph Project (TODO)
-* Consult with Dr. Brinkman on an alternative project
+Proof:
+https://github.com/continnd/07_Heap_Lab/blob/master/Heap.ipp
 
 7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
 ----
-Possible sources of evidence (do any one of these):
-
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+Proof:
+https://github.com/continnd/08_Graph_Lab/blob/master/Graph.cpp
 
 7 - Implement graph algorithms
 ----
-Possible sources of evidence (do any one of these):
-
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+Proof:
+https://github.com/continnd/Vise/blob/master/src/testApp.cpp
 
 21 - Determine space and time requirements of common data structure methods
 -----
@@ -79,25 +66,39 @@ Linked List:
 * find(i)-O(n), since in order to return the node that is right in the middle of the list you have to travel to every node before it, find relies on the number of items in the list. However, you can find an item at the beginning or the end of the list with O(1) time, since the list is circular, allowing you to move forward or backwards through the array.
 * set(i,x)-O(n), since it uses find(i) to change the data value of a node.
 * add(i,x)-O(n), since it uses find(i) to find the point where to add the new node. There will always be a constant number of links rearranged, thus meaning add(i,x)'s efficiency depends on the number of items. Adding to the beginning and end of the list, however, has a constant time due to the list's circular structure.
-* remove(i)-O(n), since it uses find(i) to find the node to remove. There will always be a constant number of links to rearrange, meaning delete(i)'s time depends on the number of items. Deleteing a node from the beginning or the end of the list, however, has a constant time due to the list's circular structure.
+* remove(i)-O(n), since it uses find(i) to find the node to remove. There will always be a constant number of links to rearrange, meaning delete(i)'s time depends on the number of items. Deleting a node from the beginning or the end of the list, however, has a constant time due to the list's circular structure.
 * get(i)-O(n), since it uses find(i) to simply return the data held within a node.
 * splice(i,len,target,t)-O(n+m), where m is the index of the second list. First the method must use find(i) to find the beginning of the segment that will be remove, an then continue to the end. Then it must use find a second time to find the point to add the segment to the second list. The number of links to rearrange will be constant, making the the method's time depend on the number of items in both lists.
 * size()-O(1), since all this method does is simply return the value stored by the variable numItems.
 
 Binary Search Tree:
+
 * BSTs are structured so that all nodes that have keys less than a specific node are all represented on the left side of that node and all nodes with keys larger than a specific node are all represented on the right of that node, methods must only check some of the values of a specific branch in the tree rather than all of them to travel to a specific key. The branches can range from height 0 to height n. In a perfectly balanced tree, the branches always have a height of log(n). This is due to the fact that the last row of nodes in a tree contains 1 more node than the rest of the tree.
 
 * Constructor-O(1), since all this does is set the variable root to NULL.
 * Destructor-O(n), since the method visits every node to remove it, the destructor depends on the number of items in the list
 * size()-O(n), since the method first must visit every node and return 1 plus size(r) called on the adjacent nodes.
 * add(k,x)-O(h), since the method must travel to the bottom of a branch in order to create a new node to store the data.
-* remove(k)-O(h), since the method must first find the node to remove, the furthest one down requiring te method to travel th height of the tree. Even when removing an internal node, the method may have to travel further down a branch to find a node to replace the removed node.
+* remove(k)-O(h), since the method must first find the node to remove, the furthest one down requiring thee method to travel the height of the tree. Even when removing an internal node, the method may have to travel further down a branch to find a node to replace the removed node.
 * find(k)-O(h), since the method must at maximum travel to the leaf of the tallest branch to find the key and return the node's value
 * keyExists(k,r)-O(h), since the method at maximum must travel to the leaf of the longest branch to check to see if the key exists
 * next(k)-O(h), since the lowest node in the tree that can be numerically next is the leaf of the longest branch.
 * prev(k)-O(h), since the lowest node in the tree that can be numerically previous is the leaf of the longest branch.
 * max(r)-O(h), since the method simply travels continually to the right until it reaches a leaf node. This leaf node can possibly be part of the longest branch.
 * min(r)-O(h), since the method simply travels continually to the left until it reaches a leaf node. This leaf node can possibly be part of the longest branch.
+
+Hash Table:
+
+*Constructor-O(1) Simply allocates an array, sets numItems to 0, numRemoved to 0, and backingArraySize to the size of the array. (This is assuming that it is an array of primitives, if it were an array of objects, each index would have to be initialized meaning efficiency would be O(m) where m is the size of the array).
+*Destructor-O(1) Simply deletes the array. This may be O(m) if the array is an array of Objects, since every object must be deleted as well.
+*add-O(1) Running the hash method will always be constant, since it has a fixed number of operators. The likeliness of a collision is so low that you can ignore the possibility. Even if there is a collision, using the jump method decreases the likeliness of a collision happening again, so the most collisions you could probably have is about 3. After all the hashing/jumping, all the method has to do is set the data and key to the correct values. Grow may have to be called, meaning this would bring the method to O(m) efficiency, but it will have to be called less and less as it gets called making the method negligible.
+*remove-O(1) As said above, hash and jump help the hash table find the key that you are looking for and delete those values, as well as setting isDel to true. All of this has a constant number of operations.
+*find-O(1) Once again, hash and jump making finding the data point in the array constant time, as the number of collisions will be minimal in most realistic situations.
+*keyExists-O(1) Simply must find the index the key would be stored at and return true if it finds it, otherwise returns false. Finding a key and returning a value are constant.
+*size-O(1) Simply returns the class variable numItems which is constant
+*grow-O(m) Since the method has to go through the whole array to ensure that every value gets copied to the new array, this method's time will be based on the size of the array.
+*jump-O(1) Jump essentially is a bunch of mathematical operations that all take constant time.
+
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----

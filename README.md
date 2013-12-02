@@ -27,7 +27,7 @@ Possible sources of evidence (do any one of these):
 * Consult with Dr. Brinkman on an alternative project
 
 I chose to do the Queue Lab for the implementation of a Queue.
-Here is a link to my repository on github which includes the source code: https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/kojsmn
+Here is a link to my source code in my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/03_Queue_Lab/blob/kojsmn/ArrayQueue.ipp
 
 7 - Create an implementation of a List
 ----
@@ -39,10 +39,10 @@ Possible sources of evidence (do any one of these):
 * Consult with Dr. Brinkman on an alternative project
 
 I chose to do the Linked List Lab for the implementation of a List.
-Here is a link to my repository on github which includes the source code: https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/kojsmn
+Here is a link to my source code in my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/blob/kojsmn/LinkedList.ipp
 
 I also used a linked list as my data structure in the Shuffle project. 
-Here is a link to my repository on github: https://github.com/MiamiOH-CSE274/Shuffle/tree/kojsmn
+Here is a link to my branch on Brinkman's repository: https://github.com/MiamiOH-CSE274/Shuffle/tree/kojsmn
 At the bottom of my repository there is a video link which shows the Shuffle project working.
 
 7 - Create an implementation of a Binary Search Tree
@@ -55,7 +55,7 @@ Possible sources of evidence (do any one of these):
 * Consult with Dr. Brinkman on an alternative project
 
 I chose to do the Binary Search Tree Lab for the implementation of a Binary Search Tree.
-Here is a link to my repository on github which includes the source code: https://github.com/MiamiOH-CSE274/06_BST_Lab/tree/kojsmn
+Here is a link to my source code in my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/06_BST_Lab/blob/kojsmn/BST.ipp
 
 7 - Create an implementation of a Hash Table
 ----
@@ -67,7 +67,7 @@ Possible sources of evidence (do any one of these):
 * Consult with Dr. Brinkman on an alternative project
 
 I chose to do the Hashing Lab for the implementation of a Hash Table.
-Here is a link to my repository on github which includes the source code: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/kojsmn
+Here is a link to my source code on my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/blob/kojsmn/HashTable.ipp
 
 7 - Create an implementation of a Heap
 ----
@@ -80,7 +80,7 @@ Possible sources of evidence (do any one of these):
 * Consult with Dr. Brinkman on an alternative project
 
 I chose to do the Heap Lab for the implementation of a Heap.
-Here is a link to my repository on github which includes the source code: https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/kojsmn
+Here is a link to my source code on my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/07_Heap_Lab/blob/kojsmn/Heap.ipp
 
 7 - Create an implementation of either Adjancency Lists or Adjacency Matrices
 ----
@@ -92,7 +92,7 @@ Possible sources of evidence (do any one of these):
 * Consult with Dr. Brinkman on an alternative project
 
 I chose to do the Graph Algorithms Lab for the implementation of an Adjancency Lists.
-Here is a link to my repository on github which includes the source code: https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/kojsmn
+Here is a link to my source code on my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/08_Graph_Lab/blob/kojsmn/Graph.cpp
 
 7 - Implement graph algorithms
 ----
@@ -158,8 +158,11 @@ Binary Search Tree Lab:
 	The max() method takes O(h) time, where h is the height of the tree. See the remove method for explanation of h.
 
 	The min() method takes O(h) time, where h is the height of the tree. See the remove method for explanation of h.
-
+	
+	The height of the tree is at most n and at least logn. It is n when the tree is unbalanced and it is logn when the tree is balanced. The reason it is logn is because the bottom level of the balanced tree will have one more node than the total number of nodes in the tree.
+	
 	Link to the methods: https://github.com/MiamiOH-CSE274/06_BST_Lab/blob/kojsmn/BST.ipp#L88	
+
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
@@ -170,7 +173,7 @@ In particular, you must show that your program does not leak memory, and does no
 This will probably require referring to your code, providing links.
 
 Memory management in C++ is manual memory management and must be controlled by the programmer. Memory is allocated using new and deallocated using the delete operator.  
-In the Hashing Lab memory is managed. Here is the link to my Hashing Lab on github, which I will be referring to: https://github.com/MiamiOH-CSE274/05_Hashing_Lab 
+In the Hashing Lab memory is managed. Here is the link to my Hashing Lab source code in Brinkman's repository on github, which I will be referring to: https://github.com/MiamiOH-CSE274/05_Hashing_Lab 
 In line 10, memory is allocated with the new operator. In line 18 memory is deallocated with the delete[] operator.
 To make sure that there is no out of bounds array access, the indexes are determined through the formula hash(k) % backingArraySize.
 This makes sure that an index is not out of bounds. Lines 29, 61, 81, and 90 show this. 
@@ -186,7 +189,7 @@ Possible sources of evidence (do one):
 
 * Any of the labs or projects, provided it uses templates in an interesting way.
 
-The Hashing Lab uses templates in an interesting way. The link to my Hashing Lab repository on github is: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/kojsmn
+The Hashing Lab uses templates in an interesting way. The link to my Hashing Lab branch in Brinkman's repository on github is: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/kojsmn
 
 Templates allow easy reuse of code. Templates can handle many different data types. This allows the programmer to decide what type of data type they would like to use.
 In the Hashing Lab, I use a template where that looks like template <class Key, class T>.  This allows the user to specify what data type they would like K(key) to be and what 
@@ -217,6 +220,9 @@ In Array Queues the get method take O(1) time. The remove and add methods in Arr
 The LinkedList methods of get, set, splice, and find take O(n) or linear time. The remove and add methods take O(n) time or constant time. LinkedLists do not need to copy any data when adding or removing. The place where the add or remove is desired needs to be found and then inserted by updating the links.
 
 For the Shuffle project I choose to use Linked Lists as my data structure. The reason I choose this data structure was because insertion and removal is easier with LinkedLists than with ArrayQueues. With ArrayQueues my running time would be worse because I would have to create new arrays to deal with the addition and removal of cards. With LinkedLists I am able to insert and remove chunks of cards easily without having to use the new operator.  With LinkedLists I do not have to deal with resizing my data structure, like I would have to with ArrayQueues. LinkedLists are easy to manipulate and the Shuffle project requires easy manipulation of cards in order to get a realistic shuffle that produces a shuffled deck.
+
+Vise
+
 
 Extra Credit - 5
 

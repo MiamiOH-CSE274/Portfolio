@@ -284,3 +284,9 @@ Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
 
+I wrote my answer in Word document, below is the link:
+https://github.com/JohnneyMing/Portfolio/blob/zhongm2/Text.docx
+
+
+
+

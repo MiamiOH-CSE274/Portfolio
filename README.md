@@ -39,48 +39,45 @@ Link List compiles, and is circular. Succesfuly adds, removes, sets and sets Nod
 ----
 Possible sources of evidence (do any one of these):
 
-* Binary Search Tree Lab (TODO)
-* Use a binary search tree or KD-Tree in the Starbucks project.
-* Use a binary search tree in the Zeitgeist project
-* Consult with Dr. Brinkman on an alternative project
-
+Explanation of how I accomplished the requirements of the lab/answered questions on Binary Search Tree.
+https://github.com/MiamiOH-CSE274/06_BST_Lab/tree/gardnedn
+code of Binary Search Tree:
+https://github.com/MiamiOH-CSE274/06_BST_Lab/blob/gardnedn/BST.ipp
 
 7 - Create an implementaiton of a Hash Table
 ----
-Possible sources of evidence (do any one of these):
+Explanation of how I accomplished the requirements of the lab/answered questions on HashTable:
+https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/gardnedn
+code of Hash Table:
+https://github.com/MiamiOH-CSE274/05_Hashing_Lab/blob/gardnedn/HashTable.ipp
 
-* https://github.com/MiamiOH-CSE274/05_Hashing_Lab
-* Use a hash table in the Zeitgeist project
-* Use locality-preserving hashing on the Starbucks project (not recommended!)
-* Consult with Dr. Brinkman on an alternative project
+
+
 
 7 - Create an implementation of a Heap
 ----
 Possible sources of evidence (do any one of these):
 
-* Heap lab (TODO)
-* Implement heap sort in the Sorting lab (TODO)
-* Implement a heap as part of the Graph Algorithms lab (TODO)
-* Implement a heap as part of the Graph Project (TODO)
-* Consult with Dr. Brinkman on an alternative project
+Explanation of how I accomplished the requirements of the lab/ answered questions on Heap:
+https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/gardnedn
+code of Heap:
+https://github.com/MiamiOH-CSE274/07_Heap_Lab/blob/gardnedn/Heap.ipp
 
 7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
 ----
-Possible sources of evidence (do any one of these):
+Explanation of Graph Lab:
+https://github.com/MiamiOH-CSE274/08_Graph_Lab
 
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+Used adjacency List for Graph Lab. 
+Code: https://github.com/MiamiOH-CSE274/08_Graph_Lab/blob/master/Graph.cpp 
+
 
 7 - Implement graph algorithms
 ----
 Possible sources of evidence (do any one of these):
 
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+added a depth first search to my graph Lab. Added a test of depth first search in main. 
+https://github.com/MiamiOH-CSE274/08_Graph_Lab/blob/master/Graph.cpp
 
 21 - Determine space and time requirements of common data structure methods
 -----
@@ -117,6 +114,8 @@ The program does not leak memory as the remove function switches the pointers an
 Possible sources of evidence (do one):
 
 * Any of the labs or projects, provided it uses templates in an interesting way.
+
+
 updated main of Linked List lab to showcase templates. Namely that we can switch the 
 type of the linked list data, such as the how I changed it to doubles from ints. 
 Templates are extremely useful in the sense that they can make code more reusable by using generic data structures that store arbitrary data types.

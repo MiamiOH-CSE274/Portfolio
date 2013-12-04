@@ -54,7 +54,7 @@ See my implementation of a Graph here: https://github.com/MiamiOH-CSE274/08_Grap
 ----
 Possible sources of evidence (do any one of these):
 
-See my implementation of a Graph here: https://github.com/MiamiOH-CSE274/08_Graph_Lab/blob/blasedd/Graph.cpp
+See my implementation of a depth-first search (incorrectly named “dijkstraTotal/dijkstraRecrusive”) here: https://github.com/MiamiOH-CSE274/Vise/blob/BlaseAndBickley/src/GameBoard.cpp
 
 21 - Determine space and time requirements of common data structure methods
 -----
@@ -78,6 +78,15 @@ For the Linked List (found here https://github.com/db4soundman/04_Linked_List_La
 	`Size()` is constant time; it only returns the numItems variable.
 
 For LinkedLists, the space requirement is based on the type of data being stored. Otherwise, the instance variables are an unsigned long, and Node* variables.
+
+For Graph data structures (see the adjacency matrix version here: https://github.com/MiamiOH-CSE274/08_Graph_Lab/blob/blasedd/Graph.cpp ), the comparison is as follows.
+
+An adjacency list consists of an array for each point in the graph, and each index of the array contains a linked list of all of the other points it intersects. With this method, you have instant access to any individual point, but the running time of finding a particular intersection is linear in terms of the number of edges that point intersects.
+
+An adjacency matrix, on the other hand, is essentially a 2-d array (though, vectors are used), with a spot for each possible intersection in the graph data structure. Due to the array-like nature of the adjacency matrix, we have constant time access to both an individual point, and the intersecting point we are interested in, since we can go directly to that point instead of looping through each spot in the array.
+
+Just from the above description, it sounds like the adjacency matrix is the hands-down better way to implement a graph structure. It’s not, due to the space requirements of the two options. With an adjacency list, the space requirement is the number of items (n) + the number of intersections (m), which would be the size of the linked list found at each index of the array. For the adjacency matrix, the space requirement is n^2, since every possible intersection is stored in the 2-d array. So, depending on the size of the data and the number of intersections any particular point can have, it is better to take the performance “hit” of the adjacency list to save large amounts of space on the memory/hard drive. If the number of intersections is brings the overall space requirement to be close to n^2, it is better to use an adjacency matrix to get the performance boost.
+
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----

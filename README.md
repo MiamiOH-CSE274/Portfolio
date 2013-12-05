@@ -114,7 +114,9 @@ Possible sources of evidence (do one):
 
 * Any of the labs or projects, provided it uses templates in an interesting way.
 
+https://github.com/MiamiOH-CSE274/Vise/tree/ContiniAndKojs/src
 
+I used a template to create my hexSpace class in order to create an easy way to set up a gameboard using a vector. There was probably many other things I also should have done, such as creating a gameBoard class that included the setup, traversal, and other methods of the gameboard.
 
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application

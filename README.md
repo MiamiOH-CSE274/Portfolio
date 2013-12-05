@@ -115,9 +115,36 @@ Possible sources of evidence (do one):
 * Any of the labs or projects, provided it uses templates in an interesting way.
 
 
+
+
 30 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
 
 Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
+
+Shuffle:
+		For Shuffle, both an Array-Based Queue and a Doubly-Ended Linked List seem like good options for shuffling. In most generic shuffles, neither seem to have significant advantages. This is due to the fact that splitting the queue into two queues will not be much faster than if the queue were substituted for an linked list. Same goes for taking one or more cards from the top of the deck to mix back into the deck. So for most shuffles such as riffle and faro efficiency trade off is mostly negligible. The only time I could think of a situation where a Linked List might have an advantage is a shuffle that simply takes a portion of the deck and places it on the top or bottom of the deck. The issue with those type of shuffles is that it takes many repetitions to result in a truly randomly ordered deck (it may be even possible that the deck never becomes randomly ordered!). Queues cannot take a chunk of cards from the middle of the deck, so any shuffles requiring taking cards anywhere other than from the top of the deck can't be implemented with Queues, since they use FIFO structure.
+
+				Queue								Array List
+Copy current deck
+from array
+
+to data structure:	O(n) (technically O(1) since n is always 52)		   O(n) (technically O(1) since n is always 52)
+
+Peeling of c cards
+from top of deck:		O(c)								   O(c)
+
+Adding c cards back
+to the array			O(c)								   O(c)
+
+*take note that moving the cards left in the array, c, to the front is also O(c). Also since the number of cards 
+
+Vise: 
+
+	Two potential data structures one could use are adjacency lists or adjacency matrices. Adjacency lists have an advantage in that they don't unnecessarily require more memory. Adjacency matrices use a two dimensional matrix where one dimension represents the current node, and the second dimension represents a potenial edge to another node. Adjacency lists are similar in that they use matrices that contain linked lists that contain every edge in the system. This means adjancency matrices have to reserve memory for every possible edge, wherease adjacency lists use up memory for edges only when the edge is added. This also means when searching for edges, adding edges, and removing edges, adjacency matrices are less effecient, running at Theta(n). Adjacency lists do these operations at Theta(d), d being the maximum number of edges on a node. This disadvantage is also seen when doing graph traversals (Theta(n^2) for matrices and Theta(n+m), since during the traversal you must search for every node. One advantage the matrix does have is that it is much quicker looking at a specific edge. So if I specifically want to see if there is an edge between two nodes, the efficiency will be Theta(1) for matrices, but still Theta(d) for lists. This advantage is of no help while implementing vise though, so the best choice for vise is an adjacency list or a structure based on an adjacency list.
+
+extra credit: I went to the research fair. I saw your research in Augmented Reality, Mr. Stanley's computer security research, someone's AI linguistics research, and many others.
+
+

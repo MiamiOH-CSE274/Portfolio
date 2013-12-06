@@ -49,7 +49,7 @@ At the bottom of my repository there is a video link which shows the Shuffle pro
 ----
 Possible sources of evidence (do any one of these):
 
-* Binary Search Tree Lab (TODO)
+* Binary Search Tree Lab
 * Use a binary search tree or KD-Tree in the Starbucks project.
 * Use a binary search tree in the Zeitgeist project
 * Consult with Dr. Brinkman on an alternative project
@@ -73,10 +73,10 @@ Here is a link to my source code on my branch in Brinkman's repository on github
 ----
 Possible sources of evidence (do any one of these):
 
-* Heap lab (TODO)
-* Implement heap sort in the Sorting lab (TODO)
-* Implement a heap as part of the Graph Algorithms lab (TODO)
-* Implement a heap as part of the Graph Project (TODO)
+* Heap lab
+* Implement heap sort in the Sorting lab
+* Implement a heap as part of the Graph Algorithms lab
+* Implement a heap as part of the Graph Project
 * Consult with Dr. Brinkman on an alternative project
 
 I chose to do the Heap Lab for the implementation of a Heap.
@@ -223,6 +223,21 @@ The LinkedList methods of get, set, splice, and find take O(n) or linear time. T
 For the Shuffle project I choose to use Linked Lists as my data structure. The reason I choose this data structure was because insertion and removal is easier with LinkedLists than with ArrayQueues. With ArrayQueues my running time would be worse because I would have to create new arrays to deal with the addition and removal of cards. With LinkedLists I am able to insert and remove chunks of cards easily without having to use the new operator.  With LinkedLists I do not have to deal with resizing my data structure, like I would have to with ArrayQueues. LinkedLists are easy to manipulate and the Shuffle project requires easy manipulation of cards in order to get a realistic shuffle that produces a shuffled deck.
 
 Vise
+
+For the Vise project there are two obvious data structure designs. The two reasonable options are Adjacency Matrix and Adjacency Lists.
+The Adjacency Matrix is a matrix that the columns as the vertices and the rows as all the possible edges. At each row and column, there is a value that tells whether there is an edge from that vertex to that edge.
+The Adjaceny List is an array with the vertices. Each vertex contains a list of the edges that are connected to that vertex. The list can be in Linked List form or array form or another type of list data structure.
+The trade offs between Adjacency Matrix and Adjacency List are in the size and running times of the methods.
+Adjacency Lists take up less space than Adjacency Matrix.  The size of an Adjacency Matrix is 0(n^2) and the size of an Adjacency List is at worst 0(n+m) but at best 0(n+dn), where n is the number of vertices, m is the number of edges, and d is the degree of the graph.
+The running times of Adjacency List determining the neighbors of one node is a lot faster than when the Adjacency Matrix determines the neighbors of one node.
+In the Adjacency List, the neighbors are linked to the vertex so the vertex needs to be found and then all of the neighbors are there.
+In the Adjacency Matrix, the vertex must be found and then you must go through each spot in the row to determine the neighbors of that vertex.
+Also with Adjacency Matrices, the question about a specific edge can be found easily, as well as inserting and deleting edges.
+With Adjacency Lists it is harder to check whether a specific edge is in the graph. Adjacency Lists save more space than Adjacency Matrix.
+An application where Adjacency Lists would be better is in this Vise project or in Road Map applications. 
+An application where Adjacency Matrix would be better is where you want to determine if a specific edge is in the graph.
+Otherwise Adjacency Lists are the clear winners especially if space is an issue.
+
 
 
 Extra Credit - 5

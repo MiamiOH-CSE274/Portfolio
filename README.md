@@ -19,79 +19,59 @@ Body of portfolio
 Possible sources of evidence (do any one of these):
 
 * https://github.com/MiamiOH-CSE274/03_Queue_Lab
-* Use a queue as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
-* Consult with Dr. Brinkman on an alternative project
 
 7 - Create an implementation of a List
 ----
 Possible sources of evidence (do any one of these):
 
 * https://github.com/MiamiOH-CSE274/04_Linked_List_Lab
-* Use a linked list as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
-* Implement chaining instead of linear probing in https://github.com/MiamiOH-CSE274/05_Hashing_Lab
-* Consult with Dr. Brinkman on an alternative project
-
 
 7 - Create an implementation of a Binary Search Tree
 ----
 Possible sources of evidence (do any one of these):
 
 * Binary Search Tree Lab (TODO)
-* Use a binary search tree or KD-Tree in the Starbucks project.
-* Use a binary search tree in the Zeitgeist project
-* Consult with Dr. Brinkman on an alternative project
-
 
 7 - Create an implementaiton of a Hash Table
 ----
 Possible sources of evidence (do any one of these):
 
 * https://github.com/MiamiOH-CSE274/05_Hashing_Lab
-* Use a hash table in the Zeitgeist project
-* Use locality-preserving hashing on the Starbucks project (not recommended!)
-* Consult with Dr. Brinkman on an alternative project
 
 7 - Create an implementation of a Heap
 ----
 Possible sources of evidence (do any one of these):
 
 * Heap lab (TODO)
-* Implement heap sort in the Sorting lab (TODO)
-* Implement a heap as part of the Graph Algorithms lab (TODO)
-* Implement a heap as part of the Graph Project (TODO)
-* Consult with Dr. Brinkman on an alternative project
 
 7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
 ----
 Possible sources of evidence (do any one of these):
 
 * Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
 
 7 - Implement graph algorithms
 ----
 Possible sources of evidence (do any one of these):
 
 * Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
 
 21 - Determine space and time requirements of common data structure methods
 -----
 Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
-
+Linked List: find()--O(n) set()--O(1) add()--O(n) remove()--O(n) get--O(1) size()--O(1) 
+Hash Table: add()--O(1)* remove()--O(1) find()--O(1) keyExists()--O(1) size()--O(1) grow()--O(n) *should be O(1) average
+Graph(Adjacency List): getCost()--O(d) add()--O(d) remove()--O(d), where d is the maximum degree of any node in the graph
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
 Possible sources of evidence (do one):
 
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
-
+Hash Table:(link)
+I used the operator "new" to allocate a chunck of dynamic memory to store the array of HashRecords, and, to avoid memory leak, I implemented the destructor to deallocate the memory that stored whole array. In size() method, I switched the pointer, backingArray, from the old array that I deleted at the end to the new array in case the pointer became a dangling pointer. Through thoroughly testing, I claim there is no out-of-bound error in this lab.     
 
 5 - Create collection classes using templates in C++
 ----

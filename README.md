@@ -29,7 +29,7 @@ Possible sources of evidence (do any one of these):
 I chose to do the Queue Lab for the implementation of a Queue.
 Here is a link to my source code on my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/03_Queue_Lab/blob/kojsmn/ArrayQueue.ipp
 
-My methods for the Queue Lab were add 0(1) or constant time except for grow which was 0(n) or linear time.
+My methods for the Queue Lab were 0(1) or constant time except for grow which was 0(n) or linear time.
 I used the array in a circular fashion. I also made sure to not leak memory.
 
 7 - Create an implementation of a List

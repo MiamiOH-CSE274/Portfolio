@@ -225,18 +225,33 @@ For the Shuffle project I choose to use Linked Lists as my data structure. The r
 Vise
 
 For the Vise project there are two obvious data structure designs. The two reasonable options are Adjacency Matrix and Adjacency Lists.
+
 The Adjacency Matrix is a matrix that the columns as the vertices and the rows as all the possible edges. At each row and column, there is a value that tells whether there is an edge from that vertex to that edge.
+
 The Adjaceny List is an array with the vertices. Each vertex contains a list of the edges that are connected to that vertex. The list can be in Linked List form or array form or another type of list data structure.
+
 The trade offs between Adjacency Matrix and Adjacency List are in the size and running times of the methods.
+
 Adjacency Lists take up less space than Adjacency Matrix.  The size of an Adjacency Matrix is 0(n^2) and the size of an Adjacency List is at worst 0(n+m) but at best 0(n+dn), where n is the number of vertices, m is the number of edges, and d is the degree of the graph.
+
 The running times of Adjacency List determining the neighbors of one node is a lot faster than when the Adjacency Matrix determines the neighbors of one node.
+
 In the Adjacency List, the neighbors are linked to the vertex so the vertex needs to be found and then all of the neighbors are there.
+
 In the Adjacency Matrix, the vertex must be found and then you must go through each spot in the row to determine the neighbors of that vertex.
+
 Also with Adjacency Matrices, the question about a specific edge can be found easily, as well as inserting and deleting edges.
+
 With Adjacency Lists it is harder to check whether a specific edge is in the graph. Adjacency Lists save more space than Adjacency Matrix.
+
 An application where Adjacency Lists would be better is in this Vise project or in Road Map applications. 
+
 An application where Adjacency Matrix would be better is where you want to determine if a specific edge is in the graph.
+
 Otherwise Adjacency Lists are the clear winners especially if space is an issue.
+
+In the Vise project, Adjacency Lists are the better data structure because there needs to be easy access to all the neighbors of a vertex, in order to run isCompleted and doVise methods easily.
+Also this allows the depth-first search to be ran faster, which is an algorithm needed for this project.
 
 
 

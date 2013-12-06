@@ -27,7 +27,7 @@ Possible sources of evidence (do any one of these):
 * Consult with Dr. Brinkman on an alternative project
 
 I chose to do the Queue Lab for the implementation of a Queue.
-Here is a link to my source code in my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/03_Queue_Lab/blob/kojsmn/ArrayQueue.ipp
+Here is a link to my source code on my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/03_Queue_Lab/blob/kojsmn/ArrayQueue.ipp
 
 7 - Create an implementation of a List
 ----
@@ -39,7 +39,7 @@ Possible sources of evidence (do any one of these):
 * Consult with Dr. Brinkman on an alternative project
 
 I chose to do the Linked List Lab for the implementation of a List.
-Here is a link to my source code in my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/blob/kojsmn/LinkedList.ipp
+Here is a link to my source code on my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/blob/kojsmn/LinkedList.ipp
 
 I also used a linked list as my data structure in the Shuffle project. 
 Here is a link to my branch on Brinkman's repository: https://github.com/MiamiOH-CSE274/Shuffle/tree/kojsmn
@@ -55,7 +55,7 @@ Possible sources of evidence (do any one of these):
 * Consult with Dr. Brinkman on an alternative project
 
 I chose to do the Binary Search Tree Lab for the implementation of a Binary Search Tree.
-Here is a link to my source code in my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/06_BST_Lab/blob/kojsmn/BST.ipp
+Here is a link to my source code on my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/06_BST_Lab/blob/kojsmn/BST.ipp
 
 7 - Create an implementation of a Hash Table
 ----
@@ -102,6 +102,10 @@ Possible sources of evidence (do any one of these):
 * Graph Algorithms lab
 * Graph project
 * Consult with Dr. Brinkman on an alternative project
+
+I chose to do the Vise project for the implementation of graph algorithms.
+In the Vise project, my partner, Nick Contini, and I did a depth-first traversal of the graph.
+Here is a link to mine and Nick's Vise project in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/Vise/tree/ContiniAndKojs
 
 21 - Determine space and time requirements of common data structure methods
 -----
@@ -173,15 +177,12 @@ In particular, you must show that your program does not leak memory, and does no
 This will probably require referring to your code, providing links.
 
 Memory management in C++ is manual memory management and must be controlled by the programmer. Memory is allocated using new and deallocated using the delete operator.  
-In the Hashing Lab memory is managed. Here is the link to my Hashing Lab source code in Brinkman's repository on github, which I will be referring to: https://github.com/MiamiOH-CSE274/05_Hashing_Lab 
+In the Hashing Lab memory is managed. Here is the link to my Hashing Lab source code in Brinkman's repository on github, which I will be referring to: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/blob/kojsmn/HashTable.ipp
 In line 10, memory is allocated with the new operator. In line 18 memory is deallocated with the delete[] operator.
 To make sure that there is no out of bounds array access, the indexes are determined through the formula hash(k) % backingArraySize.
 This makes sure that an index is not out of bounds. Lines 29, 61, 81, and 90 show this. 
 In the grow() method a new HashRecord is created in Line 116. The backingArray data is copied into the new backingArray.  
 Then in line 130 the old backingArray is deleted using the delete[] operator.
-
-DANGLING POINTERS??
-links to src in his
 
 5 - Create collection classes using templates in C++
 ----

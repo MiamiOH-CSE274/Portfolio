@@ -29,6 +29,9 @@ Possible sources of evidence (do any one of these):
 I chose to do the Queue Lab for the implementation of a Queue.
 Here is a link to my source code on my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/03_Queue_Lab/blob/kojsmn/ArrayQueue.ipp
 
+My methods for the Queue Lab were add 0(1) or constant time except for grow which was 0(n) or linear time.
+I used the array in a circular fashion. I also made sure to not leak memory.
+
 7 - Create an implementation of a List
 ----
 Possible sources of evidence (do any one of these):
@@ -40,6 +43,9 @@ Possible sources of evidence (do any one of these):
 
 I chose to do the Linked List Lab for the implementation of a List.
 Here is a link to my source code on my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/blob/kojsmn/LinkedList.ipp
+
+I implemented a doubly-linked list that had pointers to the next and prev nodes. I was able to have add, remove, get and set be 0(1) or constant time when i was 0 or i was size()-1.
+Memory is not leaked and I was able to use a Linked List in my Shuffle project.
 
 I also used a linked list as my data structure in the Shuffle project. 
 Here is a link to my branch on Brinkman's repository: https://github.com/MiamiOH-CSE274/Shuffle/tree/kojsmn
@@ -57,6 +63,9 @@ Possible sources of evidence (do any one of these):
 I chose to do the Binary Search Tree Lab for the implementation of a Binary Search Tree.
 Here is a link to my source code on my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/06_BST_Lab/blob/kojsmn/BST.ipp
 
+In my Binary Search Tree all the methods were of 0(h) running time where h is the height of the tree.
+Most of the methods are recursive.
+
 7 - Create an implementation of a Hash Table
 ----
 Possible sources of evidence (do any one of these):
@@ -68,6 +77,11 @@ Possible sources of evidence (do any one of these):
 
 I chose to do the Hashing Lab for the implementation of a Hash Table.
 Here is a link to my source code on my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/blob/kojsmn/HashTable.ipp
+
+In my hash table I used double hashing to find an open slot in the hash table. 
+This is where a jump value is calculated with the formula jump = 1 + (key%(m-1)).
+This is used when data is already stored in the intial index value calculated from the hash function.
+In this case the jump value is used until an empty spot is found.
 
 7 - Create an implementation of a Heap
 ----

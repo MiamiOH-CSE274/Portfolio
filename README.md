@@ -125,7 +125,10 @@ the object passes out of scope or is explicitly deleted. Finally, by looking at 
 ----
 Possible sources of evidence (do one):
 
-* Any of the labs or projects, provided it uses templates in an interesting way.
+By looking at my 04_Linked_List_Lab you can see that Dr. Brinkman gave us a template which was defined as: template <class T> in which in main.cpp this was changed to: LinkedList<int> testList; In this case "T" is a place holder and Dr. Brinkman
+decided to replace it with "int" in main.cpp which does all the testing of our code. Templates allow for us to use different data types for methods that do similar things for other data types. So in this example Dr. Brinkman could have went with a "double" instead of an "int" type and our methods would have still worked because we used "T" as 
+a place holder instead of using "int" or some other data type. By using templates we have the flexability to use many data types instead of having to code the same method for each different data type that we may be given. Also with templates we must declare our implementaion class as .ipp instead of the standard .cpp because the compiler can't handle template
+classes when we place them in a .cpp file. Finally, when using templates the data type is choosen at time of execuation instead of compile time like it would be if we were not using templates. Link: https://github.com/LakersAllTheWay/04_Linked_List_Lab/tree/griffid5
 
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application

@@ -87,6 +87,7 @@ An Implementation of an Adjacency Matrix can be found at https://github.com/Miam
 ----
 Possible sources of evidence (do any one of these):
 
+An implement of Graph Algorithms can be found at https://github.com/MiamiOH-CSE274/Vise/tree/BlaseAndBickley.
 * Graph lab
 * Graph Algorithms lab
 * Graph project
@@ -114,9 +115,16 @@ List:  Implemented at https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/blob/
 	Get(): The get method takes linear time, as it loops through the List, Node to Node, until it finds the Node at the index i, where it returns the Node's data. Because the loop used is dependent on the size of the List, the method has linear running time.
 	Size(): The size method takes constant time, as the size of the List is stored in a variable, which can be accessed in constant time.
 	
-* Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
-
-
+Heap: Implemented at https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/bickledb
+	Constuctor: Assuming memory allocation is constant, then the constructor will have constant running time.
+	Destructor: Because the delete[] method is called, the destructor will have either a linear or constant running time, depending on the data stored in the heap. If the data requires a destructor to be deleted, delete[] will take linear time, and if does not, the destructor should take constant time.
+	Grow(): This method takes linear time. When it is called, it allocates an array that is twice as long as the previous array. Then, every item in the old array is added to the new array, one by one. Then, the old array is deleted with the delete function, and a pointer is reset, which takes constant time. Therefore, the method will overall take linear time.
+	BubbleUp(): This method takes lg(n) time, as each time bubbleUp() is called, it checks the parameter's parent and swaps them if needed and continues to move up the heap until the item is in it's correct position. In the worst case scenario, the method has to move a data item up an entire "branch" of the heap, and because of the Heap's properties, the branch will be lg(n) nodes long. Therefore, the method will take lg(n) time in the worst possible scenario.
+	Add() : This method will take lg(n) time, or linear time if grow() is called. The method takes lg(n) time because the new item is added to the array, which takes constant time, but has to bubble up the heap to reach the correct position. The bubbleUp() method takes lg(n) time, which boosts add()'s running time to lg(n). 
+	TrickleDown(): This method will take lg(n) time, as when trickleDown() is called, it moves the parameter down the heap to find the correct location for it by swapping it with one of the Node's children. Due to the properties of the heap, the branch the parameter node is swapped down is lg(n) nodes tall. Therefore, the overall running time of the method will be lg(n).
+	Remove(): This method will take lg(n) time, because it initially starts by swappinng the root Node with the node at the end of the array, and then proceeds to call tickleDown() on the root node. Then, the item at the end of the array is returned. Because remove() contains a call to tickleDown(), the method will take lg(n) time overall.
+	getNumItems: This method takes constant time, as the size is kept track of in other methods, and all getNumItems does is returns the variable, without looking at any other data.
+	
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
 Possible sources of evidence (do one):
@@ -149,5 +157,4 @@ List versus Queue:
 	In the Vise Project, there are several different data structures possible. The data structure I chose was to combine a 2D vector containing nodes which have neighbor pointers to the northeast, east, southeast, southwest, west, and northwest. The reason why I selected this was because it offered most of the functionality of the game board at O(1) time. The neighbor pointers allow checking if adjacent spaces in the gameboard have pieces on them, used when moving new pieces onto the game board and when moving old pieces. It also
 	makes implementing Dijkstra's Algorythm easier, as it breaks down the possible nodes to check into six recursive calls, which is conceptually easy. Further more, because the gameboard is based off of a 2D vector, running through the array to find groups of playing pieces, and then can use neighbor pointers to utilize a graph traversal algorythm. This way, Dijkstra's algorythm takes linear time, based on the number of contigious pieces in each group on the board. Another possible data structure is to simply use an adjacency list, which 
 	would entail each node containing a list of neighbor pointers. I did not utilize an adjacency list because finding each edge connected to each node would take linear time, opposed to simply using neighbor pointers, which takes constant time. Due to the sheer number of times that the board is searched through, I wanted traversal to be as fast as possible. Running through each data structure to find nodes with pieces on them takes linear time for the adjacency list and vectors with neighbor pointers. The constructor of each also takes 
-	linear time, as each node has to be created individually, and then assign the correct pointers. Vise could also be implemented without pointers, purely using math to determine which nodes connect to which other nodes. This method would take linear time in the constructor, as each node would have to be created.
-* Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
+	linear time, as each node has to be created individually, and then assign the correct pointers. Vise could also be implemented without pointers, purely using math to determine which nodes connect to which other nodes. This method would take linear time in the constructor, as each node would have to be created. Overall, due to the relatively small amount of data that needed to be stored, the choice was greatly influenced by how we could code the structure and how we could visualize and implement the correct algorythms. 

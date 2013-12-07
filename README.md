@@ -159,9 +159,9 @@ Possible sources of evidence (do one):
 
 * Any of the labs or projects, provided it uses templates in an interesting way.
 
-If we look at the Heap Labhttps://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/proctopj) We see a template of two classes:
-T is the data we wish to store, and Pri stands for priority: how important it is. Since a Heap is an implementation of 
-the Priority Queue ADT, the variable Pri is particularly important for this class. That said, the class Pri in this case 
+If we look at the Heap Lab (https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/proctopj) We see a template containing two 
+classes: T is the data we wish to store, and Pri stands for priority: how important it is. Since a Heap is an implementation 
+of the Priority Queue ADT, the variable Pri is particularly important for this class. That said, the class Pri in this case 
 is implemented generally. This means one can technically set anything to be the data type used for priority here, even if
 it makes no sense, so long as there is a way to compare the data. 
 
@@ -179,3 +179,21 @@ have known the thing existed.
 Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
+
+For the Shuffle Project I personally used an array-based DEQueue to hold random numbers and build the "deck", because all functions for 
+this data structure are O(1) time except when grow() is called. Also, the array-number structure is less expensive in terms of memory 
+than a node-based linked list, another structure which would have been appropriate to use here. That said, it was by no means an easy
+implementation. The logic is arguably much tougher to use arrays/queues for this project than a linked list, and because I used multiple
+queues, I believe in the end I may have even botched the memory saving with my queue implementation of Shuffle.
+
+I believe I erred when I chose to use queues for implementing the Pharaoh Shuffle actually, because I wasted a lot of time copying data
+from two queues into a third, which is costly in terms of memory and time. For the same size data set I would have only needed two linked lists, 
+and then the process of building the final sequence of nodes would have been as simple as reassigning pointers in each node of each list
+based on a sequence of random numbers. Without having to copy data, I believe this would have run much faster than my queue implementation.
+
+And because copying the data from the queues back to the central array is equally as expensive as copying from a single linked list structure,
+I would suffer no other time loss for this particular project. And I would have saved dynamic memory space as well. All function times except
+the destructor and iterating through the structures (which isn't applicable for comparison here due to the loss of time in copying for the queues
+vs. the time it takes to rearrange addresses in the linked list) being equal for both data structures, I must admit Linked List was the superior
+structure to use here, and I assumed incorrectly about the benefits of array-based structures for this application. And no arrangement of data
+in my opinion would change this if all it is doing is changing the order of cards in a deck.

@@ -38,7 +38,7 @@ To satisfy this requirement of the portfolio I went ahead and did the BST_Lab. I
 of a BST by implementing the following methods in BST.ipp: constructor, destructor, size, add, remove, find, keyExists, next, prev, max and min.
 For most methods I used both a private and public method call so that recursion would be simplified. In this lab all my methods passed the test
 that Dr. Brinkman had and all my methods except the destructor and size were O(h) because the height of the tree is the longest number
-of edges that each method will have to travel. Finally size was O(n) instead of O(h) because we had to tavel down both sides of the tree and 
+of edges that each method will have to travel. Finally size was O(n) instead of O(h) because I had to travel down both sides of the tree and 
 visit every node. Link: https://github.com/LakersAllTheWay/06_BST_Lab/tree/griffid5
 
 
@@ -46,6 +46,10 @@ visit every node. Link: https://github.com/LakersAllTheWay/06_BST_Lab/tree/griff
 ----
 Possible sources of evidence (do any one of these):
 
+I completed the 05_Hashing_Lab to complete this part of the portfolio. In the HashTable.ipp you can find that I implemented the following methods: constructor, destructor, add, remove, find keyExists, size and grow. All of these methods passed Dr. Brinkman's tests that he had given us. Also keyExists, find, remove and size were all
+constant time O(1). We know that size is constant time since we just return numItems. Additionally, we are using an array for the implementation of the hashtable so we know that the 3 other methods will be constant time as well, since we are using key k. 
+The add method on the other hand has a worst case running time of linear time O(n) because we sometimes have to call grow, however, that is only required when the load factor becomes more than 1/2. Otherwise we don't have to call grow and the add method is O(1) on average since we are using linear probing to find an open slot in the hash table. 
+Link: https://github.com/LakersAllTheWay/05_Hashing_Lab/tree/griffid5
 
 7 - Create an implementation of a Heap
 ----

@@ -90,13 +90,13 @@ Possible sources of evidence (do one):
 By looking at my 03_Quere_Lab you can see that I know how to manage memory in C++ by not having my program leak memory, suffer from dangling pointers or out of bounds array access. In C++ we don't have a garbage collection that automatically cleans up like we do in Java. Because of this
 fact we as the programmer must do it our self. When every we use the key word "new" in C++ we must call "delete" at some point in the following code. By calling "new" we create a pointer to a new variable an create some memory space. This means that the variable doesn't have a scope
 and won't be deleted until we specifically call delete on that variable. This can be seen in my grow method of ArrayQueue.ipp:
-* template <class T>
-* void ArrayQueue<T>::grow(){
- *       T* newBackingArray = new T[backingArraySize*2];
- *       if(newBackingArray == NULL) {
- *               throw std::string("There was an error in execution");
- *       }
- *       for (unsigned long i = 0; i < backingArraySize; i++) {
+ template <class T>
+ void ArrayQueue<T>::grow(){
+        T* newBackingArray = new T[backingArraySize*2];
+        if(newBackingArray == NULL) {
+                throw std::string("There was an error in execution");
+        }
+        for (unsigned long i = 0; i < backingArraySize; i++) {
  *               newBackingArray[front + i] = backingArray[(front + i)%backingArraySize];
  *       }
  *       backingArraySize = backingArraySize * 2;

@@ -21,33 +21,31 @@ Body of portfolio
 ----
 Possible sources of evidence (do any one of these):
 
-By clicking on the link you will see that I have fully demonstrated my knowledge of a queue. The code within ArrayQueue.ipp has passed the tests that have been provided by Dr. Brinkman in main.cpp. Furthermore, to implement the queue in this assignment I used the circular array concept. In this code(ArrayQueue.ipp) you will find a constructor and destructor for a circular array. You will also find a add, remove, getNumItems and grow methods. All of these methods are fully functional. At this time I couldn't provide a video, however, at a later time I will be adding a screen shot or video to show the full implementation of an array queue. Link: https://github.com/LakersAllTheWay/03_Queue_Lab
+By clicking on the link you will see that I have fully demonstrated my knowledge of a queue. The code within ArrayQueue.ipp has passed the tests that have been provided by Dr. Brinkman in main.cpp. Furthermore, to implement the queue in this assignment I used the circular array concept. In this code(ArrayQueue.ipp) you will find a constructor and destructor for a circular array. You will also find a add, remove, getNumItems and grow methods. All of these methods are fully functional. Link: https://github.com/LakersAllTheWay/03_Queue_Lab/tree/griffid5
 
 7 - Create an implementation of a List
 ----
 Possible sources of evidence (do any one of these):
 
-By clicking on the link below you will see that I have fully demonstrated my knowledge of a linked list. Other than the splice method all other methods have passed the tests provided by Dr. Brinkman. In this assignment I used a dummyNode that allowed me to access the linked list in which the dummyNode's "next" and "prev" were itself. The methods that can be found in LinkedList.ipp are: find, set, add, remove, get and size. Also the constructor and destructor for the linked list are provided. As stated for the array queue I am going to make a video/screenshot to show the full functionality of this structure. Link: https://github.com/LakersAllTheWay/04_Linked_List_Lab
+By clicking on the link below you will see that I have fully demonstrated my knowledge of a linked list. Other than the splice method all other methods have passed the tests provided by Dr. Brinkman. In this assignment I used a dummyNode that allowed me to access the linked list in which the dummyNode's "next" and "prev" were itself. The methods that can be found in LinkedList.ipp are: find, set, add, remove, get and size. Link: https://github.com/LakersAllTheWay/04_Linked_List_Lab/tree/griffid5
 
 
 7 - Create an implementation of a Binary Search Tree
 ----
 Possible sources of evidence (do any one of these):
 
-* Binary Search Tree Lab (TODO)
-* Use a binary search tree or KD-Tree in the Starbucks project.
-* Use a binary search tree in the Zeitgeist project
-* Consult with Dr. Brinkman on an alternative project
+To satisfy this requirement of the portfolio I went ahead and did the BST_Lab. In this lab I have demonstrated my knowledge 
+of a BST by implementing the following methods in BST.ipp: constructor, destructor, size, add, remove, find, keyExists, next, prev, max and min.
+For most methods I used both a private and public method call so that recursion would be simplified. In this lab all my methods passed the test
+that Dr. Brinkman had and all my methods except the destructor and size were O(h) because the height of the tree is the longest number
+of edges that each method will have to travel. Finally size was O(n) instead of O(h) because we had to tavel down both sides of the tree and 
+visit every node. Link: https://github.com/LakersAllTheWay/06_BST_Lab/tree/griffid5
 
 
 7 - Create an implementaiton of a Hash Table
 ----
 Possible sources of evidence (do any one of these):
 
-* https://github.com/MiamiOH-CSE274/05_Hashing_Lab
-* Use a hash table in the Zeitgeist project
-* Use locality-preserving hashing on the Starbucks project (not recommended!)
-* Consult with Dr. Brinkman on an alternative project
 
 7 - Create an implementation of a Heap
 ----

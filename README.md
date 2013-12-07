@@ -80,7 +80,62 @@ Possible sources of evidence (do any one of these):
 -----
 Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
-* Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
+In General the time complexity of an algorithm/method for a program is how the time complexity scales when the input size changes. 
+
+__________________________________________________________________________________________________________
+03_Queue_Lab
+
+Link: https://github.com/LakersAllTheWay/03_Queue_Lab/tree/griffid5
+
+Space Requirement: Since we are using a circular array the space requirement is the size of the array at any given moment which is going to be "linear". 
+
+Constructor: The constructor has a runtime that is "constant time" since we only allocating memory. 
+
+Destructor: The destructor has a runtime that is "constatn time" as well since we are just deleting the pointer to the array.
+
+add: The worst case runtime for the add method is "linear" and that is only when grow is called otherwise it is constant time since we are adding the item to the back of the array.
+
+remove: Remove has a runtime that is "constant time" since we are just removing the first item in the queue. 
+
+grow: Grow takes "linear time" since we have to copy each element from the old array into the new array one at a time.
+
+__________________________________________________________________________________________________________
+04_Linked_List_Lab
+
+Link: https://github.com/LakersAllTheWay/04_Linked_List_Lab/tree/griffid5
+
+Space Requirement: The space requirement for this linked list is based on its three pointers which are next, prev and data. This gives us a space requirement of "constant time."
+
+Constructor: The constructor has a runtime that is "constant time" since we only allocating memory. 
+
+Destructor: The destructor has a runtime of "linear" since we have to loop through the list while numItems > 0.
+
+add, remove, get, set: The add, remove, get and set methods have a worst case running time of "linear" because I call the find method which also has a worst case running time of "linear," unless the item is at the front or end of the list, in which the runtime would be "constant" if
+it is.  
+
+find: Since we may have to go through each item in the linked list this gives us a worst case runtime of "linear." However, if the item is in the first or last spot then we have a runtime of "constant time."
+
+size: We are just returning the numItems variable so this method is going to be "constant time."
+
+__________________________________________________________________________________________________________
+05_Hashing_Lab
+
+Link: https://github.com/LakersAllTheWay/05_Hashing_Lab/tree/griffid5
+
+Space Requirement: Since we are using an array the space requirment is going to be the size of the array at any given moment which is going to be "linear." 
+
+Constructor: The constructor has a runtime that is "constant time" since we only allocating memory. 
+
+Destructor: The destructor has a runtime that is "constatn time" as well since we are just deleting the pointer to the array.
+
+keyExists, find and remove: We are using an array for the implementation of the hashtable so we know that these 3 methods will be "constant time" since we are using key k as the parameter. 
+
+size: We are just returning the numItems variable so this method is going to be "constant time."
+
+add: Add is going to be "constant" unless grow() has to be called in which add will become "linear time."
+
+grow: Grow takes "linear time" since we have to copy each element from the old array into the new array one at a time.
+
 
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors

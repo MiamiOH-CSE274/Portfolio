@@ -123,7 +123,7 @@ Heap: Implemented at https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/bickledb
 	Add() : This method will take lg(n) time, or linear time if grow() is called. The method takes lg(n) time because the new item is added to the array, which takes constant time, but has to bubble up the heap to reach the correct position. The bubbleUp() method takes lg(n) time, which boosts add()'s running time to lg(n). 
 	TrickleDown(): This method will take lg(n) time, as when trickleDown() is called, it moves the parameter down the heap to find the correct location for it by swapping it with one of the Node's children. Due to the properties of the heap, the branch the parameter node is swapped down is lg(n) nodes tall. Therefore, the overall running time of the method will be lg(n).
 	Remove(): This method will take lg(n) time, because it initially starts by swappinng the root Node with the node at the end of the array, and then proceeds to call tickleDown() on the root node. Then, the item at the end of the array is returned. Because remove() contains a call to tickleDown(), the method will take lg(n) time overall.
-	getNumItems: This method takes constant time, as the size is kept track of in other methods, and all getNumItems does is returns the variable, without looking at any other data.
+	getNumItems(): This method takes constant time, as the size is kept track of in other methods, and all getNumItems does is returns the variable, without looking at any other data.
 	
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
@@ -142,7 +142,9 @@ Possible sources of evidence (do one):
 
 * Any of the labs or projects, provided it uses templates in an interesting way.
 Evidence: https://github.com/MiamiOH-CSE274/07_Heap_Lab/blob/bickledb/Heap.ipp
-	In this example, a template class is used to create a Heap.
+	This collection class takes in two objects, one for the data of each Node in the Heap, and one for the prioritty of each item. The reason why a collection class is used in this case is so that the data structure is flexible, and can be used with any classes that are created. When the project is compiled, the collection class is compiled with the rest of the program, but with the program specified
+	classes as the data types instead of the generic declarations. The compiler will do this for any and all type declarations for each instance of the data structure. The main benefit of creating collection classes is to create code that is flexible and does not have to be rewritten each time a new data type is created or needs to be placed into a data structure. The only problem with collection classes is 
+	that when they are created by the compiler, the compiler creates a one to one copy of the code, with the desired data types copied and pasted into the correct locations. This can lead to a lot of bloated code and a suprisingly large amount of wasted space.
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application
 ----

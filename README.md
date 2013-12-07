@@ -90,26 +90,26 @@ Possible sources of evidence (do one):
 By looking at my 03_Quere_Lab you can see that I know how to manage memory in C++ by not having my program leak memory, suffer from dangling pointers or out of bounds array access. In C++ we don't have a garbage collection that automatically cleans up like we do in Java. Because of this
 fact we as the programmer must do it our self. When every we use the key word "new" in C++ we must call "delete" at some point in the following code. By calling "new" we create a pointer to a new variable an create some memory space. This means that the variable doesn't have a scope
 and won't be deleted until we specifically call delete on that variable. This can be seen in my grow method of ArrayQueue.ipp:
-template <class T>
-void ArrayQueue<T>::grow(){
-        T* newBackingArray = new T[backingArraySize*2];
-        if(newBackingArray == NULL) {
-                throw std::string("There was an error in execution");
-        }
-        for (unsigned long i = 0; i < backingArraySize; i++) {
-                newBackingArray[front + i] = backingArray[(front + i)%backingArraySize];
-        }
-        backingArraySize = backingArraySize * 2;
-        delete [] backingArray;
-        backingArray = newBackingArray;
+* template <class T>
+* void ArrayQueue<T>::grow(){
+ *       T* newBackingArray = new T[backingArraySize*2];
+ *       if(newBackingArray == NULL) {
+ *               throw std::string("There was an error in execution");
+ *       }
+ *       for (unsigned long i = 0; i < backingArraySize; i++) {
+ *               newBackingArray[front + i] = backingArray[(front + i)%backingArraySize];
+ *       }
+ *       backingArraySize = backingArraySize * 2;
+ *       delete [] backingArray;
+ *       backingArray = newBackingArray;
 }
 Since I called "T* newBackingArray = new T[backingArraySize*2];" I had to make sure I called "delete [] backingArray;" at some point so I could reset backingArray to the newBackingArray without having any memory problems. 
 If I didn't properly know how to use memory management in C++ then my program would have crashed or given me an error in which it does not.
 Here is the code in my destructor method that proves a memory leak doesn't occur as well:
-template <class T>
-ArrayQueue<T>::~ArrayQueue() {
-        delete [] backingArray;
-}
+*template <class T>
+*ArrayQueue<T>::~ArrayQueue() {
+*        delete [] backingArray;
+*}
 For arrays we have to call "delete [] backingArray;" instead of "delete backingArray." "delete backingArray" would only work if the backingArray was an object rather than an array. Destructors in C++ are used to deallocate memory and do the cleanup that we don't get automatically in C++. The destructor gets called for a class object when 
 the object passes out of scope or is explicitly deleted. Finally, by looking at the information above you can see that I know the importance of memory management in C++ and how it works.
 

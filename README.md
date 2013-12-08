@@ -325,7 +325,7 @@ First of all, we import all of data into Grid, interate through each not empty
 bucket in the Grid and measure the distance between given input coordinate and
 the other coordinates in each bucket till we find the shorest distance. 
 The time complexity of inserting data into Grid takes `O(n)`. Searching for the
-nearest neighbor takes O(n*m). (m is the number of bucket in the Grid)
+nearest neighbor takes `O(n*m)`. (m is the number of bucket in the Grid)
 
 ********************************************************************************
 

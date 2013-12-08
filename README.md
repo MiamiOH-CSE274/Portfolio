@@ -284,9 +284,58 @@ Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
 
-I wrote my answer in Word document, below is the link:
-https://github.com/JohnneyMing/Portfolio/blob/zhongm2/Text.docx
+********************************************************************************
+
+There are two reasonable data structure to design Starbucks problem. The 
+first one is to use 2 dimenstions tree as data structure. I am going to 
+desrcibe two main methods when using 2 dimenstions tree to solve this 
+starbucks problem: `Insert()` and `getNearest()`. 
+
+Implementing `Insert()`:
+
+It starts from the root and moving to left or right child, inserting 
+the data to left or right by comparing the longitude and latitude alternately.
+For instance, if I start to insert the first data with longitude x= 20, 
+latitude y=20 and starbucks location as root node, next I start to insert the
+second data with x=23,y=20, because the longitude of second data is larger
+than the longitude of first data x=20, so insert the second data to right.
+Next inserting third data with x = 25, y = 15, because the longitude of third 
+data is larger than the longitude of FIRST data x = 20, so moving to second  
+data which is right child of first data, then comparing the latitude of third 
+data to the latitude of second data, because 15 is less than 20, so insert 
+the third data to the left. Same as inserting other data. The time complexity
+of building data is O(nlogn), and space complexity is O(2n).
 
 
+
+Implementing 'getNearest()`:
+
+This method is to search the nearest starbucks that is nearest to the given
+input coordinate. It starts searching at the beginning of root node and move 
+down to the tree recursively by using the same algorithm when doing insertion.
+When it gets to the leaf node, start comparing the distance between given input
+node and every visited node till you obtain the minimum distance.
+The time complexity in this case is `O(logN)`.
+
+
+
+********************************************************************************
+
+The second data structure can be used to desgin this problem is Grid. 
+First of all, we import all of data into Grid, interate through each not empty
+bucket in the Grid and measure the distance between given input coordinate and
+the other coordinates in each bucket till we find the shorest distance. 
+The time complexity of inserting data into Grid takes `O(n)`. Searching for the
+nearest neighbor takes O(n*m). (m is the number of bucket in the Grid)
+
+********************************************************************************
+
+Trade-offs:
+
+Using 2-D tree will be faster if the input data set is very different, otherwise using Grid will be a better choice because you can skip a lot of empty buckets. Additionally, using Grid will also be a better choice if you need to maintain 
+ the data set. It only takes `O(1)` to remove and insert a data, while using 2-D
+ tree will take `O(logn)`. 
+
+********************************************************************************
 
 

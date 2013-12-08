@@ -68,12 +68,13 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 * (4) remove(): Assuming the exception call takes constant time, if there is no item in the linked list, remove() is O(1). Otherwise, the running time of find() plays an important role on deciding the running time of remove(), since switching pointers and updating the number of items take constant time. remove() can take up to linear time in the worst case. 
 * (5) get(): The analyzing strategy of the running time of set() can apply here.    
 * (6) size(): size() is O(1) because returning a value takes constant time.
+----
 * Hash Table: 
-* (1) add(): 
-* (2) remove():
+* (1) add(): If grow() does not get called, assuming hash() and modulus calculation take constant time, then add() would be O(n) theoretically in the worst case, since I implemented add() using linear probing, which could go through every bucket to search for an empty spot. However, in real-life cases, linear probing takes constant time and therefore add() should be O(1). If grow() gets called, then add() would be O(n). See (6) grow().  
+* (2) remove(): 
 * (3) find():
 * (4) keyExists():
-* (5) size():
+* (5) size(): size() takes constant time 
 * (6) grow():
 Graph(Adjacency List): getCost()--O(d) add()--O(d) remove()--O(d), where d is the maximum degree of any node in the graph
 

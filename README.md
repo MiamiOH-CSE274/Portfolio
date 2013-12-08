@@ -23,8 +23,7 @@ Possible sources of evidence (do any one of these):
 
 Implementing array-based Queue:
 
-https://github.com/JohnneyMing/03_Queue_Lab
-
+https://github.com/MiamiOH-CSE274/03_Queue_Lab/blob/zhongm2/ArrayQueue.ipp
 
 * https://github.com/MiamiOH-CSE274/03_Queue_Lab
 * Use a queue as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
@@ -38,8 +37,7 @@ Possible sources of evidence (do any one of these):
 
 Implementing Linked_List:
 
-https://github.com/JohnneyMing/04_Linked_List_Lab
-
+https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/blob/zhongm2/LinkedList.ipp
 
 * https://github.com/MiamiOH-CSE274/04_Linked_List_Lab
 * Use a linked list as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
@@ -54,7 +52,7 @@ Possible sources of evidence (do any one of these):
 
 Implementing Binary Search tree:
 
-https://github.com/JohnneyMing/06_BST_Lab
+https://github.com/MiamiOH-CSE274/06_BST_Lab/blob/zhongm2/BST.ipp
 
 
 * Binary Search Tree Lab (TODO)
@@ -69,7 +67,7 @@ Possible sources of evidence (do any one of these):
 
 Implementing hash table:
 
-https://github.com/JohnneyMing/05_Hashing_Lab
+https://github.com/MiamiOH-CSE274/05_Hashing_Lab/blob/zhongm2/HashTable.ipp
 
 
 * https://github.com/MiamiOH-CSE274/05_Hashing_Lab
@@ -81,7 +79,7 @@ https://github.com/JohnneyMing/05_Hashing_Lab
 ----
 Possible sources of evidence (do any one of these):
 
-Heap lab: https://github.com/MiamiOH-CSE274/07_Heap_Lab
+Heap lab: https://github.com/MiamiOH-CSE274/07_Heap_Lab/blob/zhongm2/Heap.ipp
 
 * Heap lab (TODO)
 * Implement heap sort in the Sorting lab (TODO)
@@ -93,7 +91,7 @@ Heap lab: https://github.com/MiamiOH-CSE274/07_Heap_Lab
 ----
 Possible sources of evidence (do any one of these):
 
-Graph lab: https://github.com/MiamiOH-CSE274/08_Graph_Lab
+Graph lab: https://github.com/MiamiOH-CSE274/08_Graph_Lab/blob/zhongm2/Graph.cpp
 
 * Graph lab
 * Graph Algorithms lab
@@ -104,7 +102,7 @@ Graph lab: https://github.com/MiamiOH-CSE274/08_Graph_Lab
 ----
 Possible sources of evidence (do any one of these):
 
-Graph lab: https://github.com/MiamiOH-CSE274/08_Graph_Lab
+Graph lab: https://github.com/MiamiOH-CSE274/08_Graph_Lab/blob/zhongm2/Graph.cpp
 
 * Graph lab
 * Graph Algorithms lab
@@ -121,7 +119,7 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 Queue Implementation:
 
-https://github.com/JohnneyMing/03_Queue_Lab
+https://github.com/MiamiOH-CSE274/03_Queue_Lab
 
 
 The running time for `add()` method is constant, unless `grow()` is called.
@@ -151,7 +149,8 @@ I used circular array, the space is the initial size of array.
 
 Linked-list Implementation:
 
-https://github.com/JohnneyMing/04_Linked_List_Lab
+https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/blob/zhongm2/LinkedList.ipp
+
 
 The running time for constructor is constant.
 
@@ -187,7 +186,7 @@ Classical double-linked list, it has three pointers: pre, next and data.
 
 HashTable Implementation:
 
-https://github.com/JohnneyMing/05_Hashing_Lab/tree/zhongm2
+https://github.com/MiamiOH-CSE274/05_Hashing_Lab
 
 The running time for constructor is constant. 
 

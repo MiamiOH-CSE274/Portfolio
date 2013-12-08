@@ -88,8 +88,9 @@ Possible sources of evidence (do any one of these):
 
 7 - Implement graph algorithms
 ----
-Possible sources of evidence (do any one of these):
 https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/proctopj -Dijkstra Adaptation in the function shortestPath()
+
+Possible sources of evidence (do any one of these):
 
 * Graph lab
 * Graph Algorithms lab
@@ -206,7 +207,8 @@ words, keys, and a reference to a numeric variable stored in a separate array wh
 Under double hashing, add() takes O(s+1) where s is the length of the word (in letters) we must hash before actually going into the hash table. Now, 
 add may take n (length of the backing array) secondary hashes, which are each O(s) time and change for mathematical calculations. So, this method 
 COULD in fact take O(s*n) time. With high probability, this is unlikely, but regardless the risk is worth mentioning. Searching for the word to 
-exist has the same timing structure because it is still based on the hash function which is always O(s).
+exist has the same timing structure because it is still based on the hash function which is always O(s). Grow() is of course O(n). If Add() calls
+Grow(), Add() will take minimum O(s+n) time.
 
 Upon adding, if the word already exists in the hash table, find() again takes O(s) and again possible O(s*n) time, and then modifying the number of 
 occurences is a O(1) function, because even if the rank necessarily changes, it can only change by one place at a time. A single comparison and a 

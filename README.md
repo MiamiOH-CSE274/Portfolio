@@ -62,7 +62,7 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
 * Linked List: 
-- find()--O(n) Just to test the layout
+- find()--O(n): Every line of code in find() is O(1), except the one in the ¡°for loop¡±, which is O(n) and therefore makes find() O(n).
 - set()--O(1) 
 - add()--O(n) 
 - remove()--O(n) 

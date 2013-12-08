@@ -122,7 +122,9 @@ As for space, it uses only the space necessary, and holds 1 integer for every sp
 
 Because of the points mentioned above, I believe that this design choice was good for this project, and was a suitable datastructure to use. My Vise project is located at:
 
-* https://github.com/MiamiOH-CSE274/Vise/tree/emrickgj
+* https://github.com/MiamiOH-CSE274/Vise/tree/emrickgj 
+* I can't push my code into the repo for some reason, so I'm giving a link to my local one as well
+* https://github.com/emrickgarrett/Vise/tree/emrickgj
 
 
 Zeitgeist

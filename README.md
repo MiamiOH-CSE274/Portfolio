@@ -44,7 +44,7 @@ Possible sources of evidence (do any one of these):
 I chose to do the Linked List Lab for the implementation of a List.
 Here is a link to my source code on my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/blob/kojsmn/LinkedList.ipp
 
-I implemented a doubly-linked list that had pointers to the next and prev nodes. I was able to have add, remove, get and set be 0(1) or constant time when i was 0 or i was size()-1.
+I implemented a doubly-linked list that had pointers to the next and previous nodes. I was able to have add, remove, get and set be 0(1) or constant time when i was 0 or i was size()-1.
 Memory is not leaked and I was able to use a Linked List in my Shuffle project.
 
 I also used a linked list as my data structure in the Shuffle project. 
@@ -80,7 +80,7 @@ Here is a link to my source code on my branch in Brinkman's repository on github
 
 In my hash table I used double hashing to find an open slot in the hash table. 
 This is where a jump value is calculated with the formula jump = 1 + (key%(m-1)).
-This is used when data is already stored in the intial index value calculated from the hash function.
+This is used when data is already stored in the initial index value calculated from the hash function.
 In this case the jump value is used until an empty spot is found.
 
 7 - Create an implementation of a Heap
@@ -105,7 +105,7 @@ Possible sources of evidence (do any one of these):
 * Graph project
 * Consult with Dr. Brinkman on an alternative project
 
-I chose to do the Graph Algorithms Lab for the implementation of an Adjancency Lists.
+I chose to do the Graph Algorithms Lab for the implementation of an Adjacency Lists.
 Here is a link to my source code on my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/08_Graph_Lab/blob/kojsmn/Graph.cpp
 
 7 - Implement graph algorithms
@@ -120,6 +120,7 @@ Possible sources of evidence (do any one of these):
 I chose to do the Vise project for the implementation of graph algorithms.
 In the Vise project, my partner, Nick Contini, and I did a depth-first traversal of the graph.
 Here is a link to mine and Nick's Vise project in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/Vise/tree/ContiniAndKojs
+We used a vector of hexSpaces with pointers to upleft, left, downleft, downright, right, and upright. 
 
 21 - Determine space and time requirements of common data structure methods
 -----
@@ -159,7 +160,7 @@ Linked List Lab:
 
 Binary Search Tree Lab:
 
-	The size() method takes O(n) time or linear time since each node is visited in orer to determine the number of items.
+	The size() method takes O(n) time or linear time since each node is visited in order to determine the number of items.
 
 	The add() method takes O(h) time, where h is the height of the tree.  If the tree is balanced then h is logn and if the tree is unbalanced then h is n.
 
@@ -195,8 +196,7 @@ In the Hashing Lab memory is managed. Here is the link to my Hashing Lab source 
 In line 10, memory is allocated with the new operator. In line 18 memory is deallocated with the delete[] operator.
 To make sure that there is no out of bounds array access, the indexes are determined through the formula hash(k) % backingArraySize.
 This makes sure that an index is not out of bounds. Lines 29, 61, 81, and 90 show this. 
-In the grow() method a new HashRecord is created in Line 116. The backingArray data is copied into the new backingArray.  
-Then in line 130 the old backingArray is deleted using the delete[] operator.
+In the grow() method a new HashRecord is created in Line 116. The backingArray data is copied into the new backingArray. Then in line 130 the old backingArray is deleted using the delete[] operator.
 
 5 - Create collection classes using templates in C++
 ----
@@ -242,9 +242,9 @@ For the Vise project there are two obvious data structure designs. The two reaso
 
 The Adjacency Matrix is a matrix that the columns as the vertices and the rows as all the possible edges. At each row and column, there is a value that tells whether there is an edge from that vertex to that edge.
 
-The Adjaceny List is an array with the vertices. Each vertex contains a list of the edges that are connected to that vertex. The list can be in Linked List form or array form or another type of list data structure.
+The Adjacency List is an array with the vertices. Each vertex contains a list of the edges that are connected to that vertex. The list can be in Linked List form or array form or another type of list data structure.
 
-The trade offs between Adjacency Matrix and Adjacency List are in the size and running times of the methods.
+The tradeoffs between Adjacency Matrix and Adjacency List are in the size and running times of the methods.
 
 Adjacency Lists take up less space than Adjacency Matrix.  The size of an Adjacency Matrix is 0(n^2) and the size of an Adjacency List is at worst 0(n+m) but at best 0(n+dn), where n is the number of vertices, m is the number of edges, and d is the degree of the graph.
 
@@ -267,6 +267,9 @@ Otherwise Adjacency Lists are the clear winners especially if space is an issue.
 In the Vise project, Adjacency Lists are the better data structure because there needs to be easy access to all the neighbors of a vertex, in order to run isCompleted and doVise methods easily.
 Also this allows the depth-first search to be ran faster, which is an algorithm needed for this project.
 
+In our Vise project we used a vector of hexSpaces with pointers to upleft, left, downleft, downright, right, and upright hexes. 
+We used this data structure instead of an Adjacency Matrix because it was easier for us to understand how to access certain hexes. 
+There are no major running time differences between our data structure and Adjacency Lists.
 
 
 Extra Credit - 5

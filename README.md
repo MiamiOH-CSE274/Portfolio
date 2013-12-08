@@ -295,16 +295,15 @@ Implementing `Insert()`:
 
 It starts from the root and moving to left or right child, inserting 
 the data to left or right by comparing the longitude and latitude alternately.
-For instance, if I start to insert the first data with longitude x= 20, 
-latitude y=20 and starbucks location as root node, next I start to insert the
-second data with x=23,y=20, because the longitude of second data is larger
-than the longitude of first data x=20, so insert the second data to right.
-Next inserting third data with x = 25, y = 15, because the longitude of third 
-data is larger than the longitude of FIRST data x = 20, so moving to second  
-data which is right child of first data, then comparing the latitude of third 
-data to the latitude of second data, because 15 is less than 20, so insert 
-the third data to the left. Same as inserting other data. The time complexity
-of building data is O(nlogn), and space complexity is O(2n).
+For instance, if I start to insert the first data with longitude `x= 20`, 
+latitude `y=20` and starbucks location as root node, next I start to insert the
+second data with `x=23`,`y=20`, because the longitude of second data is larger
+than the longitude of first data `x=20`, so insert the second data to right.
+Next inserting third data with `x = 25`, `y = 15`, because the longitude of 
+third data is larger than the longitude of FIRST data `x = 20`, so moving to 
+second data which is right child of first data, then comparing the latitude of 
+third data to the latitude of second data, because 15 is less than 20, so insert the third data to the left. Same as inserting other data. The time complexity
+of building data is `O(nlogn)`, and space complexity is `O(2n)`.
 
 
 

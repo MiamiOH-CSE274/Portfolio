@@ -62,6 +62,7 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
 * Linked List: 
+* https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/liy28?source=cbc 
 * (1) find(): If the index of the item is out of boundary or the item is dummy node, assuming the exception call takes constant time, then find() will be O(1). Otherwise, find() can be O(n) because the line of code in for loop brackets takes linear time.  
 * (2) set(): How much time set() can take really depends on the time find() takes, since assigning values only takes constant time. So, the worst case running time can be O(n).
 * (3) add(): Just like set(), how much time add() takes depends on the running time of find(), since switching pointers and assigning values take constant time. add() can take linear time in the worst case.   
@@ -69,18 +70,20 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 * (5) get(): The analyzing strategy of the running time of set() can apply here.    
 * (6) size(): size() is O(1) because returning a value takes constant time.
 
-* Hash Table: 
-* (1) add(): If grow() does not get called, assuming hash() and modulus calculation take constant time, then add() would be O(n) theoretically in the worst case, since I implemented add() using linear probing, which could go through every bucket to search for an empty spot. However, in real-life cases, linear probing takes constant time and therefore add() should be O(1) on average. If grow() gets called, then add() would be O(n). See (6) grow().  
+* HashTable:
+* https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/liy28?source=cbc 
+* (1) add(): If grow() does not get called, assuming hash() and modulus calculation take constant time, then add() would be O(n) theoretically in the worst case, since I implemented add() using linear probing, which could go through every bucket to search for an empty spot. However, in real-life cases, linear probing takes constant time and therefore add() should be O(1) on average. If grow() gets called, then add() would be O(n). See (6) grow().
 * (2) remove(): The running time of remove() really depends on how much time linear probing takes and, as I analyzed above, linear probing takes constant time in real-life cases. So, remove() is O(1), providing that hash() and modulus calculation take constant time.
-* (3) find(): If we assume exception call takes constant time, find() would be constant, considering the analysis above about the running time of linear probing and hash() as well as modulus calculation.  
-* (4) keyExists(): find() plays an essential role on deciding how much time keyExists() take, so keyExists() is O(1). 
-* (5) size(): Returning a value takes constant time.
+* (3) find(): If we assume exception call takes constant time, find() would be constant, considering the analysis above about the running time of linear probing and hash() as well as modulus calculation.
+* (4) keyExists(): find() plays an essential role on deciding how much time keyExists() take, so keyExists() is O(1).
+* (5) size(): Returning a value takes constant time and therefore size() is O(1).
 * (6) grow(): If we assume making a new array with double size of the old array takes constant time, looping through the old array to find appropriate items takes linear time.  
 
-* Graph (Adjacency List): 
-* getCost(): 
+* Graph (Adjacency List):
+https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/liy28?source=cbc 
+* getCost(): Following the given index(node name) to find a certain node takes constant time, but looping through the edge list of the node to find a certain edge can be O(d) in the worst case.
 * add(): 
-* remove():
+* remove(): 
 * d is the maximum degree of any node in the graph
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors

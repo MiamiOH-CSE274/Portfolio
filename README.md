@@ -62,12 +62,12 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
 * Linked List: 
-- find()--O(n): Every line of code in find() is O(1), except the one in the ¡°for loop¡±, which is O(n) and therefore makes find() O(n).
-- set()--O(1) 
-- add()--O(n) 
-- remove()--O(n) 
-- get--O(1) 
-- size()--O(1) 
+(1) find()--O(n): If we assume the exception call takes constant time, then every line of code takes constant time except the one in for loop, which takes linear time in the worst case and therefore makes find() O(n).
+(2) set()--O(1): 
+(3) add()--O(n) 
+(4) remove()--O(n) 
+(5) get--O(1) 
+(6) size()--O(1) 
 Hash Table: add()--O(1)* remove()--O(1) find()--O(1) keyExists()--O(1) size()--O(1) grow()--O(n) *should be O(1) average
 Graph(Adjacency List): getCost()--O(d) add()--O(d) remove()--O(d), where d is the maximum degree of any node in the graph
 

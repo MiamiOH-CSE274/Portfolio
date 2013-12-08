@@ -89,8 +89,7 @@ Possible sources of evidence (do any one of these):
 7 - Implement graph algorithms
 ----
 Possible sources of evidence (do any one of these):
-
-IMPLEMENT DIJKSTRA'S ALGORITHM IN THE GRAPH LAB!!!
+https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/proctopj -Dijkstra Adaptation in the function shortestPath()
 
 * Graph lab
 * Graph Algorithms lab
@@ -127,7 +126,7 @@ For Binary Search Tree https://github.com/MiamiOH-CSE274/06_BST_Lab/tree/proctop
 The running time of size() can be made constant if you store the variable numItems and increment it in add(). Otherwise it is O(n) 
 by way of using a depth-first search (also featured in my code for this lab, but not utilized). Add() is effectively O(h) where h is
 the height of BST. This height can be expressed as base2 log(n) where n is the number of nodes in the tree. Note the log-base changes
-as the number of children per node changes. If each node has 3 children, then height is base3 log(n). So, in short, add runs in O(lg(n)) time.
+as the number of children per node changes. If each node has 3 children, then height is base3 log(n). So, in short, Add() runs in O(lg(n)) time.
 
 Remove() runs in O(2lg(n)), 2 because the node must be found if it exists O(lg(n)), and then according to the implementation, bubble to the 
 bottom O(lg(n)), and then be set to NULL and deleted (each O(1)).
@@ -145,7 +144,7 @@ Possible sources of evidence (do one):
 
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
 
-For the LinkedList Lab(https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/proctopj) we see dynamic memory allocation being used to construct 
+For the LinkedList Lab (https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/proctopj) we see dynamic memory allocation being used to construct 
 and connect a data type of our own design called Node which contains data of an unknown type until execution and address markers to other Nodes in 
 the Linked List. The dummyNode is generated first and made permanent by the new() function which gives it an address in the RAM which will not be 
 changed or freed up until we specify by use of the delete() function. Each time an item is added to the LinkedList, a new Node is generated to contain 
@@ -182,6 +181,7 @@ Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
 
+https://github.com/MiamiOH-CSE274/Shuffle/tree/proctopj
 * For the Shuffle Project I personally used an array-based DEQueue to hold random numbers and build the "deck", because all functions for 
 this data structure are O(1) time except when grow() is called. Also, the array-number structure is less expensive in terms of memory 
 than a node-based linked list, another structure which would have been appropriate to use here. That said, it was by no means an easy
@@ -201,12 +201,12 @@ structure to use here, and I assumed incorrectly about the benefits of array-bas
 in my opinion would change this if all it is doing is changing the order of cards in a deck.
 
 
-* For Zeitgeist the obvious solution to a ranked dictionary problem is an array-based hash table which holds the words, keys, and a reference to
-a numeric variable stored in a separate array which solely keeps track of rank (how many times each word appears). Under double hashing, add() takes
-O(s+1) where s is the length of the word (in letters) we must hash before actually going into the hash table. Now, add may take n (length of the 
-backing array) secondary hashes, which are each O(s) time and change for mathematical calculations. So, this method could in fact take O(s*n) time.
-With high probability, this is unlikely, but regardless the risk is worth mentioning. Searching for the word to exist has the same timing structure
-because it is still based on the hash function which is always O(s).
+* For Zeitgeist (I did not complete this one) the obvious solution to a ranked dictionary problem is an array-based hash table which holds the 
+words, keys, and a reference to a numeric variable stored in a separate array which solely keeps track of rank (how many times each word appears). 
+Under double hashing, add() takes O(s+1) where s is the length of the word (in letters) we must hash before actually going into the hash table. Now, 
+add may take n (length of the backing array) secondary hashes, which are each O(s) time and change for mathematical calculations. So, this method 
+COULD in fact take O(s*n) time. With high probability, this is unlikely, but regardless the risk is worth mentioning. Searching for the word to 
+exist has the same timing structure because it is still based on the hash function which is always O(s).
 
 Upon adding, if the word already exists in the hash table, find() again takes O(s) and again possible O(s*n) time, and then modifying the number of 
 occurences is a O(1) function, because even if the rank necessarily changes, it can only change by one place at a time. A single comparison and a 
@@ -215,6 +215,7 @@ single swap are all that would take place.
 One could theoretically store the words themselves in a Binary Search Tree using the characters in words as the key. Aardvark < Abash < Accelerate
 If one can keep the tree balanced (which is its own separate juggling act in terms of time), the times for add() keyExists() and find() become O(lg(n))
 time, but if a near perfectly balanced tree is impossible to achieve, then the times all average toward O(n) time. Given the distribution of words in
-the English dictionary, perfect balance is not obviously (to me anyway) possible, but one could get close. There's no reason to store rank in anything
-except an array due to constant access time and simple storage, but nevertheless, one could use a DLList to do it.  Adding more and more word as well 
-as ranks would make the structure steadily more expensive and time consuming, even though swaps would essentially still be O(1) time.
+the English dictionary, perfect balance is not obviously possible(to me anyway, and n becomes much larger than the average s in hashing), but one could 
+get close. There's no reason to store rank in anything except an array due to constant access time and simple storage, but nevertheless, one could use 
+a DLList to do it.  Adding more and more words as well as ranks would make the structure steadily more expensive and time consuming, even though swaps 
+would essentially still be O(1) time. I still overall believe using a hashtable with double hashing and secondary array is the most elegant solution.

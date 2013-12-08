@@ -62,13 +62,19 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
 * Linked List: 
-* (1) find(): If the index of the item is out of boundary or the item is dummy node, assuming the exception call takes constant time, then find() will be O(1). Otherwise, find() can be O(n) because the line of code in for loop brackets, in the worst case, takes linear time.  
+* (1) find(): If the index of the item is out of boundary or the item is dummy node, assuming the exception call takes constant time, then find() will be O(1). Otherwise, find() can be O(n) because the line of code in for loop brackets takes linear time.  
 * (2) set(): How much time set() can take really depends on the time find() takes, since assigning values only takes constant time. So, the worst case running time can be O(n).
 * (3) add(): Just like set(), how much time add() takes depends on the running time of find(), since switching pointers and assigning values take constant time. add() can take linear time in the worst case.   
 * (4) remove(): Assuming the exception call takes constant time, if there is no item in the linked list, remove() is O(1). Otherwise, the running time of find() plays an important role on deciding the running time of remove(), since switching pointers and updating the number of items take constant time. remove() can take up to linear time in the worst case. 
 * (5) get(): The analyzing strategy of the running time of set() can apply here.    
 * (6) size(): size() is O(1) because returning a value takes constant time.
-Hash Table: add()--O(1)* remove()--O(1) find()--O(1) keyExists()--O(1) size()--O(1) grow()--O(n) *should be O(1) average
+* Hash Table: 
+* (1) add(): 
+* (2) remove():
+* (3) find():
+* (4) keyExists():
+* (5) size():
+* (6) grow():
 Graph(Adjacency List): getCost()--O(d) add()--O(d) remove()--O(d), where d is the maximum degree of any node in the graph
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors

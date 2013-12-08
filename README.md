@@ -123,6 +123,7 @@ Despite these running time comparisons, there is no clear-cut preferred choice f
 
 
 Analysis 2:
+----
 For social networking sites, the company needs to be able access usernames quickly. To accomplish this problem, there are two logical choices for storing a listing of all of the usernames of a website: a BST, or a hash table. Each data structure has its own strengths and weaknesses, but both can be used for the website.
 
 A BST would be preferred over a hash table when the user is searching for friends to connect with on the site. This is because BSTs are more efficient at accessing user names that share the same string of characters that the user typed into the search box. Once the  searching algorithm has reached the first node that matches what the user is typing, then all of the possibilities for what the person is searching for are the child nodes, and easily accessible. With a hash table, it would be much more difficult to find all of the users that share a similar username because once the first match is found, the other usernames are not necessarily going to be immediately following the first one. As a result, the search algorithm would have to iterate through the backing array to guarantee that all of the matching usernames are found, which leads to a linear running time. The BST would have a running time less than that. It would be log n, where n is the number of items in the tree, worst case.

@@ -90,6 +90,8 @@ Possible sources of evidence (do any one of these):
 ----
 Possible sources of evidence (do any one of these):
 
+IMPLEMENT DIJKSTRA'S ALGORITHM IN THE GRAPH LAB!!!
+
 * Graph lab
 * Graph Algorithms lab
 * Graph project
@@ -180,7 +182,7 @@ Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
 
-For the Shuffle Project I personally used an array-based DEQueue to hold random numbers and build the "deck", because all functions for 
+* For the Shuffle Project I personally used an array-based DEQueue to hold random numbers and build the "deck", because all functions for 
 this data structure are O(1) time except when grow() is called. Also, the array-number structure is less expensive in terms of memory 
 than a node-based linked list, another structure which would have been appropriate to use here. That said, it was by no means an easy
 implementation. The logic is arguably much tougher to use arrays/queues for this project than a linked list, and because I used multiple
@@ -197,3 +199,22 @@ the destructor and iterating through the structures (which isn't applicable for 
 vs. the time it takes to rearrange addresses in the linked list) being equal for both data structures, I must admit Linked List was the superior
 structure to use here, and I assumed incorrectly about the benefits of array-based structures for this application. And no arrangement of data
 in my opinion would change this if all it is doing is changing the order of cards in a deck.
+
+
+* For Zeitgeist the obvious solution to a ranked dictionary problem is an array-based hash table which holds the words, keys, and a reference to
+a numeric variable stored in a separate array which solely keeps track of rank (how many times each word appears). Under double hashing, add() takes
+O(s+1) where s is the length of the word (in letters) we must hash before actually going into the hash table. Now, add may take n (length of the 
+backing array) secondary hashes, which are each O(s) time and change for mathematical calculations. So, this method could in fact take O(s*n) time.
+With high probability, this is unlikely, but regardless the risk is worth mentioning. Searching for the word to exist has the same timing structure
+because it is still based on the hash function which is always O(s).
+
+Upon adding, if the word already exists in the hash table, find() again takes O(s) and again possible O(s*n) time, and then modifying the number of 
+occurences is a O(1) function, because even if the rank necessarily changes, it can only change by one place at a time. A single comparison and a 
+single swap are all that would take place.
+
+One could theoretically store the words themselves in a Binary Search Tree using the characters in words as the key. Aardvark < Abash < Accelerate
+If one can keep the tree balanced (which is its own separate juggling act in terms of time), the times for add() keyExists() and find() become O(lg(n))
+time, but if a near perfectly balanced tree is impossible to achieve, then the times all average toward O(n) time. Given the distribution of words in
+the English dictionary, perfect balance is not obviously (to me anyway) possible, but one could get close. There's no reason to store rank in anything
+except an array due to constant access time and simple storage, but nevertheless, one could use a DLList to do it.  Adding more and more word as well 
+as ranks would make the structure steadily more expensive and time consuming, even though swaps would essentially still be O(1) time.

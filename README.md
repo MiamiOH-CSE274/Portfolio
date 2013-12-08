@@ -50,13 +50,9 @@ I plan on implementing the hash table as part of my Zeitgeist project, and may e
 ----
 Possible sources of evidence (do any one of these):
 
-//NEED TO DO HEAP LAB
+My source of evidence for implementation of a heap will be my heap lab! I correctly created a heap as described, and it works as it should! Because of this, and handling memory as appropriate so there are no leaks, I believe it is worth the full 7 points.
 
-* Heap lab (TODO)
-* Implement heap sort in the Sorting lab (TODO)
-* Implement a heap as part of the Graph Algorithms lab (TODO)
-* Implement a heap as part of the Graph Project (TODO)
-* Consult with Dr. Brinkman on an alternative project
+* https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/emrickgj
 
 7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
 ----
@@ -74,12 +70,12 @@ One can see an implementation of my Graph algorithms in my Graph project.
 -----
 Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
-Looking at my Linked_List_Lab and Queue lab, I believe I have the space and time requirements of these common data structure methods, although I'm not sure. If this is incorrect, I'd like to know or if I need to go into more detail.
+Looking at my Linked_List_Lab and Queue lab, I believe I have the space and time requirements of these common data structure methods. I also have the Heap Lab, which also takes into consideration the space and time requirements, and analyzes them as well. 
 
 
 * https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/emrickgj
 * https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/emrickgj
-* Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
+* https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/emrickgj
 
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
@@ -114,8 +110,19 @@ I'm not entirely sure what an interesting implementation exactly is, as it's kin
 30 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
 
-For this I plan on using Zeitgeist (need to finish) and my Vise Project.
+Vise:
 
-Possible sources of evidence (do up to 2 of these, up to 15 points for each):
+For my Vise project, I decided to use a 1D array as my data structure to hold the board. Because I am using this 1D array, accessing, deleting, re-writing, all take O(1) time. There is not need to iterate or loop, if there is a specific space that you are looking for, it will always be extremely fast. 
 
-* Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
+The downsides of this data structure, is trying to find a cluster or group of points, and when trying to compare to all possible spaces on the board, as it will have to loop through all of them. However, since this board is only 20x20, I think this is rather insignificant since it is such a small number.
+
+The other downside would be the increased mathmatical calculations on my part to get everything working as it should, specifically finding neighboring spaces, although it wasn't too difficult and I did figure it out (also makes getting neighbors constant time). 
+
+As for space, it uses only the space necessary, and holds 1 integer for every space in the array. I could even shrink the usage down to a short, and maximize the efficiency of the space. Because I have no pointers, there is not space required for those as well, making this array just about as small as possible.
+
+Because of the points mentioned above, I believe that this design choice was good for this project, and was a suitable datastructure to use. My Vise project is located at:
+
+* https://github.com/MiamiOH-CSE274/Vise/tree/emrickgj
+
+
+Zeitgeist

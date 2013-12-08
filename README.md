@@ -307,7 +307,7 @@ of building data is `O(nlogn)`, and space complexity is `O(2n)`.
 
 
 
-Implementing 'getNearest()`:
+Implementing `getNearest()`:
 
 This method is to search the nearest starbucks that is nearest to the given
 input coordinate. It starts searching at the beginning of root node and move 

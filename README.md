@@ -24,7 +24,7 @@ My source of evidence is going to be my Queue Lab. By going to the link below, o
 
 7 - Create an implementation of a List
 ----
-My source of evidence is going to be my LinkedList Lab, as well as an implementation of it in my Zeitgeist project to keep track of the top words in the documents. This may change in the future, based on how the cache actually works. If it still runs efficiently while adding/getting indexes from the array without using the LinkedList part, then this will stay. Based on the performance, I may use an alternative method I further describe in the Portfolio project to hopefully speed up the program dramatically.
+My source of evidence is going to be my LinkedList Lab which shows a proper use of a List, and has all the functions and requirements working as they should. 
 
 
 * https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/emrickgj
@@ -40,7 +40,7 @@ My source of evidence is going to be my Binary Search tree lab. In the lab, one 
 7 - Create an implementaiton of a Hash Table
 ----
 
-I plan on implementing the hash table as part of my Zeitgeist project, and may end up doing the Hashing Lab as well. I am working on it tonight, sometime this weekend, and next weekend as well. More information can be found in my Zeitgiest repository.
+An implementation of a Hash Table can be seen in my Zeitgeist project, as well as a hashing function that I think works very effectively. It shows that I am able to not only create hash functions that work somewhat well, but can also implement them in a data structure.
 
 
 * https://github.com/MiamiOH_CSE274/Zeitgeist/tree/emrickgj
@@ -62,15 +62,16 @@ I create an adjacency list in my Graph Lab! I create an array index for each nod
 
 7 - Implement graph algorithms
 ----
-One can see an implementation of my Graph algorithms in my Graph project. 
+One can see an implementation of my Graph algorithms in my Graph project, showing I have both an understanding of how they should work and how to implement them correctly.
 
 * https://github.com/MiamiOH_CSE274/08_Graph_Lab/tree/emrickgj
 
 21 - Determine space and time requirements of common data structure methods
 -----
-Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 Looking at my Linked_List_Lab and Queue lab, I believe I have the space and time requirements of these common data structure methods. I also have the Heap Lab, which also takes into consideration the space and time requirements, and analyzes them as well. 
+
+Each of them will detail on the best/worst of each data structure.
 
 
 * https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/emrickgj
@@ -92,17 +93,15 @@ up any memory that was dynamically allocated within the object, such as member v
 
 It's also important to remember the equivalent for an array. For deleting an array that was dynamically allocated, one will use the "delete[]" instead of using "delete"!
 
-Possible sources of evidence (do one):
 
 * https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/emrickgj
 
 5 - Create collection classes using templates in C++
 ----
-Possible sources of evidence (do one):
 
-I'm not entirely sure what an interesting implementation exactly is, as it's kind of vague, but the two projects I have done so far use templates. Not sure if the Linked_List and Queue labs count here or not though.
+The following project show implementation of collection classes using templates in C++, showing that I understand the concept. They both work correctly, and both utilize templates effectively.
 
-* Any of the labs or projects, provided it uses templates in an interesting way.
+
 * https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/emrickgj
 * https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/emrickgj
 
@@ -127,4 +126,18 @@ Because of the points mentioned above, I believe that this design choice was goo
 * https://github.com/emrickgarrett/Vise/tree/emrickgj
 
 
-Zeitgeist
+Zeitgeist:
+
+For my Zeigeist project, I am using a combination of a Hashmap and a Linked List, using arrays. It will first generate a hash based on the word given, and then check for a collision, if there is a collision, it stores it in the next open slot of the collision array and stores that index in the data item located in the hashtable. Then every time a collision happens, it will update each of their next indexes appropriately so it can be found for retrieval later.
+
+The upsides is that (essentially) add, remove, and get functions will at most take n-time, although it is arguably lower due to an efficient hash function. It's able to be this fast also because it can get the bucket it's supposed to be in, and then immediately get the next, next, and next collisions very quickly using indexes in the collision array, instead of using pointers to find the next one (utilizing the benefits of how arrays are stored and retrieved vs. Linked list). 
+
+I also have it set up to only grow when appropriate, reducing the amount of space needed, and growing when needed. The slowest part of the process is the growing, although this is rare. The biggest downside is the complexity, and it resulted in the project not working essentially as it should.
+
+I could have done other options, such as a hash table with "jump" methods for collisions, or a "cuckoo" hash table setup, but these result in having to search repeatedly for an item, and can cause more collisions to occur from non-related data items. Doing it this way, I can help reduce the amount of collisions, but when there are collisions, they are bunched together and are easily sorted through without affecting the other entries. Because of this, while I don't have mathmatical proof, I believe it will reduce the amount of collisions if the hash function is efficient, which I believe mine is.
+
+The other reason for using this structure vs. a straight hash table or linked list, was the requirement for a sorted order of what are the most populated words in the documents. Using just a hash table wouldn't work, as it doesn't preserve any sort of order. Using a Linked List or plain array to find a word would make it very slow. Another option I thought of was a binary search tree, in which the worst case scenario would be O(logn) time if balanced correctly, but I believe this method is much faster as it uses both the benefits of the hash table, and linked list. As mentioned earlier, the worst case for finding, updating, removing, is O(n), but due to the hash table functioned it will in practice be much, much faster.
+
+My project can be found at:
+
+* https://github.com/MiamiOH-CSE274/Zeitgeist/tree/emrickgj 

@@ -79,10 +79,8 @@ Possible sources of evidence (do any one of these):
 I chose to do the Hashing Lab for the implementation of a Hash Table.
 Here is a link to my source code on my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/blob/kojsmn/HashTable.ipp
 
-In my hash table I used double hashing to find an open slot in the hash table. 
-This is where a jump value is calculated with the formula jump = 1 + (key%(m-1)).
-This is used when data is already stored in the initial index value calculated from the hash function.
-In this case the jump value is used until an empty spot is found.
+In my hash table I used linear probing to find an open slot in the hash table. 
+This is where if there is a collision then the item is placed in the next bucket.
 
 7 - Create an implementation of a Heap
 ----

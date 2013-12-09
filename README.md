@@ -127,7 +127,7 @@ There is no video demostration for this function
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
 
-In c++ memory management is very important and 
+In c++ memory management is very important and tends to be a thing many programmers struggle with even if they are very good.  Memory leaks can cause many problems, as well as pointing out of bounds can cause security issues.  Many proffesional programmers will do this still!  A good programmer should be able to avoid all these issues, and me personally still am honestly a bit fuzy on some things when it comes to this area.  I try to do my best and delete un used data and pointers when I need to so I have no memory leaks.  I also always make sure I do not point out of bounds (I know how much you hate that).  The problem for me is the switch from java to c++.  Before in java we had what was called a garbage collector.  We didnt have to manually remove things because the compiler did it for us.  Also when it came to pointing out of bounds java would throw an error which c++ doesnt.  Then it comes to pointers and that was new for me also.  We need to make sure we delete pointers when there is no data on the end of the pointer so we dont get dangling pointers.  To show my knowledge of this I will use my 07_Heap_Lab the link is https://github.com/kosirjm/07_Heap_Lab.  First off as you can see in my deconstructor I delete[] backingArray. When I call grow I create a tempory pointer to the data.  When I am done with it I need to make sure I delete the temp which I do.  Also in remove I reduce the number of items in the list and trickle it down so there is know memory leak.
 
 5 - Create collection classes using templates in C++
 ----

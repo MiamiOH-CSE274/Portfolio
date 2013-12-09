@@ -227,64 +227,64 @@ For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one
 really depends on the input data set. Explain what the data would have to look like for the 
 Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
 
-Shuffle
+Shuffle:
 
-For the Shuffle project there are two obvious data structure designs. The two reasonable options are Linked Lists and Array Queues. The Shuffle project requires implementing a realistic shuffle method of cards.
+	For the Shuffle project there are two obvious data structure designs. The two reasonable options are Linked Lists and Array Queues. The Shuffle project requires implementing a realistic shuffle method of cards.
 
-The trade-offs between Linked Lists and Array Queues are in the ease of insertion and removal of items.
-The running times for Array Queues and Linked Lists are walked through below. However, when used in the Shuffle project neither data structure has an advantage with running times.
-It takes 0(n) or linear time for both data structures to implement the Shuffle project.
-The Array Queue has to call grow which takes 0(n) time and the Linked List's splice method, which takes items from one Linked List
-and inserts them at an index in another, also takes 0(n) time.
+	The trade-offs between Linked Lists and Array Queues are in the ease of insertion and removal of items.
+	The running times for Array Queues and Linked Lists are walked through below. However, when used in the Shuffle project neither data structure has an advantage with running times.
+	It takes 0(n) or linear time for both data structures to implement the Shuffle project.
+	The Array Queue has to call grow which takes 0(n) time and the Linked List's splice method, which takes items from one Linked List
+	and inserts them at an index in another, also takes 0(n) time.
 
-In Array Queues the get method take O(1) time. The remove and add methods in ArrayQueues are O(1) time or constant time unless grow is called then they are O(n) or linear time. If an ArrayQueue was used for the Shuffle project the process of adding and removing items would be slow. When adding and removing the array needs to either grow or be shrunk. This is done by allocating a new array of the desired size and copying the data over.
+	In Array Queues the get method take O(1) time. The remove and add methods in ArrayQueues are O(1) time or constant time unless grow is called then they are O(n) or linear time. If an ArrayQueue was used for the Shuffle project the process of adding and removing items would be slow. When adding and removing the array needs to either grow or be shrunk. This is done by allocating a new array of the desired size and copying the data over.
 
-The LinkedList methods of get, set, splice, and find take O(n) or linear time. The remove and add methods take O(n) time or linear time. LinkedLists do not need to copy any data when adding or removing. The place where the add or remove is desired needs to be found and then the data is inserted by updating the links.
-This is what the splice method does. The splice method takes two Linke
+	The LinkedList methods of get, set, splice, and find take O(n) or linear time. The remove and add methods take O(n) time or linear time. LinkedLists do not need to copy any data when adding or removing. The place where the add or remove is desired needs to be found and then the data is inserted by updating the links.
+	This is what the splice method does. The splice method takes two Linke
 
-If an Array Queue was used for the Shuffle project, new arrays would need to allocated and data copied and then old arrays deleted.
-The manipulation of Array Queues is not as easy as Linked Lists.
+	If an Array Queue was used for the Shuffle project, new arrays would need to allocated and data copied and then old arrays deleted.
+	The manipulation of Array Queues is not as easy as Linked Lists.
 
-For the Shuffle project I choose to use Linked Lists as my data structure. The reason I choose this data structure was because insertion and removal is easier with LinkedLists than with ArrayQueues. With ArrayQueues my running time would be worse because I would have to create new arrays to deal with the addition and removal of cards. 
-With LinkedLists I do not have to deal with resizing my data structure, like I would have to with ArrayQueues. LinkedLists are easy to manipulate and the Shuffle project requires easy manipulation of cards in order to get a realistic shuffle that produces a shuffled deck.
+	For the Shuffle project I choose to use Linked Lists as my data structure. The reason I choose this data structure was because insertion and removal is easier with LinkedLists than with ArrayQueues. With ArrayQueues my running time would be worse because I would have to create new arrays to deal with the addition and removal of cards. 
+	With LinkedLists I do not have to deal with resizing my data structure, like I would have to with ArrayQueues. LinkedLists are easy to manipulate and the Shuffle project requires easy manipulation of cards in order to get a realistic shuffle that produces a shuffled deck.
 
 
-Vise
+Vise:
 
-For the Vise project there are two obvious data structure designs. The two reasonable options are Adjacency Matrix and Adjacency Lists.
+	For the Vise project there are two obvious data structure designs. The two reasonable options are Adjacency Matrix and Adjacency Lists.
 
-The Adjacency Matrix is a matrix that has the columns as the vertices and the rows as all the possible edges. At each row and column, there is a value that tells whether there is an edge from that vertex to that edge.
+	The Adjacency Matrix is a matrix that has the columns as the vertices and the rows as all the possible edges. At each row and column, there is a value that tells whether there is an edge from that vertex to that edge.
 
-The Adjacency List is an array with the vertices. Each vertex contains a list of the edges that are connected to that vertex. The list can be in Linked List form or array form or another type of list data structure.
+	The Adjacency List is an array with the vertices. Each vertex contains a list of the edges that are connected to that vertex. The list can be in Linked List form or array form or another type of list data structure.
 
-The tradeoffs between Adjacency Matrix and Adjacency List are in the storage and running times of the methods.
+	The tradeoffs between Adjacency Matrix and Adjacency List are in the storage and running times of the methods.
 
-Adjacency Lists take up less space than Adjacency Matrix.  The storage size of an Adjacency Matrix is 0(n^2) and the storage size of an Adjacency List is at worst 0(n+m) but at best 0(n+dn), where n is the number of vertices, m is the number of edges, and d is the degree of the graph.
-Adjacency Lists save more space than Adjacency Matrix.
+	Adjacency Lists take up less space than Adjacency Matrix.  The storage size of an Adjacency Matrix is 0(n^2) and the storage size of an Adjacency List is at worst 0(n+m) but at best 0(n+dn), where n is the number of vertices, m is the number of edges, and d is the degree of the graph.
+	Adjacency Lists save more space than Adjacency Matrix.
+	
+	The running times of Adjacency List determining the neighbors of one node is a lot faster than when the Adjacency Matrix determines the neighbors of one node.
 
-The running times of Adjacency List determining the neighbors of one node is a lot faster than when the Adjacency Matrix determines the neighbors of one node.
+	In the Adjacency List, the neighbors are linked to the vertex so the vertex needs to be found and then all of the neighbors are there.
 
-In the Adjacency List, the neighbors are linked to the vertex so the vertex needs to be found and then all of the neighbors are there.
+	In the Adjacency Matrix, the vertex must be found and then you must go through each spot in the row to determine the neighbors of that vertex.
 
-In the Adjacency Matrix, the vertex must be found and then you must go through each spot in the row to determine the neighbors of that vertex.
+	With Adjacency Matrices, the question about a specific edge can be found easily, as well as inserting and deleting edges.
 
-With Adjacency Matrices, the question about a specific edge can be found easily, as well as inserting and deleting edges.
+	With Adjacency Lists it is harder to check whether a specific edge is in the graph. The list pointed to by the vertex has to be searched through to determine
+	if that edge is in the graph.
 
-With Adjacency Lists it is harder to check whether a specific edge is in the graph. The list pointed to by the vertex has to be searched through to determine
-if that edge is in the graph.
+	An application where Adjacency Lists would be better is in this Vise project or in Road Map applications. 
 
-An application where Adjacency Lists would be better is in this Vise project or in Road Map applications. 
+	An application where Adjacency Matrix would be better is where you want to determine if a specific edge is in the graph.
 
-An application where Adjacency Matrix would be better is where you want to determine if a specific edge is in the graph.
+	Otherwise Adjacency Lists are the clear winners especially if space is an issue.
 
-Otherwise Adjacency Lists are the clear winners especially if space is an issue.
+	In the Vise project, Adjacency Lists are the better data structure because there needs to be fast access to all the neighbors of a vertex, in order to run isCompleted and doVise methods easily.
+	Also this allows the depth-first search to be ran faster, which is an algorithm needed for this project.
 
-In the Vise project, Adjacency Lists are the better data structure because there needs to be fast access to all the neighbors of a vertex, in order to run isCompleted and doVise methods easily.
-Also this allows the depth-first search to be ran faster, which is an algorithm needed for this project.
-
-In our Vise project we used a vector of hexSpaces with pointers to upleft, left, downleft, downright, right, and upright hexes. 
-We used this data structure instead of an Adjacency Matrix because it was easier for us to understand how to access certain hexes. 
-There are no major running time differences between our data structure and Adjacency Lists.
+	In our Vise project we used a vector of hexSpaces with pointers to upleft, left, downleft, downright, right, and upright hexes. 
+	We used this data structure instead of an Adjacency Matrix because it was easier for us to understand how to access certain hexes. 
+	There are no major running time differences between our data structure and Adjacency Lists.
 
 
 Extra Credit - 5

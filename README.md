@@ -73,7 +73,7 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 * HashTable:
 * https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/liy28?source=cbc 
 * (1) add(): If grow() does not get called, assuming hash() and modulus calculation take constant time, then add() would be O(n) theoretically in the worst case, since I implemented add() using linear probing, which could go through every bucket to search for an empty spot. However, in real-life cases, linear probing takes constant time and therefore add() should be O(1) on average. If grow() gets called, then add() would be O(n). See (6) grow().
-* (2) remove(): The running time of remove() really depends on how much time linear probing takes and, as I analyzed above, linear probing takes constant time in real-life cases. So, remove() is O(1), providing that hash() and modulus calculation take constant time.
+* (2) remove(): The running time of remove() really depends on how much time linear probing takes and, as I analyzed above, linear probing takes constant time in real-life cases. So, remove() is O(1), providing hash() and modulus calculation take constant time.
 * (3) find(): If we assume exception call takes constant time, find() would be constant, considering the analysis above about the running time of linear probing and hash() as well as modulus calculation.
 * (4) keyExists(): find() plays an essential role on deciding how much time keyExists() take, so keyExists() is O(1).
 * (5) size(): Returning a value takes constant time and therefore size() is O(1).
@@ -81,9 +81,9 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 * Graph (Adjacency List):
 https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/liy28?source=cbc 
-* getCost(): Following the given index(node name) to find a certain node takes constant time, but looping through the edge list of the node to find a certain edge can be O(d) in the worst case.
-* add(): 
-* remove(): 
+* getCost(): Following the given index(node name) to find a certain node takes constant time, but looping through the edge list of the node to find a certain edge can be O(d)* in the worst case.
+* add(): When cost < 0, assuming the exception call takes constant time, addEdge() is O(1). Otherwise, the larger degree between node1 and node2 decides the worst running time of add(), because add() uses the searching strategy of find() and therefore has the similar running time analysis. Since node1 and node2 are arbitrary nodes, in the worst case, add() is O(d), considering two function calls to getCost() could be up to O(d).
+* remove(): When there is no connection between node1 and node2, remove() takes constant time. Otherwise, two function calls to getCost() could be up to O(d). Moreover, like add() method, remove() also uses the searching strategy of find(), and therefore remove() could be O(d) in the worst case. 
 * d is the maximum degree of any node in the graph
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors

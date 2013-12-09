@@ -25,14 +25,14 @@ You can see demonstration of the test code working at https://www.youtube.com/wa
 7 - Create an implementaiton of a Hash Table
 ----
 
-To show suffecient knowledge of a Hash I will use my 05_Hash_Lab the link is https://github.com/kosirjm/05_Hash_Lab
+To show suffecient knowledge of a Hash I will use my 05_Hashing_Lab the link is https://github.com/kosirjm/05_Hashing_Lab
 
 You can see demonstration of the test code working at http://www.youtube.com/watch?v=lwgKVubCIVI
 
 7 - Create an implementation of a Heap
 ----
 
-To show suffecient knowledge of a List I will use my 07_heap_Lab the link is https://github.com/kosirjm/07_Heap_Lab
+To show suffecient knowledge of a List I will use my 07_Heap_Lab the link is https://github.com/kosirjm/07_Heap_Lab
 
 You can see demonstration of the test code working at https://www.youtube.com/watch?v=_U_GRiGsd0o
 

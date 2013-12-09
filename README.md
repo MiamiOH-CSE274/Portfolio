@@ -195,7 +195,10 @@ In particular, you must show that your program does not leak memory, and does no
 This will probably require referring to your code, providing links.
 
 Memory management in C++ is manual memory management and must be controlled by the programmer. Memory is allocated using new and deallocated using the delete operator.  
-In the Hashing Lab memory is managed. Here is the link to my Hashing Lab source code in Brinkman's repository on github, which I will be referring to: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/blob/kojsmn/HashTable.ipp
+In the Hashing Lab memory is managed. 
+
+Here is the link to my Hashing Lab source code in Brinkman's repository on github, which I will be referring to: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/blob/kojsmn/HashTable.ipp
+
 In line 10, memory is allocated with the new operator. In line 18 memory is deallocated with the delete[] operator.
 To make sure that there is no out of bounds array access, the indexes are determined through the formula hash(k) % backingArraySize.
 This makes sure that an index is not out of bounds. Lines 29, 61, 81, and 90 show this. 

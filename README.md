@@ -194,22 +194,22 @@ classes when we place them in a .cpp file. Finally, when using templates the dat
 Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
-* 
-Shuffle Project
 
-  For the shuffle project there were two reasonable data structures that we could have used. The two options were an array-based queue or a linked list. To compare these two data structures we need to decide what operations/methods that we would be using most often to simulate shuffling a deck of cards. The two that come to my mind are that of adding and removing. The data structure that would be optimal is dependent upon what style of shuffling you choose to represent.
+* Shuffle Project:
 
-  If you choose to simulate the riffle shuffle you would want to pick the array-based queue. An array-based queue has the runtime of O(1) for adding and removing items. The only time that the runtime isn't constant for the add method is when you need to call grow in which the new runtime would become O(n). If we choose a linked list for this style of shuffling we would get a runtime that is O(n) for add and remove which is clearly slower than that for the array queue.
-  
-  You would want to choose a linked list for a shuffling simulation if you were to use the hindu style of shuffling because you are removing a little more than the bottom half of the deck then taking a random number of the cards off the top of that chunk and placing them back onto the top of the deck that you didn't take off and repeat. You would represent this by doing a splice method within you code which takes O(n). Lastly, Since an array-based queue follows FIFO we couldn't even use this data structure to simulate this style of shuffling since we are removing the bottom of the deck. 
-  
-  
-Vise Project:
+For the shuffle project there were two reasonable data structures that we could have used. The two options were an array-based queue or a linked list. To compare these two data structures we need to decide what operations/methods that we would be using most often to simulate shuffling a deck of cards. The two that come to my mind are that of adding and removing. The data structure that would be optimal is dependent upon what style of shuffling you choose to represent.
 
-  For the vise project there were many data structures that we could have choosen. The two that I am going to look at are a 1D array and a graph structure made of node objects and each node object having 6 edges. 
+If you choose to simulate the riffle shuffle you would want to pick the array-based queue. An array-based queue has the runtime of O(1) for adding and removing items. The only time that the runtime isn't constant for the add method is when you need to call grow in which the new runtime would become O(n). If we choose a linked list for this style of shuffling we would get a runtime that is O(n) for add and remove which is clearly slower than that for the array queue.
   
-  The advantages of using a 1D array as the board data structure are that you have O(1) access to any value in the array in which this gives us getting and setting to be O(1). However, the disadvantage to a sorted array is that adding and removing take O(n). Another disadvantage to this structure when used as a game board is that you have to use some math to calculate the neighbors of the specific index.  
+You would want to choose a linked list for a shuffling simulation if you were to use the hindu style of shuffling because you are removing a little more than the bottom half of the deck then taking a random number of the cards off the top of that chunk and placing them back onto the top of the deck that you didn't take off and repeat. You would represent this by doing a splice method within you code which takes O(n). Lastly, Since an array-based queue follows FIFO we couldn't even use this data structure to simulate this style of shuffling since we are removing the bottom of the deck. 
   
-  The advantages of using the graph structure is that once the board was initialized most things afterwards would run in O(1) such as, adding or removing a piece to the board. Since we had 6 pointers that pointed to the neighbors of a specific position we could easily tell if its neighbors were empty, an enemy or one of its own pieces in constant time. Also another reason we choose this data structure is because we figured by using pointers we could avoid doing computations for locating neighbors in the board during game play. The disadvantage to this data structure is that it takes O(n) to setup the game board initially. Also if you don't know pointers very well then it would be difficult to implement this data structure. 
+  
+* Vise Project:
+
+For the vise project there were many data structures that we could have choosen. The two that I am going to look at are a 1D array and a graph structure made of node objects and each node object having 6 edges. 
+  
+The advantages of using a 1D array as the board data structure are that you have O(1) access to any value in the array in which this gives us getting and setting to be O(1). However, the disadvantage to a sorted array is that adding and removing take O(n). Another disadvantage to this structure when used as a game board is that you have to use some math to calculate the neighbors of the specific index.  
+  
+The advantages of using the graph structure is that once the board was initialized most things afterwards would run in O(1) such as, adding or removing a piece to the board. Since we had 6 pointers that pointed to the neighbors of a specific position we could easily tell if its neighbors were empty, an enemy or one of its own pieces in constant time. Also another reason we choose this data structure is because we figured by using pointers we could avoid doing computations for locating neighbors in the board during game play. The disadvantage to this data structure is that it takes O(n) to setup the game board initially. Also if you don't know pointers very well then it would be difficult to implement this data structure. 
   
   

@@ -63,7 +63,8 @@ Possible sources of evidence (do any one of these):
 I chose to do the Binary Search Tree Lab for the implementation of a Binary Search Tree.
 Here is a link to my source code on my branch in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/06_BST_Lab/blob/kojsmn/BST.ipp
 
-In my Binary Search Tree all the methods were of 0(h) running time where h is the height of the tree.
+In my Binary Search Tree all the methods were of 0(h) running time where h is the height of the tree. 
+In the best case, if the tree is balanced then h is log(n).  In the worst case, if the tree is unbalanced then h is n.
 Most of the methods are recursive.
 
 7 - Create an implementation of a Hash Table
@@ -162,9 +163,9 @@ Binary Search Tree Lab:
 
 	The size() method takes O(n) time or linear time since each node is visited in order to determine the number of items.
 
-	The add() method takes O(h) time, where h is the height of the tree.  If the tree is balanced then h is logn and if the tree is unbalanced then h is n.
+	The add() method takes O(h) time, where h is the height of the tree.  If the tree is balanced then h is log(n) and if the tree is unbalanced then h is n.
 
-	The remove() method takes O(h) time, where h is the height of the tree.  If the tree is balanced then h is log n and if the tree is unbalanced then h is n.
+	The remove() method takes O(h) time, where h is the height of the tree.  If the tree is balanced then h is log(n) and if the tree is unbalanced then h is n.
 
 	The find() method takes take O(h) time, where h is the height of the tree. See the remove method for explanation of h.
 
@@ -178,7 +179,7 @@ Binary Search Tree Lab:
 
 	The min() method takes O(h) time, where h is the height of the tree. See the remove method for explanation of h.
 	
-	The height of the tree is at most n and at least logn. It is n when the tree is unbalanced and it is logn when the tree is balanced. The reason it is logn is because the bottom level of the balanced tree will have one more node than the total number of nodes in the tree.
+	The height of the tree is at most n and at least log(n). It is n when the tree is unbalanced and it is log(n) when the tree is balanced. The reason it is log(n) is because the bottom level of the balanced tree will have one more node than the total number of nodes in the tree.
 	
 	Link to the methods: https://github.com/MiamiOH-CSE274/06_BST_Lab/blob/kojsmn/BST.ipp#L88	
 
@@ -197,6 +198,7 @@ In line 10, memory is allocated with the new operator. In line 18 memory is deal
 To make sure that there is no out of bounds array access, the indexes are determined through the formula hash(k) % backingArraySize.
 This makes sure that an index is not out of bounds. Lines 29, 61, 81, and 90 show this. 
 In the grow() method a new HashRecord is created in Line 116. The backingArray data is copied into the new backingArray. Then in line 130 the old backingArray is deleted using the delete[] operator.
+There are no dangling pointers. No pointers point to a memory location of deallocated memory.  
 
 5 - Create collection classes using templates in C++
 ----
@@ -207,10 +209,11 @@ Possible sources of evidence (do one):
 The Hashing Lab uses templates in an interesting way. The link to my Hashing Lab branch in Brinkman's repository on github is: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/kojsmn
 
 Templates allow easy reuse of code. Templates can handle many different data types. This allows the programmer to decide what type of data type they would like to use.
-In the Hashing Lab, I use a template where that looks like template <class Key, class T>.  This allows the user to specify what data type they would like K(key) to be and what 
-data type they would like T(data) to be. In the main.cpp file this line:  HashTable<std::string,int> testTable; tells the compiler that K is a string type and T is an int type.
-With this template, we could change K and T to be whatever data types we would like without having to change the HashTable.ipp file that contains the methods. Since this is a template
-the methods in the HashTable.ipp file will run with different data types as K and T.
+In the Hashing Lab, I use a template that looks like template <class Key, class T>.  This allows the user to specify what data type they would like Key to be and what 
+data type they would like T(data) to be. In the main.cpp file this line:  HashTable<std::string,int> testTable; tells the compiler that Key is a string type and T is an int type.
+With this template, we could change Key and T to be whatever data types we would like without having to change the HashTable.ipp file that contains the methods. Since this is a template
+the methods in the HashTable.ipp file will run with different data types as Key and T. 
+However, a new hash function would have to be created that would take the new data type of Key.
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
@@ -228,25 +231,36 @@ Shuffle
 
 For the Shuffle project there are two obvious data structure designs. The two reasonable options are Linked Lists and Array Queues. The Shuffle project requires implementing a realistic shuffle method of cards.
 
-The trade-offs between Linked Lists and Array Queues are in the running times of the methods.
+The trade-offs between Linked Lists and Array Queues are in the ease of insertion and removal of items.
+The running times for Array Queues and Linked Lists are walked through below. However, when used in the Shuffle project neither data structure has an advantage with running times.
+It takes 0(n) or linear time for both data structures to implement the Shuffle project.
+The Array Queue has to call grow which takes 0(n) time and the Linked List's splice method, which takes items from one Linked List
+and inserts them at an index in another, also takes 0(n) time.
 
 In Array Queues the get method take O(1) time. The remove and add methods in ArrayQueues are O(1) time or constant time unless grow is called then they are O(n) or linear time. If an ArrayQueue was used for the Shuffle project the process of adding and removing items would be slow. When adding and removing the array needs to either grow or be shrunk. This is done by allocating a new array of the desired size and copying the data over.
 
-The LinkedList methods of get, set, splice, and find take O(n) or linear time. The remove and add methods take O(n) time or constant time. LinkedLists do not need to copy any data when adding or removing. The place where the add or remove is desired needs to be found and then inserted by updating the links.
+The LinkedList methods of get, set, splice, and find take O(n) or linear time. The remove and add methods take O(n) time or linear time. LinkedLists do not need to copy any data when adding or removing. The place where the add or remove is desired needs to be found and then the data is inserted by updating the links.
+This is what the splice method does. The splice method takes two Linke
 
-For the Shuffle project I choose to use Linked Lists as my data structure. The reason I choose this data structure was because insertion and removal is easier with LinkedLists than with ArrayQueues. With ArrayQueues my running time would be worse because I would have to create new arrays to deal with the addition and removal of cards. With LinkedLists I am able to insert and remove chunks of cards easily without having to use the new operator.  With LinkedLists I do not have to deal with resizing my data structure, like I would have to with ArrayQueues. LinkedLists are easy to manipulate and the Shuffle project requires easy manipulation of cards in order to get a realistic shuffle that produces a shuffled deck.
+If an Array Queue was used for the Shuffle project, new arrays would need to allocated and data copied and then old arrays deleted.
+The manipulation of Array Queues is not as easy as Linked Lists.
+
+For the Shuffle project I choose to use Linked Lists as my data structure. The reason I choose this data structure was because insertion and removal is easier with LinkedLists than with ArrayQueues. With ArrayQueues my running time would be worse because I would have to create new arrays to deal with the addition and removal of cards. 
+With LinkedLists I do not have to deal with resizing my data structure, like I would have to with ArrayQueues. LinkedLists are easy to manipulate and the Shuffle project requires easy manipulation of cards in order to get a realistic shuffle that produces a shuffled deck.
+
 
 Vise
 
 For the Vise project there are two obvious data structure designs. The two reasonable options are Adjacency Matrix and Adjacency Lists.
 
-The Adjacency Matrix is a matrix that the columns as the vertices and the rows as all the possible edges. At each row and column, there is a value that tells whether there is an edge from that vertex to that edge.
+The Adjacency Matrix is a matrix that has the columns as the vertices and the rows as all the possible edges. At each row and column, there is a value that tells whether there is an edge from that vertex to that edge.
 
 The Adjacency List is an array with the vertices. Each vertex contains a list of the edges that are connected to that vertex. The list can be in Linked List form or array form or another type of list data structure.
 
-The tradeoffs between Adjacency Matrix and Adjacency List are in the size and running times of the methods.
+The tradeoffs between Adjacency Matrix and Adjacency List are in the storage and running times of the methods.
 
-Adjacency Lists take up less space than Adjacency Matrix.  The size of an Adjacency Matrix is 0(n^2) and the size of an Adjacency List is at worst 0(n+m) but at best 0(n+dn), where n is the number of vertices, m is the number of edges, and d is the degree of the graph.
+Adjacency Lists take up less space than Adjacency Matrix.  The storage size of an Adjacency Matrix is 0(n^2) and the storage size of an Adjacency List is at worst 0(n+m) but at best 0(n+dn), where n is the number of vertices, m is the number of edges, and d is the degree of the graph.
+Adjacency Lists save more space than Adjacency Matrix.
 
 The running times of Adjacency List determining the neighbors of one node is a lot faster than when the Adjacency Matrix determines the neighbors of one node.
 
@@ -254,9 +268,10 @@ In the Adjacency List, the neighbors are linked to the vertex so the vertex need
 
 In the Adjacency Matrix, the vertex must be found and then you must go through each spot in the row to determine the neighbors of that vertex.
 
-Also with Adjacency Matrices, the question about a specific edge can be found easily, as well as inserting and deleting edges.
+With Adjacency Matrices, the question about a specific edge can be found easily, as well as inserting and deleting edges.
 
-With Adjacency Lists it is harder to check whether a specific edge is in the graph. Adjacency Lists save more space than Adjacency Matrix.
+With Adjacency Lists it is harder to check whether a specific edge is in the graph. The list pointed to by the vertex has to be searched through to determine
+if that edge is in the graph.
 
 An application where Adjacency Lists would be better is in this Vise project or in Road Map applications. 
 
@@ -264,7 +279,7 @@ An application where Adjacency Matrix would be better is where you want to deter
 
 Otherwise Adjacency Lists are the clear winners especially if space is an issue.
 
-In the Vise project, Adjacency Lists are the better data structure because there needs to be easy access to all the neighbors of a vertex, in order to run isCompleted and doVise methods easily.
+In the Vise project, Adjacency Lists are the better data structure because there needs to be fast access to all the neighbors of a vertex, in order to run isCompleted and doVise methods easily.
 Also this allows the depth-first search to be ran faster, which is an algorithm needed for this project.
 
 In our Vise project we used a vector of hexSpaces with pointers to upleft, left, downleft, downright, right, and upright hexes. 

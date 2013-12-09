@@ -120,7 +120,9 @@ Possible sources of evidence (do any one of these):
 
 I chose to do the Vise project for the implementation of graph algorithms.
 In the Vise project, my partner, Nick Contini, and I did a depth-first traversal of the graph.
+
 Here is a link to mine and Nick's Vise project in Brinkman's repository on github: https://github.com/MiamiOH-CSE274/Vise/tree/ContiniAndKojs
+
 We used a vector of hexSpaces with pointers to upleft, left, downleft, downright, right, and upright. 
 
 21 - Determine space and time requirements of common data structure methods
@@ -210,7 +212,7 @@ The Hashing Lab uses templates in an interesting way. The link to my Hashing Lab
 
 Templates allow easy reuse of code. Templates can handle many different data types. This allows the programmer to decide what type of data type they would like to use.
 In the Hashing Lab, I use a template that looks like template <class Key, class T>.  This allows the user to specify what data type they would like Key to be and what 
-data type they would like T(data) to be. In the main.cpp file this line:  HashTable<std::string,int> testTable; tells the compiler that Key is a string type and T is an int type.
+data type they would like T(data) to be. In the main.cpp file this line:  HashTable < std::string,int > testTable; tells the compiler that Key is a string type and T is an int type.
 With this template, we could change Key and T to be whatever data types we would like without having to change the HashTable.ipp file that contains the methods. Since this is a template
 the methods in the HashTable.ipp file will run with different data types as Key and T. 
 However, a new hash function would have to be created that would take the new data type of Key.
@@ -227,7 +229,7 @@ For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one
 really depends on the input data set. Explain what the data would have to look like for the 
 Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
 
-Shuffle:
+Shuffle: https://github.com/MiamiOH-CSE274/Shuffle/tree/kojsmn
 
 	For the Shuffle project there are two obvious data structure designs. The two reasonable options are Linked Lists and Array Queues. The Shuffle project requires implementing a realistic shuffle method of cards.
 
@@ -249,7 +251,7 @@ Shuffle:
 	With LinkedLists I do not have to deal with resizing my data structure, like I would have to with ArrayQueues. LinkedLists are easy to manipulate and the Shuffle project requires easy manipulation of cards in order to get a realistic shuffle that produces a shuffled deck.
 
 
-Vise:
+Vise: https://github.com/MiamiOH-CSE274/Vise/tree/ContiniAndKojs
 
 	For the Vise project there are two obvious data structure designs. The two reasonable options are Adjacency Matrix and Adjacency Lists.
 

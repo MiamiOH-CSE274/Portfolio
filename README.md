@@ -50,31 +50,28 @@ Possible sources of evidence (do any one of these):
 Possible sources of evidence (do any one of these):
 
 * https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/zirkleac
-This is just a basic hashtable wihc works in constant time most of the time, O(n) at the worst
+This is just a basic hashtable which works in constant time most of the time, O(n) at the worst
 
 7 - Create an implementation of a Heap
 ----
 Possible sources of evidence (do any one of these):
 
-* Heap lab (TODO)
-* Implement heap sort in the Sorting lab (TODO)
-* Implement a heap as part of the Graph Algorithms lab (TODO)
-* Implement a heap as part of the Graph Project (TODO)
-* Consult with Dr. Brinkman on an alternative project
+* https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/zirkleac
+A basic heap using bubbling and trickling 
 
 7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
 ----
 Possible sources of evidence (do any one of these):
 
 * https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/zirkleac
-* https://github.com/aczirkle/Vise
+* https://github.com/MiamiOH-CSE274/Vise/tree/ZirckleAndBailey
 
 
 7 - Implement graph algorithms
 ----
 Possible sources of evidence (do any one of these):
 
-* https://github.com/aczirkle/Vise
+* https://github.com/MiamiOH-CSE274/Vise/tree/ZirckleAndBailey
 * The vise project uses graph algoithms to find if the pieces remain connected
 
 21 - Determine space and time requirements of common data structure methods

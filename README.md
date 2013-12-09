@@ -130,16 +130,15 @@ Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 Shuffle: https://www.youtube.com/watch?v=5x27roNbIRU
 		For Shuffle, both an Array-Based Queue and a Doubly-Ended Linked List seem like good options for shuffling. It turns out that neither really have an advantage in this project. I ended up using a linked list, but after doing the project I realized that neither data structure has a significant advantage or disadvantage over the other. This is due to the fact that traveling to the center of either data structure will take the same amount of time since it has to go through all the cards before the middle to get to the middle. Some ridiculous shuffles that have very little chance of being random may favor using a linked list, however these shuffles defeat the purpose of the project. Below is a table comparing the two data structures' operations that they must complete to shuffle the deck.
 
-				Queue								Array List
+				           Queue						Array List
 Copy current deck
 from array
-to data structure:	Theta(n) (technically O(1) since n is always 52)	Theta(n) (technically O(1) since n is always 52)
-
+to data structure:	           Theta(n) 	                                 Theta(n)
 Peeling off c cards
-from top of deck:		Theta(c)							 Theta(c)
+from top of deck:		   Theta(c)					 Theta(c)
 
 Adding c cards back
-to the array			Theta(c)						         Theta(c)
+to the array			   Theta(c)				          Theta(c)
 
 *take note that moving the cards left in the array, c, to the front is also O(c). Also since the number of cards 
 

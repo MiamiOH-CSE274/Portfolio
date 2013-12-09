@@ -130,21 +130,19 @@ Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 Shuffle: https://www.youtube.com/watch?v=5x27roNbIRU
 		For Shuffle, both an Array-Based Queue and a Doubly-Ended Linked List seem like good options for shuffling. It turns out that neither really have an advantage in this project. I ended up using a linked list, but after doing the project I realized that neither data structure has a significant advantage or disadvantage over the other. This is due to the fact that traveling to the center of either data structure will take the same amount of time since it has to go through all the cards before the middle to get to the middle. Some ridiculous shuffles that have very little chance of being random may favor using a linked list, however these shuffles defeat the purpose of the project. Below is a table comparing the two data structures' operations that they must complete to shuffle the deck.
 
-				           Queue						Array List
-Copy current deck
-from array
-to data structure:	           Theta(n) 	                                 Theta(n)
-Peeling off c cards
-from top of deck:		   Theta(c)					 Theta(c)
 
-Adding c cards back
-to the array			   Theta(c)				          Theta(c)
+Copy current deckfrom array to data structure: Queue-Theta(n) Linked List-Theta(n)
+
+Peeling off c cards from top of deck: Queue-Theta(c) Linked List-Theta(c)
+
+Adding c cards back to the array: Queue-Theta(c) Linked List-Theta(c)
 
 *take note that moving the cards left in the array, c, to the front is also O(c). Also since the number of cards 
 
 Vise: https://www.youtube.com/watch?v=7UqgBz8hunI&feature=youtube_gdata_player
 
-	Initially learning about the Vise project I thought I would end up using an adjacency list structure to implement the project. It made sense considering Vise is a game of relationships between various locations. You need to know the relationships between game pieces and whether or not a space is available to be moved to. I started the project, importing my graph lab as a basis. Upon creating the board itself, I came to realize that I had decided my structure to hastily. Although using the traversals to calculate instances of vise and other game components would still be efficient, working with the adjacency list would be way too hectic and demanding. I would have to have a way to figure out how game spaces were related (were they side by side or diagonal to each other? Two spaces apart?) and also there would have to be a way to tell which piece belonged to each player, which most likely requires another data structure. After discovering the hindrances of adjacency lists, I set out to edit the adjacency list to be more useful. It turns out that I ended up not editing the adjacency list, but using a completely different data structuree. In reality I had created a vector of objects that contained pointers to other pieces as well as two ints to identify which player lies at the space and whether it has been visited in a traversal. I used some basic math to link all the pieces together (every piece has upleft, upright, left, right, downleft, and downright pointers) and then the rest of the programming was simply implementing the game logic, which was simple due to the way I set up the board. My vector of pointers was not necessarily more efficient runtime-wise, however it was much simpler to implement. All needed methods of the game all run at the same efficiency but my code is much easier to read. The one advantage an adjacency list may have is that it uses less memory, but realistically this advantage is negligible.
+
+Initially learning about the Vise project I thought I would end up using an adjacency list structure to implement the project. It made sense considering Vise is a game of relationships between various locations. You need to know the relationships between game pieces and whether or not a space is available to be moved to. I started the project, importing my graph lab as a basis. Upon creating the board itself, I came to realize that I had decided my structure to hastily. Although using the traversals to calculate instances of vise and other game components would still be efficient, working with the adjacency list would be way too hectic and demanding. I would have to have a way to figure out how game spaces were related (were they side by side or diagonal to each other? Two spaces apart?) and also there would have to be a way to tell which piece belonged to each player, which most likely requires another data structure. After discovering the hindrances of adjacency lists, I set out to edit the adjacency list to be more useful. It turns out that I ended up not editing the adjacency list, but using a completely different data structuree. In reality I had created a vector of objects that contained pointers to other pieces as well as two ints to identify which player lies at the space and whether it has been visited in a traversal. I used some basic math to link all the pieces together (every piece has upleft, upright, left, right, downleft, and downright pointers) and then the rest of the programming was simply implementing the game logic, which was simple due to the way I set up the board. My vector of pointers was not necessarily more efficient runtime-wise, however it was much simpler to implement. All needed methods of the game all run at the same efficiency but my code is much easier to read. The one advantage an adjacency list may have is that it uses less memory, but realistically this advantage is negligible.
 
 extra credit: I went to the research fair. I saw your research in Augmented Reality, Mr. Stanley's computer security research, someone's AI linguistics research, and many others.
 

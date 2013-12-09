@@ -32,50 +32,29 @@ Body of portfolio
 
 7 - Create an implementation of a Binary Search Tree
 ----
-Possible sources of evidence (do any one of these):
 
-* Binary Search Tree Lab (TODO)
-* Use a binary search tree or KD-Tree in the Starbucks project.
-* Use a binary search tree in the Zeitgeist project
-* Consult with Dr. Brinkman on an alternative project
-
+* https://github.com/MiamiOH-CSE274/06_BST_Lab/tree/mullingh
 
 7 - Create an implementaiton of a Hash Table
 ----
-Possible sources of evidence (do any one of these):
 
-* https://github.com/MiamiOH-CSE274/05_Hashing_Lab
-* Use a hash table in the Zeitgeist project
-* Use locality-preserving hashing on the Starbucks project (not recommended!)
-* Consult with Dr. Brinkman on an alternative project
+* https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/mullingh
 
 7 - Create an implementation of a Heap
 ----
-Possible sources of evidence (do any one of these):
 
-* Heap lab (TODO)
-* Implement heap sort in the Sorting lab (TODO)
-* Implement a heap as part of the Graph Algorithms lab (TODO)
-* Implement a heap as part of the Graph Project (TODO)
-* Consult with Dr. Brinkman on an alternative project
+* https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/mullingh
 
 7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
 ----
-Possible sources of evidence (do any one of these):
 
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+* https://github.com/MiamiOH-CSE274/Vise/tree/GriffithAndMullins
 
 7 - Implement graph algorithms
 ----
 Possible sources of evidence (do any one of these):
 
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+* https://github.com/MiamiOH-CSE274/Vise/tree/GriffithAndMullins
 
 21 - Determine space and time requirements of common data structure methods
 -----

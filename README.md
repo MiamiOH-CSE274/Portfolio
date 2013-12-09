@@ -96,7 +96,7 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 ----
 Possible sources of evidence (do one):
 
-* Completed: Queue: found under question 7 at: https://github.com/deckerbd/03_Queue_Lab/tree/deckerbd (post-MiamiOH-merge request should be in MiamiOH: https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/deckerbd )
+* Completed: Queue: found under question 7 at: https://github.com/deckerbd/03_Queue_Lab/tree/deckerbd (post-MiamiOH-merge request should be in MiamiOH: https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/deckerbd ) in addition to 02_Cpp found here: https://github.com/deckerbd/02_Cpp/tree/deckerbd (post-MiamiOH-merge request should be in MiamiOH: https://github.com/MiamiOH-CSE274/02_Cpp/tree/deckerbd )
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
 
 
@@ -112,6 +112,6 @@ Possible sources of evidence (do one):
 
 Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
-* Complete: Starbucks Project - KD-Trees vs LinkedList - https://github.com/deckerbd/Portfolio/blob/deckerbd/Starbucks.txt (Post-MiamiOH-commit: https://github.com/MiamiOH-CSE274/Portfolio/blob/deckerbd/Starbucks.txt )
-* In-Progress: Zeitgeist Project - BST vs Linked List - https://github.com/deckerbd/Portfolio/blob/deckerbd/Zeitgeist.txt (Post-MiamiOH-Commit: https://github.com/MiamiOH-CSE274/Portfolio/blob/deckerbd/Zeitgeist.txt )
+* Complete: Starbucks Project Discussion - https://github.com/deckerbd/Portfolio/blob/deckerbd/Starbucks.txt (Post-MiamiOH-commit: https://github.com/MiamiOH-CSE274/Portfolio/blob/deckerbd/Starbucks.txt )
+* In-Progress: Zeitgeist Project Discussion - https://github.com/deckerbd/Portfolio/blob/deckerbd/Zeitgeist.txt (Post-MiamiOH-Commit: https://github.com/MiamiOH-CSE274/Portfolio/blob/deckerbd/Zeitgeist.txt )
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.

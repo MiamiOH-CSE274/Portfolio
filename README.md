@@ -80,9 +80,9 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 * (6) grow(): If we assume making a new array with double size of the old array takes constant time, looping through the old array to find appropriate items takes linear time.  
 
 * Graph (Adjacency List):
-https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/liy28?source=cbc 
+* https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/liy28?source=cbc 
 * getCost(): Following the given index(node name) to find a certain node takes constant time, but looping through the edge list of the node to find a certain edge can be O(d)* in the worst case.
-* add(): When cost < 0, assuming the exception call takes constant time, addEdge() is O(1). Otherwise, the larger degree between node1 and node2 decides the worst running time of add(), because add() uses the searching strategy of find() and therefore has the similar running time analysis. Since node1 and node2 are arbitrary nodes, in the worst case, add() is O(d), considering two function calls to getCost() could be up to O(d).
+* add(): When cost < 0, assuming the exception call takes constant time, addEdge() is O(1). Otherwise, the larger degree between node1 and node2 decides the worst running time of add(), because add() uses the searching strategy of find() and therefore has the similar running time performance. Since node1 and node2 are arbitrary nodes, in the worst case, add() is O(d), considering two function calls to getCost() could be up to O(d).
 * remove(): When there is no connection between node1 and node2, remove() takes constant time. Otherwise, two function calls to getCost() could be up to O(d). Moreover, like add() method, remove() also uses the searching strategy of find(), and therefore remove() could be O(d) in the worst case. 
 * d is the maximum degree of any node in the graph
 
@@ -91,7 +91,8 @@ https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/liy28?source=cbc
 Possible sources of evidence (do one):
 
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
-Hash Table:(link)
+* Hash Table:
+* https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/liy28?source=cbc  
 I used the operator "new" to allocate a chunck of dynamic memory to store the array of HashRecords, and, to avoid memory leak, I implemented the destructor to deallocate the memory that stored whole array. In size() method, I switched the pointer, backingArray, from the old array that I deleted at the end to the new array in case the pointer became a dangling pointer. Through thoroughly testing, I claim there is no out-of-bound error in this lab.     
 
 5 - Create collection classes using templates in C++

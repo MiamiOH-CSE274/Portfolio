@@ -105,7 +105,7 @@ The stack stores local variables and the stack of method calls (which are return
 
 https://github.com/db4soundman/04_Linked_List_Lab/blob/blasedd/LinkedList.ipp
 
-Templates are a way of saving time when coding. This is the case because templates allow the user to create collection classes without specifying the data types of its instance variables. By doing this, the user can create an instance of the collection class using any class type they need to use, and at compile time, the compiler creates a new copy of the class with the types of the instance variables specified by the user filled in to the file of the collection class. If the compiler didn’t do this, the programmer would have to copy and paste the collection class into a new file for each combination of data types that the programmer would want to use the collection class for, which can be a waste of time.
+Templates are a way of saving time when coding. This is the case because templates allow the user to create collection classes without specifying the data types of its instance variables. By doing this, the user can create an instance of the collection class using any class type they need to use. At compile time, the compiler creates a new copy of the class with the types of the instance variables (specified by the user) inserted in the file of the collection class. If the compiler didn’t do this, the programmer would have to copy and paste the collection class into a new file for each combination of data types that the programmer would want to use the collection class for, which can be a waste of time.
 
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application

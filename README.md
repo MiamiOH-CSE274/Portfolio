@@ -53,11 +53,74 @@ There is no video demostration for this function
 
 21 - Determine space and time requirements of common data structure methods
 -----
-Possible sources of evidence (do up to 3 of these, up to 7 points for each):
+<b>Queue</b> (We did a circular Queue https://github.com/kosirjm/03_Queue_Lab)
+              
+          Add - Took a time complexity of O(1) typically this is because we were adding the items
+                to the next avaliable spot in line.  Since we knew what that was because we knew 
+                the number of items which was kept track of everytime we added and removed an item,
+                we could simply just add the item to that position with out looping through and looking
+                for an empty spot.  Still, if the number of items exceeded the size of the list grow()
+                had to be called and our time complexity is O(n) since we have to loop through to copy
+                all the items in the list to a new temp queue.
+                    
+          Remove - Took time complexity of O(1), we simply just removed the item from the last spot in the list
+                   and subtracted one from our number of items counter.
+                       
+          Grow - Took O(n) time complexity.  This is due to the fact of iterating through the items in the list with
+                 a for loop to copy them over to a temp array so we could resize the old array.
+                     
+          Size - Size is an O(10 time complexity.  This is because everytime we remove or add an item we have a 
+                 counter which is incremented appropriately.
+                     
+                     
+<b>Linked List</b> (We did a Doubly-Linked list https://github.com/kosirjm/04_Linked_List_Lab)
+                    
+        Find - Find is an O(n) complexity for doubly-linked-list it must iterate though all of the items 
+               using a loop to see if the item matches the search.  This is of course unless the item is the
+               first or last item then it is an O(1).
+               
+        Set -  Is the same as find O(n) unless it is the first or last item then it is O(1).  This is because you
+               must find the item and then add the item which is only O(1).
+              
+        Add - In our program it was O(n) unless the item was in the first or last position. This is because the find                  function was called to remove a certain index.
+              
+        Remove - In our program it was O(n) unless the item was in the first or last position. This is because the find                  function was called to remove a certain index.
+        
+        Size - Was O(1) this is because the number of items was tracked as we addded or subtracted the items from the                  list giving us the ability to return the value without counting the items by using a loop.
+        
+        
+<b>Binary Search Tree</b> (https://github.com/kosirjm/06_BST_Lab)
+          
+        (h = The hieght of the tree.  In worst case h = n being that all nodes just go one way creating
+        an unbalanced tree.  Best case for h is log(n) being that the tree is perfectly balanced)
+        
+        Add - The time complexity for this is function was O(h).  This is because you must traverse down the 
+              tree recursively in the correct path to find the place correct place which equals NULL to input the item. 
+        
+        Remove - The time complexity for this is function was O(h).  This is because you must traverse down the 
+                 tree recursively in the correct direction to find the item which must be remove, which at worst is at                   the very bottom
+              
+        Prev - The time complexity for this is function was O(h).  This is because you must traverse down the 
+               tree recursively in the correct path to find the right function that is less than the key given to you,                 which at worst is at the very bottom
+        
+        Next - The time complexity for this is function was O(h).  This is because you must traverse down the 
+               tree recursively in the correct path to find the right function that is greater than the key given to                   you, which at worst is at the very bottom.
+          
+        Find - The time complexity for this is function was O(h).  This is because you must traverse down the 
+               tree recursively in the correct path to find the right function that is equal to the key given to                       you, which at worst is at the very bottom.
+          
+        KeyExists - The time complexity for this is function was O(h).  This is because you must traverse down the 
+                    tree recursively in the correct path to find the right function that is equal to the key given to                       you, which at worst it does not exist therefor would go all the way to the bottom and reach NULL.
+          
+        Max - The time complexity for this is function was O(h).  This is because you must traverse down the 
+              tree recursively to the farthest item on the right side of the tree.  This function is always O(h)
+              because it does not end until it hits NULL.
+          
+        Min - The time complexity for this is function was O(h).  This is because you must traverse down the 
+              tree recursively to the farthest item on the left side of the tree.  This function is always O(h)
+              because it does not end until it hits NULL.
+      
 
-* Select any of the following labs, and analyze the running times for each of your methods of your data structure: <b> Queue </b> , Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
-
-Only One currently done is the Queue Lab.  Please see https://github.com/kosirjm/03_Queue_Lab
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----

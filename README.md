@@ -29,7 +29,6 @@ Possible sources of evidence (do any one of these):
 
 An implementation of a List can be found at:  https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/bickledb
 
-*  https://github.com/MiamiOH-CSE274/04_Linked_List_Lab
 
 7 - Create an implementation of a Binary Search Tree
 ----
@@ -50,6 +49,7 @@ An implementation of a Heap can be found at: https://github.com/MiamiOH-CSE274/0
 
 
 7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
+---
 
 An Implementation of an Adjacency Matrix can be found at https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/bickledb
 

@@ -120,7 +120,8 @@ There is no video demostration for this function
               tree recursively to the farthest item on the left side of the tree.  This function is always O(h)
               because it does not end until it hits NULL.
       
-
+        Size - This one is the only function in our BST_Lab which is O(n).  This is because we do not store the number'
+               of items as we add or remove thisngs but instead, have to count each individual item in the BST.
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----

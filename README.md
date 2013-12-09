@@ -61,25 +61,28 @@ Possible sources of evidence (do any one of these):
 Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
-
+Queue:
+	*
+Linked List:
+	*
+Hash Table:
+	*
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
 Possible sources of evidence (do one):
 
-* Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
+* In C++ we get full access to allocating memory on the heap and the stack.  This can cause issues because with poor logic or incorrect usage control of these things can lead to memory leaks.  In my hashing lab(linked above) I had to de-allocate the space the hashtable was stored in the destructor to ensure that my program wouldn't leak memory.  
 
 
 5 - Create collection classes using templates in C++
 ----
-Possible sources of evidence (do one):
 
-* Any of the labs or projects, provided it uses templates in an interesting way.
+* The hashing lab is what I feel represents one of the better uses of the template class.  We were able to use the template class to create a hashtable that could store any form of data(slightly exaggerated) that we need which is really practical in a real world sense.  In reality hash tables need to store various forms of data so the implementation of the template class in this instance was greatly warranted.
 
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
 
-Possible sources of evidence (do up to 2 of these, up to 15 points for each):
-
-* Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
+* Vise Project:
+* Shuffle Project:

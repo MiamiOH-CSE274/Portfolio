@@ -44,12 +44,18 @@ https://github.com/MiamiOH-CSE274/06_BST_Lab/tree/gardnedn
 code of Binary Search Tree:
 https://github.com/MiamiOH-CSE274/06_BST_Lab/blob/gardnedn/BST.ipp
 
+Binary search tree passes all tests. All methods except the destructor and size should be O(h). size() is O(n). Destuctor commented out however, as remove is not working properly and therefore causes an infinite loop with the destructor.
+
 7 - Create an implementaiton of a Hash Table
 ----
 Explanation of how I accomplished the requirements of the lab/answered questions on HashTable:
 https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/gardnedn
 code of Hash Table:
 https://github.com/MiamiOH-CSE274/05_Hashing_Lab/blob/gardnedn/HashTable.ipp
+
+keyExists, find, remove, add and size  all O(1) since load factor is < 1/2
+grow is O(n)
+Do not leak memory
 
 
 
@@ -63,21 +69,26 @@ https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/gardnedn
 code of Heap:
 https://github.com/MiamiOH-CSE274/07_Heap_Lab/blob/gardnedn/Heap.ipp
 
+add and remove O(log n),  grow  O(n)
+Does not leak memory
 7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
 ----
 Explanation of Graph Lab:
-https://github.com/MiamiOH-CSE274/08_Graph_Lab
+https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/gardnedn
 
 Used adjacency List for Graph Lab. 
-Code: https://github.com/MiamiOH-CSE274/08_Graph_Lab/blob/master/Graph.cpp 
+Code: https://github.com/MiamiOH-CSE274/08_Graph_Lab/blob/gardnedn/Graph.cpp
+//note updated .h file for BFS aswell. 
 
+compiles and passes all tests.
 
 7 - Implement graph algorithms
 ----
 Possible sources of evidence (do any one of these):
 
-added a depth first search to my graph Lab. Added a test of depth first search in main. 
-https://github.com/MiamiOH-CSE274/08_Graph_Lab/blob/master/Graph.cpp
+added a breadth first search to my graph Lab. Added a test of search in main. 
+https://github.com/MiamiOH-CSE274/08_Graph_Lab/blob/gardnedn/Graph.cpp
+
 
 21 - Determine space and time requirements of common data structure methods
 -----
@@ -119,8 +130,7 @@ Possible sources of evidence (do one):
 updated main of Linked List lab to showcase templates. Namely that we can switch the 
 type of the linked list data, such as the how I changed it to doubles from ints. 
 Templates are extremely useful in the sense that they can make code more reusable by using generic data structures that store arbitrary data types.
-https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/blob/master/main.cpp
-
+https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/blob/gardnedn/main.cpp
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
@@ -131,6 +141,10 @@ Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
 Shuffle Project: the two most reasonable data structures are ArrayQueue and Linked Lists as they describe the two most common manners of card movement: individual card movement, and chunks of the deck being manipulated by managing portions of the deck. Array Queues are most suited for shuffles involving individual card movement, such as the "riffle" shuffle while a Linked List is more appropriate for the shuffles involving portions of the deck being manipulated, such as the hindu shuffle, or overhand. The reasoning behind these statements have to do with the time efficiency of the methods involved. ArrayQueues offer constant time for adding and removing due to the use of random access.To mimic the riffle shuffle the deck is split approximately in half and then one card at a time is added onto randomly from each half onto one area to create a full deck. By splitting the cards into two arrays and then adding a card randomly from the start of both of the arrays into a third array, the riffle shuffle is immitated. This actions are all constant time for the add and removal (unless grow is called, but if each array is allocated with appropriate space to "shuffle" the 52 cards, grow would typically not be called.) A Linked List would not be as effective for this shuffle as adding and removing takes linear time unless added or removed from the front or end of the list. A Linked List is more appropriate for the hindu shuffle or overhand shuffle because of the linked Lists splice method. Array Queues add and remove on the ends of the queue and are therefore difficult to access the middle sections of the arrayqueue, while the linked list can manipulate pointers to move portions of the deck at a time. Because the hindu shuffle is constantly splicing the deck, an arrayqueue would not make much sense for this shuffle.
 
+Vice Project: When designing the 2D board, an array based approach or a graph structure made of node objects, each node object having 6 edges (up, upleft, upright, down, downleft, downright) can be used. 
+An array has constant time look up for any given node's neighbor as mathematical equations can determine this information by taking into account the length of each row and column. However, the major search algorithems that would be used to check length of connected pieces, such as Dijkstra's would be easier to implement in the graph structure as we have covered the graph traversals more in class.
+With a graph we must traverse through the pointers in order to find neighbors and is therefore slower than constant time, however, I believe that this game would never be scaled to have an extremely large number of spaces and pieces, and so the time complexity has minimal importance.
+ Therefore, I believe that a graph based board would be more practical for this game, as in my opinion it serves the game play more (calculating the length of connected pieces for various game purposes) where as the array based board is merely more effective for the construction of the board. Since this vise project is designed as a game, I believe the game play is more important, and therefore a graph structure made of node objects, each node object having 6 edges (up, upleft, upright, down, downleft, downright) is more practical. 
 
 
  

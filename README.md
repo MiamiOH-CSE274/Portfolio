@@ -15,46 +15,37 @@ Body of portfolio
 ====
 
 7 - Create an implementation of a Queue
-----
-Possible sources of evidence (do any one of these):
-
-* https://github.com/MiamiOH-CSE274/03_Queue_Lab
+* ArrayQueue:
+* https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/liy28?source=cbc 
 
 7 - Create an implementation of a List
 ----
-Possible sources of evidence (do any one of these):
-
-* https://github.com/MiamiOH-CSE274/04_Linked_List_Lab
+* Linked List:
+* https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/liy28?source=cbc 
 
 7 - Create an implementation of a Binary Search Tree
 ----
-Possible sources of evidence (do any one of these):
-
-* Binary Search Tree Lab (TODO)
+* Binary Search Tree Lab: 
+* https://github.com/MiamiOH-CSE274/06_BST_Lab/tree/liy28?source=cbc 
 
 7 - Create an implementaiton of a Hash Table
-----
-Possible sources of evidence (do any one of these):
-
-* https://github.com/MiamiOH-CSE274/05_Hashing_Lab
+* Hash Table Lab;
+* https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/liy28?source=cbc 
 
 7 - Create an implementation of a Heap
 ----
-Possible sources of evidence (do any one of these):
-
-* Heap lab (TODO)
+* Heap lab:
+* https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/liy28?source=cbc 
 
 7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
 ----
-Possible sources of evidence (do any one of these):
-
 * Graph lab
+* https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/liy28?source=cbc 
 
 7 - Implement graph algorithms
 ----
-Possible sources of evidence (do any one of these):
-
-* Graph lab
+* Graph lab: 
+* https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/liy28?source=cbc 
 
 21 - Determine space and time requirements of common data structure methods
 -----

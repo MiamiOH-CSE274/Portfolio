@@ -87,8 +87,8 @@ Possible sources of evidence (do any one of these):
 Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 * Completed: Queue - found at: https://github.com/deckerbd/03_Queue_Lab/tree/deckerbd (post-MiamiOH-merge request should be in MiamiOH: https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/deckerbd )
-* In-Progress: Linked List:
-* In-Progress: Binary Search Tree:
+* Completed: Linked List - found at: https://github.com/deckerbd/04_Linked_List_Lab/tree/deckerbd (post-MiamiOH-merge request should be in  https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/deckerbd )
+* In-Progress: Binary Search Tree - found at: https://github.com/deckerbd/06_BST_Lab/tree/deckerbd (post-MiamiOH-merge request should be https://github.com/MiamiOH-CSE274/06_BST_Lab/tree/deckerbd )
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
 
 

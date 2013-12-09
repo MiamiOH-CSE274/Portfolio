@@ -111,8 +111,8 @@ Templates make code reusable, and they are instantiated at complier-time with th
 ----
 
 Possible sources of evidence (do up to 2 of these, up to 15 points for each):
-* Old exam problem 1: pic.twitter.com/UzJxw2O0kJ 
-* Old exam problem 2: pic.twitter.com/ZvPLV6SlGV 
+* Old exam problem 1: pic.twitter.com/UzJxw2O0kJ  
+* Old exam problem 2: pic.twitter.com/ZvPLV6SlGV  
 
 * For the old exam problem 1, it requires a dictionary as the abstract data type because the names the players type into are the keys to which the players information are stored. To satisfy the requirement, two common data structure I come up with would be Binary Search Tree (BST) and Hash Table. I prefer Hash Table to BST.
 * First of all, when implemented with Hash Table, the video game allows the players to update their score much faster than it is implemented with BST. The two data structure all take players names as the keys, but BST and Hash Table have different performance on the running time of accessing a player info with his or her key. BST can take up to log(N) time to update a person info, while Hash Table takes constant time on average if it is implemented with double hashing. Hash Table beats BST by a lot.

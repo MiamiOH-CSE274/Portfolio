@@ -126,9 +126,7 @@ There is no video demostration for this function
 ----
 Possible sources of evidence (do one):
 
-* Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
 
-Though I have done this in my Queue_Lab I would like to work with this more, and understand it better before submitting this question.  I could currently give a general answer from what we have learned, but I would like to get a better feel for it first. 
 5 - Create collection classes using templates in C++
 ----
 Possible sources of evidence (do one):
@@ -139,6 +137,19 @@ Possible sources of evidence (do one):
 30 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
 
-Possible sources of evidence (do up to 2 of these, up to 15 points for each):
-
-* Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
+<b><u>Shuffle Project</u></b>
+              
+              For this project two choices of an ADT were given to us at the biggening, a linked list or a queue.
+  In the next few paragraphs I will talk about what I believe would be the better choice to use.  First off the both
+  can easily be used to implement the structure, or movement, of shuffling a deck, so there is no issues there.  With     linked lists you are able to move, set, add, remove, and find items by a specidic index, while in queues you cannot.  
+  These functions that the linked list offer are not needed.  In shuffling a deck there is no need to do anything to a 
+  specific index or find a specific index.  The reason this is being brought up is that those function are the only 
+  real benifits of a linked list compared to a queue.
+              With this in mind knowing that we do not need the special abilities the linked lists give us lets look at   the time complexities of both ADTs.  All of the queues functions are time complexity of O(1), this is of course if 
+  given that when adding an item the number of items do not exceed the size of the queue, because then the grow function   is called which is of time complexity O(n).  With this in mind a deck only had 52 cards there will never be any more 
+  then that in the deck therefor in this project using a queue would make it always O(1).  Minipulation of the items in
+  the queue can be hard if you need to change a specific item or add or remove at a specific index.  In this instance
+  depending on how you would implement the items to shuffle, there should not be to much resizing and calling certain     indexes.
+              On the other hand all the functions in our linked list are O(n) except for size() which is O(1).  Linked    lists are much easier to modify certain indexes as well as change the size of the list.  If you were doing   a lot of   that or needed it for what ever reason I would suggest the linked list.  Though if implemented correctely this should   not be needed and therefor the queue would be faster in all instances.  So as you can see the queue is the clear        winner to be chosen in this project.
+              
+<b><u>Shuffle Project</u></b>

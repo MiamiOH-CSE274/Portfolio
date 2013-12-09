@@ -21,15 +21,15 @@ Body of portfolio
 ----
 Possible sources of evidence (do any one of these):
 
-* https://github.com/MiamiOH-CSE274/03_Queue_Lab
-* In-Progress: Use a queue as your data structure in https://github.com/MiamiOH-CSE274/Shuffle - found at https://github.com/deckerbd/Shuffle/tree/deckerbd
+* Completed: Queue Lab found at: https://github.com/deckerbd/03_Queue_Lab/tree/deckerbd (post-MiamiOH-merge request should be in MiamiOH: https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/deckerbd )
+* Use a queue as your data structure in https://github.com/MiamiOH-CSE274/Shuffle 
 * Consult with Dr. Brinkman on an alternative project
 
 7 - Create an implementation of a List
 ----
 Possible sources of evidence (do any one of these):
 
-* Completed: https://github.com/MiamiOH-CSE274/04_Linked_List_Lab - found at https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/deckerbd
+* Completed: Linked List Lab found at: https://github.com/deckerbd/04_Linked_List_Lab/tree/deckerbd (post-MiamiOH-merge request should be in  https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/deckerbd )
 * Use a linked list as your data structure in https://github.com/MiamiOH-CSE274/Shuffle
 * Implement chaining instead of linear probing in https://github.com/MiamiOH-CSE274/05_Hashing_Lab
 * Consult with Dr. Brinkman on an alternative project
@@ -39,7 +39,7 @@ Possible sources of evidence (do any one of these):
 ----
 Possible sources of evidence (do any one of these):
 
-* Binary Search Tree Lab (TODO)
+* Completed: Binary Search Tree Lab found at: https://github.com/deckerbd/06_BST_Lab/tree/deckerbd (post-MiamiOH-merge request should be https://github.com/MiamiOH-CSE274/06_BST_Lab/tree/deckerbd )
 * Use a binary search tree or KD-Tree in the Starbucks project.
 * Use a binary search tree in the Zeitgeist project
 * Consult with Dr. Brinkman on an alternative project
@@ -49,7 +49,7 @@ Possible sources of evidence (do any one of these):
 ----
 Possible sources of evidence (do any one of these):
 
-* In-Progress: https://github.com/MiamiOH-CSE274/05_Hashing_Lab - found at https://github.com/deckerbd/05_Hashing_Lab/tree/deckerbd
+* Completed: Hashing Lab found at https://github.com/deckerbd/05_Hashing_Lab/tree/deckerbd (post-MiamiOH-merge request should be https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/deckerbd )
 * Use a hash table in the Zeitgeist project
 * Use locality-preserving hashing on the Starbucks project (not recommended!)
 * Consult with Dr. Brinkman on an alternative project
@@ -58,7 +58,7 @@ Possible sources of evidence (do any one of these):
 ----
 Possible sources of evidence (do any one of these):
 
-* Heap lab (TODO)
+* Completed: Heap Lab found at https://github.com/deckerbd/07_Heap_Lab/tree/deckerbd (post-MiamiOH-merge request should be https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/deckerbd )
 * Implement heap sort in the Sorting lab (TODO)
 * Implement a heap as part of the Graph Algorithms lab (TODO)
 * Implement a heap as part of the Graph Project (TODO)
@@ -68,7 +68,7 @@ Possible sources of evidence (do any one of these):
 ----
 Possible sources of evidence (do any one of these):
 
-* Graph lab
+* Completed: Graph lab found at https://github.com/deckerbd/08_Graph_Lab/tree/deckerbd (post-MiamiOH-merge request should be https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/deckerbd )
 * Graph Algorithms lab
 * Graph project
 * Consult with Dr. Brinkman on an alternative project
@@ -77,7 +77,7 @@ Possible sources of evidence (do any one of these):
 ----
 Possible sources of evidence (do any one of these):
 
-* Graph lab
+* Completed: Graph lab found at https://github.com/deckerbd/08_Graph_Lab/tree/deckerbd (post-MiamiOH-merge request should be https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/deckerbd )
 * Graph Algorithms lab
 * Graph project
 * Consult with Dr. Brinkman on an alternative project
@@ -86,6 +86,9 @@ Possible sources of evidence (do any one of these):
 -----
 Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
+* Completed: Queue - found at: https://github.com/deckerbd/03_Queue_Lab/tree/deckerbd (post-MiamiOH-merge request should be in MiamiOH: https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/deckerbd )
+* In-Progress: Linked List:
+* In-Progress: Binary Search Tree:
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
 
 
@@ -93,6 +96,7 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 ----
 Possible sources of evidence (do one):
 
+* Completed: Queue: found under question 7 at: https://github.com/deckerbd/03_Queue_Lab/tree/deckerbd (post-MiamiOH-merge request should be in MiamiOH: https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/deckerbd )
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
 
 
@@ -108,4 +112,6 @@ Possible sources of evidence (do one):
 
 Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
+* In-Progress: Starbucks Project - KD-Trees vs Grid
+* In-Progress: Zeitgeist Project - BST vs Linked List
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.

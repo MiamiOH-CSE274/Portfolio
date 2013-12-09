@@ -94,9 +94,9 @@ Here is my queue lab : https://github.com/Vutisat/03_Queue_Lab
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
-
-Possible sources of evidence (do up to 2 of these, up to 15 points for each):
-
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
+	In the shuffle project there are two data structures that would fit to do the job. However there are no advantage in terms of running time between those two; linked list and an array. The add, remove, get, find, methods running time are O(1) if `n == 0` or if are O(n)  `n >= 1`. So I chose to go with linked list. I first added the deck into a data structure of linked list then I used splice to split the linked list into two lists. I then created a third linked list. I realize that the third linked list is unnecessary and a waste of space because you can add directly to the original deck array. However I used the third linked list to take cards incrementally from the two decks. In the end I transfer the third deck into the original array. The reason I chose to use linked list is because it was easier to implement, however it does not have any advantage in terms of running time. The only positive I could see is that the deck of card is not a normal deck but has a ridiculously high number of cards. Using linked list you can allocate the nodes throughout the space of memory in your computer, however if you use an array it must come in all one chunk.
+
+Link to my shuffle project : https://github.com/Vutisat/Shuffle
 
 **Note: I attended the undergraduate research fair for extra credit**

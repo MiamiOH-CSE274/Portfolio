@@ -79,7 +79,7 @@ In General the time complexity of an algorithm/method for a program is how the t
 __________________________________________________________________________________________________________
 03_Queue_Lab
 
-Link: https://github.com/LakersAllTheWay/03_Queue_Lab/tree/griffid5
+Link: https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/griffid5
 
 Space Requirement: Since we are using a circular array the space requirement is the size of the array at any given moment which is going to be "linear". 
 
@@ -96,7 +96,7 @@ grow: Grow takes "linear time" since we have to copy each element from the old a
 __________________________________________________________________________________________________________
 04_Linked_List_Lab
 
-Link: https://github.com/LakersAllTheWay/04_Linked_List_Lab/tree/griffid5
+Link: https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/griffid5
 
 Space Requirement: The space requirement for this linked list is based on its three pointers which are next, prev and data. This gives us a space requirement of "constant time."
 
@@ -114,7 +114,7 @@ size: We are just returning the numItems variable so this method is going to be 
 __________________________________________________________________________________________________________
 05_Hashing_Lab
 
-Link: https://github.com/LakersAllTheWay/05_Hashing_Lab/tree/griffid5
+Link: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/griffid5
 
 Space Requirement: Since we are using an array the space requirment is going to be the size of the array at any given moment which is going to be "linear." 
 
@@ -168,7 +168,7 @@ Here is the code in my destructor method that proves a memory leak doesn't occur
 For arrays we have to call "delete [] backingArray;" instead of "delete backingArray." "delete backingArray" would only work if the backingArray was an object rather than an array. Destructors in C++ are used to deallocate memory and do the cleanup that we don't get automatically in C++. The destructor gets called for a class object when 
 the object passes out of scope or is explicitly deleted. Finally, by looking at the information above you can see that I know the importance of memory management in C++ and how it works.
 
- Link: https://github.com/LakersAllTheWay/03_Queue_Lab/blob/griffid5/ArrayQueue.ipp
+ Link: https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/griffid5
 
 5 - Create collection classes using templates in C++
 ----
@@ -177,7 +177,7 @@ Possible sources of evidence (do one):
 By looking at my 04_Linked_List_Lab you can see that Dr. Brinkman gave us a template which was defined as: template <class T> in which in main.cpp this was changed to: LinkedList<int> testList; In this case "T" is a place holder and Dr. Brinkman
 decided to replace it with "int" in main.cpp which does all the testing of our code. Templates allow for us to use different data types for methods that do similar things for other data types. So in this example Dr. Brinkman could have went with a "double" instead of an "int" type and our methods would have still worked because we used "T" as 
 a place holder instead of using "int" or some other data type. By using templates we have the flexability to use many data types instead of having to code the same method for each different data type that we may be given. Also with templates we must declare our implementaion class as .ipp instead of the standard .cpp because the compiler can't handle template
-classes when we place them in a .cpp file. Finally, when using templates the data type is choosen at time of execuation instead of compile time like it would be if we were not using templates. Link: https://github.com/LakersAllTheWay/04_Linked_List_Lab/tree/griffid5
+classes when we place them in a .cpp file. Finally, when using templates the data type is choosen at time of execuation instead of compile time like it would be if we were not using templates. Link: https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/griffid5
 
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application

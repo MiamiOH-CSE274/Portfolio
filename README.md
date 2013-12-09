@@ -89,18 +89,22 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
 Possible sources of evidence (do one):
+* Hash Table:
+* https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/liy28?source=cbc
 
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
-* Hash Table:
-* https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/liy28?source=cbc  
-In the constructor, ¡°new¡± operator is used to allocate dynamic memory on Heap in order to store an array of HashRecords. Unlike Stack memory, memory have been allocated on Heap need to be deallocated to avoid memory leak, which reduces the available memory and causes software aging. The destructor uses a ¡°delete¡± operator for memory deallocations, and so doe grow(). In grow(), a chunk of dynamic memory are allocated by using a new operator to store a new array with double size of the old one, and thus delete operator has to be applied here for memory deallocations. Moreover, the pointer used to point to the old array is switched to point to the new array in case of being a dangling pointer, which points to where memory has been deallocated and thus cause memory safety issues. Last but not the least, when looping through hashPrime and the old backing array, the bound is set to be the size of each array in case out-of-bound error happens.           
+ 
+In the constructor, the operator new is used to allocate dynamic memory on Heap in order to store an array of HashRecords. Unlike Stack memory, memory have been allocated on Heap need to be deallocated to avoid memory leak, which reduces the available memory and causes software aging. The destructor uses the operator delete for memory deallocations, and so doe grow(). In grow(), a chunk of dynamic memory are allocated by using the operator new to store a new array with double size of the old one, and thus the operator delete has to be applied here for memory deallocations. Moreover, the pointer used to point to the old array is switched to point to the new array in case of being a dangling pointer, which points to where memory has been deallocated and thus cause memory safety issues. Last but not the least, when looping through hashPrime and the old backing array, the bound is set to be the size of each array in case out-of-bound error happens.           
 
 5 - Create collection classes using templates in C++
 ----
 Possible sources of evidence (do one):
+* Linked List: 
+* https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/liy28?source=cbc 
 
 * Any of the labs or projects, provided it uses templates in an interesting way.
 
+Templates make code reusable, and they are instantiated at complier-time with the source code. A class template, often used to make generic containers, is actually applied to the linked list lab. The scope resolution operator is used to define a template linked list constructor as well as the methods. Also, T, type parameter, is applied to the lab as well, so this allows users to specify what kind of data the user wants to store in the linked list. The complier is totally fine with this type of syntax.
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application
 ----

@@ -111,12 +111,14 @@ Templates make code reusable, and they are instantiated at complier-time with th
 ----
 
 Possible sources of evidence (do up to 2 of these, up to 15 points for each):
-* Vise: https://github.com/MiamiOH-CSE274/Vise/tree/StilgenbauerAndLi?source=cbc 
-* Old exam problem: pic.twitter.com/UzJxw2O0kJ 
+* Old exam problem1: pic.twitter.com/UzJxw2O0kJ 
+* Old exam problem2: pic.twitter.com/ZvPLV6SlGV 
 
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
 
-For the old exam problem, it requires a dictionary as the abstract data type because the names the players typed into are the keys to which the players information are stored. To satisfy the requirement, two common data structure I come up with would be Binary Search Tree (BST) and Hash Table. I prefer Hash Table to BST.
-First of all, when implemented with Hash Table, the video game allows the players to update their score much faster than it is implemented with BST. The two data structure all take players names as the keys, but BST and Hash Table have different performance on the running time of accessing a player info with his or her key. BST can take up to log(N) time to update a person info, while Hash Table takes constant time on average if it is implemented with double hashing. Hash Table beats BST by a lot.
-Although BST updates top 10 scores a little faster than Hash Table does, the changes to top 10 scores rarely happen. Once top 10 scores change, the video game implemented with Hash Table loops through each HashRecord. This process takes linear time. On the other hand, the video game swap nodes if changes happen and this can take up to linear time in the worst case, which is the smallest score gets changed to the largest score. However, as I mentioned, the changes to top 10 scores rarely happen, BST beats Hash Table by a little. 
-To conclude, the video game would be better to be implemented with Hash Table rather than BST.
+* For the old exam problem 1, it requires a dictionary as the abstract data type because the names the players typed into are the keys to which the players information are stored. To satisfy the requirement, two common data structure I come up with would be Binary Search Tree (BST) and Hash Table. I prefer Hash Table to BST.
+* First of all, when implemented with Hash Table, the video game allows the players to update their score much faster than it is implemented with BST. The two data structure all take players names as the keys, but BST and Hash Table have different performance on the running time of accessing a player info with his or her key. BST can take up to log(N) time to update a person info, while Hash Table takes constant time on average if it is implemented with double hashing. Hash Table beats BST by a lot.
+* Although BST updates top 10 scores a little faster than Hash Table does, the changes to top 10 scores less often than the changes to personal scores. Once top 10 scores change, the video game implemented with Hash Table loops through each HashRecord. This process takes linear time. On the other hand, the video game swap nodes if changes happen and this can take up to linear time in the worst case, which is the smallest score gets changed to the largest score. However, as I mentioned, the changes to top 10 scores rarely happen, BST beats Hash Table by a little. 
+* To conclude, the video game would be better to be implemented with Hash Table rather than BST.
+
+* For the old exam problem 2, it requires a dictionary as the abstract data type

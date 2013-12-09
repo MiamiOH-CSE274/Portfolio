@@ -61,6 +61,7 @@ Possible sources of evidence (do any one of these):
 Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 * Select any of the following labs, and analyze the running times for each of your methods of your data structure: Queue, Linked List, Binary Search Tree, Heap, Hash Table, Graph (Adjacency List or Adjacency Matrix, you don't have to do both, but you can if you want)
+
 * Linked List: 
 * https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/liy28?source=cbc 
 * (1) find(): If the index of the item is out of boundary or the item is dummy node, assuming the exception call takes constant time, then find() will be O(1). Otherwise, find() can be O(n) because the line of code in for loop brackets takes linear time.  
@@ -104,11 +105,18 @@ Possible sources of evidence (do one):
 
 * Any of the labs or projects, provided it uses templates in an interesting way.
 
-Templates make code reusable, and they are instantiated at complier-time with the source code. A class template, often used to make generic containers, is actually applied to the linked list lab. The scope resolution operator is used to define a template linked list constructor as well as the methods. Also, T, type parameter, is applied to the lab as well, so this allows users to specify what kind of data the user wants to store in the linked list. The complier is totally fine with this type of syntax.
+Templates make code reusable, and they are instantiated at complier-time with the source code. A class template, often used to make generic containers, is actually applied to the linked list lab. The scope resolution operator is used to define a template constructor as well as the template methods. Also, T, type parameter, is applied to the lab as well, so this allows users to specify what kind of data the user wants to store in the linked list. The complier is totally fine with this type of syntax.
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
 
 Possible sources of evidence (do up to 2 of these, up to 15 points for each):
+* Vise: https://github.com/MiamiOH-CSE274/Vise/tree/StilgenbauerAndLi?source=cbc 
+* Old exam problem: pic.twitter.com/UzJxw2O0kJ 
 
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.
+
+For the old exam problem, it requires a dictionary as the abstract data type because the names the players typed into are the keys to which the players information are stored. To satisfy the requirement, two common data structure I come up with would be Binary Search Tree (BST) and Hash Table. I prefer Hash Table to BST.
+First of all, when implemented with Hash Table, the video game allows the players to update their score much faster than it is implemented with BST. The two data structure all take players names as the keys, but BST and Hash Table have different performance on the running time of accessing a player info with his or her key. BST can take up to log(N) time to update a person info, while Hash Table takes constant time on average if it is implemented with double hashing. Hash Table beats BST by a lot.
+Although BST updates top 10 scores a little faster than Hash Table does, the changes to top 10 scores rarely happen. Once top 10 scores change, the video game implemented with Hash Table loops through each HashRecord. This process takes linear time. On the other hand, the video game swap nodes if changes happen and this can take up to linear time in the worst case, which is the smallest score gets changed to the largest score. However, as I mentioned, the changes to top 10 scores rarely happen, BST beats Hash Table by a little. 
+To conclude, the video game would be better to be implemented with Hash Table rather than BST.

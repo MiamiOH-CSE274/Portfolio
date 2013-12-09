@@ -19,64 +19,44 @@ Body of portfolio
 
 7 - Create an implementation of a Queue
 ----
-This is my implementation of an Array Queue.  All the logic seems sound to me, but it doesn't run properly.  I am still awaiting feedback on this lab, which will hopefully help me figure out my problem.
+This is my implementation of an Array Queue.
 
 https://github.com/stilgeki/03_Queue_Lab/tree/stilgeki
 
 
 7 - Create an implementation of a List
 ----
-This is a link to my implementation of a Linked List.  As with the Queue, my logic and code seem correct, but I still get errors.  When I attempt to debug it, Visual Studio directs me to a file that isn't even a part of the program and that I don't understand.  As with the Queue, I am awaiting feedback that will hopefully help me to fix this.
+This is a link to my implementation of a Linked List.
 
 https://github.com/stilgeki/04_Linked_List_Lab
 
 
 7 - Create an implementation of a Binary Search Tree
 ----
-Possible sources of evidence (do any one of these):
-
-* Binary Search Tree Lab (TODO)
-* Use a binary search tree or KD-Tree in the Starbucks project.
-* Use a binary search tree in the Zeitgeist project
-* Consult with Dr. Brinkman on an alternative project
+Sadly, I have a nature of procrastination.  Deadlines just don't register with my brain until they're slapping me in the face, and I didn't put myself in a position where I was able to finish the BST lab, Hash lab, Heap lab, or graph traversal.  That's 28 points worth of things I simply didn't do, but I hope you can still grade the rest of the Portfolio.  While I did enjoy many aspects of your class, this semester has taught me that programming simply doesn't click with me.  I like the idea of developing software, but I just don't enjoy the actual act of programming.  I intend to change my major, and am simply hoping I will escape with my GPA intact.  Thank you for a good semester, and I truly regret that I will not be taking another of your courses, despite my personal deficiencies in the subject matter.  I wish you all the best.  :)
 
 
 7 - Create an implementaiton of a Hash Table
 ----
-Possible sources of evidence (do any one of these):
+See the BST section.
 
-* https://github.com/MiamiOH-CSE274/05_Hashing_Lab
-* Use a hash table in the Zeitgeist project
-* Use locality-preserving hashing on the Starbucks project (not recommended!)
-* Consult with Dr. Brinkman on an alternative project
 
 7 - Create an implementation of a Heap
 ----
-Possible sources of evidence (do any one of these):
+See the BST section.
 
-* Heap lab (TODO)
-* Implement heap sort in the Sorting lab (TODO)
-* Implement a heap as part of the Graph Algorithms lab (TODO)
-* Implement a heap as part of the Graph Project (TODO)
-* Consult with Dr. Brinkman on an alternative project
 
 7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
 ----
-Possible sources of evidence (do any one of these):
+This is my implementation of an Adjacency List:
 
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+https://github.com/stilgeki/08_Graph_Lab
+
 
 7 - Implement graph algorithms
 ----
-Possible sources of evidence (do any one of these):
+See the BST section.
 
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
 
 21 - Determine space and time requirements of common data structure methods
 -----
@@ -88,19 +68,23 @@ For the Linked List, my time analysis is in Question 1, parts 1 and 4:
 
 https://github.com/stilgeki/04_Linked_List_Lab
 
+For the Adjacency List, my time analysis is in Question 2:
+
+https://github.com/stilgeki/08_Graph_Lab
+
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
-Possible sources of evidence (do one):
+https://github.com/stilgeki/03_Queue_Lab/tree/stilgeki
 
-* Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
+My Queue Lab is a good example of memory management in C++.  In C++, unlike in Java, there is no garbage collection, so you have to manually delete things that have outlived their usefulness to prevent memory leaks.  Additionally, you need to avoid deleting something but not a pointer to it, leaving a dangling pointer that points to nothing.  When a piece of memory can no longer be accessed because there is no pointer pointing at it, that is a memory leak and the data should be deleted.  My Queue Lab does this by calling a destructor method.  The destructor is called whenever the backing array needs to grow, because the old array is deleted and a new one is created in its place.  Deleting the old backing array prevents a memory leak.  After the backing array is deleted, reassigning it to the new array prevents a dangling pointer.
 
 
 5 - Create collection classes using templates in C++
 ----
-Possible sources of evidence (do one):
+https://github.com/stilgeki/03_Queue_Lab/tree/stilgeki
 
-* Any of the labs or projects, provided it uses templates in an interesting way.
+My Queue Lab is also an example of the use of templates in C++.  Templates become a necessity because of the way compilers function with C++.  To generalize your program to all data types, you must use templates to tell the compiler that it has to wait to find out what data type it is dealing with.  Templates are used in conjunction with inheritance to create template classes that are generalized and abstract, and therefore can be applied to many different programs.  This is a slightly confusing and unintuitive nuance of the language, but templates can also be very powerful when employed correctly.
 
 
 30 - Using time and space analysis, justify the selection of a data structure for a given application

@@ -55,7 +55,7 @@ https://github.com/MiamiOH-CSE274/05_Hashing_Lab/blob/gardnedn/HashTable.ipp
 
 keyExists, find, remove, add and size  all O(1) since load factor is < 1/2
 grow is O(n)
-Do not leak memory
+Does not leak memory
 
 
 

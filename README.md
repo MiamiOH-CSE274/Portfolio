@@ -112,6 +112,6 @@ Possible sources of evidence (do one):
 
 Possible sources of evidence (do up to 2 of these, up to 15 points for each):
 
-* In-Progress: Starbucks Project - KD-Trees vs Grid - https://github.com/deckerbd/Portfolio/blob/deckerbd/Starbucks.txt (Post-MiamiOH-commit: https://github.com/MiamiOH-CSE274/Portfolio/blob/deckerbd/Starbucks.txt )
+* Complete: Starbucks Project - KD-Trees vs LinkedList - https://github.com/deckerbd/Portfolio/blob/deckerbd/Starbucks.txt (Post-MiamiOH-commit: https://github.com/MiamiOH-CSE274/Portfolio/blob/deckerbd/Starbucks.txt )
 * In-Progress: Zeitgeist Project - BST vs Linked List - https://github.com/deckerbd/Portfolio/blob/deckerbd/Zeitgeist.txt (Post-MiamiOH-Commit: https://github.com/MiamiOH-CSE274/Portfolio/blob/deckerbd/Zeitgeist.txt )
 * Select a project for which there are multiple reasonable data structure designs. Describe two reasonable options, and explain the trade-offs between them. For each, describe an application where the data structure would be better. For example, if comparing KD-Trees to a Grid in the Starbucks problem, which one is better really depends on the input data set. Explain what the data would have to look like for the Grid to be a clear winner, and also what type of data would lead you to use a KD-Tree instead.

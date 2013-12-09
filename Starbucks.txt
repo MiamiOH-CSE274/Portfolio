@@ -1,2 +1,18 @@
 // Ben Decker
-// Starbucks - Comparing KD-Tree vs Grid
+// Starbucks - Comparing BST vs LinkedLists
+
+Preface: 
+
+For the Starbucks project, as like any project, it's important to pick a project which has a data structure which will give you good performance. Two structures that could be used in the Starbucks: a BST (binary search tree) and a LinkedList, have both been introduced through labs and lecture. I'll be comparing the two data structures by their runtimes and how they fit into the project.
+
+Binary Search Tree (BST):
+
+In order to save space, you can find the running time analysis of the BST under my BST Lab here: https://github.com/deckerbd/06_BST_Lab/tree/deckerbd (post-MiamiOH-merge request should be https://github.com/MiamiOH-CSE274/06_BST_Lab/tree/deckerbd )
+
+
+LinkedList:
+
+In order to save space, you can find the running time analysis of the LinkedList under my LinkedList Lab here: https://github.com/deckerbd/04_Linked_List_Lab/tree/deckerbd (post-MiamiOH-merge request should be in  https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/deckerbd )
+
+
+From this point, However, despite the linkedList having some constant time items, these actions will not be performed nearly as much as to save time in the grand scheme of things. Both the LinkedList and the BinarySearchTree will both take O(n) to create since we are having to add a set list of coordinate data into each node, which we're then putting into the data structure one by one. Looking at how the data will be manipulated, we can tell that inserting  and retreieving in a balanced BST is going to be much faster than the LinkedList (O(h)=O(lgn) versus O(n)). In addition, organizing the list without having to constantly resort the list will be done with one list sorted to x and one list sorted to y, doubling the amount of space required. Because most of the computing is done with transversing the tree or list and attempting to find values, the better option in this case would still be the Binary Search Tree, however we haven't factored in the destructor. With the destructor's times for BST and LinkedList being equal, it's apparent that using a BST/KD-Tree would be the best option, especially since a KD-tree would allow for easy partitioning off of areas using its ability for half-spaces and multidimensional search keys, like we could in this case where we'll be looking at both the x and y-coordinates.

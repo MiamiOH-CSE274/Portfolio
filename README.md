@@ -21,13 +21,13 @@ Body of portfolio
 ----
 Possible sources of evidence (do any one of these):
 
-By clicking on the link you will see that I have fully demonstrated my knowledge of a queue. The code within ArrayQueue.ipp has passed the tests that have been provided by Dr. Brinkman in main.cpp. Furthermore, to implement the queue in this assignment I used the circular array concept. In this code(ArrayQueue.ipp) you will find a constructor and destructor for a circular array. You will also find a add, remove, getNumItems and grow methods. All of these methods are fully functional. Link: https://github.com/LakersAllTheWay/03_Queue_Lab/tree/griffid5
+By clicking on the link you will see that I have fully demonstrated my knowledge of a queue. The code within ArrayQueue.ipp has passed the tests that have been provided by Dr. Brinkman in main.cpp. Furthermore, to implement the queue in this assignment I used the circular array concept. In this code(ArrayQueue.ipp) you will find a constructor and destructor for a circular array. You will also find a add, remove, getNumItems and grow methods. All of these methods are fully functional. Link: https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/griffid5
 
 7 - Create an implementation of a List
 ----
 Possible sources of evidence (do any one of these):
 
-By clicking on the link below you will see that I have fully demonstrated my knowledge of a linked list. Other than the splice method all other methods have passed the tests provided by Dr. Brinkman. In this assignment I used a dummyNode that allowed me to access the linked list in which the dummyNode's "next" and "prev" were itself. The methods that can be found in LinkedList.ipp are: find, set, add, remove, get and size. Link: https://github.com/LakersAllTheWay/04_Linked_List_Lab/tree/griffid5
+By clicking on the link below you will see that I have fully demonstrated my knowledge of a linked list. Other than the splice method all other methods have passed the tests provided by Dr. Brinkman. In this assignment I used a dummyNode that allowed me to access the linked list in which the dummyNode's "next" and "prev" were itself. The methods that can be found in LinkedList.ipp are: find, set, add, remove, get and size. Link: https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/griffid5
 
 
 7 - Create an implementation of a Binary Search Tree
@@ -39,7 +39,7 @@ of a BST by implementing the following methods in BST.ipp: constructor, destruct
 For most methods I used both a private and public method call so that recursion would be simplified. In this lab all my methods passed the test
 that Dr. Brinkman had and all my methods except the destructor and size were O(h) because the height of the tree is the longest number
 of edges that each method will have to travel. Finally size was O(n) instead of O(h) because I had to travel down both sides of the tree and 
-visit every node. Link: https://github.com/LakersAllTheWay/06_BST_Lab/tree/griffid5
+visit every node. Link: https://github.com/MiamiOH-CSE274/06_BST_Lab/tree/griffid5
 
 
 7 - Create an implementaiton of a Hash Table
@@ -49,32 +49,26 @@ Possible sources of evidence (do any one of these):
 I completed the 05_Hashing_Lab to complete this part of the portfolio. In the HashTable.ipp you can find that I implemented the following methods: constructor, destructor, add, remove, find keyExists, size and grow. All of these methods passed Dr. Brinkman's tests that he had given us. Also keyExists, find, remove and size were all
 constant time O(1). We know that size is constant time since we just return numItems. Additionally, we are using an array for the implementation of the hashtable so we know that the 3 other methods will be constant time as well, since we are using key k. 
 The add method on the other hand has a worst case running time of linear time O(n) because we sometimes have to call grow, however, that is only required when the load factor becomes more than 1/2. Otherwise we don't have to call grow and the add method is O(1) on average since we are using linear probing to find an open slot in the hash table. 
-Link: https://github.com/LakersAllTheWay/05_Hashing_Lab/tree/griffid5
+Link: https://github.com/MiamiOH-CSE274/05_Hashing_Lab/tree/griffid5
 
 7 - Create an implementation of a Heap
 ----
 Possible sources of evidence (do any one of these):
 
 In my 07_Heap_Lab I was able to satify the first 4 tests that Dr. Brinkman had given us. The methods that worked in this lab were the constructor, destructor, grow, add, remove and getNumItems. The two methods that I couldn't get working were bubbleUp and TrickleDown. 
-Since I was unable to get these two methods to work I was unable to pass Dr. Brinkman's last 3 tests. The add and remove methods are O(log n), except for when grow is called which makes the runtime O(n). Link: https://github.com/LakersAllTheWay/07_Heap_Lab/tree/griffid5
+Since I was unable to get these two methods to work I was unable to pass Dr. Brinkman's last 3 tests. The add and remove methods are O(log n), except for when grow is called which makes the runtime O(n). Link: https://github.com/MiamiOH-CSE274/07_Heap_Lab/tree/griffid5
 
 7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
 ----
 Possible sources of evidence (do any one of these):
 
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+Link: https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/griffid5 
 
 7 - Implement graph algorithms
 ----
 Possible sources of evidence (do any one of these):
 
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+Link: https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/griffid5 
 
 21 - Determine space and time requirements of common data structure methods
 -----

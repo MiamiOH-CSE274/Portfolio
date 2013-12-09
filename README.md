@@ -4,7 +4,7 @@ Portfolio
 7 - Create an implementation of a Queue
 ----
 
-To show suffecient knowledge of Queue I will use my 03_Queue_Lab the link is https://github.com/kosirjm/03_Queue_Lab
+To show suffecient knowledge of a Queue I will use my 03_Queue_Lab the link is https://github.com/kosirjm/03_Queue_Lab
 
 You can see demonstration of the test code working at https://www.youtube.com/watch?v=sWNuNIQbCug
 
@@ -24,12 +24,10 @@ You can see demonstration of the test code working at https://www.youtube.com/wa
 
 7 - Create an implementaiton of a Hash Table
 ----
-Possible sources of evidence (do any one of these):
 
-* https://github.com/MiamiOH-CSE274/05_Hashing_Lab
-* Use a hash table in the Zeitgeist project
-* Use locality-preserving hashing on the Starbucks project (not recommended!)
-* Consult with Dr. Brinkman on an alternative project
+To show suffecient knowledge of a Hash I will use my 05_Hash_Lab the link is https://github.com/kosirjm/05_Hash_Lab
+
+You can see demonstration of the test code working at http://www.youtube.com/watch?v=lwgKVubCIVI
 
 7 - Create an implementation of a Heap
 ----
@@ -40,21 +38,18 @@ You can see demonstration of the test code working at https://www.youtube.com/wa
 
 7 - Create an implementation of either Adjanency Lists or Adjacency Matrices
 ----
-Possible sources of evidence (do any one of these):
+To show suffecient knowledge of a Graph I will use my 08_Graph_Lab the link is https://github.com/kosirjm/08_Graph_Lab
 
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+You can see demonstration of the test code working at http://www.youtube.com/watch?v=bEvpcSQRcLQ
 
 7 - Implement graph algorithms
 ----
-Possible sources of evidence (do any one of these):
 
-* Graph lab
-* Graph Algorithms lab
-* Graph project
-* Consult with Dr. Brinkman on an alternative project
+To show suffecient knowledge of a Graph  algorithm I will use my 08_Graph_Lab the link is https://github.com/kosirjm/08_Graph_Lab I have added a BFS function to the lab (While doing it changed the Graph.h file 
+as well to add the BFS function 
+
+There is no video demostration for this function
+
 
 21 - Determine space and time requirements of common data structure methods
 -----

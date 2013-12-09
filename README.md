@@ -62,11 +62,15 @@ Since I was unable to get these two methods to work I was unable to pass Dr. Bri
 ----
 Possible sources of evidence (do any one of these):
 
+In my 08_Graph_Lab (Graph.cpp) you can see that I used an adjanency list to implement a representation of a graph. I was able to successful implement the following methods: getCost, addEdge and removeEdge. I used two vectors in which one vector kept track of the edges (edgeList) and the other kept track of the nodes (adjList). Finally, in this lab I learned that a graph is simply a list of nodes in which each node is supposed to keep a list of the edges that are adjacent to it. 
+
 Link: https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/griffid5 
 
 7 - Implement graph algorithms
 ----
 Possible sources of evidence (do any one of these):
+
+By looking at my 08_Graph_Lab (Graph.cpp) you can see that I implemented the proper graph algorithms for getCost(), addEdge() and  removeEdge() methods. Each of these methods worked correctly because they passed the tests that Dr. Brinkman gave us. Lastly, I showed my knowledge of graph algorithms by using two vectors in which one vector kept track of the edges (edgeList) and the other kept track of the nodes (adjList).
 
 Link: https://github.com/MiamiOH-CSE274/08_Graph_Lab/tree/griffid5 
 

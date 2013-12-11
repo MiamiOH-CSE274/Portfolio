@@ -99,4 +99,5 @@ Here is my queue lab : https://github.com/Vutisat/03_Queue_Lab
 
 Link to my shuffle project : https://github.com/Vutisat/Shuffle
 
+I did not work on Closest Starbucks project but given the chance I would have implemented the KD tree. KD tree is a Binary Search Three with multi dimnsions which work perfect for this project. This is because the project has two variables, the longtitude and the langtitude that both needs to be accounted for. Infact for this anything with multi dimension a KD tree is recommended over BST. Even though the running time of both data struture is the same O(n), or log(n) if well balanced; it is the accuracy that comes into play. When you use a normal BST you may get a relative closest in only one aspect of the dimension (let's say X or Y coordinate) but if you use KD tree you can precisely get the most accurate result. You demonstarted this in class when you drew a grid and started diving the boxes, and we saw that BST can sometime results in relatively close but not the best store.
 **Note: I attended the undergraduate research fair for extra credit**

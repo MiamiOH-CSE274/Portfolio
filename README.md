@@ -146,14 +146,15 @@ Possible sources of evidence (do one):
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
 
 For the LinkedList Lab (https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/proctopj) we see dynamic memory allocation being used to construct 
-and connect a data type of our own design called Node which contains data of an unknown type until execution and address markers to other Nodes in 
-the Linked List. The dummyNode is generated first and made permanent by the new() function which gives it an address in the RAM which will not be 
+and connect a data type of our own design called Node which contains local variable data of an unknown type until execution and address markers to other Nodes in 
+the Linked List. Local variables do not need to be deleted because they exist in the Stack instead of the Heap. The Stack exists as a structure which holds all the varaibles/data being used in a given scope, whereas the Heap contains dynamically allocated variables/data which must be explicitly removed with the delete or delete[] function. The dummyNode is generated first and made permanent by the new() function which gives it an address in the RAM which will not be 
 changed or freed up until we specify by use of the delete() function. Each time an item is added to the LinkedList, a new Node is generated to contain 
 that item and then link it to the adjacent Nodes at a given index in the LinkedList. Each time an item is removed, the nodes adjacent to the target 
-restructure their links to each other, and then the target is deleted so no dangling pointer (address to nowhere) is left behind. The LinkedList destructor
+restructure their links to each other, and then the target is deleted so no dangling pointer (address to nowhere) is left behind, which would also constitute a memory leak. In other words, a memory leak is when Heap data is not explicitly destructed in a program, thus permanently taking up space in the RAM until the computer is shut down. The LinkedList destructor
 employs a perfect loop of the Node destructor we call remove(), and it ensures not a single node, including the dummy, remains, and it doesn't go beyond 
 the LinkedList into other parts of the RAM and accidentally deleting extraneous addresses. We must manage memory by hand because C++ does not automatically 
 collect garbage the way Java does.
+We did not specifically employ references in this project, but references in C++ are variables which go to the same data in the same address in memory. A dangling reference is one which does not go to any explicitly used variable data anymore. This can cause issues if the same address is overwritten and the reference changes that data when it is not explicitly connected to the data itself. References are useful, speedy tools, but they do need to be carefully watched.
 
 5 - Create collection classes using templates in C++
 ----

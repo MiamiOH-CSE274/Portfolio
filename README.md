@@ -105,9 +105,9 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 For Queue https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/proctopj,
 
-The running times for add() and remove() are constant, while the grow() function is linear where n is the number items in the initial
+The running times for add() and remove() are constant (because you only remove a single item at position "head," and in an array all accesses are approximately equal time), while the grow() function is linear where n is the number items in the initial
 Queue which are then added to the new Queue after the array size has been doubled. The constructor and destructor are also both 
-constant, but in reality if this Queue were to be applied for classes, it would become linear time as each item would need to be 
+constant for primitive data types, but in reality if this Queue were to be applied for classes, it would become linear time as each item would need to be 
 destructed according to its class parameters. In terms of space requirements, the data structure has exactly n records(array spaces), 
 1 for each stored item.
 
@@ -116,7 +116,7 @@ For Linked List https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/procto
 
 The running time of size() is always constant due to existing control structures within other methods. find(), get(), add(), and 
 remove() are selectively constant (for cases of an index of 0 or size-1 (where the size variable is actually numItems)) but 
-otherwise will run in linear time. getAll is constant because it concatenates a LinkedList to the end of the main one, meaning 
+otherwise will run in linear time to access the xth node among n nodes. getAll is constant because it concatenates a LinkedList to the end of the main one, meaning 
 an index of numItems-1 is used. The constructor method for these purposes is constant, but one could make a linear-time constructor
 for a predetermined arrangement of data. In fact I should probably do that before the final iteration of this portfolio.In terms of 
 space requirements, the data structure has exactly n records(nodes), 1 for each stored item.
@@ -124,17 +124,17 @@ space requirements, the data structure has exactly n records(nodes), 1 for each 
 
 For Binary Search Tree https://github.com/MiamiOH-CSE274/06_BST_Lab/tree/proctopj
 
-The running time of size() can be made constant if you store the variable numItems and increment it in add(). Otherwise it is O(n) 
+The running time of size() can be made constant if you store the variable numItems and increment it in add(). Otherwise it is O(n)
 by way of using a depth-first search (also featured in my code for this lab, but not utilized). Add() is effectively O(h) where h is
 the height of BST. This height can be expressed as base2 log(n) where n is the number of nodes in the tree. Note the log-base changes
-as the number of children per node changes. If each node has 3 children, then height is base3 log(n). So, in short, Add() runs in O(lg(n)) time.
+as the number of children per node changes. If each node has 3 children, then height is base3 log(n). So, in short, Add() runs in O(lg(n)) time. Since we must only search below and to the left or right of a node, the problem of all searches in the BST is cut in half with each change in the level. This is why the time reduces to O(lg(n)).
 
-Remove() runs in O(2lg(n)), 2 because the node must be found if it exists O(lg(n)), and then according to the implementation, bubble to the 
+Remove() runs in O(2lg(n)), 2 because the node must be found if it exists O(lg(n)), and then according to the implementation, trickled to the 
 bottom O(lg(n)), and then be set to NULL and deleted (each O(1)).
 
-max() and min() run in O(lg(n)) time on average, but the balance of the tree can affect this and all methods in this lab except size()
+max() and min() run in O(lg(n)) time on average, but the balance of the tree can affect this and all methods in this lab except size(). This is because we must only search a few nodes to the left or right of the target, and there are only lg(n) nodes in the tree rooted at the first node.
 
-next() and prev() run in O(lg(n)) time as well, as they are based on the same flavor of algorithm as add.
+next() and prev() run in O(lg(n)) time as well, as they are based on the same flavor of algorithm as add().
 
 In terms of space requirements, the data structure has exactly n records(nodes), 1 for each stored item.
 

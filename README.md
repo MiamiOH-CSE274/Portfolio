@@ -214,11 +214,12 @@ Grow(), Add() will take minimum O(s+n) time.
 Upon adding, if the word already exists in the hash table, find() again takes O(s) and again possible O(s*n) time, and then modifying the number of 
 occurences is a O(1) function, because even if the rank necessarily changes, it can only change by one place at a time. A single comparison and a 
 single swap are all that would take place.
+Getting the nth popular item is a constant time array access to the given secondary array mentioned at the opening.
 
-One could theoretically store the words themselves in a Binary Search Tree using the characters in words as the key. Aardvark < Abash < Accelerate
+One could theoretically store the words themselves in a Binary Search Tree (keeping the ranks in a separate array) using the characters in words as the key. Aardvark < Abash < Accelerate
 If one can keep the tree balanced (which is its own separate juggling act in terms of time), the times for add() keyExists() and find() become O(lg(n))
 time, but if a near perfectly balanced tree is impossible to achieve, then the times all average toward O(n) time. Given the distribution of words in
 the English dictionary, perfect balance is not obviously possible(to me anyway, and n becomes much larger than the average s in hashing), but one could 
-get close. There's no reason to store rank in anything except an array due to constant access time and simple storage, but nevertheless, one could use 
-a DLList to do it.  Adding more and more words as well as ranks would make the structure steadily more expensive and time consuming, even though swaps 
-would essentially still be O(1) time. I still overall believe using a hashtable with double hashing and secondary array is the most elegant solution.
+get close. There's no reason to store rank in anything except an array due to constant access time for get nth most popular and simple storage, but nevertheless, one could use 
+a DLList to do it for O(r) time where r is the number of ranks, with O(1) for 1st and last ranks.  Adding more and more words as well as ranks would make the structure steadily more expensive and time consuming, even though swaps 
+would essentially still be O(1) time. I still overall believe using a hashtable with double hashing for word storage and a secondary array for rank storage is the most elegant solution.

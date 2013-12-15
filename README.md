@@ -105,9 +105,9 @@ Possible sources of evidence (do up to 3 of these, up to 7 points for each):
 
 For Queue https://github.com/MiamiOH-CSE274/03_Queue_Lab/tree/proctopj,
 
-The running times for add() and remove() are constant, while the grow() function is linear where n is the number items in the initial
+The running times for add() and remove() are constant (because you only remove a single item at position "head," and in an array all accesses are approximately equal time), while the grow() function is linear where n is the number items in the initial
 Queue which are then added to the new Queue after the array size has been doubled. The constructor and destructor are also both 
-constant, but in reality if this Queue were to be applied for classes, it would become linear time as each item would need to be 
+constant for primitive data types, but in reality if this Queue were to be applied for classes, it would become linear time as each item would need to be 
 destructed according to its class parameters. In terms of space requirements, the data structure has exactly n records(array spaces), 
 1 for each stored item.
 
@@ -116,7 +116,7 @@ For Linked List https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/procto
 
 The running time of size() is always constant due to existing control structures within other methods. find(), get(), add(), and 
 remove() are selectively constant (for cases of an index of 0 or size-1 (where the size variable is actually numItems)) but 
-otherwise will run in linear time. getAll is constant because it concatenates a LinkedList to the end of the main one, meaning 
+otherwise will run in linear time to access the xth node among n nodes. getAll is constant because it concatenates a LinkedList to the end of the main one, meaning 
 an index of numItems-1 is used. The constructor method for these purposes is constant, but one could make a linear-time constructor
 for a predetermined arrangement of data. In fact I should probably do that before the final iteration of this portfolio.In terms of 
 space requirements, the data structure has exactly n records(nodes), 1 for each stored item.
@@ -124,17 +124,17 @@ space requirements, the data structure has exactly n records(nodes), 1 for each 
 
 For Binary Search Tree https://github.com/MiamiOH-CSE274/06_BST_Lab/tree/proctopj
 
-The running time of size() can be made constant if you store the variable numItems and increment it in add(). Otherwise it is O(n) 
+The running time of size() can be made constant if you store the variable numItems and increment it in add(). Otherwise it is O(n)
 by way of using a depth-first search (also featured in my code for this lab, but not utilized). Add() is effectively O(h) where h is
 the height of BST. This height can be expressed as base2 log(n) where n is the number of nodes in the tree. Note the log-base changes
-as the number of children per node changes. If each node has 3 children, then height is base3 log(n). So, in short, Add() runs in O(lg(n)) time.
+as the number of children per node changes. If each node has 3 children, then height is base3 log(n). So, in short, Add() runs in O(lg(n)) time. Since we must only search below and to the left or right of a node, the problem of all searches in the BST is cut in half with each change in the level. This is why the time reduces to O(lg(n)).
 
-Remove() runs in O(2lg(n)), 2 because the node must be found if it exists O(lg(n)), and then according to the implementation, bubble to the 
+Remove() runs in O(2lg(n)), 2 because the node must be found if it exists O(lg(n)), and then according to the implementation, trickled to the 
 bottom O(lg(n)), and then be set to NULL and deleted (each O(1)).
 
-max() and min() run in O(lg(n)) time on average, but the balance of the tree can affect this and all methods in this lab except size()
+max() and min() run in O(lg(n)) time on average, but the balance of the tree can affect this and all methods in this lab except size(). This is because we must only search a few nodes to the left or right of the target, and there are only lg(n) nodes in the tree rooted at the first node.
 
-next() and prev() run in O(lg(n)) time as well, as they are based on the same flavor of algorithm as add.
+next() and prev() run in O(lg(n)) time as well, as they are based on the same flavor of algorithm as add().
 
 In terms of space requirements, the data structure has exactly n records(nodes), 1 for each stored item.
 
@@ -146,14 +146,15 @@ Possible sources of evidence (do one):
 * Select any of your labs or projects that uses dynamic memory, and explain how memory is managed. In particular, you must show that your program does not leak memory, and does not suffer from dangling pointers or out of bounds array access. This will probably require referring to your code, providing links.
 
 For the LinkedList Lab (https://github.com/MiamiOH-CSE274/04_Linked_List_Lab/tree/proctopj) we see dynamic memory allocation being used to construct 
-and connect a data type of our own design called Node which contains data of an unknown type until execution and address markers to other Nodes in 
-the Linked List. The dummyNode is generated first and made permanent by the new() function which gives it an address in the RAM which will not be 
+and connect a data type of our own design called Node which contains local variable data of an unknown type until execution and address markers to other Nodes in 
+the Linked List. Local variables do not need to be deleted because they exist in the Stack instead of the Heap. The Stack exists as a structure which holds all the varaibles/data being used in a given scope, whereas the Heap contains dynamically allocated variables/data which must be explicitly removed with the delete or delete[] function. The dummyNode is generated first and made permanent by the new() function which gives it an address in the RAM which will not be 
 changed or freed up until we specify by use of the delete() function. Each time an item is added to the LinkedList, a new Node is generated to contain 
 that item and then link it to the adjacent Nodes at a given index in the LinkedList. Each time an item is removed, the nodes adjacent to the target 
-restructure their links to each other, and then the target is deleted so no dangling pointer (address to nowhere) is left behind. The LinkedList destructor
+restructure their links to each other, and then the target is deleted so no dangling pointer (address to nowhere) is left behind, which would also constitute a memory leak. In other words, a memory leak is when Heap data is not explicitly destructed in a program, thus permanently taking up space in the RAM until the computer is shut down. The LinkedList destructor
 employs a perfect loop of the Node destructor we call remove(), and it ensures not a single node, including the dummy, remains, and it doesn't go beyond 
 the LinkedList into other parts of the RAM and accidentally deleting extraneous addresses. We must manage memory by hand because C++ does not automatically 
 collect garbage the way Java does.
+We did not specifically employ references in this project, but references in C++ are variables which go to the same data in the same address in memory. A dangling reference is one which does not go to any explicitly used variable data anymore. This can cause issues if the same address is overwritten and the reference changes that data when it is not explicitly connected to the data itself. References are useful, speedy tools, but they do need to be carefully watched.
 
 5 - Create collection classes using templates in C++
 ----
@@ -213,11 +214,12 @@ Grow(), Add() will take minimum O(s+n) time.
 Upon adding, if the word already exists in the hash table, find() again takes O(s) and again possible O(s*n) time, and then modifying the number of 
 occurences is a O(1) function, because even if the rank necessarily changes, it can only change by one place at a time. A single comparison and a 
 single swap are all that would take place.
+Getting the nth popular item is a constant time array access to the given secondary array mentioned at the opening.
 
-One could theoretically store the words themselves in a Binary Search Tree using the characters in words as the key. Aardvark < Abash < Accelerate
+One could theoretically store the words themselves in a Binary Search Tree (keeping the ranks in a separate array) using the characters in words as the key. Aardvark < Abash < Accelerate
 If one can keep the tree balanced (which is its own separate juggling act in terms of time), the times for add() keyExists() and find() become O(lg(n))
 time, but if a near perfectly balanced tree is impossible to achieve, then the times all average toward O(n) time. Given the distribution of words in
 the English dictionary, perfect balance is not obviously possible(to me anyway, and n becomes much larger than the average s in hashing), but one could 
-get close. There's no reason to store rank in anything except an array due to constant access time and simple storage, but nevertheless, one could use 
-a DLList to do it.  Adding more and more words as well as ranks would make the structure steadily more expensive and time consuming, even though swaps 
-would essentially still be O(1) time. I still overall believe using a hashtable with double hashing and secondary array is the most elegant solution.
+get close. There's no reason to store rank in anything except an array due to constant access time for get nth most popular and simple storage, but nevertheless, one could use 
+a DLList to do it for O(r) time where r is the number of ranks, with O(1) for 1st and last ranks.  Adding more and more words as well as ranks would make the structure steadily more expensive and time consuming, even though swaps 
+would essentially still be O(1) time. I still overall believe using a hashtable with double hashing for word storage and a secondary array for rank storage is the most elegant solution.

@@ -336,4 +336,39 @@ Using 2-D tree will be faster if the input data set is very different, otherwise
 
 ********************************************************************************
 
+Shuffle Project:
+
+I used riffle shuffle in this project. There are two reasonable data structure 
+to simulate shuffling. The first one is using linked-list to represent a deck
+of card, by creating a two linked-list and separate a deck of card approximately half and add them into two linked-list. This takes linear time. And then 
+creating one more linked-list to merge these two linked-list back by
+simulating riffle Shuffle. It also takes linear time. Therefore, the insertion 
+ and removal are linear time except removing the first or last position in the
+ linked-list.
+
+The second possible data structure is using Array-based Queue, by creating two 
+array-based queue and cut a deck of card approximately half and add them into 
+two array-based queue. This takes constant time. And then creating one more 
+array-based queue to merge these two array-based queue back by simulating riffle
+ Shuffle. It also takes constant time. Therefore, the insertion and removal are  constant time except `grow()` method is called. 
+
+
+Trade-offs:
+
+A linked-list will be a clear winner to handle a certain part of the list can be
+ picked and could be entirely moved to anothere point using the same amount of
+ space, which is not possible in an array. The reason is because in a linkedlist, the different elements are not stored at a fixed location on the memory like
+ in an array, the elements stored in various location are connected using 
+ pointers and hence the pointers can be manipulated accordingly to change the
+ locations of the cards. 
+
+However, by using riffle shuffle, we don't need to move a portion of cards into
+another point, therefore array-based queue will be a better choice. If the 
+shuffle method you are using needs to move a certain portion of cards then 
+linked-list will be clear winner.
+
+
+
+
+
 

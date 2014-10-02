@@ -16,30 +16,17 @@ Body of portfolio
 7 - Create an implementation of a Queue
 ----
 TODO: Provide a link to your completed 03_Queue_Lab
+https://github.com/samsab/03_Queue_Lab
 
 7 - Create an implementation of a List
 ----
 TODO: Provide a link to your completed 04_Linked_List_Lab OR 05_Hashing_Lab (only if you used chaining instead of open addressing)
-
-7 - Create an implementation of a Binary Search Tree
-----
-TODO: Provide a link to your completed 06_BST_Lab OR ClosestStarbucks project (only if you used a search tree)
+https://github.com/samsab/04_Linked_List_Lab
 
 7 - Create an implementation of a Hash Table
 ----
 TODO: Provide a link to your completed 05_Hashing_Lab
-
-7 - Create an implementation of a Heap
-----
-TODO: Provide a link to your completed 07_Heap_Lab OR Vise project (only if you implemented a heap for it)
-
-7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
-----
-TODO: Provide a link to your completed 08_Graph_Lab OR Vise project (only if you implemented a graph for it)
-
-7 - Implement graph algorithms
-----
-TODO: Provide a link to your completed Vise project (only if you used graph traversal), or add a graph traversal to 08_Graph_Lab and provide a link
+https://github.com/samsab/05_Hashing_Lab
 
 21 - Determine space and time requirements of common data structure methods
 -----

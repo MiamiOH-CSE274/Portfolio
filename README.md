@@ -55,10 +55,10 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 ----
 TODO: Define/describe each of the following terms, as they apply to memory management in C++
 
-* The call stack (not to be confused with the stack data structure!)
-* The heap (not to be confused with the heap data structure!)
-* Address
-* Pointer
+* The call stack - The stack is an area where, when we run our program, all of the local variables and functions are stored and runned. This is done in a LIFO order.
+* The heap - The heap is the area where we can dynamically allocate memory. This data in C++ is initialized using the `new` keyword and then must be deleted using some variation of the `delete` keyword. There is no set order of data storage in the heap.
+* Address - The address of a variable is where that variable is stored in memory. The address of a variable can be obtain by using the `&` reference operator. 
+* Pointer - A pointer is an object that points directly to another value's memory address stored somewhere in a computer's memory.
 
 TODO: Answer the following questions about memory management and dynamic variables
 

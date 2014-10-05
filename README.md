@@ -64,6 +64,8 @@ Pointer: a special variable type in C and C++ for storing the address of another
 `int *p = & a;`
 `*p = 20;`
 
+after this code executes, the value of `a` will be `20`.
+
 TODO: Answer the following questions about memory management and dynamic variables
 
 * What is a memory leak, and why is it bad?

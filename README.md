@@ -67,10 +67,21 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 TODO: Define/describe each of the following terms, as they apply to memory management in C++
 
 * The call stack (not to be confused with the stack data structure!)
+	The stack is a section of your computer's memory that stores temporary variables. The cpu closely monitors the stack. Memory allocation and deallocation is
+	done for you by the computer. When a program exits all of its associated variables are wiped and that memory is available to be used again.
+	
 * The heap (not to be confused with the heap data structure!)
+	The heap is a section of your computer's memory that is not managed for you automatically and is also not as tightly managed by the cpu. The heap allows you to
+	allocate memory without any restrictions on the size of the memory allocated as long as your computer has that much memory available. Using the heap also
+	means that you must deallocate any memory that was allocated otherwise a memory leak will result. This means that memory is being used to store a variable
+	that cannot be accessed by any programs.
 * Address
+	An address is the location in the computer's memory that the data of a variable is stored. 
+	
 * Pointer
-
+	A pointer is a special variable that stores the address of another variable. The pointer can then be used to access that section of memory throughout a
+	program. This allows you to directly change the stored data of a variable.
+	
 TODO: Answer the following questions about memory management and dynamic variables
 
 * What is a memory leak, and why is it bad?

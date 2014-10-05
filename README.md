@@ -61,7 +61,7 @@ Address: the physical location of an object in RAM commonly represented as a hex
 Pointer: a special variable type in C and C++ for storing the address of another variable declared with the use of the `*` operator and dereferenced with the same operator `*`.  `int *p` will create a variable `p` that will be used to store the address of an `int` and using `*p` will allow you to manipulate the value of the data it is pointing to.
 
 `int a = 10;`
-`int *p = & a;`
+`int *p = &a;`
 `*p = 20;`
 
 after this code executes, the value of `a` will be `20`.

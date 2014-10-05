@@ -54,11 +54,15 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 
 The Stack: A special part of RAM where local variables and objects are stored.  It stores informtion about the current function and where to return after the function is done.  Any variable declared in a function (ie. `int a[5]`) will be put on the Stack and will be deleted automatically when the function returns.
 
-The Heap: The part of memory where dynamically allocated memory is stored.  Accessing this memory requires asking the OS for memory with the `new` operator (or `malloc()` in C) for example `int *a = new int[5]` will created an array of 5 `int`s on the Heap which will always exist until the program exits or it is explicitly deleted by the program with the `delete[]` operator (or `delete` for singal variables such as `Object *a = new Object()`).  forgetting about Heap memory is the most common way to cause memory leaks in a program, because any data an object created with `new` will still exist even after you are done with the object.
+The Heap: The part of memory where dynamically allocated memory is stored.  Accessing this memory requires asking the OS for memory with the `new` operator (or `malloc()` in C) for example `int *a = new int[5]` will creat an array of 5 `int`'s on the Heap which will always exist until the program exits or it is explicitly deleted by the program with the `delete[]` operator (or `delete` for singal variables such as `Object *a = new Object()`).  forgetting about Heap memory is the most common way to cause memory leaks in a program, because any data an object created with `new` will still exist even after you are done with the object.
 
-Address: the physical location of an object in RAM commonly represented as a hex number.  the address of an object can be found with the `&` operator, for example: `int *p = &a`, `p` will store the address of variable `a`.
+Address: the physical location of an object in RAM commonly represented as a hex number.  the address of an object can be found with the `&` operator, for example: `int *p = &a` will create a variable `p` that stores the address of variable `a`.
 
 Pointer: a special variable type in C and C++ for storing the address of another variable declared with the use of the `*` operator and dereferenced with the same operator `*`.  `int *p` will create a variable `p` that will be used to store the address of an `int` and using `*p` will allow you to manipulate the value of the data it is pointing to.
+
+`int a = 10;`
+`int *p = & a;`
+`*p = 20;`
 
 TODO: Answer the following questions about memory management and dynamic variables
 

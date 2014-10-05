@@ -15,11 +15,11 @@ Body of portfolio
 
 7 - Create an implementation of a Queue
 ----
-TODO: Provide a link to your completed 03_Queue_Lab
+https://github.com/MiamiOH-CSE274/03_Queue_Lab
 
 7 - Create an implementation of a List
 ----
-TODO: Provide a link to your completed 04_Linked_List_Lab OR 05_Hashing_Lab (only if you used chaining instead of open addressing)
+https://github.com/ethan2014/04_Linked_List_Lab
 
 7 - Create an implementation of a Binary Search Tree
 ----
@@ -52,6 +52,14 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
 TODO: Define/describe each of the following terms, as they apply to memory management in C++
+
+The Stack: A special part of RAM where local variables and objects are stored.  It stores informtion about the current function and where to return after the function is done.  Any variable declared in a function (ie. `int a[5]`) will be put on the Stack and will be deleted automatically when the function returns.
+
+The Heap: The part of memory where dynamically allocated memory is stored.  Accessing this memory requires asking the OS for memory with the `new` operator (or `malloc()` in C) for example `int *a = new int[5]` will created an array of 5 `int`s on the Heap which will always exist until the program exits or it is explicitly deleted by the program with the `delete[]` operator (or `delete` for singal variables such as `Object *a = new Object()`).  forgetting about Heap memory is the most common way to cause memory leaks in a program, because any data an object created with `new` will still exist even after you are done with the object.
+
+Address: the physical location of an object in RAM commonly represented as a hex number.  the address of an object can be found with the `&` operator, for example: `int *p = &a`, `p` will store the address of variable `a`.
+
+Pointer: a special variable type in C and C++ for storing the address of another variable declared with the use of the `*` operator and dereferenced with the same operator `*`.  `int *p` will create a variable `p` that will be used to store the address of an `int` and using `*p` will allow you to manipulate the value of the data it is pointing to.
 
 * The call stack (not to be confused with the stack data structure!)
 * The heap (not to be confused with the heap data structure!)

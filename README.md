@@ -66,11 +66,11 @@ Pointer: a special variable type in C and C++ for storing the address of another
 
 after this code executes, the value of `a` will be `20`.
 
-TODO: Answer the following questions about memory management and dynamic variables
+Memory Leak: when data that was dynamically allocated by a class persits after the class that created it is no longer being used.  it is most common when someone creates an object in the constructor with `new` but doesnt `delete` it in the destructor.  It is harmful because you will have data you were once using just sitting in RAM with no "owner" which can lead to a program using a very large amount of memory and in some cases can lead to very dangerous security holes.
 
-* What is a memory leak, and why is it bad?
-* What is a dangling pointer (or dangling reference), and why is it dangerous?
-* What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?
+Dangling pointer: After you `delete` dynamically allocated memory, the pointer that was pointing to that memory still points to the same address, but there is no longer any usefull data there anymore, so that pointer needs to be reassigned before it can be used after a `delete`.
+
+Destructor: A function in a C++ class that is automatically called when you are done with the object, it is used to free up any memory that was created by the class thoughout its lifetime with the `new` operator.  Java doesnt need them because Java has automatic Garbage Collection, meaning that any data that isnt being used any more will eventually be freed by the JVM for later use.
 
 5 - Create collection classes using templates in C++
 ----

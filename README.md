@@ -19,7 +19,7 @@ I have created a queue in lab 3: https://github.com/busdiekc/03_Queue_Lab/blob/m
 
 7 - Create an implementation of a List
 ----
-TODO: Provide a link to your completed 04_Linked_List_Lab OR 05_Hashing_Lab (only if you used chaining instead of open addressing)
+I have created a linked list in lab 4: https://github.com/busdiekc/04_Linked_List_Lab/blob/master/LinkedList.h
 
 7 - Create an implementation of a Binary Search Tree
 ----

@@ -85,8 +85,17 @@ TODO: Define/describe each of the following terms, as they apply to memory manag
 TODO: Answer the following questions about memory management and dynamic variables
 
 * What is a memory leak, and why is it bad?
+	A memory leak results when memory in the heap is allocated to a variable but then is never deallocated. The allocated memory remains unusable and is referred to
+	as a memory leak. If this happens too much a computer can run out of memory and crash. 
+	
 * What is a dangling pointer (or dangling reference), and why is it dangerous?
+	A dangling pointer points to memory that has already been deallocated. If you use a dangling pointer without realizing it the returned data will not be
+	what is expected.
+	
 * What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?
+	A destructor is used to deallocate memory that was previously allocated. It is essentially the opposite of a constructor. They are needed to prevent
+	memory leaks because they give programmers any easy to free up memory that had been allocated for a purpose. Destructors are not needed in
+	Java because Java manages your memory allocation and deallocation for you. 
 
 5 - Create collection classes using templates in C++
 ----

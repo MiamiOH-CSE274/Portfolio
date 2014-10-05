@@ -51,7 +51,6 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
-TODO: Define/describe each of the following terms, as they apply to memory management in C++
 
 The Stack: A special part of RAM where local variables and objects are stored.  It stores informtion about the current function and where to return after the function is done.  Any variable declared in a function (ie. `int a[5]`) will be put on the Stack and will be deleted automatically when the function returns.
 
@@ -60,11 +59,6 @@ The Heap: The part of memory where dynamically allocated memory is stored.  Acce
 Address: the physical location of an object in RAM commonly represented as a hex number.  the address of an object can be found with the `&` operator, for example: `int *p = &a`, `p` will store the address of variable `a`.
 
 Pointer: a special variable type in C and C++ for storing the address of another variable declared with the use of the `*` operator and dereferenced with the same operator `*`.  `int *p` will create a variable `p` that will be used to store the address of an `int` and using `*p` will allow you to manipulate the value of the data it is pointing to.
-
-* The call stack (not to be confused with the stack data structure!)
-* The heap (not to be confused with the heap data structure!)
-* Address
-* Pointer
 
 TODO: Answer the following questions about memory management and dynamic variables
 

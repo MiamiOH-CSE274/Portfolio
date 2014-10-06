@@ -73,11 +73,18 @@ An address is the physical interpretation of where some data is being stored in 
 A pointer is a variable that contains an address of a certain type of variable data. A pointer must be the same type as the data stored at its address with an asterisk next to the type name to indicate that it is a pointer rather than a variable. A pointer only holds the address if a variable and does not store the data, but can be dereferenced in order to retrieve the data; moreover, when a pointer is deleted, the data remains in memory but the variable that stored the access of the data is lost, creating memory leak.
 
 
-TODO: Answer the following questions about memory management and dynamic variables
 
 * What is a memory leak, and why is it bad?
+
+Memory leak is caused by having a space in memory allocated with data but not having a pointer assigned to the space in memory so the data is essentially lost. Memory leak will cause the space to stay allocated and force the computer to use that portion of RAM for data with no pointer and therefore can be very difficult to access by the user, causing a loss of usable RAM and eventually will crash the program.
+
 * What is a dangling pointer (or dangling reference), and why is it dangerous?
+
+A dangling pointer is a pointer whose address stored does not contain the data that is used by the program or contains no data at all. This can cause either an issue when using the pointer because it will use whatever data was left in that address when dereferenced or can leave the computer vulnerable to hacking because the pointer will show the space in memory where data was being stored and can allow someone to get the location of any other areas of memory that should not normally be accessible if the pointer's data crashes the program.
+
 * What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?
+
+A destructor in C++ is a class that is opposite the constructor in the fact that it deallocates the memory that was initialized by the variables in the class' constructor. The destructor is important because it helps to avoid memory leak and dangling pointers and is an important programming practice to help maintain good memory management. In C++, when a variables goes out of scope and is no longer used, its value remains and any pointers remain and so without the destructor will leave many problems with dangling pointers and memory leaks; however, in Java, the memory used in a program is automatically reset to default values after the program runs and when the variables go out of scope so that programmers do not have to worry as much about their memory management while creating classes.
 
 5 - Create collection classes using templates in C++
 ----

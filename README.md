@@ -47,14 +47,13 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 
 * Array-based list vs. Linked List
 
-
+Array based lists and Linked lists can be similar in theory, but very different to implement in code. An array based list has its advantages in that the order of the elements does not matter and so it is faster to run finding methods and getting/setting methods, since they do not have to loop through the entire array. In a linked list, these methods can take more time with larger lists since the linked list has locations of elements within it relative to other elements rather than using the index to find elements. However, the way to add/remove elements is much faster in  a linked list because the nearby elements in the list do not have to be shifted, there are always only two elements whose pointers need to be changed in order to accommodate a new element or to remove an existing element. In an array based list, with a new element being added, all the other elements after it in the list have to be shifted and can waste a lot of time with a large list and the same is true when removing, that all the other elements need to shift in order to take the place of the changed space in the list. Depending on the task that the list will serve, either type can be justified and both have positives and negatives associated with their implementation.
 
 * Binary Search Tree vs. Hash Table
 * Adjacency List vs. Adjacency Matrix
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
-TODO: Define/describe each of the following terms, as they apply to memory management in C++
 
 * The call stack (not to be confused with the stack data structure!)
 
@@ -97,6 +96,7 @@ TODO: Answer the following questions about choosing data structures. (5 points e
 
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.)
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+
 
 
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.

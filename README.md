@@ -15,11 +15,11 @@ Body of portfolio
 
 7 - Create an implementation of a Queue
 ----
-TODO: Provide a link to your completed 03_Queue_Lab
+Queue Lab code can be accessed at https://github.com/clarkdb/03_Queue_Lab/blob/master/ArrayQueue.h
 
 7 - Create an implementation of a List
 ----
-TODO: Provide a link to your completed 04_Linked_List_Lab OR 05_Hashing_Lab (only if you used chaining instead of open addressing)
+Linked List code can be accessed at https://github.com/clarkdb/04_Linked_List_Lab/blob/master/LinkedList.h
 
 7 - Create an implementation of a Binary Search Tree
 ----

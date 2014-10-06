@@ -48,7 +48,7 @@ TODO: Provide a link to your completed Vise project (only if you used graph trav
 -----
 TODO: For each pair of data structures listed here, write a short essay comparing and contrasting them in terms of their running times for different operations. (7 points each)
 
-* **Array-based list vs. Linked List**
+* **Array-based list vs. Linked List** - Looking at the four methods of add, remove, set, and get, there are distinct differences in array-based lists and linked lists. A queue's add method takes O(n) time. This is because the values of the array need to be shifted to accomodate for the new value. A linked list is caple of adding a value in O(1) time. This is because you can easily change the references at each node. The queue's remove function is similar to the add function in that it takes O(n) time. This is because once you remove the value, you have have an empty space and need to move the other values in the array over to accomodate for this hole. A linked list's remove function is done in O(1) time because like the add function, it is trivial to change the references of the node. Get and set for the queue take O(1) time because it is a simple index lookup for each method. A linked list takes O(n) time to complete the get and set method. This is because in a linked list you start at the first node and advance through them until you arrive at the destination node. 
 * Binary Search Tree vs. Hash Table
 * Adjacency List vs. Adjacency Matrix
 

@@ -53,18 +53,18 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
-TODO: Define/describe each of the following terms, as they apply to memory management in C++
+
 
 * The call stack - The stack is an area where, when we run our program, all of the local variables and functions are stored and runned. This is done in a LIFO order.
 * The heap - The heap is the area where we can dynamically allocate memory. This data in C++ is initialized using the `new` keyword and then must be deleted using some variation of the `delete` keyword. There is no set order of data storage in the heap.
 * Address - The address of a variable is where that variable is stored in memory. The address of a variable can be obtain by using the `&` reference operator. 
 * Pointer - A pointer is an object that points directly to another value's memory address stored somewhere in a computer's memory.
 
-TODO: Answer the following questions about memory management and dynamic variables
 
-* What is a memory leak, and why is it bad?
-* What is a dangling pointer (or dangling reference), and why is it dangerous?
-* What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?
+
+* What is a memory leak, and why is it bad? - A memory leak occurs space is allioted in memory but then never freed. This could potentially cause you to run out of space for memory.
+* What is a dangling pointer (or dangling reference), and why is it dangerous? - A dangling pointer is a pointer that references  a space in memory that is no longer being used by our program. This is dangerous because the data could be overwritten and if the pointer is used, it will point to data that we did not intend it to.
+* What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java? - A destructor is a method that is called when an object is deleted. In this way, it is possible to deallocate space in memory, preventing memory leaks. They're necessary in C++, because the language has no means of automatically deallocating space. This isn't the case with Java, which has garbage collection, data that is no longer being used it automatically freed. 
 
 5 - Create collection classes using templates in C++
 ----

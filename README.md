@@ -19,7 +19,8 @@ I showed how to implement a Queue in my Queue lab from lines 78-144. Here is the
 
 7 - Create an implementation of a List
 ----
-TODO: Provide a link to your completed 04_Linked_List_Lab OR 05_Hashing_Lab (only if you used chaining instead of open addressing)
+I proved that I can implement a list in lines 81-194 of the Linked List Lab. This is the link.
+https://github.com/meslerke/04_Linked_List_Lab/blob/master/LinkedList.h
 
 
 7 - Determine space and time requirements of common data structure methods

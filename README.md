@@ -15,11 +15,13 @@ Body of portfolio
 
 7 - Create an implementation of a Queue
 ----
-TODO: Provide a link to your completed 03_Queue_Lab
+I have created a working queue program and my evidence is my ArrayQueue.ipp file.
+https://github.com/dieterc2/03_Queue_Lab/blob/master/ArrayQueue.ipp
 
 7 - Create an implementation of a List
 ----
-TODO: Provide a link to your completed 04_Linked_List_Lab OR 05_Hashing_Lab (only if you used chaining instead of open addressing)
+I have created a working linked list data structure and my evidence is my LinkedList.h file.
+https://github.com/dieterc2/04_Linked_List_Lab/blob/master/LinkedList.h
 
 7 - Create an implementation of a Binary Search Tree
 ----

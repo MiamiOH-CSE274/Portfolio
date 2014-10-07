@@ -15,11 +15,11 @@ Body of portfolio
 
 7 - Create an implementation of a Queue
 ----
-TODO: Provide a link to your completed 03_Queue_Lab
+https://github.com/richarkc/03_Queue_Lab/blob/master/ArrayQueue.ipp
 
 7 - Create an implementation of a List
 ----
-TODO: Provide a link to your completed 04_Linked_List_Lab OR 05_Hashing_Lab (only if you used chaining instead of open addressing)
+https://github.com/richarkc/04_Linked_List_Lab/blob/master/LinkedList.h
 
 7 - Create an implementation of a Binary Search Tree
 ----
@@ -27,7 +27,7 @@ TODO: Provide a link to your completed 06_BST_Lab OR ClosestStarbucks project (o
 
 7 - Create an implementation of a Hash Table
 ----
-TODO: Provide a link to your completed 05_Hashing_Lab
+https://github.com/richarkc/05_Hashing_Lab/blob/master/HashTable.h
 
 7 - Create an implementation of a Heap
 ----
@@ -45,7 +45,10 @@ TODO: Provide a link to your completed Vise project (only if you used graph trav
 -----
 TODO: For each pair of data structures listed here, write a short essay comparing and contrasting them in terms of their running times for different operations. (7 points each)
 
-* Array-based list vs. Linked List
+An array based list is faster in finding a specific element in an array and/or modifying a certain element due to its ability to
+instantly access any element in the list, and so it can be done in constant time, compared to linear time in a linked list
+due to having to actually loop through the list however a linked list will be faster in adding and removing elements and can do it
+in constant time due to only having to edit the two elements around it to no longer point to that element, while an array based list must change almost the entire array to add or remove from the middle of the array. 
 * Binary Search Tree vs. Hash Table
 * Adjacency List vs. Adjacency Matrix
 
@@ -53,10 +56,13 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 ----
 TODO: Define/describe each of the following terms, as they apply to memory management in C++
 
-* The call stack (not to be confused with the stack data structure!)
-* The heap (not to be confused with the heap data structure!)
-* Address
-* Pointer
+The call stack stores all statically allocated variables and any imformation relating to function calls (return address, parameters). Allows for fast and convenitent access of memory.
+
+The heap stores all dynamically allocated memory, i.e. any variables allocated with the new keyword, and requires manual memory management
+
+An address is the physical location of a variable in virtual memory.
+
+A pointer is a variable that stores an address and type of another variable in memory, so that you can pass that specific item around in code.
 
 TODO: Answer the following questions about memory management and dynamic variables
 

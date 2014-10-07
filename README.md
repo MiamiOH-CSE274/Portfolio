@@ -25,9 +25,9 @@ https://github.com/meslerke/04_Linked_List_Lab/blob/master/LinkedList.h
 
 7 - Determine space and time requirements of common data structure methods
 -----
-TODO: For each pair of data structures listed here, write a short essay comparing and contrasting them in terms of their running times for different operations. (7 points each)
-
 * Array-based list vs. Linked List
+
+An Array-based list runs O(1) time when performing operations like get(), set(), and size() while a Linked List runs O(n) time. A Linked List runs O(1) time when performing operations like add() and remove() while an Array-based list runs O(n) time. This is because an Array-based list doesn't need to go through every element that it has to get or set an element, and the length is stored in a variable so that you don't have to figure it out. In a Linked List, you have to loop through the list to access elements for the get, set, and size methods, which takes much longer. The opposite goes for the add() and remove() methods. To add or remove an element from an Array-based list, you may need to shift all of the other elements in the list to make room for it. In a Linked List, you just need to change the pointers so that they include another node, which is faster.
 
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors

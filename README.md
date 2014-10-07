@@ -32,18 +32,15 @@ An Array-based list runs O(1) time when performing operations like get(), set(),
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
-TODO: Define/describe each of the following terms, as they apply to memory management in C++
+* The call stack is similar to the data structure stack but it can only hold a limited amount of information.
+* The heap is where the memory comes from that is used when allocating memory using 'new'. It is like a large pool of memory.
+* An address is something that everything that is stored in memory has. The address tells you exactly where that piece of memory is stored.
+* A pointer is an object that refers to (or points) a specific piece of memory using its address.
 
-* The call stack (not to be confused with the stack data structure!)
-* The heap (not to be confused with the heap data structure!)
-* Address
-* Pointer
 
-TODO: Answer the following questions about memory management and dynamic variables
-
-* What is a memory leak, and why is it bad?
-* What is a dangling pointer (or dangling reference), and why is it dangerous?
-* What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?
+* A memory leak is when you allocate memory but don't deallocate it when you are done. The memory isn't free to use again until you deallocate it, which means that you aren't using it anymore. This is dangerous because if you don't tell the computer that you are done with a piece of memory, that memory won't be available to be used later and eventually you will run out of memory!
+* A dangling pointer is created when you create a pointer for something and then delete what it was pointing to. This is dangerous because you don't know how your computer will act to this in the long run.
+* A destructor essentially cleans up after you when you are done with a program. It deallocates the memory that you have allocated so that you can use it again at another time. This is necessary in C++ to prevent memory leaks because if you don't deallocate the memory that you have used, then that will create a leak in your memory and you can eventually run out of memory. These aren't necessary in Java because Java is designed to automatically do this for you when you are done with a program.
 
 
 5 - Using time and space analysis, justify the selection of a data structure for a given application

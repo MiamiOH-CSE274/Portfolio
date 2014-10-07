@@ -27,7 +27,7 @@ TODO: Provide a link to your completed 06_BST_Lab OR ClosestStarbucks project (o
 
 7 - Create an implementation of a Hash Table
 ----
-TODO: Provide a link to your completed 05_Hashing_Lab
+I have created a hash table in lab 5: https://github.com/busdiekc/05_Hashing_Lab/blob/master/HashTable.h
 
 7 - Create an implementation of a Heap
 ----
@@ -108,5 +108,8 @@ TODO: Answer the following questions about choosing data structures. (5 points e
 
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.)
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+	I would use a linked list to create a grocery list data structure. Using a linked list would give the data structure greater flexibility when adding, removing, or reordering the elements in the list. Some people prefer to have their grocery list written out in a particular order and with a linked list new elements can easily be added into any
+	place in the list. The most common commands that you would use on a grocery list in my opinion would be adding or removing elements from the list and a linked list provides these methods with O(1) time instead of O(n). Constant time would help the thrifty shopper save precious milliseconds off adding or removing forgotten grocery items to/from their list.
+	
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.

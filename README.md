@@ -15,10 +15,12 @@ Body of portfolio
 
 7 - Create an implementation of a Queue
 ----
+The link below proves that I can implement a C++ Queue Data Structure
 TODO: Provide a link to your completed 03_Queue_Lab
 
 7 - Create an implementation of a List
 ----
+The link below proves that I can implement a C++ List Data Structure
 TODO: Provide a link to your completed 04_Linked_List_Lab OR 05_Hashing_Lab (only if you used chaining instead of open addressing)
 
 7 - Create an implementation of a Binary Search Tree
@@ -46,6 +48,8 @@ TODO: Provide a link to your completed Vise project (only if you used graph trav
 TODO: For each pair of data structures listed here, write a short essay comparing and contrasting them in terms of their running times for different operations. (7 points each)
 
 * Array-based list vs. Linked List
+
+
 * Binary Search Tree vs. Hash Table
 * Adjacency List vs. Adjacency Matrix
 
@@ -53,16 +57,25 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 ----
 TODO: Define/describe each of the following terms, as they apply to memory management in C++
 
-* The call stack (not to be confused with the stack data structure!)
+* The call stack (not to be confused with the stack data structure!) 
+The call stack in C++ (and most other programming languages) is used to show the execution of local variables, parameters, and function calls.
 * The heap (not to be confused with the heap data structure!)
+The heap is a pool of memory used for dynamic memory allocation. When the new keyword is used, the object uses memory from the heap.
 * Address
+A location in memory of the object.
 * Pointer
+A pointer is a type of variable used for storing addresses.
 
 TODO: Answer the following questions about memory management and dynamic variables
 
 * What is a memory leak, and why is it bad?
+Memory leaks occur when memory is no longer in use, but still has information allocated to it.
+Memory leaks slow down performance, introduce bugs to the program, or in the worst case scenario, result in the program crashing due to insufficient free memory. 
 * What is a dangling pointer (or dangling reference), and why is it dangerous?
+A dangling pointer is a pointer that points to unallocated memory.
+Dangling pointers are dangerous because they introduce bugs to programs without crashing them, and can also create security risks if the dangling pointer is used to access other data or overwrite memory.
 * What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?
+Destructor's are used to free up memory that is no longer in use. Destructor's are necessary in C++, but not Java because Java automatically frees up memory while C++ does not.
 
 5 - Create collection classes using templates in C++
 ----

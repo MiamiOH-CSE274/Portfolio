@@ -48,6 +48,6 @@ TODO: Answer the following questions about memory management and dynamic variabl
 
 5 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
-TODO: Answer the following questions about choosing data structures. (5 points each)
-
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+
+I imagine a grocery list as a list that is kept on paper. The first item that you write on the list goes at the top of the page, and as you add more and more items to the list, they go as close to the top as they can without being higher than the previous item. Looking at a grocery list this way, I think that a Queue would be the best data structure to use. This is because it has a first in, first out order. If you are at the grocery store, you would look at the top of your list (first added) and find that item. Then you would remove that item from the list and look for the next item below it (second added to the list, etc.) This means that the first item on the list is naturally the first one off of the list as well, which is why a queue would be a good representation of this list.

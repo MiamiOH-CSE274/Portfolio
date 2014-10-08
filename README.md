@@ -46,9 +46,9 @@ TODO: Provide a link to your completed Vise project (only if you used graph trav
 TODO: For each pair of data structures listed here, write a short essay comparing and contrasting them in terms of their running times for different operations. (7 points each)
 
 * Array-based list vs. Linked List
-	In an Array-Based list, add() and remove() take O(n) operational time because the items in the list need to be shifted in order for more items to be added.
-	Array-Based size(1), get(1) and set(1) run in 0(1) time. For Linked lists, getNode(i) takes O(1+ min{i, n-i}) time, other than that all the other
-	functions run in O(1) time.
+* In an Array-Based list, add() and remove() take O(n) operational time because the items in the list need to be shifted in order for more items to be added.
+Array-Based size(1), get(1) and set(1) run in 0(1) time. For Linked lists, getNode(i) takes O(1+ min{i, n-i}) time, other than that all the other
+functions run in O(1) time.
 * Binary Search Tree vs. Hash Table
 * Adjacency List vs. Adjacency Matrix
 
@@ -56,8 +56,8 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 ----
 TODO: Define/describe each of the following terms, as they apply to memory management in C++
 
-*Call Stack: A Stack data structure on the computer's RAM that is used to store parameters and local variables for the subroutines of an active program.
-*heap: A data structure on the RAM used for storing dynamically allocated variables
+* Call Stack: A Stack data structure on the computer's RAM that is used to store parameters and local variables for the subroutines of an active program.
+* heap: A data structure on the RAM used for storing dynamically allocated variables
 * Address: A location on the RAM where data is stored denoted by a number and can be referenced or pointed to.
 * Pointer: An object that points to an Address on the RAM
 
@@ -80,8 +80,8 @@ TODO: Answer the following questions about choosing data structures. (5 points e
 
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.)
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
-	If I were to implement a data structure for a grocery list I would probably used a Linked list. Linked lists allow for more convenient adding and removing of items in between one another which is optimal
-	for when I think of things I want to add or remove at different times. In addition, if I were to use an Array-Based list, I would have to grow() the list if I added too many items, which would usually mean doubling
-	the size of my list. I would not want to carry an abnormally large list around the supermarket if I wasn't going to use all of the space on it.
+*If I were to implement a data structure for a grocery list I would probably used a Linked list. Linked lists allow for more convenient adding and removing of items in between one another which is optimal
+for when I think of things I want to add or remove at different times. In addition, if I were to use an Array-Based list, I would have to grow() the list if I added too many items, which would usually mean doubling
+the size of my list. I would not want to carry an abnormally large list around the supermarket if I wasn't going to use all of the space on it.
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.

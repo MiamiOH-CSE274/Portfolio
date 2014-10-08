@@ -15,11 +15,11 @@ Body of portfolio
 
 7 - Create an implementation of a Queue
 ----
-TODO: Provide a link to your completed 03_Queue_Lab
+https://github.com/XCCOOP/03_Queue_Lab/blob/master/ArrayQueue.h
 
 7 - Create an implementation of a List
 ----
-TODO: Provide a link to your completed 04_Linked_List_Lab OR 05_Hashing_Lab (only if you used chaining instead of open addressing)
+https://github.com/XCCOOP/04_Linked_List_Lab/blob/master/LinkedList.h
 
 7 - Create an implementation of a Binary Search Tree
 ----
@@ -46,6 +46,13 @@ TODO: Provide a link to your completed Vise project (only if you used graph trav
 TODO: For each pair of data structures listed here, write a short essay comparing and contrasting them in terms of their running times for different operations. (7 points each)
 
 * Array-based list vs. Linked List
+	
+	In an Array-based list, get() and set() are faster and add() and remove() are slower.  In order to get or set something all you need is which element it is in the array and 
+	you can read or write its data.  On the other hand in order to add or remove something from the middle of the list, you need to create a whole separate array and copy everything 
+	from the old one over to the new one.  In Linked lists get and set take longer because in order to find where they are you need to start at the dummyNode and use its next and previous 
+	variables.  Add and remove take less time because in order to cut or add something to the list all you need to do is change some next and previous variables to point to the new object
+	and it's in the list.
+
 * Binary Search Tree vs. Hash Table
 * Adjacency List vs. Adjacency Matrix
 

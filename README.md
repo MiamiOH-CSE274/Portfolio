@@ -61,8 +61,11 @@ TODO: Define/describe each of the following terms, as they apply to memory manag
 TODO: Answer the following questions about memory management and dynamic variables
 
 * What is a memory leak, and why is it bad?
+	- A memory leak is when memory that you have used in your program continues to remain even after your use for it has ended.  If you created an object or something in which you have not properly deleted or allocated it as usable memory, it will remain and not be reused by your program's limited memory, leading to the possibility of memory overflow.  This could crash your program if too much memory is leaked and not able to be reused, or lead to memory being accessible when it is not meant to be.
 * What is a dangling pointer (or dangling reference), and why is it dangerous?
+	- A dangling pointer is a pointer variable that no longer points to memory that is allocated in memory by the program.  If you delete the object or data the pointer references, but not the pointer variable, you can still use the pointer variable.  If the deallocated memory it points to is replaced by something else by the computer, the pointer variable will have extremely unpredictable results, most likely leading to a crash or misinterpretation of your program.
 * What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?
+	- In C++, efficiency comes at a cost.  Lots of stuff under the hood in Java that takes extra time because it's just extra memory/security precautions is left out of c++ so the programmer only includes it when needed, making the code sleeker and faster.  Java includes the destructor, even when c++ programmers might not deem it necessary.  In c++, we must include the destructor when it IS necessary.  When we won't use things again, we call the destructor so that memory can be allocated again.  If we don't use the destructor, c++ won't automatically do it like java, and a memory leak (as described in the question above) will occur, as variables we aren't using anymore remain allocated in memory until eventually there is no available memory left. 
 
 5 - Create collection classes using templates in C++
 ----

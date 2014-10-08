@@ -60,12 +60,19 @@ Get, set, and size are all constant time in an array-based list as variables kee
 TODO: Define/describe each of the following terms, as they apply to memory management in C++
 
 * The call stack (not to be confused with the stack data structure!) 
+
 The call stack in C++ (and most other programming languages) is used to show the execution of local variables, parameters, and function calls.
+
 * The heap (not to be confused with the heap data structure!)
+
 The heap is a pool of memory used for dynamic memory allocation. When the new keyword is used, the object uses memory from the heap.
+
 * Address
+
 A location in memory of the object.
+
 * Pointer
+
 A pointer is a type of variable used for storing addresses.
 
 TODO: Answer the following questions about memory management and dynamic variables

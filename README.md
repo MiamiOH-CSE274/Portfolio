@@ -88,6 +88,9 @@ TODO: Answer the following questions about choosing data structures. (5 points e
 
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.)
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
-	A LinkedList data structure would suffice for a Grocery List. 
+	A LinkedList data structure would suffice for a Grocery List. A LinkedList porceeds sequentially, just as a person would look down the list.
+	If something was forgotten and needs to be added, LinkedLists can handle that efficiently. When a item is found and placed in the cart, 
+	the LinkedList can remove that item without any trouble as well. The only limitation is being unable to scan the entire list easily, but with a LinkedList with enough open space,
+	it is easily possible for all the items to be sorted so that they are near one another in the store.
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.

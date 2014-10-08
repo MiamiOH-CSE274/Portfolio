@@ -32,24 +32,26 @@ An array-based list is a good choice to make for lists when the list needs to be
 ----
 TODO: Define/describe each of the following terms, as they apply to memory management in C++
 
-* The call stack (not to be confused with the stack data structure!)
+* The call stack (not to be confused with the stack data structure!) - 
 The call stack holds variables like an array, but stores in a LIFO structure.
 
-* The heap (not to be confused with the heap data structure!)
+* The heap (not to be confused with the heap data structure!) - 
 The heap is a pool of memory used for dynamic allocation.
 
-* Address
+* Address - 
 The location of a variable's memory stored in the computer.
 
-* Pointer
+* Pointer - 
 A variable which stores the address to a variable and can reference the address at any time.
 
 TODO: Answer the following questions about memory management and dynamic variables
 
 * What is a memory leak, and why is it bad?
+
 Memory which is allocated but not released is said to have 'leaked'. This leaked memory takes up space on the computer and will slow applications on the computer unless handled correctly.
 
 * What is a dangling pointer (or dangling reference), and why is it dangerous?
+
 Dangling pointers are those which point to invalid data or data which is no longer valid as it has been removed. These references are bugs which typically crash the program, and do so in a way which makes them difficult to find, as they usually do not crash right away.
 
 * What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?

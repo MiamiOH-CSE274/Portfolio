@@ -15,7 +15,7 @@ Body of portfolio
 
 7 - Create an implementation of a Queue
 ----
-TODO: Provide a link to your completed 03_Queue_Lab
+Link to my 03_Queue_Lab: https://github.com/mccarts3/03_Queue_Lab/blob/master/ArrayQueue.ipp
 
 7 - Create an implementation of a List
 ----

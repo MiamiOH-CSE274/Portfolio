@@ -16,12 +16,12 @@ Body of portfolio
 7 - Create an implementation of a Queue
 ----
 The link below proves that I can implement a C++ Queue Data Structure
-TODO: Provide a link to your completed 03_Queue_Lab
+https://github.com/GrasysER/03_Queue_Lab/blob/master/ArrayQueue.h
 
 7 - Create an implementation of a List
 ----
 The link below proves that I can implement a C++ List Data Structure
-TODO: Provide a link to your completed 04_Linked_List_Lab OR 05_Hashing_Lab (only if you used chaining instead of open addressing)
+https://github.com/GrasysER/04_Linked_List_Lab/blob/master/LinkedList.h
 
 7 - Create an implementation of a Binary Search Tree
 ----
@@ -49,6 +49,8 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 
 * Array-based list vs. Linked List
 
+Array-based lists must rearrange the list whenever add and remove is used, so add/remove are both 0(n) while with a linked list, you only need to adjust pointers, which results in 0(1), or constant time add and remove.
+Get, set, and size are all constant time in an array-based list as variables keep track of, and alter data members using the following methods. In a linked list, get and set are 0(n) due to the need for searching through the entire list, while size is 0(1) due to a variable that keeps track of the size. 
 
 * Binary Search Tree vs. Hash Table
 * Adjacency List vs. Adjacency Matrix
@@ -69,12 +71,18 @@ A pointer is a type of variable used for storing addresses.
 TODO: Answer the following questions about memory management and dynamic variables
 
 * What is a memory leak, and why is it bad?
+
 Memory leaks occur when memory is no longer in use, but still has information allocated to it.
 Memory leaks slow down performance, introduce bugs to the program, or in the worst case scenario, result in the program crashing due to insufficient free memory. 
+
 * What is a dangling pointer (or dangling reference), and why is it dangerous?
+
 A dangling pointer is a pointer that points to unallocated memory.
+
 Dangling pointers are dangerous because they introduce bugs to programs without crashing them, and can also create security risks if the dangling pointer is used to access other data or overwrite memory.
+
 * What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?
+
 Destructor's are used to free up memory that is no longer in use. Destructor's are necessary in C++, but not Java because Java automatically frees up memory while C++ does not.
 
 5 - Create collection classes using templates in C++
@@ -88,5 +96,10 @@ TODO: Answer the following questions about choosing data structures. (5 points e
 
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.)
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+
+For a grocery list, a doubly linked list would be preffered.
+A doubly linked list would allow for products to be inserted anywhere in the list, which is preferrable for a grocery list.
+Other data types we have used so far only allow data to be added to the front or back, which could make the grocery list hard to read. 
+
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.

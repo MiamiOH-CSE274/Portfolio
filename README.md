@@ -54,11 +54,14 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 TODO: Define/describe each of the following terms, as they apply to memory management in C++
 
 * The call stack (not to be confused with the stack data structure!)
+ 	- The call stack, or "stack", is a portion of memory that deals with variables, parameters, and other short-lived data in the running of our program.  It is also very important in recursion, as recursion relies on the last method call's basecase to answer all the previous computations.  The stack is Last-in-First-Out, meaning the most recent data is the first to be allocated again for more use.  The stack, since it is filled as a program runs, has the posibility of being filled by a surplus of local variables and parameters, leading to a "stack overflow" and a crash.
 * The heap (not to be confused with the heap data structure!)
+	- The heap holds dynamically allocated variables.  After it is compiled, and right as it runs, dynamically allocated variables have spaces in memory prepared for them to be filled in the heap.  An int in the heap will have 4 bytes prepared in memory, an array will have n-bytes for it, and etc.
 * Address
+ 	- An address is the actual place in memory in which data is stored or allocated.  It is stored by variables/objects to find data we want to use.
 * Pointer
+	- A pointer is a variable that holds the address of data or objects.  Pointers are used in our program code to manipulate or use our data, but need the correct address to find the data we mean to use.
 
-TODO: Answer the following questions about memory management and dynamic variables
 
 * What is a memory leak, and why is it bad?
 	- A memory leak is when memory that you have used in your program continues to remain even after your use for it has ended.  If you created an object or something in which you have not properly deleted or allocated it as usable memory, it will remain and not be reused by your program's limited memory, leading to the possibility of memory overflow.  This could crash your program if too much memory is leaked and not able to be reused, or lead to memory being accessible when it is not meant to be.
@@ -66,6 +69,8 @@ TODO: Answer the following questions about memory management and dynamic variabl
 	- A dangling pointer is a pointer variable that no longer points to memory that is allocated in memory by the program.  If you delete the object or data the pointer references, but not the pointer variable, you can still use the pointer variable.  If the deallocated memory it points to is replaced by something else by the computer, the pointer variable will have extremely unpredictable results, most likely leading to a crash or misinterpretation of your program.
 * What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?
 	- In C++, efficiency comes at a cost.  Lots of stuff under the hood in Java that takes extra time because it's just extra memory/security precautions is left out of c++ so the programmer only includes it when needed, making the code sleeker and faster.  Java includes the destructor, even when c++ programmers might not deem it necessary.  In c++, we must include the destructor when it IS necessary.  When we won't use things again, we call the destructor so that memory can be allocated again.  If we don't use the destructor, c++ won't automatically do it like java, and a memory leak (as described in the question above) will occur, as variables we aren't using anymore remain allocated in memory until eventually there is no available memory left. 
+
+
 
 5 - Create collection classes using templates in C++
 ----

@@ -52,6 +52,11 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 Array-based lists must rearrange the list whenever add and remove is used, so add/remove are both 0(n) while with a linked list, you only need to adjust pointers, which results in 0(1), or constant time add and remove.
 Get, set, and size are all constant time in an array-based list as variables keep track of, and alter data members using the following methods. In a linked list, get and set are 0(n) due to the need for searching through the entire list, while size is 0(1) due to a variable that keeps track of the size. 
 
+Add table comparing methods of both. Then in essay write why for easier readability. Iterators very important, talk about them, instead of add in the table, could be add at an iterator, get would would be get an iterator for an index then talk about them in terms of iterators. Iterator is like an index, keeps track of where you are on a list.
+
+ArrayList add 0(n) get/set 0(1) get at an iterator 0(1) remove 0(n) get iterator at front/back 0(1) add/rem f/b 0(1)
+LinkedList add 0(1) get 0(n) set 0(1) get at an iterator 0(1) remove 0(1) get iterator at front/back 0(1) add/rem f/b 0(1)
+
 * Binary Search Tree vs. Hash Table
 * Adjacency List vs. Adjacency Matrix
 
@@ -62,6 +67,8 @@ TODO: Define/describe each of the following terms, as they apply to memory manag
 * The call stack (not to be confused with the stack data structure!) 
 
 The call stack in C++ (and most other programming languages) is used to show the execution of local variables, parameters, and function calls.
+
+!the stack. Which variables live where and implications of that. Statically allocated variables live here.
 
 * The heap (not to be confused with the heap data structure!)
 
@@ -92,6 +99,8 @@ Dangling pointers are dangerous because they introduce bugs to programs without 
 
 Destructor's are used to free up memory that is no longer in use. Destructor's are necessary in C++, but not Java because Java automatically frees up memory while C++ does not.
 
+Objects cleaning up after themselves. Java checks heap to see if object still in use, if not object is deleted, c++ does not do this.
+
 5 - Create collection classes using templates in C++
 ----
 TODO: Answer the following questions about templates in C++
@@ -108,5 +117,13 @@ For a grocery list, a doubly linked list would be preffered.
 A doubly linked list would allow for products to be inserted anywhere in the list, which is preferrable for a grocery list.
 Other data types we have used so far only allow data to be added to the front or back, which could make the grocery list hard to read. 
 
+What is a grocery list?
+How should I decide which data structure to use?
+Efficiency not imp, list not very long. Operations supported is most important thing.
+Platform list would be on.
+Iterators for aisles, 
+
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+
+BST

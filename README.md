@@ -46,6 +46,21 @@ TODO: Provide a link to your completed Vise project (only if you used graph trav
 TODO: For each pair of data structures listed here, write a short essay comparing and contrasting them in terms of their running times for different operations. (7 points each)
 
 * Array-based list vs. Linked List
+
+	//TODO Talk about iterators (add at an iterator, add at an index)
+		Tables
+
+	Iterators are bookmarks keeping track of where you are in a data structure.  
+
+	get an iterator for an index in array list O(1) in linked list O(n)
+
+	Array list add remove O(n)
+
+	get/set iterator
+
+	get iterator front/back
+
+	add/remove front/back
 	
 	In an Array-based list, get() and set() are faster and add() and remove() are slower.  In order to get or set something all you need is which element it is in the array and 
 	you can read or write its data.  On the other hand in order to add or remove something from the middle of the list, you need to create a whole separate array and copy everything 
@@ -61,6 +76,8 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 TODO: Define/describe each of the following terms, as they apply to memory management in C++
 
 * The call stack (not to be confused with the stack data structure!)
+
+	//TODO Not the window!!!
 
 	The call stack is a list of calls to different functions in your program starting from the operating system going all the way to wherever you currently are in your program.  
 

@@ -123,6 +123,14 @@ TODO: Answer the following questions about choosing data structures. (5 points e
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.)
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 
+	//TODO 
+		---What is a grocery list
+		---How to decide which data structure?
+			---Efficiency? ---Lists aren't going to be that long that so runtime will not matter depending on datastructure.
+			---What opperations they support?
+			---Easiest acceptable solution!
+			---Platform(computer(new/old), smartphone, paper)
+
 	First lets assume that when you're writing your grocery list that you write it in order that the items are found in the store.  With this in mind I would use a linked list data structure when implementing the shopping list because the add and remove methods in linked lists are faster than those found in array-based lists.  With shopping lists the main functions you would 
 	need are adding and removing to and from the list.  Another reason for a linked list is the ability to add a forgotten item directly into the middle of the list without creating a completely new list and copying everything over. 
 

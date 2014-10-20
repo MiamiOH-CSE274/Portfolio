@@ -71,7 +71,7 @@ Define/describe each of the following terms, as they apply to memory management 
 * The call stack (not to be confused with the stack data structure!) - the block of RAM that is used to store parameters and local variables. Also the stack keeps track of a function’s call to another function if it is needed to return a value.
 * The heap (not to be confused with the heap data structure!)- a block of RAM that is used to store dynamic variables created by the keyword ‘new’. 
 * Address - An objects location in memory. 
-* Pointer - a reference to a block or a specific location in memory 
+* Pointer - a variable that can hold an address. 
 
 Answer the following questions about memory management and dynamic variables
 

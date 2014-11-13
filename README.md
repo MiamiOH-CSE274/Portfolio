@@ -15,7 +15,7 @@ Body of portfolio
 
 7 - Create an implementation of a Queue
 ----
-I have created a queue in lab 3: https://github.com/busdiekc/03_Queue_Lab/blob/master/ArrayQueue.ipp
+I have created a queue in lab 3: https://github.com/busdiekc/03_Queue_Lab/blob/master/ArrayQueue.h
 
 7 - Create an implementation of a List
 ----

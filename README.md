@@ -23,7 +23,7 @@ I have created a linked list in lab 4: https://github.com/busdiekc/04_Linked_Lis
 
 7 - Create an implementation of a Binary Search Tree
 ----
-TODO: Provide a link to your completed 06_BST_Lab OR ClosestStarbucks project (only if you used a search tree)
+I ahve created an implementation of a binary search tree in lab 6: https://github.com/busdiekc/06_BST_Lab/blob/master/BST.h
 
 7 - Create an implementation of a Hash Table
 ----

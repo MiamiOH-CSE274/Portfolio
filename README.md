@@ -46,7 +46,8 @@ TODO: Provide a link to your completed Vise project (only if you used graph trav
 TODO: For each pair of data structures listed here, write a short essay comparing and contrasting them in terms of their running times for different operations. (7 points each)
 
 * Array-based list vs. Linked List
-	In a general array based lists are easier to work with but are less flexible than linked lists. In an array based list the get() and set() methods can be completed
+-----
+In a general array based lists are easier to work with but are less flexible than linked lists. In an array based list the get() and set() methods can be completed
 	in constant time, O(1). However, the drawback to having constant time get() and set() methods is that the add() and remove() methods take linear time, O(n). When an
 	element is added or removed from the array all other elements in the array must be moved backward one spot or forward one spot to accommodate the added/removed 
 	element. This can be a time consuming process when the array that you are working with has thousands of elements in it. Linked lists are the opposite of array based lists
@@ -60,7 +61,9 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 	will be frequently added or removed.
 	
 * Binary Search Tree vs. Hash Table
+* -----
 * Adjacency List vs. Adjacency Matrix
+* -----
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----

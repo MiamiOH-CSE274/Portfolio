@@ -23,7 +23,7 @@ I have created a linked list in lab 4: https://github.com/busdiekc/04_Linked_Lis
 
 7 - Create an implementation of a Binary Search Tree
 ----
-I ahve created an implementation of a binary search tree in lab 6: https://github.com/busdiekc/06_BST_Lab/blob/master/BST.h
+I have created an implementation of a binary search tree in lab 6: https://github.com/busdiekc/06_BST_Lab/blob/master/BST.h
 
 7 - Create an implementation of a Hash Table
 ----
@@ -31,11 +31,11 @@ I have created a hash table in lab 5: https://github.com/busdiekc/05_Hashing_Lab
 
 7 - Create an implementation of a Heap
 ----
-TODO: Provide a link to your completed 07_Heap_Lab OR Vise project (only if you implemented a heap for it)
+I have created an implementation of a heap in lab 7: https://github.com/busdiekc/07_Heap_Lab/blob/master/Heap.h
 
 7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----
-TODO: Provide a link to your completed 08_Graph_Lab OR Vise project (only if you implemented a graph for it)
+I have created an implementation of an adjacency list graph in lab 8: https://github.com/busdiekc/08_Graph_Lab/blob/master/Graph.cpp
 
 7 - Implement graph algorithms
 ----

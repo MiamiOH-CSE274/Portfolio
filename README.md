@@ -62,14 +62,17 @@ because you just have to use find (O(1)) to get the item you want to change and 
 because you just have to update the value pointed to by the iterator, without an iterator, you would need to call find() which is O(n), which would make set also O(n).  For both, size can be stored internally as an integer value, so get_size would be O(1)
 	
 ```
-| array-based	| linked list	| linked list (iterator)|
-|	O(1)	| 	O(n) 	| 	 O(1)		|	find
-|	O(1)	|	O(n)	|	 O(1)		|	set
-|	O(n)	|	O(n)	|	 O(1)		|	add/remove
-|	O(1)	|	O(1)	|	 O(1)		|	size
+| array-based		| linked list		| linked list (iterator)|
+|	O(1)	  	| 	O(n) 		| 	 O(1)		|	find
+|	O(1)		|	O(n)		|	 O(1)		|	set
+|	O(n)		|	O(n)		|	 O(1)		|	add/remove
+|	O(1)		|	O(1)		|	 O(1)		|	size
 ```
 
 * Binary Search Tree vs. Hash Table
+
+
+
 * Adjacency List vs. Adjacency Matrix
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors

@@ -19,7 +19,7 @@ I showed how to implement a Queue in my Queue lab from lines 78-144. Here is the
 
 7 - Create an implementation of a List
 ----
-I proved that I can implement a list in lines 81-194 of the Linked List Lab. This is the link.
+I proved that I can implement a list in lines 81-171 of the Linked List Lab. This is the link.
 https://github.com/meslerke/04_Linked_List_Lab/blob/master/LinkedList.h
 
 7 - Create an implementation of a Binary Search Tree

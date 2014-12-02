@@ -124,7 +124,7 @@ thus efficiency is not important, as even the slowest data structure will be ver
 as he/she thinks of new items to buy or wants to cross of items already purchased.
 
 With all of that said, a doubly linked list would be a great option for a grocery list. A doubly linked list uses pointers to point to the next and previous item, and thus would allow the user to easily update the grocery list as it is used by manipulating pointers. By using a doubly linked list, items could be easily inserted anywhere in the list or removed without having to recreate the list every time.
-
+The doubly linked list would store strings for the name of each item to be bought at the store. An option that could be considered would be to use a 
 
 
 What is a grocery list?

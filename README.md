@@ -48,7 +48,7 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 * Array-based list vs. Linked List
 
 Array-based lists and Linked Lists are both used to store data in a linear fashion.  The main difference between the two is that the elements in an Array-based list
-are stored next to each other in continuous chunks of memory, while Linked lists store elements are not stored next to each other in memory, they are stored all
+are stored next to each other in continuous chunks of memory, while Linked list elements are not stored next to each other in memory, they are stored all
 throughout memory.  Because of this, finding a random element in an array-based list (such as element 135) can be done in O(1) time because element 135 is 135
 'spaces' in memory away from the first element, so its similar to doing `*(array + 135) = 10;`.  To find that same element number in a linked list, you have to
 iterate through each element in the list until you are at element number 135, which takes O(k) time, with O(n) in the worst case.  So for accessing a random value
@@ -59,7 +59,7 @@ an iterator to point to the location you need, can be done in O(1) time because 
 the node you are trying to insert.  Removing an item is the same running time as adding an item for both lists, so when it comes to adding/removing, a linked list
 beats array-based lists with running times of O(1) vs O(n).  If you are setting the value of an item that already exists, array-based lists can do this in O(1) time
 because you just have to use find (O(1)) to get the item you want to change and update its value; with an iterator, linked lists can also do set in O(1) time
-because you just have to update the value pointed to by the iterator, without an iterator, you would need to call find() which is O(n), which would make set also O(n).  For both, size can be stored internally as an integer value, so get_size would be O(1)
+because you just have to update the value pointed to by the iterator, without an iterator, you would need to call find() which is O(n), which would make set also O(n).  For both, size can be stored internally as an integer value, so size would be O(1)
 	
 ```
 | array-based | linked list | linked list (iterator) |

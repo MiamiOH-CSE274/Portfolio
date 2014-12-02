@@ -64,7 +64,7 @@ because you just have to update the value pointed to by the iterator, without an
 ```
 		| array-based	| linked list	| linked list (iterator)
 find		|	O(1)	| 	O(n) 	| 	 O(1)
-set		|	O(1)	|	O(n)	|	 O(1)
+set	 	|	O(1)	|	O(n)	|	 O(1)
 add/remove	|	O(n)	|	O(n)	|	 O(1)
 size		|	O(1)	|	O(1)	|	 O(1)
 ```

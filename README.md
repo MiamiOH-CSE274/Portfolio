@@ -111,9 +111,11 @@ Address: the physical location of an object in RAM commonly represented as a hex
 
 Pointer: a special variable type in C and C++ for storing the address of another variable declared with the use of the `*` operator and dereferenced with the same operator `*`.  `int *p` will create a variable `p` that will be used to store the address of an `int` and using `*p` will allow you to manipulate the value of the data it is pointing to.
 
-`int a = 10;`
-`int *p = &a;`
-`*p = 20;`
+```
+int a = 10;
+int *p = &a;
+*p = 20;
+```
 
 after this code executes, the value of `a` will be `20`.
 
@@ -121,7 +123,7 @@ Memory Leak: when data that was dynamically allocated by a class persits after t
 
 Dangling pointer: After you `delete` dynamically allocated memory, the pointer that was pointing to that memory still points to the same address, but there is no longer any usefull data there anymore, so that pointer needs to be reassigned before it can be used after a `delete`.
 
-Destructor: A function in a C++ class that is automatically called when you are done with the object, it is used to free up any memory that was created by the class thoughout its lifetime with the `new` operator.  Java doesnt need them because Java has automatic Garbage Collection, meaning that any data that isnt being used any more will eventually be freed by the JVM for later use.
+Destructor: A function in a C++ class that is automatically called when you are done with the object, it is used to free up any memory that was created by the class thoughout its lifetime with the `new` operator by using the `delete` operator.  Java doesnt need them because Java has automatic Garbage Collection, meaning that any data that isnt being used any more will eventually be freed by the JVM for later use.
 
 5 - Create collection classes using templates in C++
 ----

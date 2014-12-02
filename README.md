@@ -13,7 +13,7 @@ If you prefer, you may turn this in to me via email, instead of hosting it on Gi
 Body of portfolio
 ====
 
-7 - Create an implementation of a Queue
+7 - Create an implementation of a Queue using a circular array-based list
 ----
 The link below proves that I can implement a C++ Queue Data Structure
 https://github.com/GrasysER/03_Queue_Lab/blob/master/ArrayQueue.h
@@ -33,15 +33,15 @@ TODO: Provide a link to your completed 05_Hashing_Lab
 
 7 - Create an implementation of a Heap
 ----
-TODO: Provide a link to your completed 07_Heap_Lab OR Vise project (only if you implemented a heap for it)
+TODO: Provide a link to your completed 07_Heap_Lab
 
 7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----
-TODO: Provide a link to your completed 08_Graph_Lab OR Vise project (only if you implemented a graph for it)
+TODO: Provide a link to your completed 08_Graph_Lab
 
 7 - Implement graph algorithms
 ----
-TODO: Provide a link to your completed Vise project (only if you used graph traversal), or add a graph traversal to 08_Graph_Lab and provide a link
+TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
 
 21 - Determine space and time requirements of common data structure methods
 -----
@@ -66,13 +66,11 @@ TODO: Define/describe each of the following terms, as they apply to memory manag
 
 * The call stack (not to be confused with the stack data structure!) 
 
-The call stack in C++ (and most other programming languages) is used to show the execution of local variables, parameters, and function calls.
-
-!the stack. Which variables live where and implications of that. Statically allocated variables live here.
+The call stack in C++ is the portion of the RAM used for statically allocated variables. Variables in the stack only live as long as that particular variable stays in scope, or in other words while the funtion that created that variable is still running. The stack is a LIFO data structure and can grow too large, resulting in the popular saying "stack overflow".
 
 * The heap (not to be confused with the heap data structure!)
 
-The heap is a pool of memory used for dynamic memory allocation. When the new keyword is used, the object uses memory from the heap.
+The heap is a pool of memory used for dynamic memory allocation. When the new keyword is used, the object uses memory from the heap. Variables in the heap must be deleted with delete to prevent memory problems.
 
 * Address
 
@@ -105,6 +103,13 @@ Objects cleaning up after themselves. Java checks heap to see if object still in
 ----
 TODO: Answer the following questions about templates in C++
 
+* What is the main benefit of using templates when creating collection classes?
+
+The main benefit of using templates for creating collection classes is that a template allows for typesafe collection classes. Typesafe collection classes work with any type of data, bypassing the need to create many specialized classes for each type of data.
+
+* In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
+
+The compiler must know both the template definition and the type of data to fill in the template. When the compiler gets down to the .cpp code it must already know both or else the compiler won't know what to do with the .cpp code.
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
@@ -113,9 +118,14 @@ TODO: Answer the following questions about choosing data structures. (5 points e
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.)
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 
-For a grocery list, a doubly linked list would be preffered.
-A doubly linked list would allow for products to be inserted anywhere in the list, which is preferrable for a grocery list.
-Other data types we have used so far only allow data to be added to the front or back, which could make the grocery list hard to read. 
+A grocery list keeps a list of items to buy at a store. A good grocery list should sort the items into sections based on where each particular item would be found. My grocery list would be designed as an app for a cellphone, and even the weakest cellphones have enough memory for a grocery list app.
+A grocery list will never get bigger than a few hundred items,
+thus efficiency is not important, as even the slowest data structure will be very fast at operating on such a small number of items. The operations supported by the data structure is the most important point to consider, as the user should be able to manipulate their grocery list 
+as he/she thinks of new items to buy or wants to cross of items already purchased.
+
+With all of that said, a doubly linked list would be a great option for a grocery list. A doubly linked list uses pointers to point to the next and previous item, and thus would allow the user to easily update the grocery list as it is used by manipulating pointers. By using a doubly linked list, items could be easily inserted anywhere in the list or removed without having to recreate the list every time.
+
+
 
 What is a grocery list?
 How should I decide which data structure to use?

@@ -71,7 +71,32 @@ because you just have to update the value pointed to by the iterator, without an
 
 * Binary Search Tree vs. Hash Table
 
+Both a hashtable and a binary search tree are used to store key, value pairs, the way they store them and how they are used within the data structure is what
+differentiates them.  To find an item by its key in a hashtable, you hash the key, calculate an index based on the hash, then (assuming there are no conflicts)
+that location is where the value is in the hashtable, so find takes O(1) time.  To do the same thing in a BST tree, you have to (obviously) do a binary search
+with the key until you find an item with a matching key, so find for a BST takes O(log n) time.  This makes a hashtable faster for finding a random value by its
+key than a BST with running times of O(1) vs O(log n).  Because find is O(1) in a hashtable, add/remove is also O(1) time, because you simply have to call find
+with the given key to add or remove and delete that item from the table or add it to the empty space.  Add for a BST takes O(log n) time, because you have to
+binary search for the empty position (or key that already exists) in the tree to add that value there (or update an existing value) which again takes O(log n).
+remove in a BST is very similar to add in that it also takes O(log n) time, but there are a few other steps that have to be taken, because removing an item
+from the middle of a list is different than adding an item to the middle because you simply update the value if you want to add a key that already exists.
+If you want to find the max/min values in a BST, you can do this in O(log n) time because you just keep looking left or right until you find the last item, but
+a hashtable requires you to iterate over the entire list to find the max or min, because a hashtable is not sorted at all, so it takes O(n) time.  Similar to
+max/min, finding the next/prev item in a BST can also be done in O(log n) time, and just like with max/min for a hashtable, next/prev requires you to iterate
+over the entire table to find the next or prev key to the one given, so it takes O(n) time.  Size is one of the places that hashtable beats BST, because a simple
+counter can be stored internally for the size of the hashtable, which would take O(1) time to return, where as a BST has to count every item in the tree to get
+the size of it, which takes O(n) time (this is one of the few methods in a BST that takes O(n) time).  The primary advantage of a BST is that elements are
+automtically stored in a sorted order by their key, whereas a hashtable stores them in random order.
 
+```
+| hashtable | BST 
+| O(1)      | O(log n)  |	find
+| O(1)      | O(log n)  |	set
+| O(1)      | O(log n)  |	add/remove
+| O(1)      | O(n)      |	size
+| O(n)      | O(log n)  |	min/max
+| O(n)      | O(log n)  |	prev/next
+```
 
 * Adjacency List vs. Adjacency Matrix
 

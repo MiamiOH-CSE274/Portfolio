@@ -30,7 +30,7 @@ TODO: Provide a link to your completed 06_BST_Lab OR ClosestStarbucks project (o
 7 - Create an implementation of a Hash Table
 ----
 TODO: Provide a link to your completed 05_Hashing_Lab
-
+//THIS WILL TAKE A WHILE
 7 - Create an implementation of a Heap
 ----
 TODO: Provide a link to your completed 07_Heap_Lab OR Vise project (only if you implemented a heap for it)

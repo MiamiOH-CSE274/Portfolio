@@ -39,7 +39,7 @@ https://github.com/ethan2014/08_Graph_Lab
 
 7 - Implement graph algorithms
 ----
-TODO: Provide a link to your completed Vise project (only if you used graph traversal), or add a graph traversal to 08_Graph_Lab and provide a link
+https://github.com/ethan2014/08_Graph_Lab
 
 21 - Determine space and time requirements of common data structure methods
 -----

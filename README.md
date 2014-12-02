@@ -42,7 +42,7 @@ TODO: Provide a link to your completed 08_Graph_Lab
 ----
 TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
 
-7 - Determine space and time requirements of common data structure methods
+21 - Determine space and time requirements of common data structure methods
 -----
 TODO: For each pair of data structures listed here, write a short essay comparing and contrasting them in terms of their running times for different operations. (7 points each)
 
@@ -73,7 +73,7 @@ TODO: Answer the following questions about templates in C++
 * What is the main benefit of using templates when creating collection classes?
 * In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
 
-5 - Using time and space analysis, justify the selection of a data structure for a given application
+20 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
 TODO: Answer the following questions about choosing data structures. (5 points each)
 

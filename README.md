@@ -46,6 +46,27 @@ TODO: Provide a link to your completed Vise project (only if you used graph trav
 TODO: For each pair of data structures listed here, write a short essay comparing and contrasting them in terms of their running times for different operations. (7 points each)
 
 * Array-based list vs. Linked List
+
+Array-based lists and Linked Lists are both used to store data in a linear fashion.  The main difference between the two is that the elements in an Array-based list
+are stored next to each other in continuous chunks of memory, while Linked lists store elements are not stored next to each other in memory, they are stored all
+throughout memory.  Because of this, finding a random element in an array-based list (such as element 135) can be done in O(1) time because element 135 is 135
+'spaces' in memory away from the first element, so its similar to doing `*(array + 135) = 10;`.  To find that same element number in a linked list, you have to
+iterate through each element in the list until you are at element number 135, which takes O(k) time, with O(n) in the worst case.  So for accessing a random value
+array-based lists are much faster than linked lists because there running times are O(1) and O(n) respectively.  To add an element into an array-based list,
+you can easily find where it goes (with find() being O(1)) but adding that element to the space requires you to move every element to its right by 1 space, which
+takes O(n) time, because the elements in an array-based list must be kept in continuous slots in memory.  Adding an item to a linked list, assuming you are using
+an iterator to point to the location you need, can be done in O(1) time because all you have to do is change the pointers of the items to the left and right of
+the node you are trying to insert.  Removing an item is the same running time as adding an item for both lists, so when it comes to adding/removing, a linked list
+beats array-based lists with running times of O(1) vs O(n).  If you are setting the value of an item that already exists, array-based lists can do this in O(1) time
+because you just have to use find (O(1)) to get the item you want to change and update its value; with an iterator, linked lists can also do set in O(1) time
+because you just have to update the value pointed to by the iterator, without an iterator, you would need to call find() which is O(n), which would make set also O(n).  For both, size can be stored internally as an integer value, so get_size would be O(1)
+	
+		| array-based	| linked list	| linked list (iterator)
+find		|	O(1)	| 	O(n) 	| 	 O(1)
+set		|	O(1)	|	O(n)	|	 O(1)
+add/remove	|	O(n)	|	O(n)	|	 O(1)
+size		|	O(1)	|	O(1)	|	 O(1)
+
 * Binary Search Tree vs. Hash Table
 * Adjacency List vs. Adjacency Matrix
 

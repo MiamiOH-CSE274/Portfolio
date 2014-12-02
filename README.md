@@ -25,7 +25,8 @@ https://github.com/dazeycm/04_Linked_List_Lab/blob/master/LinkedList.h
 
 7 - Create an implementation of a Binary Search Tree
 ----
-TODO: Provide a link to your completed 06_BST_Lab OR ClosestStarbucks project (only if you used a search tree)
+Here is an example of a Binary Search Tree:
+https://github.com/dazeycm/06_BST_Lab
 
 7 - Create an implementation of a Hash Table
 ----
@@ -34,11 +35,13 @@ https://github.com/dazeycm/05_Hashing_Lab/blob/master/HashTable.ipp
 
 7 - Create an implementation of a Heap
 ----
-TODO: Provide a link to your completed 07_Heap_Lab
+An implementation of a heap:
+https://github.com/dazeycm/07_Heap_Lab
 
 7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----
-TODO: Provide a link to your completed 08_Graph_Lab
+An implementation of an adjacency list:
+https://github.com/dazeycm/08_Graph_Lab
 
 7 - Implement graph algorithms
 ----

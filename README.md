@@ -13,7 +13,7 @@ If you prefer, you may turn this in to me via email, instead of hosting it on Gi
 Body of portfolio
 ====
 
-7 - Create an implementation of a Queue
+7 - Create an implementation of a Queue using a circular array-based list
 ----
 Link to my 03_Queue_Lab: https://github.com/mccarts3/03_Queue_Lab/blob/master/ArrayQueue.ipp
 
@@ -23,7 +23,7 @@ Link to my 04_Linked_List_Lab: https://github.com/mccarts3/04_Linked_List_Lab/bl
 
 7 - Create an implementation of a Binary Search Tree
 ----
-TODO: Provide a link to your completed 06_BST_Lab OR ClosestStarbucks project (only if you used a search tree)
+TODO: Provide a link to your completed 06_BST_Lab
 
 7 - Create an implementation of a Hash Table
 ----
@@ -31,15 +31,15 @@ TODO: Provide a link to your completed 05_Hashing_Lab
 
 7 - Create an implementation of a Heap
 ----
-TODO: Provide a link to your completed 07_Heap_Lab OR Vise project (only if you implemented a heap for it)
+TODO: Provide a link to your completed 07_Heap_Lab
 
 7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----
-TODO: Provide a link to your completed 08_Graph_Lab OR Vise project (only if you implemented a graph for it)
+TODO: Provide a link to your completed 08_Graph_Lab
 
 7 - Implement graph algorithms
 ----
-TODO: Provide a link to your completed Vise project (only if you used graph traversal), or add a graph traversal to 08_Graph_Lab and provide a link
+TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
 
 21 - Determine space and time requirements of common data structure methods
 -----
@@ -77,6 +77,9 @@ TODO: Define/describe each of the following terms, as they apply to memory manag
 5 - Create collection classes using templates in C++
 ----
 TODO: Answer the following questions about templates in C++
+
+* What is the main benefit of using templates when creating collection classes?
+* In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
 
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application

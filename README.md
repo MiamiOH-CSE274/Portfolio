@@ -13,7 +13,7 @@ If you prefer, you may turn this in to me via email, instead of hosting it on Gi
 Body of portfolio
 ====
 
-7 - Create an implementation of a Queue
+7 - Create an implementation of a Queue using a circular array-based list
 ----
 I have created a queue in lab 3: https://github.com/busdiekc/03_Queue_Lab/blob/master/ArrayQueue.h
 
@@ -39,7 +39,7 @@ I have created an implementation of an adjacency list graph in lab 8: https://gi
 
 7 - Implement graph algorithms
 ----
-TODO: Provide a link to your completed Vise project (only if you used graph traversal), or add a graph traversal to 08_Graph_Lab and provide a link
+TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
 
 21 - Determine space and time requirements of common data structure methods
 -----
@@ -61,58 +61,76 @@ In a general array based lists are easier to work with but are less flexible tha
 	will be frequently added or removed.
 	
 * Binary Search Tree vs. Hash Table
-* -----
+-----
+stuff here
+
 * Adjacency List vs. Adjacency Matrix
-* -----
+-----
+stuff here
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
 TODO: Define/describe each of the following terms, as they apply to memory management in C++
 
 * The call stack (not to be confused with the stack data structure!)
-	The stack is a section of your computer's memory that stores temporary variables. The cpu closely monitors the stack. Memory allocation and deallocation is
-	done for you by the computer. When a program exits all of its associated variables are wiped and that memory is available to be used again.
+------
+The stack is a section of your computer's memory that stores temporary variables. The cpu closely monitors the stack. Memory allocation and deallocation is done for you by the computer. When a program exits all of its associated variables are wiped and that memory is available to be used again.
 	
 * The heap (not to be confused with the heap data structure!)
-	The heap is a section of your computer's memory that is not managed for you automatically and is also not as tightly managed by the cpu. The heap allows you to
-	allocate memory without any restrictions on the size of the memory allocated as long as your computer has that much memory available. Using the heap also
-	means that you must deallocate any memory that was allocated otherwise a memory leak will result. This means that memory is being used to store a variable
-	that cannot be accessed by any programs.
+-----
+The heap is a section of your computer's memory that is not managed for you automatically and is also not as tightly managed by the cpu. The heap allows you to allocate memory without any restrictions on the size of the memory allocated as long as your computer has that much memory available. Using the heap also means that you must deallocate any memory that was allocated otherwise a memory leak will result. This means that memory is being used to store a variable that cannot be accessed by any programs.
+
 * Address
-	An address is the location in the computer's memory that the data of a variable is stored. 
+------
+An address is the location in the computer's memory that the data of a variable is stored. 
 	
 * Pointer
-	A pointer is a special variable that stores the address of another variable. The pointer can then be used to access that section of memory throughout a
-	program. This allows you to directly change the stored data of a variable.
+------
+A pointer is a special variable that stores the address of another variable. The pointer can then be used to access that section of memory throughout a program. This allows you to directly change the stored data of a variable.
 	
 TODO: Answer the following questions about memory management and dynamic variables
 
 * What is a memory leak, and why is it bad?
-	A memory leak results when memory in the heap is allocated to a variable but then is never deallocated. The allocated memory remains unusable and is referred to
-	as a memory leak. If this happens too much a computer can run out of memory and crash. 
+------
+A memory leak results when memory in the heap is allocated to a variable but then is never deallocated. The allocated memory remains unusable and is referred to as a memory leak. If this happens too much a computer can run out of memory and crash. 
 	
 * What is a dangling pointer (or dangling reference), and why is it dangerous?
-	A dangling pointer points to memory that has already been deallocated. If you use a dangling pointer without realizing it the returned data will not be
-	what is expected.
+-------
+A dangling pointer points to memory that has already been deallocated. If you use a dangling pointer without realizing it the returned data will not be what is expected.
 	
 * What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?
-	A destructor is used to deallocate memory that was previously allocated. It is essentially the opposite of a constructor. They are needed to prevent
-	memory leaks because they give programmers any easy to free up memory that had been allocated for a purpose. Destructors are not needed in
-	Java because Java manages your memory allocation and deallocation for you. 
+-----
+A destructor is used to deallocate memory that was previously allocated. It is essentially the opposite of a constructor. They are needed to prevent memory leaks because they give programmers any easy to free up memory that had been allocated for a purpose. Destructors are not needed in Java because Java manages your memory allocation and deallocation for you. 
 
 5 - Create collection classes using templates in C++
 ----
 TODO: Answer the following questions about templates in C++
 
+* What is the main benefit of using templates when creating collection classes?
+-----
+stuff here
+
+* In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
+------
+stuff here
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
 TODO: Answer the following questions about choosing data structures. (5 points each)
 
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.)
+-----
+stuff here
+
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
-	I would use a linked list to create a grocery list data structure. Using a linked list would give the data structure greater flexibility when adding, removing, or reordering the elements in the list. Some people prefer to have their grocery list written out in a particular order and with a linked list new elements can easily be added into any
-	place in the list. The most common commands that you would use on a grocery list in my opinion would be adding or removing elements from the list and a linked list provides these methods with O(1) time instead of O(n). Constant time would help the thrifty shopper save precious milliseconds off adding or removing forgotten grocery items to/from their list.
+-----
+I would use a linked list to create a grocery list data structure. Using a linked list would give the data structure greater flexibility when adding, removing, or reordering the elements in the list. Some people prefer to have their grocery list written out in a particular order and with a linked list new elements can easily be added into any place in the list. The most common commands that you would use on a grocery list in my opinion would be adding or removing elements from the list and a linked list provides these methods with O(1) time instead of O(n). Constant time would help the thrifty shopper save precious milliseconds off adding or removing forgotten grocery items to/from their list.
 	
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+------
+stuff here
+
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+-----
+stuff here
+

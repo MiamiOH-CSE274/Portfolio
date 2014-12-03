@@ -84,6 +84,11 @@ TODO: Answer the following questions about memory management and dynamic variabl
 5 - Create collection classes using templates in C++
 ----
 TODO: Answer the following questions about templates in C++
+* What is the main benefit of using templates when creating collection classes? - One of the main benefits of using templates for collection classes over using classes is that a template can be created to accept any data type unlike classes which
+	have to be specialized to handle different types of data. Also, templates are typesafe because the compiler knows the data types before compile time, so it can check for errors before they occur.
+* In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes. - This is because whenever a template class is instantiated within a .cpp file, 
+	a class is created with the argument of the template. When this class becomes instantiated, the compiler will have to find out where the private functions and variables are to create the class with the template arguments. Thus, it will look in the	
+	.h file that is included with the program. Without the inclusion of the template within the .h file, the compiler will not be able to find the private functions and variables of the newly instantiated class. 
 
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application

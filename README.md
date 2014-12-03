@@ -23,7 +23,7 @@ Linked List code can be accessed at https://github.com/clarkdb/04_Linked_List_La
 
 7 - Create an implementation of a Binary Search Tree
 ----
-TODO: Provide a link to your completed 06_BST_Lab OR ClosestStarbucks project (only if you used a search tree)
+Binary Tree code can be found at https://github.com/clarkdb/06_BST_Lab/blob/master/BST.h
 
 7 - Create an implementation of a Hash Table
 ----
@@ -31,7 +31,7 @@ Hash table code can be found at https://github.com/clarkdb/05_Hashing_Lab/blob/m
 
 7 - Create an implementation of a Heap
 ----
-TODO: Provide a link to your completed 07_Heap_Lab OR Vise project (only if you implemented a heap for it)
+Heap code can be found at https://github.com/clarkdb/07_Heap_Lab/blob/master/Heap.h
 
 7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----

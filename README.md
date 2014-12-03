@@ -24,7 +24,8 @@ https://github.com/meslerke/04_Linked_List_Lab/blob/master/LinkedList.h
 
 7 - Create an implementation of a Binary Search Tree
 ----
-TODO: Provide a link to your completed 06_BST_Lab OR ClosestStarbucks project (only if you used a search tree)
+This 06_BST_Lab shows that I can implement a Binary Search Tree from lines 83-324. Here is the link.
+https://github.com/meslerke/06_BST_Lab/blob/master/BST.h
 
 7 - Create an implementation of a Hash Table
 ----

@@ -56,6 +56,15 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 	array-based list because the program can access array elements with the preset array functions. This allows for 0(1) runtime for get and set functions in array-based lists. Finally, both the array-based list and the
 	linked list have a size function with 0(1) time because all this function does is return a counter variable that is updated elsewhere in the program. 
 * Binary Search Tree vs. Hash Table
+	Like the main difference between array-based lists and linked lists, one of the major differences between the binary search tree and the hash table is that the hash table uses a backing array while the binary search 
+	tree uses nodes. Moreover, additions into the hash table require a hash function, and are not sorted upon entry (instead, the hash function computes an index in the array). This creates 0(1) run time because adding at 
+	an index in an array takes constant time. For the binary search tree, additions are made with regards to keeping the tree sorted. A node is first compared to the root node to see if it is larger or smaller, and then goes 
+	down the directed path, effectively eliminating one half of the root’s sub-tree that it is currently being compared with. This takes 0(lg(n)) time. For remove, the hash table also takes 0(1) time if given a key, because 
+	the hash can be performed on the key, finding the exact index at which the key is stored. The binary search tree still takes 0(lg(n)) time because  	of the time it takes to find the key of which to delete. This is done 
+	by progressively going down a branch of the tree, comparing the key with a root and then proceeding down one of the roots’ sub-tree’s branches. This process of finding the key on which to operate is also why get and set, min 
+	and max, and next and previous are 0(lg(n)) time, because at most half of the nodes must be touched upon to find the key. Hash tables run get and set in constant time because of their ability to compute the exact index of the 
+	key in the array, but run min and max and next and previous in 0(n) time because of the unsorted nature of the hash table. Every value must be compared with the picked key in order to ensure that the right next or previous key 
+	has been chosen. Finally, the min and max of an unsorted array can only be found by touching on every node, which is why hash tables have bad run times for these operations. 
 * Adjacency List vs. Adjacency Matrix
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors

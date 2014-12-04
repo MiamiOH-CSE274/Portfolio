@@ -201,7 +201,7 @@ of your class to handle the data types you use with it throughout the program, w
 of the class was in a seperate .cpp file, when the compiler went to create a new class (for example, one that handles `MyClass<int>`) it wouldn't know where to find the implementation
 for those new functions, because the .cpp file may have already been compiled and it can't add new things to the file and compile it again.  So you include the implementation in the
 .hpp file so whenever the user of your code `#include`s your header file, all of the templated implementations of your functions will be included in the users source file, so it will
-know where to find them when new code needs to be generated, then the entire file will be compiled along with all the implementations of each version of your template class that re needed.
+know where to find them when new code needs to be generated, then the entire file will be compiled along with all the implementations of each version of your template class that are needed.
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application
 ----

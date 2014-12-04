@@ -119,7 +119,7 @@ of V (node count) or E, because looking getting a node is done by looking at tha
 an adjacency matrix, adding an item is (no surprise) also O(1) time, because just like getting the weight of an edge, you just have to look up an item in the 2D
 array by its row and column and set the value with `array[node1][node2] = 1;`; this also happens to be the same for remove with a matrix, but instead of setting
 the value to 1 or a weight, you just set it to 0 or false with `array[node1][node2] = 0;`.  Removing an item with an adjacency list is a bit more work, and just like
-getEdgeCost(), ends up being O(E) time; first, you have to find the second node in the first nodes list of edges and remove if you find it (you are done if you dont
+getEdgeCost(), ends up being O(V) time; first, you have to find the second node in the first nodes list of edges and remove if you find it (you are done if you dont
 find it), then look for the first node in the second nodes list of edges and remove it if you find it.  If you wish to add a node to the graph, you can do this in
 O(1) time with an adjacency list because all you have to do is push a new node onto the array that stores the nodes, but to do this with a matrix requires O(n^2)
 (the worst time complexity we've seen with a graph so far) because you have to increase the size of both arrays in the 2D array which requires copying the data
@@ -183,9 +183,24 @@ meaning that any data that isnt being used any more will eventually be freed by 
 TODO: Answer the following questions about templates in C++
 
 
-*What is the main benefit of using templates when creating collection classes?
-*In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
+* What is the main benefit of using templates when creating collection classes?
 
+Using templates means you can write one class that can handle any kind of data the user wants to use with your collection class, whether it be `int`, `double`, `std::string`,
+`std::vector`, or even there own classes.  when you use a template, the compiler will create a new specialized version of your class to handle each different type of data
+the user wants to use, so if you use a `std::vector<int>` and a `std::vector<std::string>` the compiler will create a `std::vector` class that only handles `int`s and another one
+that only handles `std::string`s.  using templates allows you to very easily abstract away the difficult problem of handling the many different types of data a person might want
+to use with your collection class.  For example, in the olden days before templates and generic programming, if you wanted a hashtable that stored keys as a `char*` and values as a `double`, but all
+you had was one that stored keys as a `char*` and values as an `int`, then you were writing an entirely new structure to handle your new case (or creating some ugly abomination
+of preprocessor hacks that 'works', which ever you prefer).  Templates allow for truly generic and reusable code, if done correctly, your collection class will no absolutely nothing
+about the data it will even be working with before you compile it!
+
+* In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
+You can't create template classes in the conventional c++ style of seperate .hpp and .cpp files because when you use templates, the compiler will create a new version
+of your class to handle the data types you use with it throughout the program, which means different functions declerations and definitions for each case.  if the implementation
+of the class was in a seperate .cpp file, when the compiler went to create a new class (for example, one that handles `MyClass<int>`) it wouldn't know where to find the implementation
+for those new functions, because the .cpp file may have already been compiled and it can't add new things to the file and compile it again.  So you include the implementation in the
+.hpp file so whenever the user of your code `#include`s your header file, all of the templated implementations of your functions will be included in the users source file, so it will
+know where to find them when new code needs to be generated, then the entire file will be compiled along with all the implementations of each version of your template class that re needed.
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application
 ----

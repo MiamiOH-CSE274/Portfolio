@@ -43,7 +43,6 @@ TODO: Provide a link to your completed Vise project (only if you used graph trav
 
 21 - Determine space and time requirements of common data structure methods
 -----
-TODO: For each pair of data structures listed here, write a short essay comparing and contrasting them in terms of their running times for different operations. (7 points each)
 
 * Array-based list vs. Linked List
 
@@ -95,7 +94,6 @@ A destructor in C++ is a class that is opposite the constructor in the fact that
 
 5 - Create collection classes using templates in C++
 ----
-TODO: Answer the following questions about templates in C++
 
 * What is the main benefit of using templates when creating collection classes?
 
@@ -107,12 +105,19 @@ With collection classes, the implementations are contained in a .h file because 
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
-TODO: Answer the following questions about choosing data structures. (5 points each)
 
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.)
+
+With a set of strings that do not need to keep any order, it would be simple to find a data structure well suited for the purpose. With almost any unordered set, it would be best to implement a hash table to get the fastest possible running times and memory management. With few possible strings or shorter strings, it may be better suited to use a random access table, but with more possible strings, a hash table will offer similarly fast running times while using up much less memory storing items. To add, remove, and get items from the set, a hash table will offer constant time to run regardless of the number of strings. However, depending on the use cases of this set, a hash table may need to be combined with another data structure in order to get the best results as in the zeitgeist project in which my partner and I believed that the best data structure combination would be a hash table with a heap since we needed to get information about the items in an ordered set.
+
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 
 With a grocery list, I would implement the task with the way that I am used to using a grocery list, as a paper with all of the items that are needed. However, it would be nice to order the items in the list so that I can go from one side of the store to the other without wasting a lot of time going back and forth across the store looking for items. For this reason, I would use a Linked List so that the elements can have a next and a previous item relating their location in the store so that I do not waste a lot of time between items in the store. THe linked list would also allow for a fast way to add or remove items depending on how often I change my mind on groceries within the store. With a linked list, it would not be a downside to have a slower time to find elements, since I am most likely going to use them in order and even if not, I can use the previous item to find what I am looking for within my shopping list.
 
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+
+For student records, the fastest solution would be to use a random access table, but a random access table uses a lot of memory and takes up a lot of unnecessary space. In any implementation of this problem, it will be beneficial to use a dictionary abstract data type to use keys and data to store the records and be able to look the records up by a student identification number. A hash table will also yield fast running times in this case when there are a large number of possible keys and a random access table no longer is worth the amount of memory that it needs to store the elements. The random access table will have constant running times for every operation that it supports, but will take a lot of space if the keys are spread out. A hash table will give constant running times for most functions but will have trouble when finding or getting an element compared to the time that the same function takes in a random access table. 
+
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+
+In order to make this use case work correctly, I believe that the implementation will need to include a priority queue of some type, possibly within a heap. With a heap, the priority can be determined by having a value set equal to the highest amount of money paid by a company subtracted by the company's money paid. This way, the top node of the heap will be taken and then the rest of the tree will need to be balanced so that the next highest priority item will be taken next. The heap will remain balanced and will allow the packets sent by a lower priority company to be held in the tree until all of the packets of higher priority companies are sent. This will offer constant time to run because the tree is only using the top element, but will take logarithmic time to adjust the balance between companies since the function to adjust the tree will need to look at all the items in a subtree.

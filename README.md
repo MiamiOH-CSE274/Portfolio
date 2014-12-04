@@ -56,6 +56,8 @@ A binary search tree is a very reliable data structure for a task that requires 
 
 * Adjacency List vs. Adjacency Matrix
 
+An adjacency list and an adjacency matrix are very similar in theory but are very different in construction. They both contain a list of edges between vertices of a graph, but an adjacency matrix is much faster to return results than an adjacency list at the cost of much more memory required to store the list. An adjacency matrix boasts constant time for adding and removing edges as well as for finding and getting edges to update, but takes up the square of the input data in memory to represent the data. An adjacency list requires roughly the same amount of memory as the input data to store, but will require running times proportional to the density of the graph.
+With highly dense graphs in which the number of edges approaches the square of the number of vertices, an adjacency matrix will yield the best results; however, when a graph is less dense, it makes more sense to use an adjacency list to preserve space in memory.
 
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors

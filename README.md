@@ -97,6 +97,13 @@ A destructor in C++ is a class that is opposite the constructor in the fact that
 ----
 TODO: Answer the following questions about templates in C++
 
+* What is the main benefit of using templates when creating collection classes?
+
+Templates allow collection classes to be reused and made to work in many situations with different requirements. Templates allow several classes to be used in a similar fashion with the same functions through the use of templates that allow a function to accept a template data type in construction and in use will be initialized with a data type and will execute the functions in the same way.
+
+* In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
+
+With collection classes, the implementations are contained in a .h file because the functions can be run with many data types and the implementation of the functions must be initialized with a data type. The collection class with a template gives its implementation in the .h file but cannot be run from that state and must be initialized in order to fill the template and allow the program to run.
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application
 ----

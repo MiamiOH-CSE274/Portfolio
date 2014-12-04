@@ -195,6 +195,7 @@ of preprocessor hacks that 'works', which ever you prefer).  Templates allow for
 about the data it will even be working with before you compile it!
 
 * In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
+
 You can't create template classes in the conventional c++ style of seperate .hpp and .cpp files because when you use templates, the compiler will create a new version
 of your class to handle the data types you use with it throughout the program, which means different functions declerations and definitions for each case.  if the implementation
 of the class was in a seperate .cpp file, when the compiler went to create a new class (for example, one that handles `MyClass<int>`) it wouldn't know where to find the implementation

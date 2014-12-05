@@ -208,6 +208,20 @@ know where to find them when new code needs to be generated, then the entire fil
 TODO: Answer the following questions about choosing data structures. (5 points each)
 
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.)
+
+If I wanted to store strings in an unordered set, I would actually do what most compilers do for the implementation of the c++ standard template library class
+std::unordered_set.  in the std::unordered_set class, elements are stored using a hashtable, where the key of an item is found by passing the string through
+a hash function then calculating its position from the hash, and the values associated with every key is the actual string itself.  I believe this is the best way
+to store an unordered set of strings (not just because thats how the c++ STL does it) because the most important functions of this use case, add, remove and key_exists
+can all be done in O(1) time with a hashtable.  key_exists is O(1) because all you have to do is caculate a keys position in the hashtable using the hash function,
+as well as handle collisions whenever needed, which takes O(1) (unless you have a terrible hash function that produces the same result for many different inputs).  because
+key_exists is so fast, checking if we actually are supposed to add a value when add_item is called can also be done in o(1) time, because you just have to check if the string
+the user wants to add already exists, and if it does, dont add it.  remove_item is also O(1) for the same reasons find and add_item are, all you have to do is hash the input
+string, and if there is something in that position with a matching key, you simply remove it, both of which can be done in constant time.  Because add, remove and find are all O(1)
+time, a hashtable is definitely the best solution for this problem, because some of the short comings of hashtables such as find by value (although that would be easy in this
+specific use case because the values are the keys), finding max and min values, and finding the next and prev keys of a given key because none of that functionality is
+needed to store a simple unordered set of strings.
+
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 
 For a grocery list I would use a Doubly Linked list.  I made this decision because using a doubly linked list allows you to easily add and remove items

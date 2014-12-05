@@ -15,32 +15,26 @@ Body of portfolio
 
 7 - Create an implementation of a Queue using a circular array-based list
 ----
-Here is an implementation of a queue: 
 https://github.com/dazeycm/03_Queue_Lab/blob/master/ArrayQueue.ipp
 
 7 - Create an implementation of a List
 ----
-Here is an example of the implementation of a list:
 https://github.com/dazeycm/04_Linked_List_Lab/blob/master/LinkedList.h
 
 7 - Create an implementation of a Binary Search Tree
 ----
-Here is an example of a Binary Search Tree:
 https://github.com/dazeycm/06_BST_Lab
 
 7 - Create an implementation of a Hash Table
 ----
-The code for the implementation of a hash table can be found at:
 https://github.com/dazeycm/05_Hashing_Lab/blob/master/HashTable.ipp
 
 7 - Create an implementation of a Heap
 ----
-An implementation of a heap:
 https://github.com/dazeycm/07_Heap_Lab
 
 7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----
-An implementation of an adjacency list:
 https://github.com/dazeycm/08_Graph_Lab
 
 7 - Implement graph algorithms

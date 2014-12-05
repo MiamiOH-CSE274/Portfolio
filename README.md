@@ -51,17 +51,17 @@ TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
 -----
 TODO: For each pair of data structures listed here, write a short essay comparing and contrasting them in terms of their running times for different operations. (7 points each)
 
-* **Array-based list vs. Linked List** - Looking at the four methods of add, remove, set, and get, there are distinct differences in array-based lists and linked lists. A queue's add method takes O(n) time. This is because the values of the array need to be shifted to accomodate for the new value. A linked list is caple of adding a value in O(1) time. This is because you can easily change the references at each node. The queue's remove function is similar to the add function in that it takes O(n) time. This is because once you remove the value, you have have an empty space and need to move the other values in the array over to accomodate for this hole. A linked list's remove function is done in O(1) time because like the add function, it is trivial to change the references of the node. Get and set for the queue take O(1) time because it is a simple index lookup for each method. A linked list takes O(n) time to complete the get and set method. This is because in a linked list you start at the first node and advance through them until you arrive at the destination node. **TODO: ADD TABLE, SHORTEN ESSAY.. LL SEQUENTIAL.. ITERATORS - WHAT ARE THEY, WHAT DO THEY DO? IN TABLE, ALONG WITH METHOD NAMES HAVE ITERATOR STUFF LIKE add() at an iterator (IS O(1) for linked list and O(n) for arraylist) and get an iterator for given index - IS O(1) for arraylist and O(n) for linkedlist.. set at an iterator is O(1) for both... get at an iterator is O(1) for both... remove is O(n) for arraylist, O(1) for linkedlist.. get iterator at front and back is O(1) for both.. add/remove at front or back is O(1) time for both**
-    
-  |              | Array | Linked List | Linked List Iterator |
-  |--------------|-------|-------------|----------------------|
-  | Find (Value) | O(n)  | O(n)        | O(n)                 |
-  | Find (Index) | O(1)  | O(n)        | O(1)                 |
-  | Get/Set      | O(1)  | O(n)        | O(1)                 |
-  | Add/Remove   | O(n)  | O(1)        | O(1)                 |
+* **Array-based list vs. Linked List** - Generally, an array will allow for faster look up in most cases. This is because arraya support random access, and if you want to get or set a value in a certain index, it's trivial to pull up that element and make changes to it. The problem with Arrays is that to add and remove requires the shifting of data, resulting in a runtime of O(n). Linked list initially don't seem much better. To find something in a Linked list you have to traverse through possibly every node, meaning O(n) time, to find a value. To get or set a value you have to first find it, and then return it. To add or remove nodes, you also have to find it first and then make the changes. This can be remedied, however, through the use of iterators. If you have an iterator to a node in a Linked List, get and set can be done in constant time. Add and remove can also be done in constant time, greatly improving the efficiency of the Linked List Data structure.   
 
-
-
+  |              | Array | Linked List |
+  |--------------|-------|-------------|
+  | Find (Value) | O(n)  | O(n)        | 
+  | Find (Index) | O(1)  | O(n)        |
+  | Get/Set      | O(1)  | O(n)        |
+  | Get/Set (Iterator) | O(1) | O(n)   |
+  | Add/Remove   | O(n)  | O(1)        |
+  | Add/Remove (Iterator) | O(n) | O(1)|
+  
 * Binary Search Tree vs. Hash Table
 * Adjacency List vs. Adjacency Matrix
 

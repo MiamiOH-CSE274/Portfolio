@@ -15,7 +15,7 @@ Body of portfolio
 
 7 - Create an implementation of a Queue
 ----
-https://github.com/MiamiOH-CSE274/03_Queue_Lab
+https://github.com/ethan2014/03_Queue_Lab
 
 7 - Create an implementation of a List
 ----

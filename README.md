@@ -230,4 +230,7 @@ would be doable in O(1) time.  Similarly, if you forgot to write an item down af
 again in O(1) time.  Being able to easily remove an item would also be very helpful because after you have gotten the item while at the store, you can simply remove that item from the list.
 
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+
+
+
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.

@@ -45,7 +45,7 @@ TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
 -----
 TODO: For each pair of data structures listed here, write a short essay comparing and contrasting them in terms of their running times for different operations. (7 points each)
 
-* **Array-based list vs. Linked List** - Generally, an array will allow for faster look up in most cases. This is because arraya support random access, and if you want to get or set a value in a certain index, it's trivial to pull up that element and make changes to it. The problem with Arrays is that to add and remove requires the shifting of data, resulting in a runtime of O(n). Linked list initially don't seem much better. To find something in a Linked list you have to traverse through possibly every node, meaning O(n) time, to find a value. To get or set a value you have to first find it, and then return it. To add or remove nodes, you also have to find it first and then make the changes. This can be remedied, however, through the use of iterators. If you have an iterator to a node in a Linked List, get and set can be done in constant time. Add and remove can also be done in constant time, greatly improving the efficiency of the Linked List Data structure.   
+* **Array-based list vs. Linked List** - Generally, an array will allow for faster look up in most cases. This is because arrays support random access, and if you want to get or set a value in a certain index, it's trivial to pull up that element and make changes to it. The problem with Arrays is that to add and remove requires the shifting of data, resulting in a runtime of O(n). Linked list initially don't seem much better. To find something in a Linked list you have to traverse through possibly every node, meaning O(n) time, to find a value. To get or set a value you have to first find it, and then return it. To add or remove nodes, you also have to find it first and then make the changes. This can be remedied, however, through the use of iterators. If you have an iterator to a node in a Linked List, get and set can be done in constant time. Add and remove can also be done in constant time, greatly improving the efficiency of the Linked List Data structure.   
 
   |              | Array | Linked List |
   |--------------|-------|-------------|
@@ -56,7 +56,12 @@ TODO: For each pair of data structures listed here, write a short essay comparin
   | Add/Remove   | O(n)  | O(1)        |
   | Add/Remove (Iterator) | O(n) | O(1)|
   
-* Binary Search Tree vs. Hash Table
+* **Binary Search Tree vs. Hash Table** - 
+
+  |             | HashTable | BST |
+  |-------------|-----------|-----|
+  |Find|O(1)|O(logn)|
+  
 * Adjacency List vs. Adjacency Matrix
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors

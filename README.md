@@ -56,7 +56,7 @@ TODO: For each pair of data structures listed here, write a short essay comparin
   | Add/Remove   | O(n)  | O(1)        |
   | Add/Remove (Iterator) | O(n) | O(1)|
   
-* **Binary Search Tree vs. Hash Table** - 
+* **Binary Search Tree vs. Hash Table** - Both binary search trees and hash tables store key value pairs, making them dictionary data structures. Binary search trees must uphold a certain structure and set order, while hash tables allow for fast indexing of values by hashing them. Overall, a hash table has a running time fo O(1) for most operations. Through hashing, it's very simple to find a a value in a hash table and make changes to it. A binary search tree is a little more tricky to navigate through. In general, for a balanced tree, the running time of most operartions will be O(log n). This is because a binary search is performed on the tree to find a value in order to make changes to it. One area that BST beat hash tables is in Min/Max and Next/Prev. Because BST have an order and structure to them, finding the next node is as simple as finding the node and then looking at its children, while in a hash table, which has no order, you have to iterate over the entire set of data. Similarly to find the min or max you just have to continually navigate one direction through the tree until you find the end, while in a hash table you need to check every single element. 
 
   |             | HashTable | BST |
   |-------------|-----------|-----|

@@ -71,7 +71,6 @@ An adjacency matrix provides O(1) running time when looking for a specific edge 
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
-TODO: Define/describe each of the following terms, as they apply to memory management in C++
 
 * The call stack (not to be confused with the stack data structure!)
 ------
@@ -88,8 +87,6 @@ An address is the location in the computer's memory that the data of a variable 
 * Pointer
 ------
 A pointer is a special variable that stores the address of another variable. The pointer can then be used to access that section of memory throughout a program. This allows you to directly change the stored data of a variable.
-	
-TODO: Answer the following questions about memory management and dynamic variables
 
 * What is a memory leak, and why is it bad?
 ------
@@ -109,7 +106,7 @@ TODO: Answer the following questions about templates in C++
 
 * What is the main benefit of using templates when creating collection classes?
 -----
-stuff here
+The main benefit of using templates when creating collection classes is that you can design your class without using a specific data type in the code. With templates you create a place holder data type that stands in for a real data type. This allows the collection class that you write to be used for different data types and the only thing that needs to change when using the same class for two different data types is the line of code used to construct your object.
 
 * In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
 ------

@@ -67,7 +67,7 @@ On average hash tables have O(1) running time for searching, inserting and delet
 
 * Adjacency List vs. Adjacency Matrix
 -----
-stuff here
+An adjacency matrix provides O(1) running time when looking for a specific edge but suffers from large memory usage. The space that an adjacency matrix takes up is (n*n) which can be a considerable amount depending on the size of n. The adjacency matrix stores an entry, either true or false, for every node in the graph. This is the reason an adjacency matrix takes up so much space. However, because of this a specific edge between two nodes can be found in constant time. Getting a list of neighbours for a particular node is slow because the computer will have to look at all n nodes to get a complete list of neighbours. An adjacency list uses less memory but does not have the constant time look up for a specific edge. It does have a shorter running time for getting a list of neighbours to a particular node though because adjacency lists only store the nodes that a particular node is connected to rather than having an entry for every single node. 
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----

@@ -91,7 +91,7 @@ TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
 ----
 TODO: Answer the following questions about templates in C++
 
-* What is the main benefit of using templates when creating collection classes?
+* **What is the main benefit of using templates when creating collection classes?** - When developing a new collection class, you want it to be universal. That is, it would be best if the collection could hold any type of data. This is where templates come in. Templates allow us to omit specifying a data type in our collection. In this way, the collection can be used by any of the default data types, or data types we create. This also saves us a lot of time that would be required to implement the data structure for the standard data types as well as the types we create. 
 * In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application

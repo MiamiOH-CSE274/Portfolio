@@ -110,7 +110,7 @@ The main benefit of using templates when creating collection classes is that you
 
 * In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
 ------
-stuff here
+The normal separation of declarations and implementation of methods cannot be maintained when using template classes because in order to instantiate a template class with a particular template argument the compiler needs to have access to the implementation of the methods. If these implementations are not in the header file then the compiler won't be able to instantiate the template. In order to circumvent this problem .ipp files are used to keep the declarations and implementations separate. The declarations of a template class's methods will remain in the .h file and the implementations of those methods will go into the .ipp file which is #included at the end of the .h file.
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application
 ----

@@ -100,7 +100,7 @@ A dangling pointer points to memory that has already been deallocated. If you us
 	
 * What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?
 -----
-A destructor is used to deallocate memory that was previously allocated. It is essentially the opposite of a constructor. They are needed to prevent memory leaks because they give programmers any easy to free up memory that had been allocated for a purpose. Destructors are not needed in Java because Java manages your memory allocation and deallocation for you. 
+A destructor is used to deallocate memory that was previously allocated. It is essentially the opposite of a constructor. Destructors are needed to prevent memory leaks because they give programmers the ability to free up memory that had previously been allocated. Destructors are not needed in Java because Java manages your memory allocation and deallocation for you through a process called garbage collection. In Java the compiler is able to detect when allocated memory is no longer reachable and will then deallocated that memory for you. This is not the case with C++ and hence the need for destructors so that programmers have a way to deallocate memory. 
 
 5 - Create collection classes using templates in C++
 ----

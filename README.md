@@ -27,6 +27,7 @@ I have created an implementation of a binary search tree in lab 6: https://githu
 
 7 - Create an implementation of a Hash Table
 ----
+(grow currently not working)
 I have created a hash table in lab 5: https://github.com/busdiekc/05_Hashing_Lab/blob/master/HashTable.h
 
 7 - Create an implementation of a Heap
@@ -74,7 +75,7 @@ TODO: Define/describe each of the following terms, as they apply to memory manag
 
 * The call stack (not to be confused with the stack data structure!)
 ------
-The stack is a section of your computer's memory that stores statically allocated variables. Memory allocation and deallocation in the call stack is done for you by the computer. When a these variables leave the scope of the executing code all the statically allocated variables are erased and that memory is available to be used again.
+The stack is a section of your computer's memory that stores statically allocated variables. Memory allocation and deallocation in the call stack is done for you by the computer. When these variables leave the scope of the executing code all statically allocated variables are erased and that memory is available to be used again.
 	
 * The heap (not to be confused with the heap data structure!)
 -----

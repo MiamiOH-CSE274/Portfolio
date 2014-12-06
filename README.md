@@ -33,7 +33,8 @@ TODO: Provide a link to your completed 05_Hashing_Lab
 
 7 - Create an implementation of a Heap
 ----
-TODO: Provide a link to your completed 07_Heap_Lab
+This 07_Heap_Lab shows that I can implement a Heap from lines 58-152. Here is the link.
+https://github.com/meslerke/07_Heap_Lab/blob/master/Heap.h
 
 7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----

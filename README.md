@@ -70,6 +70,11 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 
   |         |Adjacency List| Adjacency Matrix|
   |---------|--------------|-----------------|
+  |Add Vertex| O(1) | O(V^2)|
+  |Add Edge| O(1) | O(1)|
+  |Remove Edge| O(E) | O(1)
+  |Get Weight| O(V) | O(1) |
+  |Space| O(V + E)|O(V^2)|
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----

@@ -60,7 +60,11 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 
   |             | HashTable | BST |
   |-------------|-----------|-----|
-  |Find|O(1)|O(logn)|
+  |Find|O(1)|O(log n)|
+  |Set|O(1)|O(log n)|
+  |Add/Remove|O(1)|O(log n)|
+  |Prev/Next|O(n)|O(log n)|
+  |Min/Max|O(n)|O(log n)|
   
 * Adjacency List vs. Adjacency Matrix
 

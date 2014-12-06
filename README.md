@@ -15,7 +15,7 @@ Body of portfolio
 
 7 - Create an implementation of a Queue using a circular array-based list
 ----
-Link to my 03_Queue_Lab: https://github.com/mccarts3/03_Queue_Lab/blob/master/ArrayQueue.ipp
+Link to my 03_Queue_Lab: https://github.com/mccarts3/03_Queue_Lab/blob/master/ArrayQueue.h
 
 7 - Create an implementation of a List
 ----
@@ -53,7 +53,6 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
-TODO: Define/describe each of the following terms, as they apply to memory management in C++
 
 * The call stack (not to be confused with the stack data structure!)
  	- The call stack, or "stack", is a portion of memory that deals with variables, parameters, and other short-lived data in the running of our program.  It is also very important in recursion, as recursion relies on the last method call's basecase to answer all the previous computations.  The stack is Last-in-First-Out, meaning the most recent data is the first to be allocated again for more use.  The stack, since it is filled as a program runs, has the posibility of being filled by a surplus of local variables and parameters, leading to a "stack overflow" and a crash.
@@ -90,4 +89,5 @@ TODO: Answer the following questions about choosing data structures. (5 points e
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 	- For grocery lists, where we add and remove elements as we acquire them throughout the store, the two most suitable data structures would be an Array List or a Linked List. I keep my grocery list on my phone, adding items I need throughout the week with no real concern for order.  As I walk through the store and get an item, I read through, find the item, and delete it from the list, leaving no "null" spots between two items.  The most important methods we would need for this grocery list are add() at the end of the list as I think of new methods, and remove().  I would choose Linked List for this grocery list task because adding a new element at the end runs in O(1) constant time.  All we do is create a new node, and make sure it points to the dummyNode and the previous one, and vice versa, which takes a constant, small number of steps, no matter how big the list gets.  If we used an ArrayList, we would run at constant time until our list gets too big for our array to hold, meaning we would have to call a separate grow() method, increasing our method to O(n) linear time, much less efficient for our task than a Linked List.  Remove() for a Linked List requires going from node to node through the list to find the item you just got, which takes O(n) constant time.  The main benefit of an Array List is a fast remove() method, but that only works if you have your list in order of the store's layout, otherwise you'll be running from one end of the store to the other to remove the first item off your list, making it significantly less efficient than a Linked List.  A Linked List also gives me the ability to have no gaps between items, because remove has the previous node to the item you want to remove point to the following item, therefore creating a nice, structured grocery list that is easily accessible and able to efficiently add items to the list and keep track of which items you already have.
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+--Hash Table? find() is constant, add() is pretty fast--
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.

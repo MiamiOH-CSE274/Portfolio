@@ -75,7 +75,7 @@ TODO: Define/describe each of the following terms, as they apply to memory manag
 
 * The call stack (not to be confused with the stack data structure!)
 ------
-The stack is a section of your computer's memory that stores statically allocated variables. Memory allocation and deallocation in the call stack is done for you by the computer. When a these variables leave the scope of the executing code all the statically allocated variables are erased and that memory is available to be used again.
+The stack is a section of your computer's memory that stores statically allocated variables. Memory allocation and deallocation in the call stack is done for you by the computer. When these variables leave the scope of the executing code all statically allocated variables are erased and that memory is available to be used again.
 	
 * The heap (not to be confused with the heap data structure!)
 -----

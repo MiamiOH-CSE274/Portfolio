@@ -27,7 +27,7 @@ TODO: Provide a link to your completed 06_BST_Lab
 
 7 - Create an implementation of a Hash Table
 ----
-TODO: Provide a link to your completed 05_Hashing_Lab
+Link to my 05_Hashing_Lab: https://github.com/mccarts3/05_Hashing_Lab/blob/master/HashTable.h
 
 7 - Create an implementation of a Heap
 ----

@@ -66,7 +66,10 @@ TODO: For each pair of data structures listed here, write a short essay comparin
   |Prev/Next|O(n)|O(log n)|
   |Min/Max|O(n)|O(log n)|
   
-* Adjacency List vs. Adjacency Matrix
+* **Adjacency List vs. Adjacency Matrix** - 
+
+  |         |Adjacency List| Adjacency Matrix|
+  |---------|--------------|-----------------|
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
@@ -76,8 +79,6 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 * **The heap** - The heap is the area where we can dynamically allocate memory. This data in C++ is initialized using the `new` keyword and then must be deleted using some variation of the `delete` keyword. There is no set order of data storage in the heap.
 * **Address** - The address of a variable is where that variable is stored in memory. The address of a variable can be obtain by using the `&` reference operator. 
 * **Pointer** - A pointer is an object that points directly to another value's memory address stored somewhere in a computer's memory.
-
-
 
 * **What is a memory leak, and why is it bad?** - A memory leak occurs space is allioted in memory but then never freed. This could potentially cause you to run out of space for memory.
 * **What is a dangling pointer (or dangling reference), and why is it dangerous?** - A dangling pointer is a pointer that references  a space in memory that is no longer being used by our program. This is dangerous because the data could be overwritten and if the pointer is used, it will point to data that we did not intend it to.

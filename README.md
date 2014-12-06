@@ -96,7 +96,7 @@ A memory leak results when memory in the heap is allocated to a variable but the
 	
 * What is a dangling pointer (or dangling reference), and why is it dangerous?
 -------
-A dangling pointer points to memory that has already been deallocated. If you use a dangling pointer without realizing it the returned data will not be what is expected.
+A dangling pointer points to memory that has already been deallocated. If you use a dangling pointer without realizing it the returned data will not be what is expected. Operations on the data returned by a dangling pointer could change important information and cause problems in other areas of your program.
 	
 * What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?
 -----

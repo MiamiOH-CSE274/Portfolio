@@ -27,6 +27,7 @@ I have created an implementation of a binary search tree in lab 6: https://githu
 
 7 - Create an implementation of a Hash Table
 ----
+(grow currently not working)
 I have created a hash table in lab 5: https://github.com/busdiekc/05_Hashing_Lab/blob/master/HashTable.h
 
 7 - Create an implementation of a Heap

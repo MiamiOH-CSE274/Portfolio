@@ -40,7 +40,7 @@ I have created an implementation of an adjacency list graph in lab 8: https://gi
 
 7 - Implement graph algorithms
 ----
-TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
+I have created a depth first graph traversal at the bottom of https://github.com/busdiekc/08_Graph_Lab/blob/master/Graph.cpp
 
 21 - Determine space and time requirements of common data structure methods
 -----

@@ -39,7 +39,14 @@ https://github.com/dazeycm/08_Graph_Lab
 
 7 - Implement graph algorithms
 ----
-TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
+Link to lab containing BFS and DFS:
+
+https://github.com/dazeycm/08_Graph_Lab/blob/master/Graph.cpp
+
+Link to actual BFS and DFS code:
+
+https://gist.github.com/dazeycm/9be0b9ece7f2f0c6e08b
+
 
 21 - Determine space and time requirements of common data structure methods
 -----

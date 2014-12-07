@@ -25,7 +25,8 @@ https://github.com/dieterc2/04_Linked_List_Lab/blob/master/LinkedList.h
 
 7 - Create an implementation of a Binary Search Tree
 ----
-TODO: Provide a link to your completed 06_BST_Lab OR ClosestStarbucks project (only if you used a search tree)
+I have created a working binary search tree data structure and my evidence is my BST.h file.
+https://github.com/dieterc2/06_BST_Lab/blob/master/BST.h
 
 7 - Create an implementation of a Hash Table
 ----
@@ -33,11 +34,13 @@ TODO: Provide a link to your completed 05_Hashing_Lab
 
 7 - Create an implementation of a Heap
 ----
-TODO: Provide a link to your completed 07_Heap_Lab OR Vise project (only if you implemented a heap for it)
+I have created a working heap data structure and my evidence is my Heap.h file.
+https://github.com/dieterc2/07_Heap_Lab/blob/master/Heap.h
 
 7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----
-TODO: Provide a link to your completed 08_Graph_Lab OR Vise project (only if you implemented a graph for it)
+I have created a working adjacecny list in my Graph.h file for a graph data structure.
+https://github.com/dieterc2/08_Graph_Lab/blob/master/Graph.cpp
 
 7 - Implement graph algorithms
 ----
@@ -66,6 +69,15 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 	key in the array, but run min and max and next and previous in 0(n) time because of the unsorted nature of the hash table. Every value must be compared with the picked key in order to ensure that the right next or previous key 
 	has been chosen. Finally, the min and max of an unsorted array can only be found by touching on every node, which is why hash tables have bad run times for these operations. 
 * Adjacency List vs. Adjacency Matrix
+	Adjacency lists and adjacency matrices differ in the way they present vertices and edges in a graph data structure. Adjacency matrices come with a more explicitly presented picture of edges and vertices using a two dimensional
+	array with rows and columns for each vertices. Initially, if no edges are present, every index in the two dimensional array is set to a default value, and as edges are added, a weighted value is set to the row of the node that 
+	the edge is coming from and the column that the edge is going to. Since adjacency matrices work with arrays, adding edges, removing them, and getting a weight of an edge all takes 0(1) time. The downfall of the adjacency matrix 
+	is the amount of space in memory it takes up, which is precisely 0(n^2) (which is ok if the number of nodes equals the number of edges). Furthermore, the get neighbors function takes 0(1) time because it has to go to the node, 
+	then check it against every other node to see if the value is a weighted edge. Adjacency lists use an array of lists to cut back on the space that a graph data structure can take. The size of an adjacency list is 0(n + m), where 
+	n is the number of nodes and m is the number of edges, which will be much smaller than the adjacency matrix. Each node or vertices is an index in the array, and a list of its neighbors occupies the list of that index. Thus, get 
+	neighbors takes 0(1) times because it is just returning an array index. Getting weight of an edge is 0(n) time because the function has to go through every value in the list to see if it is the corresponding node. Finally, adding 
+	an edge and removing an edge in the adjacency list takes 0(d) time where d is the constant degree (no node has more than d neighbors). This makes sense because these functions have to find each node and its corresponding partner 
+	of which to add or remove an edge with. Thus, adjacency matrices may have faster run times with adding and removing, but adjacency lists take up less space and return neighbors of vertices faster.
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----

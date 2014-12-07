@@ -15,11 +15,11 @@ Body of portfolio
 
 7 - Create an implementation of a Queue using a circular array-based list
 ----
-TODO: Provide a link to your completed 03_Queue_Lab
+https://github.com/laufengd/03_Queue_Lab/blob/master/ArrayQueue.h
 
 7 - Create an implementation of a List
 ----
-TODO: Provide a link to your completed 04_Linked_List_Lab OR 05_Hashing_Lab (only if you used chaining instead of open addressing)
+https://github.com/laufengd/04_Linked_List_Lab/blob/master/LinkedList.h
 
 7 - Create an implementation of a Binary Search Tree
 ----
@@ -46,6 +46,9 @@ TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
 TODO: For each pair of data structures listed here, write a short essay comparing and contrasting them in terms of their running times for different operations. (7 points each)
 
 * Array-based list vs. Linked List
+* In an Array-Based list, add() and remove() take O(n) operational time because the items in the list need to be shifted in order for more items to be added.
+Array-Based size(1), get(1) and set(1) run in 0(1) time. For Linked lists, getNode(i) takes O(1+ min{i, n-i}) time, other than that all the other
+functions run in O(1) time.
 * Binary Search Tree vs. Hash Table
 * Adjacency List vs. Adjacency Matrix
 
@@ -53,16 +56,18 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 ----
 TODO: Define/describe each of the following terms, as they apply to memory management in C++
 
-* The call stack (not to be confused with the stack data structure!)
-* The heap (not to be confused with the heap data structure!)
-* Address
-* Pointer
+* Call Stack: A Stack data structure on the computer's RAM that is used to store parameters and local variables for the subroutines of an active program.
+* heap: A data structure on the RAM used for storing dynamically allocated variables
+* Address: A location on the RAM where data is stored denoted by a number and can be referenced or pointed to.
+* Pointer: An object that points to an Address on the RAM
 
 TODO: Answer the following questions about memory management and dynamic variables
 
-* What is a memory leak, and why is it bad?
-* What is a dangling pointer (or dangling reference), and why is it dangerous?
-* What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?
+* A memory leak is when data stored on the RAM can no longer be accessed and therefore takes up unnesesary space
+* A dangling pointer is a pointer that references an address of an invalid data type and often times is the result of when data in a address is deleted or deallocated without deleting the pointer.
+These are dangerous because often times other data can fill into the address being pointed to and cause the code to break.
+* What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java? Destructors deallocate memory and delete dangling pointers.
+Java does not need destructors as much because the java compiler is very good and figuring out when something is no longer in use and getting rid of it automatically.
 
 5 - Create collection classes using templates in C++
 ----
@@ -77,5 +82,10 @@ TODO: Answer the following questions about choosing data structures. (5 points e
 
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.)
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+
+* If I were to implement a data structure for a grocery list I would probably used a Linked list. Linked lists allow for more convenient adding and removing of items in between one another which is optimal
+for when I think of things I want to add or remove at different times. In addition, if I were to use an Array-Based list, I would have to grow() the list if I added too many items, which would usually mean doubling
+the size of my list. I would not want to carry an abnormally large list around the supermarket if I wasn't going to use all of the space on it.
+
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.

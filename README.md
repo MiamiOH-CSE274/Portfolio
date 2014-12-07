@@ -102,7 +102,6 @@ A destructor is used to deallocate memory that was previously allocated. It is e
 
 5 - Create collection classes using templates in C++
 ----
-TODO: Answer the following questions about templates in C++
 
 * What is the main benefit of using templates when creating collection classes?
 -----
@@ -118,7 +117,7 @@ TODO: Answer the following questions about choosing data structures. (5 points e
 
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.)
 -----
-stuff here
+To store a set of strings I would implement a set using a hash table. The hash table would use the string as the key and the data associated with it would most likely be the number of times that the string appears. The hash table will make it easy to check if a string is already being stored by searching for the hashed key. If the string already exists in the hash table then the count of that string will be updated. If the string is not already being stored then it will be added. The main disadvantage I see with using a hash table for this problem is the space requirement. The hash table will need more memory allocated to it than other data structures such as a list or binary search tree. However, storage is relatively cheap at the moment so I believe it is worth it to sacrifice space for the speed that the using a hash table brings. 
 
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 -----
@@ -126,11 +125,11 @@ I would use a linked list to create a grocery list data structure. Using a linke
 	
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 ------
-stuff here
+To store student records I would implement a set using a binary search tree. I would use the banner numbers as the key for the nodes within the tree. Using the banner number as the key would make it very easy to search for a specific student which is what I imagine the most common action would be for this data structure.
 
-* Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+* Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue needs a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 -----
-stuff here
+I believe that using implementing a priority queue through a heap would be best suited for this task. Each customer's packets can be stored in a node of the heap and their priority would be based on how much money they have paid. Unlike the heap that we made for our lab, this heap would give the highest priority to the largest key instead of the smallest key. That means if one customer paid $10 and another paid $7, the customer that paid $10 would be a higher priority than the $7 customer. The heap works well for this problem because the only order that we care about in this data structure is who's packets are going to be sent out next. The customer who pays the most money will therefore have their packets marked with the highest priority and their packets will be at the top of the heap.
 
 * Zeitgeist Youtube Video
 ------

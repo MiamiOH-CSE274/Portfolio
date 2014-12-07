@@ -51,7 +51,9 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 In terms of running times, Array-based Lists and Linked Lists are virtually opposites.  All the things that one does in constant time, the other can do in linear time and vice versa. (With an exception for the size function which is always constant time, due to it's simplicity.)
 For example, in an Array-based List; the get, set and size methods all run in constant time, where as add and remove take linear time.
 Vice versa, in a LinkedList, the add and remove (and size) methods are constant instead.
-The difference here is due to each data structures approach to the particular methods.  A fair rule of them that I've observed, is that a method is slower if ever needs to use a loop to search through the entirity/majority of an array.
+The difference here is due to each data structures approach to the particular methods.  A fair rule for this that I've observed, is that a method is slower whenever it needs to use a loop to search through the entirity/majority of an array.
+The reasoning behind this has to do with iterators.  An iterator is like a bookmark that you can use to keep track of things in data structures, a feature with many uses.  With my basic understanding, the more times you have to move/manipulate an iterator(s), the slower your method.
+LinkedLists can place at an iterator very quickly, making their add and remove functions constant time.  However, to find data at a certain iterator to either get or set it is in linear time.  It is easy for Linked Lists to tie, untie, and insert before or after making them useful when you don't know how big the List needs to be.  The opposite is true for iterators in Array Lists.  Getting/setting the iterator at a certain index is much faster here due to the speediness of arrays in this frontier. 
 
 
 * Binary Search Tree vs. Hash Table
@@ -63,11 +65,11 @@ TODO: Define/describe each of the following terms, as they apply to memory manag
 
 * The call stack (not to be confused with the stack data structure!)
 
-The call stack is basically the list of actions (or requests) that the computer needs to handle, and the order in which it needs to handle them.  When too many requests are made, we have "stack overflow."
+The call stack is a region in memory that sort of functions as a list of actions the computer needs to perform and the order in which those actions are to be completed. Variables created in the stack are statically allocated (basic declarations of ints and stuff).  They only exist within scope of their particular methods and then are deleted immediately afterwards.  The stack is used with a FILO mentality, it is memory associated with performing processes.
 
 * The heap (not to be confused with the heap data structure!)
 
-An allocated space for a program to do it's processing in, instead of on the stack/disk.
+The heap is a section of memory associated with storing data for later. Things here are carried out when they are needed.  These variables are dynamically allocated, meaning that they have to be created on the heap with the "new" command and removed from the heap with "delete." (Although never really deleted, the space they took up is merely marked as reusable.)
 
 * Address
 
@@ -81,7 +83,7 @@ TODO: Answer the following questions about memory management and dynamic variabl
 
 * What is a memory leak, and why is it bad?
 
-Memory leak is when you allocate disk space that you don't intend to, slowing down your entire computer.
+Personally I find "leak" to be an innappropriate word to use here.  Memory leak generally happens when you forget to delete an object off the heap when you are done using it.  If you get rid of a pointer to something on the heap without deleting it, you've now lost your ability to access that spot in memory but that spot in memory is still taking up space. Enough situations like this and you can seriously muck up your computer.
 
 * What is a dangling pointer (or dangling reference), and why is it dangerous?
 

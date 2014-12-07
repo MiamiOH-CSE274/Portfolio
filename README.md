@@ -44,7 +44,6 @@ TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
 
 21 - Determine space and time requirements of common data structure methods
 -----
-TODO: For each pair of data structures listed here, write a short essay comparing and contrasting them in terms of their running times for different operations. (7 points each)
 
 * Array-based list vs. Linked List
 -----

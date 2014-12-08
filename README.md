@@ -35,7 +35,7 @@ https://github.com/XCCOOP/07_Heap_Lab/blob/master/Heap.h
 
 7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----
-TODO: Provide a link to your completed 08_Graph_Lab
+https://github.com/XCCOOP/08_Graph_Lab/blob/master/Graph.cpp
 
 7 - Implement graph algorithms
 ----

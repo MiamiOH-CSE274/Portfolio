@@ -44,7 +44,8 @@ https://github.com/dieterc2/08_Graph_Lab/blob/master/Graph.cpp
 
 7 - Implement graph algorithms
 ----
-TODO: Provide a link to your completed Vise project (only if you used graph traversal), or add a graph traversal to 08_Graph_Lab and provide a link
+I have created a depth first search graph traversal that gets all reachable nodes of a node in a graph and my evidence is in my Graph.cpp file.
+https://github.com/dieterc2/08_Graph_Lab/blob/master/Graph.cpp
 
 21 - Determine space and time requirements of common data structure methods
 -----

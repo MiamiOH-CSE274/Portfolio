@@ -15,7 +15,7 @@ Body of portfolio
 
 7 - Create an implementation of a Queue using a circular array-based list
 ----
-TODO: Provide a link to your completed 03_Queue_Lab
+https://github.com/adammast/03_Queue_Lab
 
 7 - Create an implementation of a List
 ----

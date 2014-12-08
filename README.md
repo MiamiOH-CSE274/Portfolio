@@ -23,7 +23,7 @@ https://github.com/richarkc/04_Linked_List_Lab/blob/master/LinkedList.h
 
 7 - Create an implementation of a Binary Search Tree
 ----
-TODO: Provide a link to your completed 06_BST_Lab OR ClosestStarbucks project (only if you used a search tree)
+https://github.com/richarkc/06_BST_Lab/blob/master/BST.h
 
 7 - Create an implementation of a Hash Table
 ----
@@ -31,11 +31,11 @@ https://github.com/richarkc/05_Hashing_Lab/blob/master/HashTable.h
 
 7 - Create an implementation of a Heap
 ----
-TODO: Provide a link to your completed 07_Heap_Lab
+https://github.com/richarkc/07_Heap_Lab/blob/master/Heap.h
 
 7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----
-TODO: Provide a link to your completed 08_Graph_Lab
+https://github.com/richarkc/08_Graph_Lab/blob/master/Graph.cpp
 
 7 - Implement graph algorithms
 ----

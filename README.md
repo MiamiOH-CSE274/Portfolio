@@ -119,4 +119,5 @@ The main feature that this data structure will need to incorporate is a way to q
 
 * Zeitgeist Youtube Video
 ------
-link here
+
+http://www.youtube.com/watch?v=R4XicszQk2U&feature=youtu.be

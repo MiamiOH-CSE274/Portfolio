@@ -30,7 +30,8 @@ https://github.com/dieterc2/06_BST_Lab/blob/master/BST.h
 
 7 - Create an implementation of a Hash Table
 ----
-TODO: Provide a link to your completed 05_Hashing_Lab
+I have created a working hash table and my evidence is my HashTable.h file.
+https://github.com/dieterc2/05_Hashing_Lab/blob/master/HashTable.h
 
 7 - Create an implementation of a Heap
 ----

@@ -57,6 +57,10 @@ LinkedLists can place at an iterator very quickly, making their add and remove f
 
 
 * Binary Search Tree vs. Hash Table
+
+When one is deciding to use either a HashTable or Binary Search Tree (BST) it's probably a good idea to consider which functions you will be performing the most often.  Provided that the key has been hashed, a HashTable can add, remove, and set in constant time.  The disadvantage being that a HashTable can only find the min, max, next, and prev of (lets say a dictionary class) in linear time O(n) (since they'd have to loop through the entire backing array).  Meanwhile, BST's have a relatively consistent running time across all these functions of O(lg n) because of the binary nature of the tree.  What I mean by binary nature is that whenever you're searching for a certain node, and you move from one node to the next down the tree, you eliminate half of the remaining options.  It's worth noting that add and remove in a BST dictionary can be written in O(h) time where h is the height.
+
+
 * Adjacency List vs. Adjacency Matrix
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
@@ -98,9 +102,7 @@ Java is intelligent, and basically...knows when to delete the information it no 
 TODO: Answer the following questions about templates in C++
 
 
-- What is the main benefit of using templates when creating collection classes?
-
-- In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
+???????????????????????????????????????
 
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application

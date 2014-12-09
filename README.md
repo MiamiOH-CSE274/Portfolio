@@ -83,6 +83,13 @@ Dangling pointers are those which point to invalid data or data which is no long
 * What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?
 Destructors delete unneeded memory to prevent memory leakage. In Java, developers need not worry about this, as the built-in garbage collector cleans up the program for the user.
 
+5 - Create collection classes using templates in C++
+----
+TODO: Answer the following questions about templates in C++
+
+What is the main benefit of using templates when creating collection classes?
+In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
+
 20 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
 TODO: Answer the following questions about choosing data structures. (5 points each)

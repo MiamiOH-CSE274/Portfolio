@@ -98,7 +98,9 @@ Java is intelligent, and basically...knows when to delete the information it no 
 TODO: Answer the following questions about templates in C++
 
 
-???????????????????????????????????????
+> What is the main benefit of using templates when creating collection classes?
+
+> In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
 
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application

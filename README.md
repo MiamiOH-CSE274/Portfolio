@@ -126,3 +126,6 @@ The concept of banner numbers seems like a perfect reason to use a hash table.  
 
 
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+
+
+In my opinion the best way to approach a situation like this one would be to implement an implicit binary tree as a Heap structure.  Heaps are uniquely fit for this scenario because no other structure can prioritize it's contents with the same amount of efficiency.  I could add things into the tree and bubble them up to their proper priority within the heap. Company X would get a key value of 1, Y would get 2 and so on where X,Y,Z,etc. can change based on their priority (aka how much they pay me).

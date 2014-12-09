@@ -51,15 +51,18 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 
 An Arraylist is generally faster for most uses. Arraylists support random access and keep track of each spot in the array. This allows for very fast manipulation of already present data. For adding and removing data, arraylists are much slower, due to having to recreate the arraylist if the array is nearing capacity, or having to shift elements over when removing. Linked lists are very slow when accessing or removing already present data, due to having to iterate over the entire linked list. On the other hand add is very fast as linked lists never have to be resized and use pointer manipulation to add data anywhere in the list. Linked lists become much better with the use of iterators as get, set, add, and remove all become O(1) by providing direct access to a node through an iterator. When adding and removing at the front or back, both arraylists and linked lists are constant time. 
 
-                      Arraylist | Linkedlist
-             add         O(n)         O(1)
-|remove                     O(n)         O(n)
-get                        O(1)         O(n)
-get(at an iterator)        O(1)         O(1)
-set                        O(1)         O(n)  
-set(at an iterator)        O(1)         O(1)  
-add/remove (front/back)    O(1)         O(1)
-remove(at an iterator)     O(n)         O(1)      
+* means at an iterator.
+f/b means at front or back
+
+                   Arraylist | Linkedlist
+          add         O(n)         O(1)
+        remove        O(n)         O(n)
+          get         O(1)         O(n)
+        get(*)        O(1)         O(1)
+          set         O(1)         O(n)  
+        set(*)        O(1)         O(1)  
+    add/remove(f/b)   O(1)         O(1)
+     remove(*)        O(n)         O(1)      
 
 
 * Binary Search Tree vs. Hash Table

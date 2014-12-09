@@ -15,7 +15,7 @@ Body of portfolio
 
 7 - Create an implementation of a Queue using a circular array-based list
 ----
-The link below proves that I can implement a C++ Queue Data Structure
+The link below proves that I can implement a C++ Queue Data Structure that utilizes a circular-array.
 https://github.com/GrasysER/03_Queue_Lab/blob/master/ArrayQueue.h
 
 7 - Create an implementation of a List
@@ -49,13 +49,18 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 
 * Array-based list vs. Linked List
 
-Array-based lists must rearrange the list whenever add and remove is used, so add/remove are both 0(n) while with a linked list, you only need to adjust pointers, which results in 0(1), or constant time add and remove.
-Get, set, and size are all constant time in an array-based list as variables keep track of, and alter data members using the following methods. In a linked list, get and set are 0(n) due to the need for searching through the entire list, while size is 0(1) due to a variable that keeps track of the size. 
+An Arraylist is generally faster for most uses. Arraylists support random access and keep track of each spot in the array. This allows for very fast manipulation of already present data. For adding and removing data, arraylists are much slower, due to having to recreate the arraylist if the array is nearing capacity, or having to shift elements over when removing. Linked lists are very slow when accessing or removing already present data, due to having to iterate over the entire linked list. On the other hand add is very fast as linked lists never have to be resized and use pointer manipulation to add data anywhere in the list. Linked lists become much better with the use of iterators as get, set, add, and remove all become O(1) by providing direct access to a node through an iterator. When adding and removing at the front or back, both arraylists and linked lists are constant time. 
 
-Add table comparing methods of both. Then in essay write why for easier readability. Iterators very important, talk about them, instead of add in the table, could be add at an iterator, get would would be get an iterator for an index then talk about them in terms of iterators. Iterator is like an index, keeps track of where you are on a list.
+                        Arraylist | Linkedlist
+add                        O(n)         O(1)
+remove                     O(n)         O(n)
+get                        O(1)         O(n)
+get(at an iterator)        O(1)         O(1)
+set                        O(1)         O(n)  
+set(at an iterator)        O(1)         O(1)  
+add/remove (front/back)    O(1)         O(1)
+remove(at an iterator)     O(n)         O(1)      
 
-ArrayList add 0(n) get/set 0(1) get at an iterator 0(1) remove 0(n) get iterator at front/back 0(1) add/rem f/b 0(1)
-LinkedList add 0(1) get 0(n) set 0(1) get at an iterator 0(1) remove 0(1) get iterator at front/back 0(1) add/rem f/b 0(1)
 
 * Binary Search Tree vs. Hash Table
 * Adjacency List vs. Adjacency Matrix

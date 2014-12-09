@@ -51,7 +51,7 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 
 An Arraylist is generally faster for most uses. Arraylists support random access and keep track of each spot in the array. This allows for very fast manipulation of already present data. For adding and removing data, arraylists are much slower, due to having to recreate the arraylist if the array is nearing capacity, or having to shift elements over when removing. Linked lists are very slow when accessing or removing already present data, due to having to iterate over the entire linked list. On the other hand add is very fast as linked lists never have to be resized and use pointer manipulation to add data anywhere in the list. Linked lists become much better with the use of iterators as get, set, add, and remove all become O(1) by providing direct access to a node through an iterator. When adding and removing at the front or back, both arraylists and linked lists are constant time. 
 
-* means at an iterator.
+star means at an iterator.
 f/b means at front or back
 
                         Arraylist | Linkedlist
@@ -66,6 +66,19 @@ f/b means at front or back
 
 
 * Binary Search Tree vs. Hash Table
+
+Both the binary search tree (BST) and the hash table are examples of dictionary data types that store (key, value) pairs. Through hash values, hash tables run in constant time for add/remove and get/set. Provided that a BST is balanced, run times are O(log n) for most operations, with run times degrading to O(n) if the BST is unbalanced. Hash tables suffer in the min/max and next/prev operations due to the hash table having no real structure to it, resulting in O(n) for those operations. A binary search trees nodes store the nodes children, which allows for min/max/next/prev to all run in O(log n) time.
+
+                        Arraylist | Linkedlist
+         add               O(1)         O(lg n)
+         remove            O(1)         O(lg n)
+         get               O(1)         O(lg n)
+         get(*)            O(1)         O(lg n)
+         set               O(1)         O(lg n)  
+         set(*)            O(1)         O(lg n)  
+         min/max           O(n)         O(lg n)    
+         next/prev         O(n)         O(lg n)  
+
 * Adjacency List vs. Adjacency Matrix
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors

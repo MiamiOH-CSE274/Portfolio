@@ -69,6 +69,7 @@ f/b means at front or back
 
 Both the binary search tree (BST) and the hash table are examples of dictionary data types that store (key, value) pairs. Through hash values, hash tables run in constant time for add/remove and get/set. Provided that a BST is balanced, run times are O(log n) for most operations, with run times degrading to O(n) if the BST is unbalanced. Hash tables suffer in the min/max and next/prev operations due to the hash table having no real structure to it, resulting in O(n) for those operations. A binary search trees nodes store the nodes children, which allows for min/max/next/prev to all run in O(log n) time.
 
+
                         Arraylist | Linkedlist
          add               O(1)         O(lg n)
          remove            O(1)         O(lg n)

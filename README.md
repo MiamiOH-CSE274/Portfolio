@@ -13,13 +13,33 @@ If you prefer, you may turn this in to me via email, instead of hosting it on Gi
 Body of portfolio
 ====
 
-7 - Create an implementation of a Queue
+7 - Create an implementation of a Queue using a circular array-based list
 ----
-https://github.com/samsab/03_Queue_Lab
+https://github.com/samsab/03_Queue_Lab/blob/master/ArrayQueue.ipp
 
 7 - Create an implementation of a List
 ----
-https://github.com/samsab/04_Linked_List_Lab
+https://github.com/samsab/04_Linked_List_Lab/blob/master/LinkedList.h
+
+7 - Create an implementation of a Binary Search Tree
+
+https://github.com/samsab/06_BST_Lab/blob/master/BST.h
+
+7 - Create an implementation of a Hash Table
+
+https://github.com/samsab/05_Hashing_Lab/blob/master/HashTable.h
+
+7 - Create an implementation of a Heap
+
+https://github.com/samsab/07_Heap_Lab/blob/master/Heap.h
+
+7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
+
+https://github.com/samsab/08_Graph_Lab/blob/master/Graph.cpp
+
+7 - Implement graph algorithms
+
+https://github.com/samsab/08_Graph_Lab/blob/master/Graph.cpp
 
 7 - Determine space and time requirements of common data structure methods
 -----

@@ -54,15 +54,15 @@ An Arraylist is generally faster for most uses. Arraylists support random access
 * means at an iterator.
 f/b means at front or back
 
-                   Arraylist | Linkedlist
-          add         O(n)         O(1)
-        remove        O(n)         O(n)
-     add/rem(f/b)     O(1)         O(1)
-          get         O(1)         O(n)
-        get(*)        O(1)         O(1)
-          set         O(1)         O(n)  
-        set(*)        O(1)         O(1)  
-     remove(*)        O(n)         O(1)      
+                        Arraylist | Linkedlist
+         add               O(n)         O(1)
+         remove            O(n)         O(n)
+         get               O(1)         O(n)
+         get(*)            O(1)         O(1)
+         set               O(1)         O(n)  
+         set(*)            O(1)         O(1)  
+         remove(*)         O(n)         O(1)    
+         add/rem(f/b)      O(1)         O(1)  
 
 
 * Binary Search Tree vs. Hash Table

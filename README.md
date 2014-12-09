@@ -78,7 +78,9 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 TODO: Answer the following questions about templates in C++
 
 * What is the main benefit of using templates when creating collection classes?
+	- In C++, templates are helpful in handling variables whose type isn't known until the running of the code.  The compiler creates a version of the function with the correct variable type in place of the template variable when called.  Template classes allow the code to be more flexible when the variable is unknown, or when the collection class needs to be able to handle several different variable types for a single function.  Having a single template collection class is much more efficient than rewriting the same operations for functions where only the parameter variable is changed.
 * In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
+	- Unlike normal C++ code, the implementation of a template-based collection class must be in the .h header file instead of a .cpp file.  When a template class is called with a given parameter for T, a new class is created with that given parameter and compiled.  All operations involving the template must be defined in the template collection class so the compiler can have access to them.  This requires both the declaration and implementation of a template collection class to be within the .h header file.  The .cpp file creates an instance of the template collection class with a specific variable type in place of the template, with the .h file having the implementation and operations to do with that variable type.
 
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application

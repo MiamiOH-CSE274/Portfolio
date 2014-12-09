@@ -35,7 +35,7 @@ Link to my 07_Heap_Lab: https://github.com/mccarts3/07_Heap_Lab/blob/master/Heap
 
 7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----
-TODO: Provide a link to your completed 08_Graph_Lab
+Link to my Graph repo: https://github.com/mccarts3/Graph_Lab
 
 7 - Implement graph algorithms
 ----

@@ -19,7 +19,7 @@ https://github.com/adammast/03_Queue_Lab
 
 7 - Create an implementation of a List
 ----
-TODO: Provide a link to your completed 04_Linked_List_Lab OR 05_Hashing_Lab (only if you used chaining instead of open addressing)
+https://github.com/adammast/04_Linked_List_Lab
 
 7 - Create an implementation of a Binary Search Tree
 ----

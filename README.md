@@ -80,6 +80,7 @@ Both the binary search tree (BST) and the hash table are examples of dictionary 
          min/max           O(n)         O(lg n)    
          next/prev         O(n)         O(lg n)  
 
+
 * Adjacency List vs. Adjacency Matrix
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors

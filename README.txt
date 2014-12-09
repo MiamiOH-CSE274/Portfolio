@@ -63,6 +63,7 @@ f/b means at front or back
         set(*)        O(1)         O(1)  
      remove(*)        O(n)         O(1)  
     add/rem(f/b)      O(1)         O(1)
+
     
 
 * Binary Search Tree vs. Hash Table

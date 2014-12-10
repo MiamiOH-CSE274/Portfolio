@@ -61,8 +61,8 @@ size()  	| O(1) | O(1)|
 get/set		| O(n) | O(1)                                                                               
 add		| O(n) | O(n)
 remove		| O(n) | O(n)
-add & remove at	| O(1) | O(1)
-front or back	
+add & remove at front or back		| O(1) | O(1)
+
 
 
 * Binary Search Tree vs. Hash Table<br>
@@ -77,8 +77,9 @@ That being said, hash tables are much faster than binary search trees in almost 
 An adjacency matrix is a 2D array with the dimensions of A x A. A graph is most helpful when trying to visualize a adjacency matrix.
  A 1 means there is an edge connecting the node (or vertex) in the column to the node in the row. 
    
-  0 1 2 3  
+ | 0 | 1 | 2 | 3 | 
 
+|---|---|---|---|---|
 0| 0 0 1 0 
 
 1| 0 1 0 1

@@ -151,7 +151,7 @@ Answer the following questions about templates in C++
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
-TODO: Answer the following questions about choosing data structures. (5 points each)
+Answer the following questions about choosing data structures. (5 points each)
 
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be 
   most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove

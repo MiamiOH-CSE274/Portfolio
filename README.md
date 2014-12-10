@@ -13,6 +13,11 @@ If you prefer, you may turn this in to me via email, instead of hosting it on Gi
 Body of portfolio
 ====
 
+Unless Otherwise specified, all answers given were based off of notes from Dr. Brinkman's lectures, notes the course text: http://opendatastructures.org/, or from my own
+knowledge from completing the course labs.
+
+
+
 7 - Create an implementation of a Queue
 ----
 https://github.com/laufengd/03_Queue_Lab/blob/master/ArrayQueue.h
@@ -59,12 +64,12 @@ Another way to describe this would be searching for a blue item amongst many ite
 Although statistically unlikely to occur, the worse case runtimes of a hash table for these functions is O(n). The average runtimes of binary search trees for find(), add(), and remove() are O(log n).
 This is because each level of the tree has twice as many nodes as the previous, so the 4th level has 2^(4) times more nodes than the root(The level being defined how many connectors there are between the root and the last ancestor).
 When searching for node in a binary search tree, the function only needs to traverse one level at a time to find the node its looking for, thus the runtime is proportional to log n (with base 2).
-In the worst case scenario these functions will run in o(n) time, which when there is an unbalanced tree. One instance in which this could occur when every item added is greater than the last.
+In the worst case scenario these functions will run in o(n) time, which when there is an unbalanced tree. One instance in which this could occur is when every item added is greater than the last.
 
 
-* Adjacency List vs. Adjacency Matrix
+* Adjacency List vs. Adjacency Matrix (Answer paraphrased from http://www.brpreiss.com/books/opus5/html/page547.html)
 
-In an adjacency list, finding all edges printing them take minimum of O(n) operational time a maximum of O(n+e), where e is the number of edges. 
+In an adjacency list, finding all edges printing them takes a minimum of O(n) operational time and a maximum of O(n+e), where e is the number of edges. 
 This is because you must cycle through all the nodes and when encountering a new edge, print it out. If you find an edge between 1 and 2 in node1's edgelist, 
 the same edge exists in node2's edgelist. It is important to make sure you do not print that node twice when examining node2. For an adjacency matrix, finding 
 all edges takes O(n^2) time because there is a X vertex containing n nodes and a Y vertex containing n nodes. Together, these make n^2 vertices. To find all edges,
@@ -92,14 +97,14 @@ Java does not need destructors as much because the java compiler is very profici
 
 5 - Create collection classes using templates in C++
 ----
-(Answers found on a Microsoft Developer Network Page:  http://msdn.microsoft.com/en-us/library/z3f89ch8.aspx)
+(Answer paraphrased from a Microsoft Developer Network Page:  http://msdn.microsoft.com/en-us/library/z3f89ch8.aspx)
 The main benefit of using Template collection classes is that it is an efficient way of abstracting functions and variables with flexibility on what data type is used as parameters.
 When someone instantiates a template-class in another file, the compiler will create separate versions of the function for the data-type specified by the user when instantiated.(See example below)
 This is especially helpful for implementing data structures because it is not always certain what type of data is being stored. For example, in our arrayQueue, lab if we were
 to implement the functions in the class to take parameter with data-type int instead of data-type T, we would only be allowed to have create arrayQueue that store integers. We would not be able to store 
 doubles, floats, longs, or any other data-type you can think of.
 
-(Answer found on stack overflow: http://stackoverflow.com/questions/495021/why-can-templates-only-be-implemented-in-the-header-file)
+(Answer paraphrased from a stack overflow comment: http://stackoverflow.com/questions/495021/why-can-templates-only-be-implemented-in-the-header-file)
 When instantiating a template, the compiler creates a new class with the given template argument. For example if a template class foo uses a template <typename T>,
 and somewhere in a .cpp file foo<int> is instantiated, then a new class is created and every T parameter used in the template class will be compiled as an integer in the new class.
 As a result, the compiler needs all functions to be defined in order to create this new foo<int> class; if these function definitions were not in the header then the compiler could not
@@ -154,18 +159,14 @@ which would make the array a very inefficient idea. Another possible data struct
 
 
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
-
-For a network router where certain packets have priority over others I would implement an implicit binary tree as a Heap.
- 
  
 For a network router where certain packets have priority over others I would implement an implicit binary tree as a Heap. While(index > 0 && backingArray[index] < backingArray[p]), 
 the key of a packet will continue to bubbleUp. This means that packets of the same key will not bubbleUp past one another, thus allowing multiple packets of the same key to
  be parents and children of one another. The end result is that all the highest keys are at the top, and ensuring that a packet with a greater key will be sent before one with a lesser key. 
  When company X adds a packet to send, I would give it a key value of how ever much they paid and when company Y added a packet to send I would give it a key of their payment 
- value and so on. This data-structure is preferable to all other data structures this semester. No other data structures offer the same efficiency with
- prioritizing by greatest to least or least to greatest. A simple list as an array might work but its bubbleUp() and trickle down would run in O(n) instead of O(log n) like my tree. 
+ value and so on. This data-structure is preferable to all other data structures this semester. A simple list as an array might work but its bubbleUp() and trickleDown() would run in O(n) instead of O(log n) like my tree. 
  A normal bst would not work at all because all smaller items are meant to be to the left and all larger items to the right; when popping off the root it would send some
- value in between which is something we do not want. No other function manages ordering keys from greatest to least or least to greatest with the same efficiency.
+ value in between which is something we do not want. No other data-structure can ordering keys from greatest to least or least to greatest with the same efficiency.
 
 
 

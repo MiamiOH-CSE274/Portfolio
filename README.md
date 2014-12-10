@@ -67,7 +67,7 @@ On average hash tables have O(1) running time for searching, inserting and delet
 | Set        | O(1)      | O(log n)           |
 | Add/Remove | O(1)      | O(log n)           |
 | Prev/Next  | O(n)      | O(log n)           |
-| Min/Max    | O(n)      | O(V^2)             |
+| Min/Max    | O(n)      | O(log n)           |
 
 
 * Adjacency List vs. Adjacency Matrix

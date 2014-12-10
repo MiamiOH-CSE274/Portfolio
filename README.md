@@ -49,7 +49,7 @@ TODO: TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a lin
 -----
 TODO: For each pair of data structures listed here, write a short essay comparing and contrasting them in terms of their running times for different operations. (7 points each)
 
-* Array-based list vs. Linked List
+* Array-based list vs. Linked List<br>
 There are pros and cons to using Array Lists or Linked Lists. LinkedList is wonderful if you have a lot of items you need to add, and need to put those in a particular
 order. The add and remove methods in a Linked List are constant time, much better than ArrayList's linear time. ArrayList, however, has the advantage in the get and set
 methods, running with constant time, instead of Linked list's linear time. Getting and setting at an iterator is constant time for both data structures. An iterator keeps 
@@ -63,7 +63,7 @@ add & remove at	|   O(1)     |  O(1)
 front or back	
 
 
-* Binary Search Tree vs. Hash Table
+* Binary Search Tree vs. Hash Table<br>
  A binary search tree is a great data structure to store ordered lists, or information that needs to be inserted in a certain placed, or has to be retrieved by a given key. 
 A hash table is made up of an array and a hash function, which is designed to assign data to spots in the array. A hash table is great
  for large amount of unsorted information. Unlike the binary tree which only creates as much space in the RAM as it requires as elements
@@ -71,7 +71,7 @@ A hash table is made up of an array and a hash function, which is designed to as
 Binary search trees are also better if the contents of the tree need to be printed, because there are no empty nodes, and everything is in ascending order. Printing contents from a hash table takes more time, because every "bucket" in the array has to be checked to see if it's empty. That's why an area where a binary search tree is faster than the hash table is finding the minimum and maximum value in a set. Because the hash table is unsorted, without a key, it has to go through every bucket, comparing the value in the bucket to a variable of the lowest/highest value so far. A binary search tree's minimum value is the node at the farthest left point in the tree, and the maximum value is the farthest right. 
 That being said, hash tables are much faster than binary search trees in almost everything else. It is constant time (O(1)) in find, add, delete, get, and set, while a balanced tree is on average O(log n). To pick which data structure is best depends on what kind of things the user has to do with it. For example, if there is a lot of searching (like a dictionary) a binary search tree would be better, but if there is a lot of data containing even more data, like a table containing gamer tags, holding high scores, achievements earned, and other player information, then a hash table would be better. 
 
-* Adjacency List vs. Adjacency Matrix
+* Adjacency List vs. Adjacency Matrix<br>
 An adjacency matrix is a 2D array with the dimensions of A x A. A graph is most helpful when trying to visualize a adjacency matrix.
  A 1 means there is an edge connecting the node (or vertex) in the column to the node in the row. 
    
@@ -86,7 +86,6 @@ An adjacency matrix is a 2D array with the dimensions of A x A. A graph is most 
 3| 0 1 1 0 
 
 
-<img src="m/ss1.png" alt="ss1" <br>
 In this example there would be edges connecting vertex 2 to vertex 0. To find out if there is an edge (In code, in the table)
  we would use arr[2][0] to see if it returned a 1 or a 0 (in our example it returns a 1). 
 An adjacency list is an array of linked lists.

@@ -70,13 +70,13 @@ In the worst case scenario these functions will run in o(n) time, which when the
 * Adjacency List vs. Adjacency Matrix (Answer paraphrased from http://www.brpreiss.com/books/opus5/html/page547.html)
 
 In an adjacency list, finding all edges printing them takes a minimum of O(n) operational time and a maximum of O(n+e), where e is the number of edges. 
-This is because you must cycle through all the nodes and when encountering a new edge, print it out. If you find an edge between 1 and 2 in node1's edgelist, 
+This is because you must cycle through all the nodes and, when encountering a new edge, print it out. If you find an edge between 1 and 2 in node1's edgelist, 
 the same edge exists in node2's edgelist. It is important to make sure you do not print that node twice when examining node2. For an adjacency matrix, finding 
 all edges takes O(n^2) time because there is a X vertex containing n nodes and a Y vertex containing n nodes. Together, these make n^2 vertices. To find all edges,
-each vertices must be examined. In an adjacency list, finding whether an edge exists between node1 and node2 has a worst-case running time of O(n) or O(n-1). In an adjacency list,
-all nodes have a list of edges containing keys of other nodes with whom they have edges with. As a result, finding an edge has a worst case running time of O(n) or O(n-1) depending on
-whether or not you allow a node to have an edge with itself. In an adjacency matrix, seeing whether or not node1 and node2 have an edge runs in O(1) time because it 
-is just a matter of whether or not that spot in the matrix has a value of true.
+all vertices must be examined. In an adjacency list, finding whether an edge exists between node1 and node2 has a worst-case running time of O(n) or O(n-1). For adjacency lists,
+all nodes have a list containing keys of other nodes with whom they have edges with. As a result, finding an edge has a worst case running time of O(n) or O(n-1) because 
+it is possible for a node to have an edge with every other node, and whether or not you allow it, it could have an edge with itself. In an adjacency matrix, seeing whether or not
+node1 and node2 have an edge runs in O(1) time because it is just a matter of whether or not that spot in the matrix has a value of true.
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----

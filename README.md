@@ -64,6 +64,15 @@ In the worst case scenario these functions will run in o(n) time, which when the
 
 * Adjacency List vs. Adjacency Matrix
 
+In an adjacency list, finding all edges printing them take minimum of O(n) operational time a maximum of O(n+e), where e is the number of edges. 
+This is because you must cycle through all the nodes and when encountering a new edge, print it out. If you find an edge between 1 and 2 in node1's edgelist, 
+the same edge exists in node2's edgelist. It is important to make sure you do not print that node twice when examining node2. For an adjacency matrix, finding 
+all edges takes O(n^2) time because there is a X vertex containing n nodes and a Y vertex containing n nodes. Together, these make n^2 vertices. To find all edges,
+each vertices must be examined. In an adjacency list, finding whether an edge exists between node1 and node2 has a worst-case running time of O(n) or O(n-1). In an adjacency list,
+all nodes have a list of edges containing keys of other nodes with whom they have edges with. As a result, finding an edge has a worst case running time of O(n) or O(n-1) depending on
+whether or not you allow a node to have an edge with itself. In an adjacency matrix, seeing whether or not node1 and node2 have an edge runs in O(1) time because it 
+is just a matter of whether or not that spot in the matrix has a value of true.
+
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
 TODO: Define/describe each of the following terms, as they apply to memory management in C++
@@ -130,7 +139,7 @@ the size of my list. I would not want to carry an abnormally large list around t
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 
 Once again, I would use a hash function for this data structure because after passing the banner number through a hash function, adding, removing, and finding the records would run in constant time. 
-One of the flaws of a hash table is that you cannot add identical items, however no banner is the same which eliminates that issue. If each banner number were in some sort of numerical order, 
+One of the flaws of a hash table is that you cannot add identical items, however, since no banner number is the same that issue is eliminated. If each banner number were in some sort of numerical order, 
 you could store the nodes in an array with the banner number being the index and you could find records in constant time as well. However, my guess is that banner numbers are randomly generated 
 which would make the array a very inefficient idea. Another possible data structure would be a bst, however, the performances of the add, remove, and find functions would not be as fast as a hash table.
 
@@ -141,10 +150,14 @@ which would make the array a very inefficient idea. Another possible data struct
 For a network router where certain packets have priority over others I would implement an implicit binary tree as a Heap.
  
  
- This works because in an implicit binary allows for multiple keys of the same value to be descendents and parents of one another.
- When company X adds a packet to send, I would give it a key value of  and when company Y added a packet to send I would give it a key value of 2 and so on.
- My bubble up function would result in all the 1 keys being at the top of the tree, all the 2 keys being below 1’s, and 3’s below 2’s etc.
- This is preferable to all other data structures this semester. No other data structures offer the same efficiency with prioritizing by greatest to least or least to greatest.
+For a network router where certain packets have priority over others I would implement an implicit binary tree as a Heap. While(index > 0 && backingArray[index] < backingArray[p]), 
+the key of a packet will continue to bubbleUp. This means that packets of the same key will not bubbleUp past one another, thus allowing multiple packets of the same key to
+ be parents and children of one another. The end result is that all the highest keys are at the top, and ensuring that a packet with a greater key will be sent before one with a lesser key. 
+ When company X adds a packet to send, I would give it a key value of how ever much they paid and when company Y added a packet to send I would give it a key of their payment 
+ value and so on. This data-structure is preferable to all other data structures this semester. No other data structures offer the same efficiency with
+ prioritizing by greatest to least or least to greatest. A simple list as an array might work but its bubbleUp() and trickle down would run in O(n) instead of O(log n) like my tree. 
+ A normal bst would not work at all because all smaller items are meant to be to the left and all larger items to the right; when popping off the root it would send some
+ value in between which is something we do not want. No other function manages ordering keys from greatest to least or least to greatest with the same efficiency.
 
 
 

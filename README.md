@@ -24,23 +24,26 @@ https://github.com/eaglesonA/04_Linked_List_Lab/blob/master/LinkedList.h
 
 7 - Create an implementation of a Binary Search Tree
 ----
-TODO: Provide a link to your completed 06_BST_Lab OR ClosestStarbucks project (only if you used a search tree)
+The link to the Binary Search Tree Lab:
+https://github.com/eaglesonA/06_BST_Lab/blob/master/BST.h
 
 7 - Create an implementation of a Hash Table
 ----
-TODO: Provide a link to your completed 05_Hashing_Lab
+https://github.com/eaglesonA/05_Hashing_Lab/blob/master/HashTable.h
 
 7 - Create an implementation of a Heap
 ----
-TODO: Provide a link to your completed 07_Heap_Lab OR Vise project (only if you implemented a heap for it)
+A heap was implemented in our 07_Heap_Lab:
+https://github.com/eaglesonA/07_Heap_Lab/blob/master/Heap.h
 
 7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----
-TODO: Provide a link to your completed 08_Graph_Lab OR Vise project (only if you implemented a graph for it)
+An adjacency list is implemented in: https://github.com/eaglesonA/08_Graph_Lab/blob/master/Graph.cpp
 
 7 - Implement graph algorithms
 ----
-TODO: Provide a link to your completed Vise project (only if you used graph traversal), or add a graph traversal to 08_Graph_Lab and provide a link
+TODO: TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
+
 
 21 - Determine space and time requirements of common data structure methods
 -----
@@ -49,10 +52,66 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 * Array-based list vs. Linked List
 There are pros and cons to using Array Lists or Linked Lists. LinkedList is wonderful if you have a lot of items you need to add, and need to put those in a particular
 order. The add and remove methods in a Linked List are constant time, much better than ArrayList's linear time. ArrayList, however, has the advantage in the get and set
-methods, running with constant time, instead of Linked list's linear time. 
+methods, running with constant time, instead of Linked list's linear time. Getting and setting at an iterator is constant time for both data structures. An iterator keeps 
+track of where you are in a data structure. So, getting, setting, and adding are constant time (except in ArrayList when adding at an iterator is still ilnear). 
+		 Linked List |  Array List
+size()  	|   O(1)     |	O(1)
+get/set		|   O(n)     |  O(1)                                                                                 
+add		|   O(n)     |	O(?)
+remove		|   O(n)     |  O(?)
+add & remove at	|   O(1)     |  O(1)
+front or back	
+
 
 * Binary Search Tree vs. Hash Table
+ A binary search tree is a great data structure to store ordered lists, or information that needs to be inserted in a certain placed, or has to be retrieved by a given key. 
+A hash table is made up of an array and a hash function, which is designed to assign data to spots in the array. A hash table is great
+ for large amount of unsorted information. Unlike the binary tree which only creates as much space in the RAM as it requires as elements
+ are added, the hash table takes up more memory space than elements added to it since adding to the table is more efficient than growing the table then adding to it. So, if wasted space is important and and the list is small it would be better to use a binary search tree. 
+Binary search trees are also better if the contents of the tree need to be printed, because there are no empty nodes, and everything is in ascending order. Printing contents from a hash table takes more time, because every "bucket" in the array has to be checked to see if it's empty. That's why an area where a binary search tree is faster than the hash table is finding the minimum and maximum value in a set. Because the hash table is unsorted, without a key, it has to go through every bucket, comparing the value in the bucket to a variable of the lowest/highest value so far. A binary search tree's minimum value is the node at the farthest left point in the tree, and the maximum value is the farthest right. 
+That being said, hash tables are much faster than binary search trees in almost everything else. It is constant time (O(1)) in find, add, delete, get, and set, while a balanced tree is on average O(log n). To pick which data structure is best depends on what kind of things the user has to do with it. For example, if there is a lot of searching (like a dictionary) a binary search tree would be better, but if there is a lot of data containing even more data, like a table containing gamer tags, holding high scores, achievements earned, and other player information, then a hash table would be better. 
+
 * Adjacency List vs. Adjacency Matrix
+An adjacency matrix is a 2D array with the dimensions of A x A. A graph is most helpful when trying to visualize a adjacency matrix.
+ A 1 means there is an edge connecting the node (or vertex) in the column to the node in the row. 
+   
+   0 1 2 3  
+
+0| 0 0 1 0 
+
+1| 0 1 0 1
+
+2| 1 0 0 1
+
+3| 0 1 1 0 
+
+
+<img src="m/ss1.png" alt="ss1" <br>
+In this example there would be edges connecting vertex 2 to vertex 0. To find out if there is an edge (In code, in the table)
+ we would use arr[2][0] to see if it returned a 1 or a 0 (in our example it returns a 1). 
+An adjacency list is an array of linked lists.
+ The number of vertices is the size of the array. The nodes in the linked list hold what vertices the ith vertex points to. Still using 
+the example above, if we put it into an adjacency list we would get:
+
+[0]-> 2
+
+[1]-> 1 -> 3
+
+[2]-> 0 -> 3
+
+[3]-> 1 -> 2
+
+
+An adjacency matrix takes up more space than an adjacency list, but it is much easier to search for a 
+particular edge if you know the vertices. The reason to search for an edge would be to get its weight, and it would require an adjacency 
+list to run check each node to see if it matched the vertices needed (O(n) running time). In general people tend to use adjacency lists 
+because they don't use as much memory, and they tend to be faster. The adjacency list is constant time to add a vertex or an edge.The 
+matrix runs 0(1) when its adding or removing an edge. It runs poorly when adding or removing a vertex (it's the number of vertices squared,
+ so O(v^2). Removing anything is not very efficient, but not terrible in the adjacency list, with removing a vertex being O of the number 
+of vertices and edges (O(v+e)), and removing an edge being O(e).
+In conclusion, the adjacency matrix is amazing at searching, and adding 
+or removing an edge, but is terrible when dealing with vertices. And the adjacency list is amazing at adding a vertex or an edge, but is
+ just alright at searching, and removing a vertex or an edge.
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
@@ -88,7 +147,8 @@ C++ does not have this luxury, so it is done by hand.
 5 - Create collection classes using templates in C++
 ----
 TODO: Answer the following questions about templates in C++
-
+What is the main benefit of using templates when creating collection classes?
+In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application
 ----

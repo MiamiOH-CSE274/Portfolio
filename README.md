@@ -180,8 +180,6 @@ meaning that any data that isnt being used any more will eventually be freed by 
 
 5 - Create collection classes using templates in C++
 ----
-TODO: Answer the following questions about templates in C++
-
 
 * What is the main benefit of using templates when creating collection classes?
 
@@ -205,7 +203,6 @@ know where to find them when new code needs to be generated, then the entire fil
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
-TODO: Answer the following questions about choosing data structures. (5 points each)
 
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.)
 
@@ -231,6 +228,29 @@ again in O(1) time.  Being able to easily remove an item would also be very help
 
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 
-
+To store every students' records, searchable by their banner number, I would use a hashtable with there banner number as the key, and a custom `StudentRecord` class as the value
+associated with each key.  I believe this is the best solution to this problem because the most important function of a data structure in this case would be the ability to quickly
+find a students record by their banner number, for example `StudentRecord student = students.find(banner_number);`.  Because of this, a hashtable is the best option because you can
+find a value by its key in a hashtable in O(1) time, a feature that almost no other data structure has, at best you can do that in O(log n) time with a BST.  Besides finding a students
+record by their banner number, the other most important requirements of this problem are adding a new student or removing an old one (assuming Miami doesnt keep old student records, I'm
+not sure if they do).  Adding a new student with a given banner number is a trivial task for a hashtable, because every student is guaranteed to have a unique banner number, so collisions
+in the hashtable would be very minimal as they would only arise due to the size constraints on the backing array of the table itself.  With this in mind, we know that adding a new student would
+take O(1) time.  Removing a student would be the same as adding one, except instead of adding a students record to that spot in the hashtable, you simple remove it which will always take O(1) time.
+I believe these three functions, finding, adding and removing are the only ones that are really important for this situation because there isnt really a reason you would need to find the min or max banner
+number or find the next/prev banner number from another students', so you can eliminate the 4 functions that hashtable performs poorly at.  There is no other data structure that allows you to
+find a value by its key and add/remove new entries all in constant time.
 
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+
+For this problem, I am assuming that a company can have more than 1 packet waiting at a time and different companies can pay the same amount for their packets, so duplicate keys would
+be necessary to solve this problem.   So, to solve this problem I would use a max-heap that allows for duplicate keys to store each packet with the amount the company paid as its key.
+This is the best solution to this problem because all you would have to do to get the current packet that needs to be sent (the one that paid the most money) all you would have to do
+is get the item from the top of the heap, which takes O(1) time if you are simply getting its value, but O(log n) time if you are removing it.  A max heap would work for this because
+lets say you have 3 different companies, X, Y and Z; first, you add a packet from company X which paid $10, since this is the only item in the heap, it would be at the top, then you add
+company Y which paid $20, because of the heap rule this item will be "bubbled" up to the top item in the heap because 20 > 10, and finally you add company Z which also paid $10 so it would
+stay at the same level as company X.  In this case, when company Y's packet was sent out because it has the highest priority, company Z's packet will be moved up to the top of the heap because
+it was to the right of the top item.  The only other function that would be necessary for this problem would be adding new item to the heap which is guaranteed to be O(log n) time.  This is a very
+simple application that needs to be made, all you have to be able to do is add new packets to the queue and get the one that has the highest priority, so none of the other functions of most
+abstract data types such as remove, find by key, find by value, min/max or next/prev would ever need to be used.  Using a max-heap is the only data structure that allows us to keep the packets in
+the order we need and allow removing and adding to always be in O(log n) time, anything else like a hashtable  or just a plain old array would have to be manually sorted every time a packet was
+added which the heap does for us automatically.

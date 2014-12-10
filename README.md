@@ -77,18 +77,13 @@ That being said, hash tables are much faster than binary search trees in almost 
 An adjacency matrix is a 2D array with the dimensions of A x A. A graph is most helpful when trying to visualize a adjacency matrix.
  A 1 means there is an edge connecting the node (or vertex) in the column to the node in the row. 
    
- | 0 | 1 | 2 | 3 | 
 
-| --- | --- | --- | --- | --- 
-0| 0 | 0 | 1 | 0 
-
-1| 0 | 1 | 0 | 1
-
-2| 1 | 0 | 0 | 1
-
-3| 0 1 1 0 
-
-
+| 0 | 1 | 2 | 3 |
+| --- | --- | --- | --- | --- | 
+0 | 0 | 0 | 1 | 0
+1 | 0 | 1 | 0 | 1
+2 | 1 | 0 | 0 | 1
+3 | 0 | 1 | 1 | 0
 In this example there would be edges connecting vertex 2 to vertex 0. To find out if there is an edge (In code, in the table)
  we would use arr[2][0] to see if it returned a 1 or a 0 (in our example it returns a 1). 
 An adjacency list is an array of linked lists.

@@ -159,20 +159,14 @@ TODO: Answer the following questions about choosing data structures. (5 points e
   
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most
   appropriate? Carefully explain why.
-
-	//TODO 
-		---What is a grocery list
-		---How to decide which data structure?
-			---Efficiency? ---Lists aren't going to be that long that so runtime will not matter depending on data structure.
-			---What operations they support?
-			---Easiest acceptable solution!
-			---Platform(computer(new/old), smart phone, paper)
-
-	First lets assume that when you're writing your grocery list that you write it in order that the items are found in the store.  With this 
-	in mind I would use a linked list data structure when implementing the shopping list because the add and remove methods in linked lists 
-	are faster than those found in array-based lists.  With shopping lists the main functions you would need are adding and removing to and
-	from the list.  Another reason for a linked list is the ability to add a forgotten item directly into the middle of the list without 
-	creating a completely new list and copying everything over. 
+  
+	For this question I am going to assume that a grocery list is ordered by location of item in store, and that it will be written down on paper 
+	and not coded on computer.  Lets say the average grocery list is about one page long.  Because the list is reasonably short, efficiency will not
+	factor into deciding a data structure because the speed difference will be unnoticeable for all of them.  The main operation for the list would
+	be adding items to it, but we might also need remove if we discover (after we've added it) we don't need something.  With all of this in mind I 
+	would use something like a linked list data structure(Maybe a little too complex for just paper but the idea still works).  Adding and removing 
+	would be fast because all that is needed is to write down or scratch out an entry.  Adding into the middle of a list (to keep ordering by location 
+	in store) would also be fast because all you would need are arrows pointing from one entry to another and then back.  
 
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures)
   that we learned this semester would be most appropriate? Carefully explain why.

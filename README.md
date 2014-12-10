@@ -55,32 +55,32 @@ In general array based lists are easier to work with but are less flexible than 
 | Get/Set                | O(1)  | O(n)        |
 | Get/Set w/ Iterator    | O(1)  | O(1)        |
 | Add/Remove             | O(n)  | O(n)        |
-| Add/Remove w/ Iterator | O(n)  |             |
+| Add/Remove w/ Iterator | O(n)  | O(1)        |
 	
 * Binary Search Tree vs. Hash Table
 -----
 On average hash tables have O(1) running time for searching, inserting and deleting. The worst case scenario for searching, inserting and deleting are O(n). Binary search trees on the other hand have an average running time of O(log n) for searching, inserting and deleting. The worst case running times for a binary search tree are the same as the worst case running times of a hash table, which is O(n). The big differences between hash tables and binary search trees are the space that each takes up and how the elements are stored. In order for a hash table to achieve its average running times of O(1) it must have a large amount of space allocated. Usually the space allocated for a hash table is twice as big as the amount of entries that will go into the hash table. The extra space is needed because there needs to be empty space for keys to be mapped to in order to distribute the entries throughout the hash table. Hash tables also suffer from collisions, which is when two different keys are mapped to the same place. When this happens the hash table's running time is negatively impacted because the solutions for dealing with a collision (such as linear probing) end up taking much more time than O(1). Collisions are unavoidable when using a hash table because there is not a perfect hashing function that we know of. Hash tables do not store the entries in any order either. This makes searching through the hash table for a specific entry slow if you do not have the key for the entry you are looking for. Binary search trees do not require extra space like hash tables. A binary search tree can be kept in a memory allocation that is only as big as the data in the binary search tree. The running time for inserting into a binary search tree will not suffer from collisions like a hash table. This will give a much more consistent running time. However, a binary search tree may need to bubble up a newly inserted element which will negatively impact the running time but bubbling up is generally not as slow as linear probing. Binary search trees store their entries in an ordered fashion. The left child will always be smaller than the parent and the right child will always be larger than the parent. Because of this searching through a binary search tree is much faster than searching through a hash table.
 
-  |             | HashTable | BST |
-  |-------------|-----------|-----|
-  |Find|O(1)|O(log n)|
-  |Set|O(1)|O(log n)|
-  |Add/Remove|O(1)|O(log n)|
-  |Prev/Next|O(n)|O(log n)|
-  |Min/Max|O(n)|O(log n)|
+|            | HashTable | Binary Search Tree |
+|------------|-----------|--------------------|
+| Find       | O(1)      | O(log n)           |
+| Set        | O(1)      | O(log n)           |
+| Add/Remove | O(1)      | O(log n)           |
+| Prev/Next  | O(n)      | O(log n)           |
+| Min/Max    | O(n)      | O(V^2)             |
 
 
 * Adjacency List vs. Adjacency Matrix
 -----
 An adjacency matrix provides O(1) running time when looking for a specific edge but suffers from large memory usage. The space that an adjacency matrix takes up is (n*n) which can be a considerable amount depending on the size of n. The adjacency matrix stores an entry, either true or false, for every node in the graph. This is the reason an adjacency matrix takes up so much space. However, because of this a specific edge between two nodes can be found in constant time. Getting a list of neighbours for a particular node is slow because the computer will have to look at all n nodes to get a complete list of neighbours. An adjacency list uses less memory but does not have the constant time look up for a specific edge. It does have a shorter running time for getting a list of neighbours to a particular node though because adjacency lists only store the nodes that a particular node is connected to rather than having an entry for every single node. 
 
-  |         |Adjacency List| Adjacency Matrix|
-  |---------|--------------|-----------------|
-  |Add Vertex| O(1) | O(V^2)|
-  |Add Edge| O(1) | O(1)|
-  |Remove Edge| O(E) | O(1)
-  |Get Weight| O(V) | O(1) |
-  |Space| O(V + E)|O(V^2)|
+|             | Adjacency List | Adjacency Matrix |
+|-------------|----------------|------------------|
+| Add Vertex  | O(1)           | O(V^2)           |
+| Add Edge    | O(1)           | O(1)             |
+| Remove Edge | O(E)           | O(1)             |
+| Get Cost    | O(V)           | O(1)             |
+| Space       | O(V + E)       | O(V^2)           |
 
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors

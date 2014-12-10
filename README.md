@@ -54,6 +54,9 @@ Hash tables and binary search trees are both very good data structures to implem
 
 * Adjacency List vs. Adjacency Matrix
 
+An adjacency matrix is better at checking whether or not a given adjacency exists. An adjacency matrix is a matrix where you have all of the nodes on the x and y axes, and then a boolean value for each entry representing whether the adjacency exists. For checking a certain adjacency, all one has to do is go to the specific element representing the adjancency, and get the boolean. The tradeoff for this is space, an adjacency matrix has to hold a boolean for every single possible entry, O(n * n), while an adjacency list only has to store all existing adjacencies. While a matrix can get an adjacency in O(1) time, it is poor at iterating through all adjacencies. A list on the other hand, only stores the adjacency themselves. However, checking for a specific adjacency can be slow, especially in a large graph, where it has a worst case of O(n), in the event a node is adjacent to every other node. It has the added benefit of space, and it is easy to iterate through all adjacencies, or to find all adjacencies to or from a given node. 
+
+
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
 

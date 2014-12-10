@@ -157,6 +157,15 @@ TODO: Answer the following questions about choosing data structures. (5 points e
   most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove
   items, and check to see if an item is already in the set.)
   
+	With this application in mind I would probably choose a hash table for the data structure.  There is no order to a hash table, it does not store
+	duplicates, we can search for a specific item fairly quickly and because so can add or remove an item just a quick.  In this hash table the key 
+	and value would both just be the string we are storing.  When adding to the table, we would hash the string to find where in the array it goes 
+	and see if it's already in that spot.  If it is already there then we don't need to do anything.  If something else is there we continue looking in
+	other spots according to our collision strategy.  If we don't find the string we are trying to add, we go and add it in the first available location
+	according to the hash and collision strategy.  Removing goes through the same process as adding instead we just mark the string to be removed as 
+	"removed" to save time from actually deleting it.  If we have a good hash function and leave enough memory for our table, we should be able to achieve 
+	a runtime of O(1) for every operation.  
+  
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most
   appropriate? Carefully explain why.
   

@@ -180,6 +180,13 @@ TODO: Answer the following questions about choosing data structures. (5 points e
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures)
   that we learned this semester would be most appropriate? Carefully explain why.
   
+	Because of the speed needed for searching and the potential for a large number of students I would suggest a binary search tree for this problem.
+	Assuming the tree is balanced properly, that is it's short and fat as opposed to long and skinny, it will have search speeds of O(log n) and will 
+	only take up as much space as the number of students.  Each students Banner number would be stored in the tree as the key and any data that needs
+	to be stored will be associated as the data for that key.  The speed comes in when searching because of the way a BST is ordered.  All Banner numbers 
+	smaller than the one you're looking at are to the left and all larger are to the right.  This means you would only have to search though a handful of 
+	possible entries before you find the one you're looking for.
+  
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a
   special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent
   out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if

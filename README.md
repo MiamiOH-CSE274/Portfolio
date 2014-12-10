@@ -145,7 +145,9 @@ TODO: Answer the following questions about templates in C++
 * In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why 
   this isn't the case with template-based collection classes.
   
-	
+	When the compiler looks at a template it creates a different version of the code for each data type that is trying to use the template code.
+	In order to do this it needs to have access to every part of the code including implementations.  This is the reason some code has what would be 
+	in the .cpp in a .ipp that is #included at the bottom of the .h file.
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application
 ----

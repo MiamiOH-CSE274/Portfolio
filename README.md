@@ -72,9 +72,17 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 	Add and remove take less time because in order to cut or add something to the list all you need to do is change some next and previous 
 	variables to point to the new object and it's in the list.
 	
-	| Operations | Array-based List | Linked List |
-	|:----------:|:----------------:|:-----------:|
-	| Test       | o(n)             | Test        |
+	All of this is true if you do not have any iterators.  Iterators tell you exactly where something is, for instance the spot in memory where 
+	the third element of an array is.  They allow access to specific elements without having to take time to find them.  With an iterator, get 
+	and set will both be the same speed but finding the address for the iterator (if you don't already have the address) in a linked list will still
+	be slow.
+	
+	| Operations            | Array-based List | Linked List |
+	|:---------------------:|:----------------:|:-----------:|
+	| Get/Set               | O(1)             | O(n)        |
+	| Get/Set W/Iterator    | O(1)             | O(1)        |
+	| Add/Remove            | O(n)             | O(n)        |
+	| Add/Remove W/Iterator | O(n)             | O(1)        |
 
 * Binary Search Tree vs. Hash Table
 * Adjacency List vs. Adjacency Matrix

@@ -90,27 +90,21 @@ An adjacency matrix provides O(1) running time when looking for a specific edge 
 The stack is a section of your computer's memory that stores statically allocated variables. Memory allocation and deallocation in the call stack is done for you by the computer. When these variables leave the scope of the executing code all statically allocated variables are erased and that memory is available to be used again.
 	
 * **The heap (not to be confused with the heap data structure!)**
------
 The heap is a section of your computer's memory that is not managed for you automatically. The heap forces you to dynamically allocate the memory needed for your variables and allows you to allocate memory without any restrictions on the size of the memory allocated as long as your computer has that much memory available. Using the heap also means that you must deallocate any memory that was allocated otherwise a memory leak will result. This means that memory is being used to store a variable that cannot be accessed because it has gone out of scope.
 
 * **Address**
-------
 An address is the location in the computer's memory that the data of a variable is stored at. 
 	
 * **Pointer**
-------
 A pointer is a special variable that stores the address of another variable. The pointer can then be used to access that section of memory throughout a program. This allows you to directly change the stored data of a variable without explicitly accessing that variable.
 
 * **What is a memory leak, and why is it bad?**
-------
 A memory leak results when memory in the heap is allocated to a variable but then is never deallocated after the executing codes leaves the scope of that variable. The allocated memory remains unusable and is referred to as a memory leak. If this happens too much a computer can run out of memory and crash. A less serious problem would be slower performance of the running program.
 	
 * **What is a dangling pointer (or dangling reference), and why is it dangerous?**
--------
 A dangling pointer points to a non-existant variable's address in memory. The variable has been deleted and does not exist anymore but the pointer that used to point to that variable's address has not been updated to reflected this change. If you use a dangling pointer without realizing it the returned data will not be what is expected. Operations on the data returned by a dangling pointer could change important information and cause problems in other areas of your program.
 	
 * **What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?**
------
 A destructor is used to manually deallocate memory that was previously allocated. It is essentially the opposite of a constructor. Destructors are needed to prevent memory leaks in C++ because they give programmers the ability to free up memory that had previously been allocated. C++ lacks garbage collection and therefore it is the responsibility of the programmer to deallocate memory that is dynamically allocated. Destructors are not needed in Java because Java manages your memory allocation and deallocation for you through garbage collection. In Java the compiler is able to detect when allocated memory is no longer reachable and will then deallocated that memory for you. This is not the case with C++ and hence the need for destructors so that programmers have a way to deallocate memory. 
 
 5 - Create collection classes using templates in C++

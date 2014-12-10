@@ -73,7 +73,7 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 	variables to point to the new object and it's in the list.
 	
 	| Operations | Array-based List | Linked List |
-	|:----------:|:-----------------|:------------|
+	|:----------:|:----------------:|:-----------:|
 	| Test       | o(n)             | Test        |
 
 * Binary Search Tree vs. Hash Table

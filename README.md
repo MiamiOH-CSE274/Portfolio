@@ -49,21 +49,6 @@ TODO: For each pair of data structures listed here, write a short essay comparin
       for different operations. (7 points each)
 
 * Array-based list vs. Linked List
-
-	//TODO Talk about iterators (add at an iterator, add at an index)
-		Tables
-
-	Iterators are bookmarks keeping track of where you are in a data structure.  
-
-	get an iterator for an index in array list O(1) in linked list O(n)
-
-	Array list add remove O(n)
-
-	get/set iterator
-
-	get iterator front/back
-
-	add/remove front/back
 	
 	In an Array-based list, get() and set() are faster and add() and remove() are slower.  In order to get or set something all you need is 
 	which element it is in the array and you can read or write its data.  On the other hand in order to add or remove something from the 
@@ -80,9 +65,9 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 	| Operations            | Array-based List | Linked List |
 	|:---------------------:|:----------------:|:-----------:|
 	| Get/Set               | O(1)             | O(n)        |
-	| Get/Set W/Iterator    | O(1)             | O(1)        |
+	| Get/Set w/Iterator    | O(1)             | O(1)        |
 	| Add/Remove            | O(n)             | O(n)        |
-	| Add/Remove W/Iterator | O(n)             | O(1)        |
+	| Add/Remove w/Iterator | O(n)             | O(1)        |
 
 * Binary Search Tree vs. Hash Table
 * Adjacency List vs. Adjacency Matrix

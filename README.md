@@ -71,10 +71,16 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 
 * Binary Search Tree vs. Hash Table
 
-	
+	BST's and hash tables have the same worst case runtime for their main functions, searching, adding, and removing.  However on average a hash 
+	table will have faster speeds than a BST.  The main difference between the two is in their layout and size.  A BST only needs as much space as 
+	you have entries.  Each entry gets added to the tree and is either a parent leading to more entries or a leaf at the bottom of the tree.  All 
+	of the children to the left of a parent are smaller than the parent and all to the right are larger.  When perfectly balanced this leads to very 
+	fast search speeds.  In the worst case, every entry could be to one side or the other leading to slow speeds.  Hash tables however take up much
+	more space than BST's do.  In a hash table you want to always have at least twice the space allocated then you have entries.  This allows for 
+	minimal collisions (when two different keys map to the same spot in the table) and keeps the speed up.
 
-	| Operations | BST                         | HashTable                       |
-	|:----------:|:---------------------------:|:-------------------------------:|
+	| Operations | BST                             | Hash Table                  |
+	|:----------:|:-------------------------------:|:---------------------------:|
 	| Get/Set    | Average - O(log n) Worst - O(n) | Average - O(1) Worst - O(n) |
 	| Add/Remove | Average - O(log n) Worst - O(n) | Average - O(1) Worst - O(n) |
 	
@@ -86,14 +92,14 @@ TODO: Define/describe each of the following terms, as they apply to memory manag
 
 * The call stack (not to be confused with the stack data structure!)
 
-	//TODO Not the window!!!
+	The call stack is a portion of memory where local variables are stored.  It can be thought of as similar to the stack data structure 
+	in that it is last in first out.  That is, when a function is called, it stores the return address and then proceeds to carry out
+	the function, returning any data to the return address, and so on until the entire program has run its course.
 
-	The call stack is a list of calls to different functions in your program starting from the operating system going all the way to
-	wherever you currently are in your program.  
 
 * The heap (not to be confused with the heap data structure!)
 
-	The heap is a section of memory where dynamically allocated variable are stored.  Whenever an object is created with the new operator
+	The heap is a section of memory where dynamically allocated variables are stored.  Whenever an object is created with the new operator
 	it is stored in memory here.  Anything created here must be deleted when no longer needed or a memory leak will occur, where the heap
 	runs out of memory and the program crashes.
 

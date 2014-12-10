@@ -54,7 +54,8 @@ There are pros and cons to using Array Lists or Linked Lists. LinkedList is wond
 order. The add and remove methods in a Linked List are constant time, much better than ArrayList's linear time. ArrayList, however, has the advantage in the get and set
 methods, running with constant time, instead of Linked list's linear time. Getting and setting at an iterator is constant time for both data structures. An iterator keeps 
 track of where you are in a data structure. So, getting, setting, and adding are constant time (except in ArrayList when adding at an iterator is still ilnear). 
-		 Linked List |  Array List
+		 Linked List |  Array List 
+		------------ | -----------
 size()  	|   O(1)     |	O(1)
 get/set		|   O(n)     |  O(1)                                                                                 
 add		|   O(n)     |	O(?)
@@ -75,7 +76,7 @@ That being said, hash tables are much faster than binary search trees in almost 
 An adjacency matrix is a 2D array with the dimensions of A x A. A graph is most helpful when trying to visualize a adjacency matrix.
  A 1 means there is an edge connecting the node (or vertex) in the column to the node in the row. 
    
-   0 1 2 3  
+  0 1 2 3  
 
 0| 0 0 1 0 
 

@@ -13,7 +13,7 @@ If you prefer, you may turn this in to me via email, instead of hosting it on Gi
 Body of portfolio
 ====
 
-Unless Otherwise specified, all answers given were based off of notes from Dr. Brinkman's lectures, notes the course text: http://opendatastructures.org/, or from my own
+Unless Otherwise specified, all answers given were based off of notes from Dr. Brinkman's lectures, notes from the course text: http://opendatastructures.org/, or from my own
 knowledge from completing the course labs.
 
 

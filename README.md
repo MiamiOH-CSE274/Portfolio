@@ -27,19 +27,19 @@ TODO: Provide a link to your completed 06_BST_Lab OR ClosestStarbucks project (o
 
 7 - Create an implementation of a Hash Table
 ----
-TODO: Provide a link to your completed 05_Hashing_Lab
+This is where I created an implementation of a Hash Table: https://github.com/wilso199/05_Hashing_Lab/blob/master/HashTable.h
 
 7 - Create an implementation of a Heap
 ----
-TODO: Provide a link to your completed 07_Heap_Lab
+This is where I created an implementation of a Heap: https://github.com/wilso199/07_Heap_Lab/blob/master/Heap.h
 
 7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----
-TODO: Provide a link to your completed 08_Graph_Lab
+This is where I created an implementation of a Adjacency List: https://github.com/wilso199/08_Graph_Lab/blob/master/Graph.cpp
 
 7 - Implement graph algorithms
 ----
-TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
+This is where I implemented a DFS graph algorithm: https://github.com/wilso199/08_Graph_Lab/blob/master/Graph.cpp
 
 21 - Determine space and time requirements of common data structure methods
 -----
@@ -62,6 +62,7 @@ When comparing an Array-based list to a Linked List it is important to look at t
 			size	|	O(1)	  |	O(1)
 
 * Binary Search Tree vs. Hash Table
+
 * Adjacency List vs. Adjacency Matrix
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
@@ -89,16 +90,25 @@ You need a class destructor because C++ does not know when you are done with a c
 TODO: Answer the following questions about templates in C++
 
 * What is the main benefit of using templates when creating collection classes?
+
+Using a template when creating a collection class allows you to write one class that can handle any type of data the user may enter into your collection class. This way a class can be reused to handle string inputs and int inputs without having to be rewritten. By doing this you eliminate the difficulty of trying to accommodate for every type of data the user may enter. 
+
 * In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
+
+You are unable to do this because when you use a template it allows for any data type to be entered. When using a template the compiler will have to create a new version of your class which means new function declarations and definitions for each function. If you implemented the function in a separate .cpp file, the compiler wouldn’t know where to find the implementation for the new functions it created because the .cpp file has already been compiled and won’t be able to add new information to the file. To avoid this you include the implementation in the .hpp file so whenever you #include that .hpp file all of the implementation will be included and compiled in the .cpp file.  
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
 TODO: Answer the following questions about choosing data structures. (5 points each)
 
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.)
+
+
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. 
 
 When I think of a grocery list I have the same vision that you do. I like to make sure everything from the same section are grouped together so I am not running around like a chicken with my head cut off. I also like to keep open spaces in case I remember something once I get to the store. With that being said, I would use a Linked List for making a grocery list. I think this is most fitting for the situation because if you wanted to add or remove an item from the list once you got to the store the action would be performed in constant time. Also if you wanted to leave empty space in your list you could do that in one of two ways: 1) by simply just doing “list surgery” once you find out that you forgot something or 2) leaving dummyNodes in the places where you feel you might have forgot something then add a value to the dummyNode once you remember what you forgot. Also you will not have to worry about the original size of your list because there will not be a grow function or limitation on the number of items in the List.  
 
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+

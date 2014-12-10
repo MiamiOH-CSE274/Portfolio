@@ -97,14 +97,14 @@ Java does not need destructors as much because the java compiler is very profici
 
 5 - Create collection classes using templates in C++
 ----
-(Answer paraphrased from a Microsoft Developer Network Page:  http://msdn.microsoft.com/en-us/library/z3f89ch8.aspx)
+(Answer researched on Microsoft Developer Network Page:  http://msdn.microsoft.com/en-us/library/z3f89ch8.aspx)
 The main benefit of using Template collection classes is that it is an efficient way of abstracting functions and variables with flexibility on what data type is used as parameters.
 When someone instantiates a template-class in another file, the compiler will create separate versions of the function for the data-type specified by the user when instantiated.(See example below)
 This is especially helpful for implementing data structures because it is not always certain what type of data is being stored. For example, in our arrayQueue, lab if we were
 to implement the functions in the class to take parameter with data-type int instead of data-type T, we would only be allowed to have create arrayQueue that store integers. We would not be able to store 
 doubles, floats, longs, or any other data-type you can think of.
 
-(Answer paraphrased from a stack overflow comment: http://stackoverflow.com/questions/495021/why-can-templates-only-be-implemented-in-the-header-file)
+(Answer researched from stack overflow comment: http://stackoverflow.com/questions/495021/why-can-templates-only-be-implemented-in-the-header-file)
 When instantiating a template, the compiler creates a new class with the given template argument. For example if a template class foo uses a template <typename T>,
 and somewhere in a .cpp file foo<int> is instantiated, then a new class is created and every T parameter used in the template class will be compiled as an integer in the new class.
 As a result, the compiler needs all functions to be defined in order to create this new foo<int> class; if these function definitions were not in the header then the compiler could not

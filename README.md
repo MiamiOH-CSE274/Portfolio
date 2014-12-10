@@ -71,6 +71,10 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 	get and set take longer because in order to find where they are you need to start at the dummyNode and use its next and previous variables.
 	Add and remove take less time because in order to cut or add something to the list all you need to do is change some next and previous 
 	variables to point to the new object and it's in the list.
+	
+	| Operations | Array-based List | Linked List |
+	|:----------:|:-----------------|:------------|
+	| Test       | o(n)             | Test        |
 
 * Binary Search Tree vs. Hash Table
 * Adjacency List vs. Adjacency Matrix

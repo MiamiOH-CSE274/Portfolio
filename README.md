@@ -39,7 +39,7 @@ Link to my Graph repo: https://github.com/mccarts3/Graph_Lab
 
 7 - Implement graph algorithms
 ----
-TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
+My graph lab with a DFS traversal: https://github.com/mccarts3/08_Graph_Lab
 
 21 - Determine space and time requirements of common data structure methods
 -----

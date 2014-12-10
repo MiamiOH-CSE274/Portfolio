@@ -23,7 +23,7 @@ https://github.com/adammast/04_Linked_List_Lab
 
 7 - Create an implementation of a Binary Search Tree
 ----
-TODO: Provide a link to your completed 06_BST_Lab OR ClosestStarbucks project (only if you used a search tree)
+https://github.com/adammast/06_BST_Lab
 
 7 - Create an implementation of a Hash Table
 ----

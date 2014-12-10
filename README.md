@@ -70,7 +70,6 @@ An address is the physical location of a variable in virtual memory.
 
 A pointer is a variable that stores an address and type of another variable in memory, so that you can pass that specific item around in code.
 
-
 * What is a memory leak, and why is it bad?
 
 A memory leak is an item in memory that no longer has any pointers to it. It is bad because it is occupying memory space that could be freed, and eventually could overflow your allocated memory and cause a crash.
@@ -93,8 +92,8 @@ TODO: Answer the following questions about templates in C++
 TODO: Answer the following questions about choosing data structures. (5 points each)
 
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.)
-* 
 
+For this problem I would approach it with a hash table data structure. Assuming that the only functions that the set will do for the purposes of this program is to adding string, removing strings, and checking existence of a string. Considering that the hash table can do adding and removing, the two operations that will be used the most in this program, will take O(1) time. The added benefit of using a hash table is that it will also be able to check the existence of a given key whenever it adds another string to the set. One problem to using a hash table to store a set is that if the hash table is not at least 2 times bigger than the amount of entries than the chance of collisions(two keys behind hashed to the same bucket) is large, so it would use a lot of memory, but the trade off of speed is more than worth it. In the event of using linear probing for collision resolution, one can simply check for either an empty bucket, or for an exact key match, otherwise move to the next available bucket. However since we can't store duplicates, we must probe over deleted values so that we can find a possible matching key, and then if we do not find the key place it in the deleted bucket. Another downside to using a hash table is that if we have to actually view the entire set, we must iterate through the entire backing array in order to print all keys, however the problem did not state this, so hash table is definitely the best data structure for this problem.
 
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 

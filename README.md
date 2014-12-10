@@ -57,11 +57,11 @@ track of where you are in a data structure. So, getting, setting, and adding are
 	
                 | Linked List |  Array List 
 		| ---------- | -----------
-size()  	|   O(1)     |	O(1)
-get/set		|   O(n)     |  O(1)                                                                                 
-add		|   O(n)     |	O(?)
-remove		|   O(n)     |  O(?)
-add & remove at	|   O(1)     |  O(1)
+size()  	| O(1) | O(1)
+get/set		| O(n) | O(1)                                                                                 
+add		| O(n) | O(n)
+remove		| O(n) | O(n)
+add & remove at	| O(1) | O(1)
 front or back	
 
 

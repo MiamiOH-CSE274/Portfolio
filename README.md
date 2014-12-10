@@ -91,7 +91,7 @@ Adjacency lists and matrixes are used to represent graph data structures. An adj
          addEdge               O(d)           O(1)
          addVertex             O(1)           O(n*n)
 	 removeEdge            O(d)           O(1)
-         getWeight             O(n)           O(1)
+         getWeight             O(d)           O(1)
          getNeighborhs         O(1)           O(n)    
          SpaceReq              O(n+m)         O(n*n)    
           

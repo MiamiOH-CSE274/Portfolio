@@ -48,7 +48,7 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 * Array-based list vs. Linked List
 
 In an Array-Based list, add() and remove() take O(n) operational time because the items in the list need to be shifted in order for more items to be added. 
-Array-Based size(1), get(1) and set(1) run in 0(1) time. For Linked lists, getNode(i) takes O(1+ min{i, n-i}) time, other than that all the other functions run 
+Array-Based size(), get() and set() run in 0(1) time. For Linked lists, getNode(i) takes O(1+ min{i, n-i}) time, other than that all the other functions run 
 in O(1) time. When using an iterator, adding to, removing, getting, and setting the iterator runs in O(1) after the iterator has been found.
 
 
@@ -57,8 +57,8 @@ in O(1) time. When using an iterator, adding to, removing, getting, and setting 
 The average runtime for find(), add(), and remove() for a hash table is O(1) time. The reason find() runs in constant time is because the key, when stored, is passed through a hash function which gives each key a drastically unique value.
 Another way to describe this would be searching for a blue item amongst many items that are different shades of blue versus searching for it amongst items that are all different colors.
 Although statistically unlikely to occur, the worse case runtimes of a hash table for these functions is O(n). The average runtimes of binary search trees for find(), add(), and remove() are O(log n).
-This is because each level of the trees has twice as many nodes as the previous, so the 4th level has 2^(4) times more nodes than the root(The level being defined how many connectors there are between the root and the last ancestor).
-When searching for node in a binary search tree, the function only needs traverse one level at a time to find the node its looking for, thus the runtime is proportional to log n (with base 2).
+This is because each level of the tree has twice as many nodes as the previous, so the 4th level has 2^(4) times more nodes than the root(The level being defined how many connectors there are between the root and the last ancestor).
+When searching for node in a binary search tree, the function only needs to traverse one level at a time to find the node its looking for, thus the runtime is proportional to log n (with base 2).
 In the worst case scenario these functions will run in o(n) time, which when there is an unbalanced tree. One instance in which this could occur when every item added is greater than the last.
 
 
@@ -88,14 +88,16 @@ TODO: Answer the following questions about memory management and dynamic variabl
 * A dangling pointer is a pointer that references an address of an invalid data type and often times is the result of when data in a address is deleted or deallocated without deleting the pointer.
 These are dangerous because often times other data can fill into the address being pointed to and cause the code to break.
 * What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java? Destructors deallocate memory and delete dangling pointers.
-Java does not need destructors as much because the java compiler is very good and figuring out when something is no longer in use and getting rid of it automatically.
+Java does not need destructors as much because the java compiler is very proficient at figuring out when something is no longer in use and getting rid of it automatically.
 
 5 - Create collection classes using templates in C++
 ----
 (Answers found on a Microsoft Developer Network Page:  http://msdn.microsoft.com/en-us/library/z3f89ch8.aspx)
 The main benefit of using Template collection classes is that it is an efficient way of abstracting functions and variables with flexibility on what data type is used as parameters.
-When someone instantiates a template-class in another file, compiler will create separate versions of the function for the data-type specified by the user when instantiated.(See example below)
-This is especially helpful for implementing data structures because it is not always certain what type of data is being stored.
+When someone instantiates a template-class in another file, the compiler will create separate versions of the function for the data-type specified by the user when instantiated.(See example below)
+This is especially helpful for implementing data structures because it is not always certain what type of data is being stored. For example, in our arrayQueue, lab if we were
+to implement the functions in the class to take parameter with data-type int instead of data-type T, we would only be allowed to have create arrayQueue that store integers. We would not be able to store 
+doubles, floats, longs, or any other data-type you can think of.
 
 (Answer found on stack overflow: http://stackoverflow.com/questions/495021/why-can-templates-only-be-implemented-in-the-header-file)
 When instantiating a template, the compiler creates a new class with the given template argument. For example if a template class foo uses a template <typename T>,
@@ -104,20 +106,26 @@ As a result, the compiler needs all functions to be defined in order to create t
 access them.
 
 //taken from a stackoverflow comment
-template<typename T>
+
+<typename T>
+
 struct Foo
 {
     T bar;
-    void doSomething(T param) {/* do stuff using T */}
+    
+	void doSomething(T param) {/* do stuff using T */}
 };
 
 // somewhere in a .cpp
 Foo<int> f; 
+
 //compiler creates new class equivalent to this
+
 struct FooInt
 {
     int bar;
-    void doSomething(int param) {/* do stuff using int */}
+    
+	void doSomething(int param) {/* do stuff using int */}
 }
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application

@@ -56,7 +56,7 @@ methods, running with constant time, instead of Linked list's linear time. Getti
 track of where you are in a data structure. So, getting, setting, and adding are constant time (except in ArrayList when adding at an iterator is still linear). 
 	
                 | Linked List |  Array List |
-		| ---------- | -----------
+|--------- | ---------- | -----------
 size()  	| O(1) | O(1)|
 get/set		| O(n) | O(1)                                                                               
 add		| O(n) | O(n)

@@ -146,8 +146,12 @@ an array instead of, or in addition to, my hash table. That way, the retrieval o
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 
 If I were to implement a data structure for a grocery list I would use a Linked list. Linked lists allow for more convenient adding and removing of items in between one another which is optimal
-for when I think of things I want to add or remove at different times.If I were to use an Array-Based list, I would have to grow() the list if I added too many items, which would usually mean doubling
-the size of my list. I would not want to carry an abnormally large list around the supermarket if I wasn't going to use all of the space on it.
+for when I think of things I want to add or remove at different times. Placing items in between one another is important because I might want to group one category 
+together such as vegetables or cereals. So if I were to think of a vegetable I want to add at a later time, I don't want to put it at the end and have it bubble up, 
+I want to be able to insert it with other vegetables right away. If I were to use an array-based list, trying to place an item in the middle would require shifting the whole list.
+In addition, I would have to grow() the list if I added too many items, which would usually mean doubling the size of my list. I would not want to carry an abnormally large list around the supermarket
+if I wasn't going to use all of the space on it. All other data-structures, such as bst, heap, or hashtable, might work but have overly-complicated implementations that are unlikely to yield much improvement on a 
+linked list.
 
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 

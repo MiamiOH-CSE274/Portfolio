@@ -88,12 +88,13 @@ d = max degree of graph
 Adjacency lists and matrixes are used to represent graph data structures. An adjacancy matrix uses a 2D array to represent edges between rows and columns. Due to the ability to access a particular spot in the 2D array, adjacancy matrixes have O(1) add/remove edge and get weight. Adding a vertex is slower at O(n*n) because the 2D array might have to be grown in size and the old arrays values copied over to the new array. Adjacancy lists use an array of nodes, with the nodes acting as a list of connecting edges. Adding an edge, vertex, or getting the neighborhs runs in O(1) time due to the ability to access any spot in the array, then simply adding the edge/vertex to the end or returning the neighborhs. Removing an edge is slower due to the array not knowing if the edge exists or not, which requires iteration over the edge list, resulting in O(d) run time. Getweight is also O(d) due to the need for iteration over the adjacancy list to find the weight. Adjacancy lists are prefferable when the number of vertexes is low due to the space requirements being O(n+m) versus an adjacancy matrix which requires O(n*n) space. An adjacancy matrix is only preffered for storage of large amounts of data, such as the US highway system connections.
 
                          Adjacancy List| Adjacancy Matrix
+         removeEdge            O(d)           O(1)
          addEdge               O(d)           O(1)
          addVertex             O(1)           O(n*n)
-	 removeEdge            O(d)           O(1)
          getWeight             O(d)           O(1)
          getNeighborhs         O(1)           O(n)    
-         SpaceReq              O(n+m)         O(n*n)    
+         SpaceReq              O(n+m)         O(n*n)   
+        
           
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors

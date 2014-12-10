@@ -53,9 +53,10 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 There are pros and cons to using Array Lists or Linked Lists. LinkedList is wonderful if you have a lot of items you need to add, and need to put those in a particular
 order. The add and remove methods in a Linked List are constant time, much better than ArrayList's linear time. ArrayList, however, has the advantage in the get and set
 methods, running with constant time, instead of Linked list's linear time. Getting and setting at an iterator is constant time for both data structures. An iterator keeps 
-track of where you are in a data structure. So, getting, setting, and adding are constant time (except in ArrayList when adding at an iterator is still ilnear). 
-		 Linked List |  Array List 
-		------------ | -----------
+track of where you are in a data structure. So, getting, setting, and adding are constant time (except in ArrayList when adding at an iterator is still linear). 
+	
+                | Linked List |  Array List 
+		| ---------- | -----------
 size()  	|   O(1)     |	O(1)
 get/set		|   O(n)     |  O(1)                                                                                 
 add		|   O(n)     |	O(?)

@@ -70,6 +70,14 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 	| Add/Remove w/Iterator | O(n)             | O(1)        |
 
 * Binary Search Tree vs. Hash Table
+
+	
+
+	| Operations | BST                         | HashTable                       |
+	|:----------:|:---------------------------:|:-------------------------------:|
+	| Get/Set    | Average - O(log n) Worst - O(n) | Average - O(1) Worst - O(n) |
+	| Add/Remove | Average - O(log n) Worst - O(n) | Average - O(1) Worst - O(n) |
+	
 * Adjacency List vs. Adjacency Matrix
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors

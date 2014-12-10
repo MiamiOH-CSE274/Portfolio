@@ -191,3 +191,9 @@ TODO: Answer the following questions about choosing data structures. (5 points e
   special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent
   out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if
   X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+
+	For this instance the only data structure I see being appropriate is a priority queue.  You need to keep a list of all the packets waiting to be
+	sent out over the network as well as which ones to send first (priority).  A packet would get added to the end of the queue(FIFO), and then its
+	priority would get considered.  If it has a high priority it would get bumped up to the end of whichever priority it is.  This structure would ensure 
+	that no packets from a company paying less would get sent out before any from a higher paying company got sent.  As long as a higher paying company's 
+	packet is received before a lesser is sent, the higher will get sent.

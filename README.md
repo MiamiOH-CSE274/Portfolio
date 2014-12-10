@@ -47,7 +47,13 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 
 * Array-based list vs. Linked List
 
-An array-based list is a good choice to make for lists when the list needs to be accessed many times. Accessing an array list is quicker than accessing a linked list. The 'get' method is O(1) for array lists and O(n) for linked lists. However, an iterator is very advantageous when using a linked list. The iterator can add or remove elements at O(1). Any method in a linked list which requires stepping through the list ('get', 'add(index, element)', 'remove') is O(n), while any method not requiring the index ('add(element)', iterator methods) is O(1). All methods but get and add in an array list are O(n-index), which could be advantageous if the list is shorter.
+Linked lists are, at their core, an entirely different concept from array-based lists. Each value or 'node' in a linked list contains a variable assigned to the next node, and another for previous if doubly linked. Therefore, in get(i) and set(i,x), we must iterate through each of the elements in the list until we find i. The worst case running time for these methods would therefore be O(n), n being the number of nodes. An array-based list, however, can be accessed at any point to find any element. Say we had an array 'ray' of 10 objects. Calling get(4) would result in one line: 'return ray[4];'. As arrays can be accessed randomly, get(i) and set(i,x) would take constant time, or O(1). That means for larger lists which must be accessed or edited often, an array list would be preferred. However, there are many other differences between the two.
+
+When adding elements to an array, the list must iterate through all elements behind the new addition, pushing them back one index. When removing elements from an array, the list must push all elements behind the deletion forward one index to fill in the gap. These processes are not desirable to a list with many additions and deletions, as they each take O(n) time due to mass iteration. Linked lists not only have add and remove, but also push(x) and pop(). While add places the new node at the end (or 'tail') of the list, push places it at the front (or 'head'). Pop have the same operations as remove. Since all of this takes place around the head and tail, add, remove, push, and pop all take O(1) time. This would be preferrable to arrays with more addition and removal than accessing the actual elements.
+
+A linked list is dynamic in nature. As adding new elements only requires the addition of new links and some changes to existing links, it never needs to be resized. Array-based lists have a strict size, and when adding elements to the list, it may occasionally have to call the grow() method, which stores a new array with the same elements into the current array. Due to the iteration involved in copying a temporary array back into the original array, the method takes O(n) time. This is not desirable for rapidly growing lists. A linked list also has an iterator, which arrays do not as they can be accessed randomly. An iterator can shorten the time taken to find one location in an array and if the iterator is in the desired location, add, remove, get, set, pop, push, and other methods dealing with location could be O(1). This is assuming the iterator would always be in the right place. Iterators do require memory to keep track of, and when using linked lists, memory is already being used to keep track of each link between nodes. This is not present in array lists, so when memory is crucial, linked lists should not be the first choice.
+
+To add a new element at a certain index would be O(n) worst case for both linked lists and arrays. Arrays would have to iterate through all elements behind the addition to move them forward. A linked list would have to iterate through each element to find the correct index, which would take linear time or O(n) and then adding the element would take constant time. For the same reasons, we can see that worst case for linked lists and arrays when removing an item at a designated index would be O(n). Adding an object to or removing an object from the back of an array would take O(1) time, as would getting or setting the first element of a linked list. So best case running time for get, set, add, and remove would be O(1), but arrays still have grow() which takes O(n).
 
 * Binary Search Tree vs. Hash Table
 
@@ -59,17 +65,13 @@ An array-based list is a good choice to make for lists when the list needs to be
 ----
 TODO: Define/describe each of the following terms, as they apply to memory management in C++
 
-* The call stack (not to be confused with the stack data structure!) - 
-The call stack holds variables like an array, but stores in a LIFO structure.
+* The call stack (not to be confused with the stack data structure!) - The call stack holds all statically allocated variables like an array, but stores in a LIFO structure. The stack hold local variables.
 
-* The heap (not to be confused with the heap data structure!) - 
-The heap is a pool of memory used for dynamic allocation.
+* The heap (not to be confused with the heap data structure!) - The heap is a pool of memory used for dynamic allocation.
 
-* Address - 
-The location of a variable's memory stored in the computer.
+* Address - The location of a variable's memory stored in the computer.
 
-* Pointer - 
-A variable which stores the address to a variable and can reference the address at any time.
+* Pointer - A variable which stores the address to a variable and can reference the address at any time.
 
 TODO: Answer the following questions about memory management and dynamic variables
 
@@ -82,6 +84,7 @@ Memory which is allocated but not released is said to have 'leaked'. This leaked
 Dangling pointers are those which point to invalid data or data which is no longer valid as it has been removed. These references are bugs which typically crash the program, and do so in a way which makes them difficult to find, as they usually do not crash right away.
 
 * What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?
+
 Destructors delete unneeded memory to prevent memory leakage. In Java, developers need not worry about this, as the built-in garbage collector cleans up the program for the user.
 
 5 - Create collection classes using templates in C++

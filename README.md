@@ -35,11 +35,11 @@ Heap code can be found at https://github.com/clarkdb/07_Heap_Lab/blob/master/Hea
 
 7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----
-TODO: Provide a link to your completed 08_Graph_Lab OR Vise project (only if you implemented a graph for it)
+Graph code can be found at https://github.com/clarkdb/08_Graph_Lab/blob/master/Graph.cpp
 
 7 - Implement graph algorithms
 ----
-TODO: Provide a link to your completed Vise project (only if you used graph traversal), or add a graph traversal to 08_Graph_Lab and provide a link
+Graph code can be found at https://github.com/clarkdb/08_Graph_Lab/blob/master/Graph.cpp
 
 21 - Determine space and time requirements of common data structure methods
 -----

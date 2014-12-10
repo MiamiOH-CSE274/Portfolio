@@ -88,7 +88,7 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
-TODO: Define/describe each of the following terms, as they apply to memory management in C++
+Define/describe each of the following terms, as they apply to memory management in C++
 
 * The call stack (not to be confused with the stack data structure!)
 
@@ -113,7 +113,7 @@ TODO: Define/describe each of the following terms, as they apply to memory manag
 	Pointers are a data type that hold address for objects that can't be interacted with in other ways.  When something like an array is created 
 	we also create a pointer to gain access to where it is stored in order to change and read the data stored there.
 
-TODO: Answer the following questions about memory management and dynamic variables
+Answer the following questions about memory management and dynamic variables
 
 * What is a memory leak, and why is it bad?
 

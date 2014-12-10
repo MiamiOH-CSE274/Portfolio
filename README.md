@@ -67,10 +67,10 @@ f/b means at front or back
 
 * Binary Search Tree vs. Hash Table
 
-Both the binary search tree (BST) and the hash table are examples of the dictionary abstract data types which stores (key, value) pairs. Through hashing, hash tables run in constant time for add/remove and get/set. Provided that a BST is balanced, run times are O(log n) for most operations, with run times degrading to O(n) if the BST is unbalanced. Hash tables suffer in the min/max and next/prev operations due to the hash table having no real structure to it, resulting in O(n) for those operations. A binary search trees nodes store the nodes children, which allows for min/max/next/prev to all run in O(log n) time by calling the nodes children to traverse the BST.
+Both the binary search tree (BST) and the hash table are examples of the dictionary abstract data type which stores (key, value) pairs. Through hashing, hash tables run in constant time for add/remove and get/set. Provided that a BST is balanced, run times are O(log n) for most operations, with run times degrading to O(n) if the BST is unbalanced. Hash tables suffer in the min/max and next/prev operations due to the hash table having no real structure to it, resulting in O(n) for those operations. A binary search trees nodes store the nodes children, which allows for min/max/next/prev to all run in O(log n) time by calling the nodes children to traverse the BST.
 
 
-                        Arraylist | Linkedlist
+                       Hash Table  |    BST
          add               O(1)       O(lg n)
          remove            O(1)       O(lg n)
          get               O(1)       O(lg n)
@@ -85,7 +85,7 @@ n = # of nodes
 m = # of edges
 d = max degree of graph
 
-Adjacency lists and matrixes are used to represent graph data structures. An adjacancy matrix uses a 2D array to represent edges between rows and columns. Due to the ability to access a particular spot in the 2D array, adjacancy matrixes have O(1) add/remove edge and get weight. Adding a vertex is slower at O(n*n) because the 2D array might have to be grown in size and the old arrays values copied over to the new array. Adjacancy lists use an array of nodes, with the nodes acting as a list of connecting edges. Adding an edge, vertex, or getting the neighborhs runs in O(1) time due to the ability to access any spot in the array, then simply adding the edge/vertex to the end or returning the neighborhs. Removing an edge is slower due to the array not knowing if the edge exists or not, which requires iteration over the edge list, resulting in O(d) run time. Getweight is also O(d) due to the need for iteration over the adjacancy list to find the weight. Adjacancy lists are prefferable when the number of vertexes is low due to the space requirements being O(n+m) versus an adjacancy matrix which requires O(n*n) space. An adjacancy matrix is only preffered for storage of large amounts of data, such as the US highway system connections.
+Adjacency lists and matrixes are used to represent the graph abstract data structure. An adjacancy matrix uses a 2D array to represent edges between rows and columns. Due to the ability to access a particular spot in the 2D array, adjacancy matrixes have O(1) add/remove edge and get weight. Adding a vertex is slower at O(n*n) because the 2D array might have to be grown in size and the old arrays values copied over to the new array. Adjacancy lists use an array of nodes, with the nodes acting as a list of connecting edges. Adding an edge, vertex, or getting the neighborhs runs in O(1) time due to the ability to access any spot in the array, then simply adding the edge/vertex to the end or returning the neighborhs. Removing an edge is slower due to the array not knowing if the edge exists or not, which requires iteration over the edge list, resulting in O(d) run time. Getweight is also O(d) due to the need for iteration over the adjacancy list to find the weight. Adjacancy lists are prefferable when the number of vertexes is low due to the space requirements being O(n+m) versus an adjacancy matrix which requires O(n*n) space. An adjacancy matrix is only preffered for storage of large amounts of data, such as the US highway system connections.
 
                          Adjacancy List | Adjacancy Matrix
          removeEdge            O(d)            O(1)
@@ -111,7 +111,7 @@ The heap is a pool of memory used for dynamic memory allocation. When the new ke
 
 * Address
 
-A location in memory of the object.
+The location in memory of a variable. &, or the adress of operator, can be used to return the address of a variable by preceding the variable with &.
 
 * Pointer
 
@@ -132,9 +132,7 @@ Dangling pointers are dangerous because they introduce bugs to programs without 
 
 * What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?
 
-Destructor's are used to free up memory that is no longer in use. Destructor's are necessary in C++, but not Java because Java automatically frees up memory while C++ does not.
-
-Objects cleaning up after themselves. Java checks heap to see if object still in use, if not object is deleted, c++ does not do this.
+Destructor's are used to free up memory that is no longer in use, which prevents memory leaks by deleting variables and other data that are no longer needed/in use. Destructor's are necessary in C++, but not Java because objects in Java automatically clean up after themselves by checking the heap to see if the object is in use. If  the object is no longer in use, the object is deleted. C++ does not run automatic garbage collection and leaves it up to the user to manage memory.
 
 5 - Create collection classes using templates in C++
 ----
@@ -152,23 +150,18 @@ The compiler must know both the template definition and the type of data to fill
 ----
 TODO: Answer the following questions about choosing data structures. (5 points each)
 
-* If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.)
+* If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.
+
+A hashset would be a very easy way to accomplish what is asked for in this problem. We do not know how many strings we will need to store, but a hashset grows as more data is added, which is very useful for something like string storage. Seeing as the only requirements are add, remove, checkExists, and for the data structure to be a set, a hashset is the obvious choice. 
+
+Returning the min/max and next/prev is not required which eliminates the only major weakness of a hashset. All other operations for a hashset are O(1), which would make the string storage very fast. The other major requirement is also met, as a hashset does not allow duplicates. Add, remove, and check would all run in O(1) provided that the strings were hashed properly. 
+
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 
-A grocery list keeps a list of items to buy at a store. A good grocery list should sort the items into sections based on where each particular item would be found. My grocery list would be designed as an app for a cellphone, and even the weakest cellphones have enough memory for a grocery list app.
-A grocery list will never get bigger than a few hundred items,
-thus efficiency is not important, as even the slowest data structure will be very fast at operating on such a small number of items. The operations supported by the data structure is the most important point to consider, as the user should be able to manipulate their grocery list 
-as he/she thinks of new items to buy or wants to cross of items already purchased.
+A grocery list keeps track of a list of items to buy at a store. My grocery list would be designed as an application for a cellphone, and nowadays even the weakest cellphones have enough memory for a grocery list app. A grocery list will never get bigger than a few hundred items, thus efficiency is not important, as even the slowest data structure will be very fast at operating on such a small number of items. The operations supported by the data structure is the most important point to consider. A good cellphone application must also have an easy to use GUI that is backed by a data structure that supports any operation that the user would want to do with that particular application.
 
-With all of that said, a doubly linked list would be a great option for a grocery list. A doubly linked list uses pointers to point to the next and previous item, and thus would allow the user to easily update the grocery list as it is used by manipulating pointers. By using a doubly linked list, items could be easily inserted anywhere in the list or removed without having to recreate the list every time.
-The doubly linked list would store strings for the name of each item to be bought at the store. An option that could be considered would be to use a 
+With all of that said, a doubly linked list would be a great option for a grocery list. A doubly linked list uses pointers to point to the next and previous item, and thus would allow the user to easily update the grocery list as it is used through pointer manipulation. My application would allow users to click in between two items in their grocery list, which would allow the user to enter in a new item anywhere in the list. If the user wanted to cross off an item from the list, the user would simply drag the item to either side, which would remove the item. Usability is very important with a grocery list, and a doubly linked list supports all of the operations needed for a grocery list while also being fast.
 
-
-What is a grocery list?
-How should I decide which data structure to use?
-Efficiency not imp, list not very long. Operations supported is most important thing.
-Platform list would be on.
-Iterators for aisles, 
 
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.

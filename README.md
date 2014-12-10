@@ -27,7 +27,7 @@ TODO: Provide a link to your completed 06_BST_Lab OR ClosestStarbucks project (o
 
 7 - Create an implementation of a Hash Table
 ----
-TODO: Provide a link to your completed 05_Hashing_Lab
+https://github.com/adammast/05_Hashing_Lab
 
 7 - Create an implementation of a Heap
 ----

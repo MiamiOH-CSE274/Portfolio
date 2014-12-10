@@ -151,7 +151,7 @@ together such as vegetables or cereals. So if I were to think of a vegetable I w
 I want to be able to insert it with other vegetables right away. If I were to use an array-based list, trying to place an item in the middle would require shifting the whole list.
 In addition, I would have to grow() the list if I added too many items, which would usually mean doubling the size of my list. I would not want to carry an abnormally large list around the supermarket
 if I wasn't going to use all of the space on it. All other data-structures, such as bst, heap, or hashtable, might work but have overly-complicated implementations that are unlikely to yield much improvement
-for a simple grocery list.
+for a simple grocery list. A linked list such as this would most resemble the notes application on an iPhone.
 
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 

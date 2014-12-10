@@ -46,6 +46,7 @@ https://github.com/samsab/08_Graph_Lab/blob/master/Graph.cpp
 TODO: For each pair of data structures listed here, write a short essay comparing and contrasting them in terms of their running times for different operations. (7 points each)
 
 * Array-based list vs. Linked List
+
 An array-based list is a good choice to make for lists when the list needs to be accessed many times. Accessing an array list is quicker than accessing a linked list. The 'get' method is O(1) for array lists and O(n) for linked lists. However, an iterator is very advantageous when using a linked list. The iterator can add or remove elements at O(1). Any method in a linked list which requires stepping through the list ('get', 'add(index, element)', 'remove') is O(n), while any method not requiring the index ('add(element)', iterator methods) is O(1). All methods but get and add in an array list are O(n-index), which could be advantageous if the list is shorter.
 
 * Binary Search Tree vs. Hash Table

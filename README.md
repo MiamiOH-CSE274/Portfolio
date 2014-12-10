@@ -135,7 +135,7 @@ Answer the following questions about memory management and dynamic variables
 
 5 - Create collection classes using templates in C++
 ----
-TODO: Answer the following questions about templates in C++
+Answer the following questions about templates in C++
 
 * What is the main benefit of using templates when creating collection classes?
 

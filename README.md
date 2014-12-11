@@ -192,13 +192,13 @@ Banner id numbers are 9 character "numbers" assigned to each student. There are 
 for this is the hash table. There are a large amount of student ids that have to be put in a table, and there will be no duplicates. If there are collisions (since there always are), linear 
 probing can be used to find the next open space. The constant running times for each main function (find, add, delete, get/set) should outweigh any slow times from collisions/linear probing. 
 Because each student has a key (their banner id number), all their data is easily accessible. You wouldn't have to wait for an algorithm to sift through thousands of students to get to yours. 
- Even grow wouldn't be bad since it's only called once every year (if Miami continues to expand). 
-
-In this scenario the priority is very important in considering which structure to implement. 
+ Even grow wouldn't be bad since it's only called once every year (if Miami continues to expand).
 <br><br>
 
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
-<br>-The heap data structure comes to mind since it specifically deals with priorities, and organizing its tree based on highest priority. 
+<br>- 
+
+In this scenario the priority is very important in considering which structure to implement. The heap data structure comes to mind since it specifically deals with priorities, and organizing its tree based on highest priority. 
 So, the highest priority item would be the root of the tree, and when that is removed the second highest replaces it. Since company X 
 is paying a larger amount, their packets would always get the higher priority compared to company Y. Giving the packets a higher priority 
 will always send them to the top of the tree, allowing company X to always have their packets sent before company Y's packets. If there was

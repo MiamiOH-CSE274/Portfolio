@@ -164,7 +164,7 @@ which would make the array a very inefficient idea. Another possible data struct
 
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
  
-For a network router where certain packets have priority over others I would implement an implicit binary tree as a Heap. While(index >= 0 && backingArray[index] < backingArray[p]), 
+For a network router where certain packets have priority over others I would implement an implicit binary tree as a Heap. While(index > 0 && backingArray[index] < backingArray[p]), 
 the key of a packet will continue to bubbleUp. This means that packets of the same key will not bubbleUp past one another, thus allowing multiple packets of the same key to
  be parents and children of one another. The end result is that all the highest keys are at the top, and ensuring that a packet with a greater key will be sent before one with a lesser key. 
  When company X adds a packet to send, I would give it a key value of how ever much they paid and when company Y added a packet to send I would give it a key of their payment 

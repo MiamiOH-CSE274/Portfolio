@@ -52,13 +52,14 @@ https://github.com/meslerke/08_Graph_Lab/blob/master/Graph.cpp
 -----
 * Array-based list vs. Linked List
 
-      	                     Array  Linked List 
-add/remove		      O(n)     O(n)     
-add/remove with an iterator   O(n)     O(1)     
-get/set			      O(1)     O(n)     
-get/set with an iterator      O(1)     O(1)     
-find an index		      O(1)     O(n)     
-find a value 	              O(n)     O(n)     
+                		| Array | Linked List
+:------------------------------ | :---: | :---------:
+add/remove  			| O(n)  | O(n)
+add/remove with an iterator	| O(n)  | O(1)
+get/set			      	| O(1)  | O(n)     
+get/set with an iterator      	| O(1)  | O(1)     
+find an index		      	| O(1)  | O(n)     
+find a value 	              	| O(n)  | O(n)     
 
 -add/remove - In an array, you would need to shift all of the other items in the array everytime you wanted to do one of these functions. In a linked list, you would have to search through every value in the list by going through the pointers forwards and backwards to get where you want to add or remove an item.
 
@@ -74,12 +75,13 @@ find a value 	              O(n)     O(n)
 
 * Binary Search Tree vs. Hash Table
 
-	         BST    Hash Table 
-add/remove      O(lgn)     O(1)    
-find	        O(lgn)     O(1)    
-get/set	        O(lgn)     O(1)    
-min/max	        O(lgn)     O(n)    
-next/previous   O(lgn)     O(n)    
+	       | BST    | Hash Table 
+:------------- | :----: | :---------:
+add/remove     | O(lgn) |  O(1)    
+find	       | O(lgn) |  O(1)    
+get/set	       | O(lgn) |  O(1)    
+min/max	       | O(lgn) |  O(n)    
+next/previous  | O(lgn) |  O(n)    
 
 -add/remove - To add or remove a node from a BST, you would need to find it. The running time for this depends on the height of the tree because you would start at the top of the tree and work your way down, getting closer to the item you are searching for. In a hash table, the location of the item is stored with the item, so it is easy to locate that particular item.
 
@@ -93,12 +95,13 @@ next/previous   O(lgn)     O(n)
 
 * Adjacency List vs. Adjacency Matrix
 
-	             Adj List   Adj Matrix 
-add/remove edge	      O(d)        O(1)     
-add vertex	      O(d)        O(1)     
-get/set weight	      O(d)        O(1)     
-space	              O(n+m)      O(n^2)   
-getNeighbors	      O(1)        O(n)     
+	            | Adj List | Adj Matrix 
+:------------------ | :------: | :--------:
+add/remove edge	    | O(d)     |  O(1)     
+add vertex	    | O(d)     |  O(1)     
+get/set weight	    | O(d)     |  O(1)     
+space	            | O(n+m)   |  O(n^2)   
+getNeighbors	    | O(1)     |  O(n)     
 
 -add/remove edge - In an adj list, the run time depends on the distance it is from the starting point. In an adj matrix, you just have to look up the item in the table and change it accordingly, which takes much less time.
 

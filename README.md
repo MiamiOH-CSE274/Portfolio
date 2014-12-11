@@ -185,7 +185,8 @@ since I tend to add things while I'm there (and it's easier to carry than paper 
 or lots of eraser marks. <br><br>
 
 *If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
--
+
+
 
 Banner id numbers are 9 character "numbers" assigned to each student. There are 8 actual numbers, but a + sign in front making it 9 characters. The best data structure 
 for this is the hash table. There are a large amount of student ids that have to be put in a table, and there will be no duplicates. If there are collisions (since there always are), linear 

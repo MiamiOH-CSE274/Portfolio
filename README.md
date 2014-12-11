@@ -196,7 +196,8 @@ Because each student has a key (their banner id number), all their data is easil
 <br><br>
 
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
-<br>- 
+<br>
+
 
 In this scenario the priority is very important in considering which structure to implement. The heap data structure comes to mind since it specifically deals with priorities, and organizing its tree based on highest priority. 
 So, the highest priority item would be the root of the tree, and when that is removed the second highest replaces it. Since company X 

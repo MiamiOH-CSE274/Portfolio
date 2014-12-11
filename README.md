@@ -86,6 +86,13 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 	
 * Adjacency List vs. Adjacency Matrix
 
+
+
+    | Operations | BST                             | Hash Table                  |
+	|:----------:|:-------------------------------:|:---------------------------:|
+	| Get/Set    | Average - O(log n) Worst - O(n) | Average - O(1) Worst - O(n) |
+	| Add/Remove | Average - O(log n) Worst - O(n) | Average - O(1) Worst - O(n) |
+
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
 Define/describe each of the following terms, as they apply to memory management in C++

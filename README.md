@@ -75,7 +75,7 @@ A pointer is a variable that stores an address and type of another variable in m
 
 * What is a memory leak, and why is it bad?
 
-A memory leak is an item in memory that no longer has any pointers to it. It is bad because it is occupying memory space that could be freed, and eventually could overflow your allocated memory and cause a crash.
+A memory leak is an item in memory that no longer has any pointers to it. It is bad because it is occupying memory space that could be freed for other resources in the OS, which is generally a behavior that is not preferred. A memory leak is simply wasting valuable resources for program, which in the worst case might cause a crash in your system, or simply slow it down.
 * What is a dangling pointer (or dangling reference), and why is it dangerous?
 
 A dangling pointer is a pointer to a point in memory that has already been deallocated by the program. It is dangerous because you can still try to access that memory, which may contain invalid data, leading you to have potentially unexpected behavior in your program and potential program crashes.
@@ -90,11 +90,11 @@ TODO: Answer the following questions about templates in C++
 
 * What is the main benefit of using templates when creating collection classes?
 
-The main benefit of using templates when creating collection classes is the ability to use generics. With templates, you can specify a generic, which then the user of that collection class can specify that generic to be the specific object that they want to use in their code, rather than restricting them to using one type.
+The main benefit of using templates when creating collection classes is the ability to use generics. With templates, you can specify a generic, which then the user of that collection class can specify that generic to be the specific object that they want to use in their code, rather than restricting them to using one type. This flexibility allows many different users to use your collection class in many different situations, rather than coding a different class for every possible data type to achieve the same result.
 
 * In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
 
-In template-based collection classes the compiler needs to have access to the implementation of the class so that it can compile it with the specified class at compile time. If we seperated it into a .cpp file then the compiler would not know how to compile the collection class with the given type. Most of the time this is circumvented by making a .ipp file and #include that .ipp file to the end of the .h file in order to obfuscate
+In template-based collection classes the compiler needs to have access to the implementation of the class so that it can compile it with the specified class at compile time. If we seperated it into a .cpp file then the compiler would not know how to compile the collection class with the given type. This is due to the way a compiler handles templates. The compiler will compile a new class with the specified data type every time that it is instantiated with that given data type. This does require us to put the code in the .h file so that the compiler only looks there to compile it, but most of the time this is circumvented by making a .ipp file and #include that .ipp file to the end of the .h file in order to obfuscate that code into a different file.
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application
 ----

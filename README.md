@@ -80,7 +80,6 @@ TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----
-TODO: Define/describe each of the following terms, as they apply to memory management in C++
 
 * The call stack (not to be confused with the stack data structure!)
 	The call stack allows for fast access of memory. It stores all statically allocated variables and info related to function calls.
@@ -96,11 +95,22 @@ TODO: Define/describe each of the following terms, as they apply to memory manag
 * Pointer
 	A pointer is a variable that holds a memory address. Using the address of an object, you can easily see what is stored there.
 
-TODO: Answer the following questions about memory management and dynamic variables
 
 * What is a memory leak, and why is it bad?
+	A memory leak is an item in memory that no longer has any pointers to it. It is bad because it is occupying memory space that
+	could be freed for other resources. This waste of valuable resources in the worst case might cause a crash in your system, or
+	simply slow it down.
+
 * What is a dangling pointer (or dangling reference), and why is it dangerous?
+	A dangling pointer occurs when you deallocate an object without dereferencing it. The pointer that used to point to that object
+	still points to the memory location of that deallocated object. This can lead to unexcpected behaviour in your program or even
+	potential crashes.
+
 * What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?
+	A destructor is a method that is used in C++ to destroy in object that is no longer needed for whatever reason. This deallocates
+	the memory that was being used by that object and prevents a memory leak. This is not needed in Java coding because Java
+	automattically destroys all the objects that are no longer in use in your code.	
+
 
 5 - Create collection classes using templates in C++
 ----

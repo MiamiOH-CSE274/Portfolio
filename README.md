@@ -41,7 +41,7 @@ https://github.com/XCCOOP/08_Graph_Lab/blob/master/Graph.cpp
 
 7 - Implement graph algorithms
 ----
-TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
+Graph traversal in graph.cpp above ^^^
 
 21 - Determine space and time requirements of common data structure methods
 -----

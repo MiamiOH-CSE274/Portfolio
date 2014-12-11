@@ -116,35 +116,34 @@ or removing an edge, but is terrible when dealing with vertices. And the adjacen
 * The call stack is the order in which operations get done. All commands (and local variables, objects, and operations) are stored in 
 the computer's RAM. The stack is the reason we can perform recursive methods. It keeps track of everything we need, and puts it off to the
 side, until it either runs out of space, or a command is performed. Once the function is completed all data is deleted from the stack.
+
 * The heap is also stored in the computer's RAM. The heap is a giant space used for dynamic memory allocation. You can access any sort of 
 information at any time from it, unlike the stack where there is an order of execution. It is the programmer's responsibility to delete
 unused variables in the heap, because C++ will not do it for you (like Java does with the garbage collector). 
-* An Address is the address of a variable stored in memory. It can be found using '&', and to access the value stored within that address of RAM 
-you need to use a pointer. 
-* As stated above, a pointer can be used to store the value of an address. Declaring a pointer involves a star; ClassType* foo (foo being the pointer).
+
+* An Address is the address of a variable stored in memory. It can be found using '&', and to access it you need a reference or a pointer.
+
+* A pointer can be used to store the value of an address in RAM. Declaring a pointer involves a star; ClassType* foo (foo being the pointer).
 Changing the value of the pointer would only require *foo="new value". 
 
-
 * What is a memory leak, and why is it bad?
-A memory leak is caused by programmers/developers not deleting variables they create in a function- so it is still accessible. It is important
-to delete any objects not in use, so RAM isn't taken up by useless things. Also, since the data is still accessible it becomes a major
-security issues, potentially allowing a breach, or random people getting into your information.
+A memory leak is caused by programmers/developers not deleting variables they create in a function- so they are still accessible. It is important
+to delete any objects not in use, so RAM isn't taken up by unreference variable. Also, since the data is still accessible it becomes a major
+security issue, potentially allowing a breach, or random people getting into your information.
 
 * What is a dangling pointer (or dangling reference), and why is it dangerous?
 A dangling pointer is one that continues to point to an address after you delete the data that was there. To fix this, you would either delete
 the pointer, or reassign it to point to data in use. 
 
 * What is a destructor, and why are they necessary (in C++) to prevent memory leaks? Why *aren't* they necessary in Java?
-This is called automatically (like how the constructor is called automatically). But instead of creating objects, the destructor
-deletes them. This is where everything created and used in the function is erased, so there are no memory leaks (no one can access
-items after the function ends). Java has something called a garbage collector, which deletes unused or data without pointers, for you.
-C++ does not have this luxury, so it is done by hand. 
+This is called automatically (like how the constructor is called automatically).This is where everything created and used in the function is deleted, so there are no memory leaks (no one can access
+items after the function ends). Java has the garbage collector, which deletes unused data for you. C++ does not have this luxury, so it is done by hand. 
 
 
 5 - Create collection classes using templates in C++
 ----
 What is the main benefit of using templates when creating collection classes?<br>
-A template allows a programmer to use any data type in a function or class. This cuts down on code duplication since there would be no need to 
+-A template allows a programmer to use any data type in a function or class. This cuts down on code duplication since there would be no need to 
 write almost the same thing, but taking in a different type and manipulating it. An advantage to writing templates is the ability
 to make one general skeleton of a class instead of creating specializations. When it's time to compile, the compiler will create a separate
 version of the function for each type you used. So if you were to create: template <class T> class Foo, then when you substitute
@@ -153,7 +152,7 @@ that is called/performed.
 <br><br>
 In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. 
 Explain why this isn't the case with template-based collection classes.<br>
-The compiler needs to know where variables and functions are stored and implemented in order for the program to run. Each time a template
+-The compiler needs to know where variables and functions are stored and implemented in order for the program to run. Each time a template
 class calls a function, the compiler makes a new version of your class with whatever datatype was passed in. If the new version doesn't
 have access to certain variables (they would need to be in the .h file), or the template is called again in another file, then it won't compile.
 That's why it's best to put a template class in the header, so all .cpp files have access and the compiler can instantiate different versions of the code.
@@ -163,16 +162,15 @@ That's why it's best to put a template class in the header, so all .cpp files ha
 Answer the following questions about choosing data structures. (5 points each)
 
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.)
-<br> First we need to determine what functions are most important so we can choose a data type that's most efficient in those same areas. 
+<br> -First we need to determine what functions are most important so we can choose a data type that's most efficient in those same areas. 
 It needs to have a good running time when adding, removing, and searching. Because the list is unordered I would suggest using a hash table, 
 since it has O(1) for all the desired functions. A binary tree would be okay to handle this because it would be balanced so it's time would 
 be O(log n) for everything, which isn't nearly as fast as the hash table. Hash functions won't allow any duplicates, and don't require the data 
 set to be in order for a better running time. A hash function will always have collisions though. A way to handle similar, but not duplicate strings, is by linear probing. 
 This is when a random index is chosen, and if it's occupied we would keep moving down the list ( arr[i+1] ) until an open spot is found. This isn't constant time, but collisions 
-shouldn't happen very often, so the extra time is negligible.<br> 
+shouldn't happen very often, so the extra time is negligible.<br> <br>
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
-My grocery list is the Notes app on my phone. In the app I am able to add, remove, and edit whatever I want. I can place certain things at various points in the list, and the “paper” is endless (the app doesn’t set a max of how many items I can have). Because of all these reasons, I would use a Linked List, since it will allow me to add items at any point in the list (I’m forgetful, and being in the bread section might remind me to get donuts). Also, if I start in a different part of the store (say I want to go clockwise), I can arrange my list easily to reflect my decision. If I find an item isn’t on sale, or is too expensive, I can delete it and there won’t be any blank spaces in my list. 
-<br> 
+<br> -
 The most important function of a grocery list is the ability to add items.You don't have to necessarily remove items; 
 you could cross them off, or mark them as useless and put a new item in the old one's spot. Because the grocery list has a max, a hash table would be a bit extreme, even though it
  is constant for add/deleting. We have to determine if running time is a top priority, or efficient use of space, or what the easiest is to implement. Since grocery lists are usually 
@@ -184,9 +182,9 @@ the most common thing that happens to a grocery list is that extra items are add
  to be by food category, since that's most like a grocery store. If you're in the dairy section then you can look at your list, and cross off the things you come across first, so it doesn't 
 need to be in any order besides being in the correct food group. This type of list could be used on a smartphone, or a piece of paper, or anything really. I would personally use a smartphone, 
 since I tend to add things while I'm there (and it's easier to carry than paper and pencil). To make the paper neat while inserting would be to leave space at the end of each food group, so you wouldn't have things written on the margins, 
-or lots of eraser marks. <br>
+or lots of eraser marks. <br><br>
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
-<br>
+<br>-
 
 Banner id numbers are 9 character "numbers" assigned to each student. There are 8 actual numbers, but a + sign in front making it 9 characters. The best data structure 
 for this is the hash table. There are a large amount of student ids that have to be put in a table, and there will be no duplicates. If there are collisions (since there always are), linear 
@@ -195,9 +193,9 @@ Because each student has a key (their banner id number), all their data is easil
  Even grow wouldn't be bad since it's only called once every year (if Miami continues to expand). 
 
 In this scenario the priority is very important in considering which structure to implement. 
-<br>
+<br><br>
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
-<br>The heap data structure comes to mind since it specifically deals with priorities, and organizing its tree based on highest priority. 
+<br>-The heap data structure comes to mind since it specifically deals with priorities, and organizing its tree based on highest priority. 
 So, the highest priority item would be the root of the tree, and when that is removed the second highest replaces it. Since company X 
 is paying a larger amount, their packets would always get the higher priority compared to company Y. Giving the packets a higher priority 
 will always send them to the top of the tree, allowing company X to always have their packets sent before company Y's packets. If there was

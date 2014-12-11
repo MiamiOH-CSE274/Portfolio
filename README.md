@@ -20,28 +20,33 @@ https://github.com/GrasysER/03_Queue_Lab/blob/master/ArrayQueue.h
 
 7 - Create an implementation of a List
 ----
-The link below proves that I can implement a C++ List Data Structure
+The link below proves that I can implement a C++ List Data Structure.
 https://github.com/GrasysER/04_Linked_List_Lab/blob/master/LinkedList.h
 
 7 - Create an implementation of a Binary Search Tree
 ----
-TODO: Provide a link to your completed 06_BST_Lab OR ClosestStarbucks project (only if you used a search tree)
+The link below proves that I can implement a C++ Binary Search Tree.
+https://github.com/GrasysER/06_BST_Lab/blob/master/BST.h
 
 7 - Create an implementation of a Hash Table
 ----
-TODO: Provide a link to your completed 05_Hashing_Lab
+The link below proves that I can implement a C++ Hash Table.
+https://github.com/GrasysER/05_Hashing_Lab/blob/master/HashTable.h
 
 7 - Create an implementation of a Heap
 ----
-TODO: Provide a link to your completed 07_Heap_Lab
+The link below proves that I can implement a C++ Heap.
+https://github.com/GrasysER/07_Heap_Lab/blob/master/Heap.h
 
 7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----
-TODO: Provide a link to your completed 08_Graph_Lab
+The link below proves that I can implement a C++ Adjacancy List.
+https://github.com/GrasysER/08_Graph_Lab/blob/master/Graph.cpp
 
 7 - Implement graph algorithms
 ----
-TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
+The link below proves that I can implement a depth first graph traversal. (Last method)
+https://github.com/GrasysER/08_Graph_Lab/blob/master/Graph.cpp
 
 21 - Determine space and time requirements of common data structure methods
 -----
@@ -144,7 +149,7 @@ The main benefit of using templates for creating collection classes is that a te
 
 * In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
 
-The compiler must know both the template definition and the type of data to fill in the template. When the compiler gets down to the .cpp code it must already know both or else the compiler won't know what to do with the .cpp code.
+The compiler must know both the template definition and the type of data to fill in the template. When the compiler gets down to the .cpp code it must already know both or else the compiler won't know what to do with the .cpp code. In other words, the compiler must know the type, so we have to include the whole source code. 
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
@@ -152,9 +157,9 @@ TODO: Answer the following questions about choosing data structures. (5 points e
 
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.
 
-A hashset would be a very easy way to accomplish what is asked for in this problem. We do not know how many strings we will need to store, but a hashset grows as more data is added, which is very useful for something like string storage. Seeing as the only requirements are add, remove, checkExists, and for the data structure to be a set, a hashset is the obvious choice. 
+A hash table would be a very easy way to accomplish what is asked for in this problem. We do not know how many strings we will need to store, but a hash table grows as more data is added, which is very useful for something like string storage. Seeing as the only requirements are add, remove, checkExists, and for the data structure to be a set, a hashset is the obvious choice. 
 
-Returning the min/max and next/prev is not required which eliminates the only major weakness of a hashset. All other operations for a hashset are O(1), which would make the string storage very fast. The other major requirement is also met, as a hashset does not allow duplicates. Add, remove, and check would all run in O(1) provided that the strings were hashed properly. 
+Returning the min/max and next/prev is not required which eliminates the only major weakness of a hashset. All other operations for a hashset are O(1), which would make the string storage very fast. The other major requirement is also met, as a hashset does not allow duplicates. Since there are no duplicates, adding each string would run in O(1) by hashing each string then placing the string at the location specified by the hash value. Finally, remove and checkExists would also run in O(1) time by hashing the index for the string, then using that index to remove or check the string located at the index.
 
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 
@@ -164,6 +169,9 @@ With all of that said, a doubly linked list would be a great option for a grocer
 
 
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+
+The major requirement asked for by this question is for the ability to look up students by their banner number. 
+
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 
 BST

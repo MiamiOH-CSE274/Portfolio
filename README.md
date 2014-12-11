@@ -35,7 +35,7 @@ https://github.com/adammast/07_Heap_Lab
 
 7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----
-TODO: Provide a link to your completed 08_Graph_Lab
+https://github.com/adammast/08_Graph_Lab
 
 7 - Implement graph algorithms
 ----

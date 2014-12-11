@@ -83,9 +83,18 @@ TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
 TODO: Define/describe each of the following terms, as they apply to memory management in C++
 
 * The call stack (not to be confused with the stack data structure!)
+	The call stack allows for fast access of memory. It stores all statically allocated variables and info related to function calls.
+	For example,  parameters and return addresses.
+
 * The heap (not to be confused with the heap data structure!)
+	This stores all dynamically allocated memeory and requires manual memory management. For example, any variable allocated with
+	the new keyword will be stored here.
+
 * Address
+	This is the physical location of a variable in memory.
+
 * Pointer
+	A pointer is a variable that holds a memory address. Using the address of an object, you can easily see what is stored there.
 
 TODO: Answer the following questions about memory management and dynamic variables
 

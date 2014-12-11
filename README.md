@@ -39,7 +39,8 @@ https://github.com/adammast/08_Graph_Lab
 
 7 - Implement graph algorithms
 ----
-TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
+https://github.com/adammast/08_Graph_Lab
+-Added a DFT method as well as a DFT helper method
 
 21 - Determine space and time requirements of common data structure methods
 -----

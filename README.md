@@ -105,7 +105,14 @@ TODO: Answer the following questions about templates in C++
 
 - What is the main benefit of using templates when creating collection classes?
 
-- In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes
+
+I think the best way to explain the use of templates is with an example.  Let's suppose I'm making a Dictionary-like data structure with both a key and a certain kind of data -- but I don't know what kind of data.  This dictionary could be storing words as strings, or student ID numbers as integers, or anything else.  Templates allow me to not worry about what the final use of the class I'm making is and instead focus on a well made and extremely flexible data structure that could be implemented in many different classes each storing a different kind of data.
+
+- In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
+
+The caveat we're dealing with here is that templates must be implemented in the header file.  When supplying a template argument in some .cpp file, the template class is going to create a new class specific to that argument modeled after the template.  But in order to create a model of the template, it will need the template methods and those would be inaccessible by the compiler anywhere other than from the header file.
+
+
 
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application
@@ -131,3 +138,8 @@ The concept of banner numbers seems like a perfect reason to use a hash table.  
 
 
 In my opinion the best way to approach a situation like this one would be to implement an implicit binary tree as a Heap structure.  Heaps are uniquely fit for this scenario because no other structure can prioritize it's contents with the same amount of efficiency.  I could add things into the tree and bubble them up to their proper priority within the heap. Company X would get a key value of 1, Y would get 2 and so on where X,Y,Z,etc. can change based on their priority (aka how much they pay me).
+
+
+Originality Statement
+===
+- All code is original unless stated otherwise within the various labs accordingly

@@ -39,7 +39,8 @@ https://github.com/richarkc/08_Graph_Lab/blob/master/Graph.cpp
 
 7 - Implement graph algorithms
 ----
-TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
+Method DFT() is a depth-first traversal
+https://github.com/richarkc/08_Graph_Lab/blob/master/Graph.cpp
 
 21 - Determine space and time requirements of common data structure methods
 -----
@@ -62,10 +63,10 @@ An adjacency matrix is better at checking whether or not a given adjacency exist
 
 * The call stack (not to be confused with the stack data structure!)
 
-The call stack stores all statically allocated variables and any imformation relating to function calls (return address, parameters). Allows for fast and convenient access of memory.
+The call stack stores all statically allocated variables and any imformation relating to function calls (return address, parameters). Allows for fast and convenient access of memory. 
 * The heap (not to be confused with the heap data structure!)
 
-The heap stores all dynamically allocated memory, i.e. any variables allocated with the new keyword, and requires manual memory management
+The heap stores all dynamically allocated memory, i.e. any variables allocated with the "new" keyword, and requires manual memory management, such as ensuring that the variable is deleted when it falls out of scope.
 * Address
 
 An address is the physical location of a variable in virtual memory.

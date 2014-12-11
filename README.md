@@ -114,16 +114,54 @@ TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a link
 
 5 - Create collection classes using templates in C++
 ----
-TODO: Answer the following questions about templates in C++
 
 * What is the main benefit of using templates when creating collection classes?
+	The main benefit of using templates when creating collection classes is that you don't have to make a class for every single
+	data type. Instead what you do is make it general for all data types and then when you implement it you can specify which
+	data type is going to be stored in that collection. This saves time as you don't need to write repeated code over and over
+	again for each data type that you want to store within the collection.
+
 * In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
+	This is due to the fact that the compiler will compile a new class with the specified data type every time that it is 
+	instantiated with that given data type.	So we have to put the code in the .h file in order for the compiler to be able to
+	compile it. Another way around this is to put the implementations in a .ipp file and #include that file at the end of the
+	header file.
+
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application
 ----
-TODO: Answer the following questions about choosing data structures. (5 points each)
 
 * If I needed a data structure to store a set of strings, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why. (Remember that a set doesn't have any order, and doesn't store duplicates. We can add items, remove items, and check to see if an item is already in the set.)
+	I would use a hash table for this problem. I would use that because hash tables are fast at adding and removing items, which
+	I'm assuming would be the main functions used in this program. The time for these in a hash table would be O(1). The hash table
+	will also be able to check for the existence of a given key whenever another key is added to the set, which can be helpful. The
+	problem with using a hash table is that it uses a lot of space because you want to avoid collisions between items in the set.
+	In my opinion, the added speed of using a hash table outweighs the space issue though, so I would go with a hash table for this
+	problem for sure.
+
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+	For this problem I'd use a doubly linked list. The reason for this is that I believe the most used functions for a grocery list
+	would be the add and remove functions. I believe this because as you pick up something from the store, you'll always have to
+	mark it off your list, or delete it. And whenever you think of something new you need form the store, you need to add to the
+	list, so being able to add and remove things quickly seems very important for this problem. Luckily, doubly linked list does
+	both of these funstions in O(1) time. Also, with a doubly linked list, you won't have to worry about the size of the list, as
+	it is dynamic unlike an array where you'd need to resize the list every time the list outgrows the size of the array.
+
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+	I would use a hash table for this one as well, with the banner number as the key and the record being the value. Since banner
+	numbers are all unique for students, we know we can use that as a unique identifier. Hash tables with unique keys have a time
+	of O(1) for the add and remove functions as well as looking up certain elements. Assuming that these would be the most used
+	functions, this would be very efficient for the user of this program.Of course, as usual, whenever we use a hash table, we need
+	to make sure we avoid collisions. This would require that we have a good hash function and a properly sized backing array. This
+	requires a lot of space, but gives you an advantage with speed. If space is an issue however, then I would go with a binary
+	search tree as it only uses the neccessary space to store all of the items in the tree. The downside though is that the methods
+	discussed earlier would be O(log n) time instead of O(1), so it would be much slower. If space is not important, the ideal data
+	structure would be a hash table.
+
 * Imagine that I'm implementing a network router. It needs to keep a queue of packets waiting to be sent out over the network, but this queue need a special ability: Different companies are going to pay me different amounts of money, and the packets from the highest paying company should be sent out first. That is, if company X paid 20 and company Y paid 10, then X's packets always get sent before Y's packets. Y only gets to send packets if X doesn't have any waiting. Which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
+	I believe that the best option for this problem would be a heap implemented as a priority queue. Since priority is large factor
+	in this problem, the priority queue would be perfect for this if we simply use money as the priority. Also, a heap is very good 
+	at implementing a priority queue because of the fact that most of its functions run at O(log n) time except for looking up the 
+	highest priority which is O(1) time. Also, it doesn't need to be fully sorted, just sorted so that all the objects of lesser 
+	priority are below the node.
+

@@ -72,7 +72,7 @@ f/b means at front or back
 
 * Binary Search Tree vs. Hash Table
 
-Both the binary search tree (BST) and the hash table are examples of the dictionary abstract data type which stores (key, value) pairs. Through hashing, hash tables run in constant time for add/remove and get/set. Provided that a BST is balanced, run times are O(log n) for most operations, with run times degrading to O(n) if the BST is unbalanced. Hash tables suffer in the min/max and next/prev operations due to the hash table having no real structure to it, resulting in O(n) for those operations. A binary search trees nodes store the nodes children, which allows for min/max/next/prev to all run in O(log n) time by calling the nodes children to traverse the BST.
+Both the binary search tree (BST) and the hash table are examples of the dictionary abstract data type which stores (key, value) pairs. Through hashing, hash tables run in constant time for add/remove and get/set. Provided that a BST is balanced, run times are O(lg n) for most operations, with run times degrading to O(n) if the BST is unbalanced. Hash tables suffer in the min/max and next/prev operations due to the hash table having no real structure to it, resulting in O(n) for those operations. A binary search trees nodes store the nodes children, which allows for min/max/next/prev to all run in O(lg n) time by calling the nodes children to traverse the BST.
 
 
                        Hash Table  |    BST

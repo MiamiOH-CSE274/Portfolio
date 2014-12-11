@@ -23,7 +23,7 @@ Link to my 04_Linked_List_Lab: https://github.com/mccarts3/04_Linked_List_Lab/bl
 
 7 - Create an implementation of a Binary Search Tree
 ----
-TODO: Provide a link to your completed 06_BST_Lab
+Link to my BST file: https://github.com/mccarts3/06_BST_Lab/blob/master/BST.h
 
 7 - Create an implementation of a Hash Table
 ----

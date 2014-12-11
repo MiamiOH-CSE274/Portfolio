@@ -53,48 +53,61 @@ https://github.com/meslerke/08_Graph_Lab/blob/master/Graph.cpp
 * Array-based list vs. Linked List
 
       	                    |Array |Linked List|
-add/remove			            | O(n) |   O(n)    |
-add/remove with an iterator	| O(n) |   O(1)    |
-get/set				              | O(1) |   O(n)    |
+add/remove		    | O(n) |   O(n)    |
+add/remove with an iterator | O(n) |   O(1)    |
+get/set			    | O(1) |   O(n)    |
 get/set with an iterator    | O(1) |   O(1)    |
-find an index			          | O(1) |   O(n)    |
-find a value			          | O(n) |   O(n)    |
+find an index		    | O(1) |   O(n)    |
+find a value 	            | O(n) |   O(n)    |
 
 -add/remove - In an array, you would need to shift all of the other items in the array everytime you wanted to do one of these functions. In a linked list, you would have to search through every value in the list by going through the pointers forwards and backwards to get where you want to add or remove an item.
+
 -add/remove with an iterator - In an array, you would still have to shift all of the other items to perform one of these methods. In a linked list, you would be able to go right where you wanted to be, which would make for a faster running time.
+
 -get/set - In an array, you can just look up where an item is and go straight to it, but in a linked list, you have to loop through the list to find the item.
+
 -get/set with an iterator - Both an array and a linked list can have a constant running time because they will both be able to direct you to the item you want.
+
 -find an index - An array holds its own index which makes it easy to find objects, but a linked list does not.
+
 -find a value - For both of these data structures, you would need to iterate through it to find the item you were looking for.
 
 * Binary Search Tree vs. Hash Table
 
-			        |  BST   |Hash Table|
-add/remove		| O(lgn) |   O(1)   |
-find			    | O(lgn) |   O(1)   |
-get/set			  | O(lgn) |   O(1)   |
-min/max			  | O(lgn) |   O(n)   |
-next/previous	| O(lgn) |   O(n)   |
+	      |  BST   |Hash Table|
+add/remove    | O(lgn) |   O(1)   |
+find	      | O(lgn) |   O(1)   |
+get/set	      | O(lgn) |   O(1)   |
+min/max	      | O(lgn) |   O(n)   |
+next/previous | O(lgn) |   O(n)   |
 
 -add/remove - To add or remove a node from a BST, you would need to find it. The running time for this depends on the height of the tree because you would start at the top of the tree and work your way down, getting closer to the item you are searching for. In a hash table, the location of the item is stored with the item, so it is easy to locate that particular item.
+
 -find - In a BST the running time for this method is based off of the height of the tree, and in a hash table, it is easy to just look up the items position
+
 -get/set - In a BST, the height tells you how long it could take for you to find the item to get and set it. In a hast table, you can look it up immediately.
+
 -min/max - In a BST, again you have to search through the height of the tree to find the min or the max value. In a hash table, you have to go through every item, which costs a lot of time.
+
 -next/previous - In a BST, you again have to find the item first, which depends on the height of the tree. In a hash table, you have to search the entire table to find the item you are looking for before finding its next or previous.
 
 * Adjacency List vs. Adjacency Matrix
 
-			            |Adj List|Adj Matrix|
-add/remove edge	  | O(d)   |  O(1)    |
-add vertex		    | O(d)   |  O(1)    |
-get/set weight	  | O(d)   |  O(1)    |
-space			        | O(n+m) |  O(n^2)  |
-getNeighbors		  | O(1)   |  O(n)    |
+	            |Adj List|Adj Matrix|
+add/remove edge	    | O(d)   |  O(1)    |
+add vertex	    | O(d)   |  O(1)    |
+get/set weight	    | O(d)   |  O(1)    |
+space	            | O(n+m) |  O(n^2)  |
+getNeighbors	    | O(1)   |  O(n)    |
 
 -add/remove edge - In an adj list, the run time depends on the distance it is from the starting point. In an adj matrix, you just have to look up the item in the table and change it accordingly, which takes much less time.
+
 -add vertex - This also depends on the distance it is away from the starting point in an adj list, and can be easily looked up in an adj matrix.
+
 -get/set weight - This works the same way as the add vertex method for both data structures
+
 -space - an adj matrix takes up a substantial amount of space more than an adj list, which could be a very negative aspect.
+
 -getNeighbors - This takes much more time to perform in a matrix because you would have to search through every entry to determine the neighbors.
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
@@ -110,8 +123,11 @@ getNeighbors		  | O(1)   |  O(n)    |
 5 - Create collection classes using templates in C++
 ----
 * What is the main benefit of using templates when creating collection classes?
+
 The main benefit of using templates is that you only need to create one version of your code, and it will work for all data types.
+
 * In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
+
 This is because .cpp files don't have enough information to compile with a template because it doesn't know the data type that you are going to use. This will compile in a header because it does not require the knowledge of the data type to compile.
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application

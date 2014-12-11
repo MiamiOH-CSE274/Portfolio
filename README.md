@@ -15,16 +15,16 @@ Body of portfolio
 
 7 - Create an implementation of a Queue
 ----
-Here is the link to the Queue I implemented: https://github.com/eaglesonA/03_Queue_Lab/blob/master/ArrayQueue.ipp
+Here is the link to the Queue I implemented: <br> https://github.com/eaglesonA/03_Queue_Lab/blob/master/ArrayQueue.ipp
 
 7 - Create an implementation of a List
 ----
-An example of a List is in our Linked List Lab, in the header file, located here: 
+An example of a List is in our Linked List Lab, in the header file, located here: <br>
 https://github.com/eaglesonA/04_Linked_List_Lab/blob/master/LinkedList.h
 
 7 - Create an implementation of a Binary Search Tree
 ----
-The link to the Binary Search Tree Lab:
+The link to the Binary Search Tree Lab: <br>
 https://github.com/eaglesonA/06_BST_Lab/blob/master/BST.h
 
 7 - Create an implementation of a Hash Table
@@ -33,12 +33,13 @@ https://github.com/eaglesonA/05_Hashing_Lab/blob/master/HashTable.h
 
 7 - Create an implementation of a Heap
 ----
-A heap was implemented in our 07_Heap_Lab:
+A heap was implemented in our 07_Heap_Lab: <br>
 https://github.com/eaglesonA/07_Heap_Lab/blob/master/Heap.h
 
 7 - Create an implementation of either Adjacency Lists or Adjacency Matrices
 ----
-An adjacency list is implemented in: https://github.com/eaglesonA/08_Graph_Lab/blob/master/Graph.cpp
+An adjacency list is implemented in: <br>
+ https://github.com/eaglesonA/08_Graph_Lab/blob/master/Graph.cpp
 
 7 - Implement graph algorithms
 ----
@@ -47,7 +48,6 @@ TODO: TODO: Add a graph traversal (DFS or BFS) to 08_Graph_Lab and provide a lin
 
 21 - Determine space and time requirements of common data structure methods
 -----
-TODO: For each pair of data structures listed here, write a short essay comparing and contrasting them in terms of their running times for different operations. (7 points each)
 
 * Array-based list vs. Linked List<br>
 There are pros and cons to using Array Lists or Linked Lists. LinkedList is wonderful if you have a lot of items you need to add, and need to put those in a particular
@@ -144,8 +144,20 @@ C++ does not have this luxury, so it is done by hand.
 5 - Create collection classes using templates in C++
 ----
 TODO: Answer the following questions about templates in C++
-What is the main benefit of using templates when creating collection classes?
-In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. Explain why this isn't the case with template-based collection classes.
+What is the main benefit of using templates when creating collection classes?<br>
+A template allows a programmer to use any data type in a function or class. This cuts down on code duplication since there would be no need to 
+write almost the same thing, but taking in a different type and manipulating it. An advantage to writing templates is the ability
+to make one general skeleton of a class instead of creating specializations. When it's time to compile, teh compiler will create a separate
+version of the function for each type you used. So if you were to create: template <class T> class Foo, then whenever you subsitute
+a real value for T (we can use string as an example), then the compiler will make a Foo<String> version. It does this for each function
+that is called/performed. 
+<br>
+In normal C++ code the .h file contains the declarations, and the .cpp file contains implementations. 
+Explain why this isn't the case with template-based collection classes.<br>
+The compiler needs to know where variables and functions are stored and implemented in order for the program to run. Each time a template
+class calls a function, the compiler makes a new version of your class with whatever datatype was passed in. If the new version doesn't
+have access to certain variables (they would need to be in the .h file), or the template is called again in another file, then it won't compile.
+That's why it's best to put a template class in the header, so all .cpp files have access and the compiler can instantiate different versions of the code.
 
 20 - Using time and space analysis, justify the selection of a data structure for a given application
 ----

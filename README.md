@@ -86,12 +86,20 @@ TODO: For each pair of data structures listed here, write a short essay comparin
 	
 * Adjacency List vs. Adjacency Matrix
 
+	One of the main differences between adjacency lists and adjacency matrices is the size they take.  A matrix is basically a 2d array with a spot 
+	for every possible cost from one vertex to another.  Unless there are a lot of edges, most of the space is wasted.  A matrix does have very fast 
+	speeds for most operations.  Because it has a specific spot for each cost, you can quickly add, remove, and get the cost for a particular edge.  
+	One downside other than the size is that if you need to add vertex, creating a new 2d array takes a long time.  A list takes up much less space,
+	only requiring as much space as vertices and edges.  If you know exactly how many vertices you will have and space is not an issue, a matrix will 
+	give you faster results.  If you have limited space or it is unknown how many vertices you will have, a list will be slightly slower for most operations
+	but will save time if adding a lot of vertices. 
 
-
-    | Operations | BST                             | Hash Table                  |
-	|:----------:|:-------------------------------:|:---------------------------:|
-	| Get/Set    | Average - O(log n) Worst - O(n) | Average - O(1) Worst - O(n) |
-	| Add/Remove | Average - O(log n) Worst - O(n) | Average - O(1) Worst - O(n) |
+    | Operations  | Adjacency List | Adjacency Matrix |
+	|:-----------:|:--------------:|:----------------:|
+    | Add Vertex  | O(1)           | O(V^2)           |
+    | Add Edge    | O(E)           | O(1)             |
+    | Remove Edge | O(E)           | O(1)             |
+    | Get Cost    | O(V + E)       | O(1)             |
 
 5 - Describe memory management in C++, and correctly use dynamic variables, including destructors
 ----

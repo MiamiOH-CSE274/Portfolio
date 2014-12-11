@@ -221,10 +221,17 @@ needed to store a simple unordered set of strings.
 
 * If I needed a data structure to store a grocery list, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 
-For a grocery list I would use a Doubly Linked list.  I made this decision because using a doubly linked list allows you to easily add and remove items
-anywhere in the list, for example, if you realised after writing your list that you didn't need a certain item anymore, removing that item from the list
-would be doable in O(1) time.  Similarly, if you forgot to write an item down after creating the list, you can easily insert that list anywhere in the list
-again in O(1) time.  Being able to easily remove an item would also be very helpful because after you have gotten the item while at the store, you can simply remove that item from the list.
+When I make a list for the grocerty store, I dont list item in any kind of order, I just write down items as I realise that I need them, I also dont get the items at the store
+in any particular order, I just walk down every isle and get items off my list that are in that isle.  Because of this, the only features I would need out of a data structure
+would be adding items to the end of the list and finding and removing items at arbitrary positions in the list.  If I was at the store and has already bought a few item then realised
+I needed something else, I would just write that new item at the bottom of the list, so I don't need to be able to insert item into the list.  Because of these two requirements I believe
+the best data structure to use would be a doubly linked list.  The main reason for this is that you can add an item to the end of a doubly linked list in O(1) time because you obviously
+dont need to iterate over every item in the list to find whats at the end, its just the node to the left of the root.  And a doubly linked list would keep everything in the same order that
+I added it, unlike say a hashtable or a heap that would move things to different positions.  The other benefit of a doubly linked list is that once you know which item you want to remove
+from the list, you can do so in O(1) time, although finding that item takes O(n) time.  Since I would be removing items as I am getting them at the store, the time it takes to find and remove
+each additional item will take less and less time as `n` goes to 0, and because my grocerty lists never contain more than say 10-15 items, the time it takes to find an item would not even
+be noticeable on a modern computer.  I am also assuming that I would actually be using a computer to implement this data structure, if this was being done with a pencil and paper a doubly linked
+list wouldn't really make sense, because humans dont need to store "links" on the paper to the next and previous item.
 
 * If I needed a data structure to store student records so that I could look students up by Banner number, which data structure (or data structures) that we learned this semester would be most appropriate? Carefully explain why.
 
